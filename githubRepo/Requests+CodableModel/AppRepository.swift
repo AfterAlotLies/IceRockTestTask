@@ -10,7 +10,6 @@ import Alamofire
 
 class AppRepository {
     
-    //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
     private var urlResponse = ""
     
     func set(url: String?) {
