@@ -22,33 +22,52 @@
                         <rect key="frame" x="15" y="15" width="410" height="53"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="air-IF-i4F">
-                                <rect key="frame" x="0.0" y="0.0" width="410" height="31.666666666666668"/>
+                                <rect key="frame" x="0.0" y="0.0" width="410" height="32.333333333333336"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" text="Name repository" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sde-s1-mXV">
-                                        <rect key="frame" x="0.0" y="0.0" width="342.33333333333331" height="31.666666666666668"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sde-s1-mXV">
+                                        <rect key="frame" x="0.0" y="0.0" width="340.33333333333331" height="32.333333333333336"/>
                                         <color key="tintColor" systemColor="systemBlueColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="165.66999999999999" id="8yk-fU-UOl"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Charter-Roman" family="Charter" pointSize="16"/>
-                                        <color key="textColor" red="0.20081217984581046" green="0.60379153371497873" blue="0.96611279249191284" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Name repository">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20081217984581046" green="0.60379153371497873" blue="0.96611279249191284" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <font key="NSFont" size="16" name="Phosphate-Inline"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="751" text="language" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbJ-aG-y8g">
-                                        <rect key="frame" x="350.33333333333331" y="0.0" width="59.666666666666686" height="31.666666666666668"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="751" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbJ-aG-y8g">
+                                        <rect key="frame" x="348.33333333333331" y="0.0" width="61.666666666666686" height="32.333333333333336"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="41.329999999999998" id="oLm-fC-8B1"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Charter-Roman" family="Charter" pointSize="15"/>
-                                        <color key="textColor" systemColor="systemYellowColor"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="language">
+                                                <attributes>
+                                                    <color key="NSColor" red="1" green="0.92348132163542829" blue="0.2294290774555926" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <font key="NSFont" size="15" name="Phosphate-Inline"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xB8-cP-qCg">
-                                <rect key="frame" x="0.0" y="34.666666666666664" width="410" height="18.333333333333336"/>
-                                <fontDescription key="fontDescription" name="Charter-Bold" family="Charter" pointSize="15"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xB8-cP-qCg">
+                                <rect key="frame" x="0.0" y="35.333333333333336" width="410" height="17.666666666666664"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="description">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" size="15" name="Phosphate-Inline"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -74,9 +93,6 @@
     <resources>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
