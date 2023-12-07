@@ -10,6 +10,7 @@ import UIKit
 class RepositoriesListViewController: UIViewController {
 
     @IBOutlet private weak var repoList: UITableView!
+    @IBOutlet private weak var loadingTableView: UIActivityIndicatorView!
     
     var nameRepoArray = [String]()
     var languageArray = [String]()
@@ -17,7 +18,7 @@ class RepositoriesListViewController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTableView()
+        setupView()
         setupNavigationRightItem()
     }
     
@@ -29,6 +30,7 @@ class RepositoriesListViewController: UIViewController {
     }
     
     private func getUserRepositories() {
+        loadingTableView.startAnimating()
         AppRepository.shared.getRepositories { data, error in
             if error != nil {
                 print(error?.localizedDescription ?? "error")
@@ -37,16 +39,21 @@ class RepositoriesListViewController: UIViewController {
                 for info in repositoriesInfo {
                     self.addInfoToArrays(info: info)
                 }
+                DispatchQueue.main.async {
+                    self.loadingTableView.stopAnimating()
+                    self.loadingTableView.isHidden = true
+                }
                 self.repoList.reloadData()
             }
         }
     }
     
-    private func setupTableView() {
+    private func setupView() {
         repoList.dataSource = self
         repoList.delegate = self
         repoList.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomTableViewCell")
         repoList.separatorInset = UIEdgeInsets.zero
+        loadingTableView.isHidden = false
     }
     
     private func addInfoToArrays(info: Repo) {
