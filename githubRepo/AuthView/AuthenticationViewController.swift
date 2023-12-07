@@ -12,43 +12,54 @@ class AuthenticationViewController: UIViewController {
     @IBOutlet private weak var imageLogo: UIImageView!
     @IBOutlet private weak var inputTokenField: UITextField!
         
+    @IBOutlet private weak var signInButton: CustomButtonClass!
+    
+    private let workItem = {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupInputFieldUI()
-       // CustomButton().signInButton.titleLabel?.isHidden = true
-
+        signInUserButton()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        CustomButton().loadingIndicator.isHidden = false
-//        CustomButton().loadingIndicator.startAnimating()
     }
     
-    @IBAction private func signInAction(_ sender: Any) {
-        guard let token = inputTokenField.text else { return }
-        
-        if token == "" {
-            makeAlert(title: "Error",
-                           message: "Enter your personal access token")
-        } else {
-            authUserInApp(token: token)
+    private func signInUserButton() {
+        signInButton.actionHandler = {
+            guard let token = self.inputTokenField.text else { return }
+            
+            if token == "" {
+                self.makeAlert(title: "Error",
+                               message: "Enter your personal access token")
+            } else {
+                self.authUserInApp(token: token)
+            }
         }
     }
     
     private func authUserInApp(token: String) {
+        signInButton.startLoading()
         AppRepository.shared.signIn(token: token) { response, error in
             if error != nil {
                 DispatchQueue.main.async {
+                    self.signInButton.stopLoading()
                     self.makeAlert(title: "Error",
                                    message: "\(error?.localizedDescription ?? "something gone wrong")")
                 }
             } else {
-                let repoUrl = response?.urlRepositories
-                let repositoriesListViewController = RepositoriesListViewController(nibName: "RepositoriesListViewController", bundle: nil)
-                AppRepository.shared.set(url: repoUrl)
-                self.navigationController?.pushViewController(repositoriesListViewController, animated: false)
-                self.inputTokenField.text = ""
+                let workItem = DispatchWorkItem {
+                    self.signInButton.stopLoading()
+                    let repoUrl = response?.urlRepositories
+                    let repositoriesListViewController = RepositoriesListViewController(nibName: "RepositoriesListViewController", bundle: nil)
+                    AppRepository.shared.set(url: repoUrl)
+                    self.navigationController?.pushViewController(repositoriesListViewController, animated: false)
+                    self.inputTokenField.text = ""
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: workItem)
             }
         }
     }
