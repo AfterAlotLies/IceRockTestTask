@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomButton" customModule="githubRepo" customModuleProvider="target">
+            <connections>
+                <outlet property="loadingIndicator" destination="fgo-3n-A78" id="osd-zS-ys9"/>
+                <outlet property="signInButton" destination="Aa9-zF-XAB" id="5cH-dt-DnG"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="46"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aa9-zF-XAB">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="46"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Button">
+                        <color key="baseBackgroundColor" red="0.53101071789999998" green="0.81596166820000005" blue="0.5807868129" alpha="0.69682716840000003" colorSpace="custom" customColorSpace="displayP3"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="tapButton:" destination="-1" eventType="touchUpInside" id="TfX-yx-xf8"/>
+                    </connections>
+                </button>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="fgo-3n-A78">
+                    <rect key="frame" x="162.66666666666666" y="0.0" width="68" height="46"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="46" id="LQd-0S-v6k"/>
+                        <constraint firstAttribute="width" constant="68" id="yBW-6V-wbz"/>
+                    </constraints>
+                    <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </activityIndicatorView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fgo-3n-A78" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="G21-SN-vZN"/>
+                <constraint firstItem="Aa9-zF-XAB" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="M7r-ab-vBL"/>
+                <constraint firstItem="Aa9-zF-XAB" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="MRI-Rp-ZYZ"/>
+                <constraint firstItem="Aa9-zF-XAB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Qhq-tg-UVu"/>
+                <constraint firstItem="Aa9-zF-XAB" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="b80-pa-fZE"/>
+                <constraint firstItem="fgo-3n-A78" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="pZY-md-Qh4"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="83.206106870229007" y="278.16901408450707"/>
+        </view>
+    </objects>
+</document>
