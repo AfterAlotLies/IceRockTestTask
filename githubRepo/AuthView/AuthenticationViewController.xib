@@ -46,23 +46,25 @@
                     </constraints>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vUb-Yp-Ohi" customClass="CustomButtonClass" customModule="githubRepo" customModuleProvider="target">
-                    <rect key="frame" x="30" y="764" width="333" height="47"/>
+                    <rect key="frame" x="30" y="771" width="333" height="47"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="47" id="aRQ-gr-J7L"/>
+                        <constraint firstAttribute="width" constant="333" id="dXh-Yk-x73"/>
+                    </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" red="0.055238811690307268" green="0.05631618719430135" blue="0.1358961886868687" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color key="backgroundColor" red="0.05523881169" green="0.056316187189999999" blue="0.1358961887" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
                 <constraint firstItem="dKx-v2-Buf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="144" id="46M-ky-gFK"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dKx-v2-Buf" secondAttribute="trailing" constant="151" id="4ki-ZH-4MC"/>
+                <constraint firstItem="vUb-Yp-Ohi" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="9lq-7P-VPc"/>
                 <constraint firstItem="dyJ-SP-aEW" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="GQW-hY-vu6"/>
-                <constraint firstItem="vUb-Yp-Ohi" firstAttribute="centerX" secondItem="dyJ-SP-aEW" secondAttribute="centerX" id="HfP-Ik-WkZ"/>
                 <constraint firstItem="dyJ-SP-aEW" firstAttribute="top" secondItem="dKx-v2-Buf" secondAttribute="bottom" constant="49" id="Iog-KW-Vf1"/>
-                <constraint firstItem="vUb-Yp-Ohi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="QHg-dD-c99"/>
                 <constraint firstItem="dKx-v2-Buf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="70" id="XcR-wZ-b84"/>
-                <constraint firstItem="vUb-Yp-Ohi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="764" id="ZmS-Cf-sgT"/>
                 <constraint firstItem="dyJ-SP-aEW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="bFc-0F-HZX"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="vUb-Yp-Ohi" secondAttribute="bottom" constant="7" id="dfe-fI-vwd"/>
+                <constraint firstItem="vUb-Yp-Ohi" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="mLj-Wa-Raw"/>
             </constraints>
             <point key="canvasLocation" x="136.64122137404578" y="19.718309859154932"/>
         </view>

@@ -9,6 +9,9 @@ import UIKit
 
 class RepositoryDetailInfoViewController: UIViewController {
 
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -16,8 +19,6 @@ class RepositoryDetailInfoViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        navigationItem.leftBarButtonItem?.title = ""
-//        navigationController?.navigationItem.leftBarButtonItem?.
-//        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+
     }
 }

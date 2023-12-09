@@ -18,18 +18,20 @@ class RepositoriesListViewController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupView()
         setupNavigationRightItem()
+        setupNavBar()
+        setupView()
+        //спросить здесь ли метод должен быть или нет а то он утечку памяти ловит в аппиаре
+        getUserRepositories()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setupNavBar()
-        clearAllArrays()
-        getUserRepositories()
+        navigationItem.backButtonTitle = ""
     }
     
     private func getUserRepositories() {
+        clearAllArrays()
         loadingTableView.startAnimating()
         AppRepository.shared.getRepositories { data, error in
             if error != nil {
@@ -40,10 +42,10 @@ class RepositoriesListViewController: UIViewController {
                     self.addInfoToArrays(info: info)
                 }
                 DispatchQueue.main.async {
+                    self.repoList.reloadData()
                     self.loadingTableView.stopAnimating()
                     self.loadingTableView.isHidden = true
                 }
-                self.repoList.reloadData()
             }
         }
     }
