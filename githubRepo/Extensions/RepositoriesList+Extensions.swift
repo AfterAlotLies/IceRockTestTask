@@ -66,6 +66,8 @@ extension RepositoriesListViewController: UITableViewDataSource {
 extension RepositoriesListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        navigationController?.pushViewController(RepositoryDetailInfoViewController(nibName: "RepositoryDetailInfoViewController", bundle: nil), animated: true)
+        let repositoryDetail = RepositoryDetailInfoViewController(nibName: "RepositoryDetailInfoViewController", bundle: nil)
+        repositoryDetail.setChosenRepoId(repoId: reposIdArray[indexPath.row])
+        navigationController?.pushViewController(repositoryDetail, animated: true)
     }
 }
