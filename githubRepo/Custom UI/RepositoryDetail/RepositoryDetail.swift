@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CustomViewForRepoInfo: UIView {
+class RepositoryDetail: UIView {
     
     @IBOutlet weak var githubUrlLabel: UILabel!
     @IBOutlet weak var licenseLabel: UILabel!
@@ -15,7 +15,8 @@ class CustomViewForRepoInfo: UIView {
     @IBOutlet weak var starsCountLabel: UILabel!
     @IBOutlet weak var forksCountLabel: UILabel!
     @IBOutlet weak var watchersCoutnLabel: UILabel!
-
+    @IBOutlet weak var stackview: UIStackView!
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureView()
@@ -34,8 +35,12 @@ class CustomViewForRepoInfo: UIView {
     }
     
     private func loadViewFromXib() -> UIView {
-        guard let view = Bundle.main.loadNibNamed("CustomViewForRepoInfo", owner: self)?.first as? UIView else { return UIView() }
+        guard let view = Bundle.main.loadNibNamed("RepositoryDetailUI", owner: self)?.first as? UIView else { return UIView() }
 
         return view
+    }
+    
+    func hideLicenseView() {
+        stackview.arrangedSubviews[1].isHidden = true
     }
 }
