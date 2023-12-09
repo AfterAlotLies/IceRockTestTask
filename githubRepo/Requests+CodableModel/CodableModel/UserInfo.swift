@@ -8,7 +8,7 @@
 import UIKit
 
 struct UserInfo: Codable {
-    
+
     private enum CodingKeys: String, CodingKey {
         case urlRepositories = "repos_url"
     }
@@ -16,8 +16,25 @@ struct UserInfo: Codable {
 }
 
 struct Repo: Codable {
-    
+
     var name: String
     var language: String?
     var description: String?
+    var id: Int
+}
+
+struct RepoDetails: Codable {
+
+    private enum CodingKeys: String, CodingKey {
+        case githubUrlRepo = "html_url"
+//        case license
+        case stargazers = "stargazers_count"
+        case watchers = "watchers_count"
+        case forks = "forks_count"
+    }
+    var githubUrlRepo: String
+//    var license: String?
+    var stargazers: Int
+    var forks: Int
+    var watchers: Int
 }

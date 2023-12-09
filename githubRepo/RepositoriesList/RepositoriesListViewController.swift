@@ -15,6 +15,7 @@ class RepositoriesListViewController: UIViewController {
     var nameRepoArray = [String]()
     var languageArray = [String]()
     var descriptionArray = [String]()
+    var reposIdArray = [Int]()
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,12 +63,14 @@ class RepositoriesListViewController: UIViewController {
         nameRepoArray.append(info.name)
         languageArray.append(info.language ?? "")
         descriptionArray.append(info.description ?? "")
+        reposIdArray.append(info.id)
     }
     
     private func clearAllArrays() {
         nameRepoArray.removeAll(keepingCapacity: false)
         languageArray.removeAll(keepingCapacity: false)
         descriptionArray.removeAll(keepingCapacity: false)
+        reposIdArray.removeAll(keepingCapacity: false)
     }
     
     @objc

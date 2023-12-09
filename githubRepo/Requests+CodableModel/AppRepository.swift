@@ -29,6 +29,23 @@ class AppRepository {
         }
     }
     
+    func getRepository(repoId: String, completion: @escaping (RepoDetails?, Error?) -> Void) {
+        let repoUrl = "https://api.github.com/repositories/\(repoId)"
+        
+        AF.request(repoUrl, method: .get).validate().responseDecodable(of: RepoDetails.self) { response in
+            switch response.result {
+            case .success(let data):
+                completion(data, nil)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func getRepositoryReadme(ownerName: String, repositoryName: String, branchName: String, completion: @escaping (String?, Error?) -> Void) {
+        
+    }
+    
     func signIn(token: String, completion: @escaping (UserInfo?, Error?) -> Void) {
         let headers: HTTPHeaders = [
             "Authorization": "Bearer \(token)",
