@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1140223F2B24EEBD005B775A /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1140223E2B24EEBD005B775A /* Int+Extensions.swift */; };
 		114434AB2B1DF48700D7355C /* AppRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114434AA2B1DF48700D7355C /* AppRepository.swift */; };
 		114434AD2B1F121000D7355C /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114434AC2B1F121000D7355C /* UserInfo.swift */; };
 		114434B22B208B8C00D7355C /* RepositoriesList+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114434B12B208B8C00D7355C /* RepositoriesList+Extensions.swift */; };
 		114434B42B208DB900D7355C /* AuthenticationView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114434B32B208DB900D7355C /* AuthenticationView+Extensions.swift */; };
-		114435CA2B2172BA00D7355C /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114435C92B2172BA00D7355C /* CustomButton.swift */; };
-		114435CC2B2172CD00D7355C /* CustomButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 114435CB2B2172CD00D7355C /* CustomButton.xib */; };
+		114435DA2B22246300D7355C /* CustomButtonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114435D52B2223A300D7355C /* CustomButtonClass.swift */; };
+		114435DB2B22246800D7355C /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114435D92B2223A300D7355C /* CustomTableViewCell.swift */; };
+		114435DC2B2224BB00D7355C /* CustomButtonUI.xib in Resources */ = {isa = PBXBuildFile; fileRef = 114435D62B2223A300D7355C /* CustomButtonUI.xib */; };
+		114435DD2B2224BE00D7355C /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 114435D82B2223A300D7355C /* CustomTableViewCell.xib */; };
+		114435E02B22257B00D7355C /* RepositoryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114435DF2B22257B00D7355C /* RepositoryDetail.swift */; };
+		114435E22B22259700D7355C /* RepositoryDetailUI.xib in Resources */ = {isa = PBXBuildFile; fileRef = 114435E12B22259700D7355C /* RepositoryDetailUI.xib */; };
 		1173136A2B172EDF00289745 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117313692B172EDF00289745 /* AppDelegate.swift */; };
 		1173136C2B172EDF00289745 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1173136B2B172EDF00289745 /* SceneDelegate.swift */; };
 		117313732B172EE100289745 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 117313722B172EE100289745 /* Assets.xcassets */; };
@@ -25,18 +30,21 @@
 		117313C52B1A034000289745 /* RepositoriesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 117313C32B1A034000289745 /* RepositoriesListViewController.xib */; };
 		117313CB2B1A175800289745 /* RepositoryDetailInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117313C92B1A175800289745 /* RepositoryDetailInfoViewController.swift */; };
 		117313CC2B1A175800289745 /* RepositoryDetailInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 117313CA2B1A175800289745 /* RepositoryDetailInfoViewController.xib */; };
-		11D3A0EF2B1D7562005D26B3 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D3A0ED2B1D7562005D26B3 /* CustomTableViewCell.swift */; };
-		11D3A0F02B1D7562005D26B3 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11D3A0EE2B1D7562005D26B3 /* CustomTableViewCell.xib */; };
 		CD89ACEFEA16E3BE03B47013 /* Pods_githubRepo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1BED8C7408CDAC20161CD88 /* Pods_githubRepo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1140223E2B24EEBD005B775A /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
 		114434AA2B1DF48700D7355C /* AppRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRepository.swift; sourceTree = "<group>"; };
 		114434AC2B1F121000D7355C /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		114434B12B208B8C00D7355C /* RepositoriesList+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepositoriesList+Extensions.swift"; sourceTree = "<group>"; };
 		114434B32B208DB900D7355C /* AuthenticationView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthenticationView+Extensions.swift"; sourceTree = "<group>"; };
-		114435C92B2172BA00D7355C /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
-		114435CB2B2172CD00D7355C /* CustomButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomButton.xib; sourceTree = "<group>"; };
+		114435D52B2223A300D7355C /* CustomButtonClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonClass.swift; sourceTree = "<group>"; };
+		114435D62B2223A300D7355C /* CustomButtonUI.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomButtonUI.xib; sourceTree = "<group>"; };
+		114435D82B2223A300D7355C /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		114435D92B2223A300D7355C /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		114435DF2B22257B00D7355C /* RepositoryDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetail.swift; sourceTree = "<group>"; };
+		114435E12B22259700D7355C /* RepositoryDetailUI.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryDetailUI.xib; sourceTree = "<group>"; };
 		117313662B172EDF00289745 /* githubRepo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = githubRepo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		117313692B172EDF00289745 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1173136B2B172EDF00289745 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,8 +59,6 @@
 		117313C32B1A034000289745 /* RepositoriesListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoriesListViewController.xib; sourceTree = "<group>"; };
 		117313C92B1A175800289745 /* RepositoryDetailInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailInfoViewController.swift; sourceTree = "<group>"; };
 		117313CA2B1A175800289745 /* RepositoryDetailInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryDetailInfoViewController.xib; sourceTree = "<group>"; };
-		11D3A0ED2B1D7562005D26B3 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
-		11D3A0EE2B1D7562005D26B3 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		9369A6AC7C55F2139C245CF3 /* Pods-githubRepo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-githubRepo.debug.xcconfig"; path = "Target Support Files/Pods-githubRepo/Pods-githubRepo.debug.xcconfig"; sourceTree = "<group>"; };
 		D1BED8C7408CDAC20161CD88 /* Pods_githubRepo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_githubRepo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E58FCD385542B042FA76DBF7 /* Pods-githubRepo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-githubRepo.release.xcconfig"; path = "Target Support Files/Pods-githubRepo/Pods-githubRepo.release.xcconfig"; sourceTree = "<group>"; };
@@ -92,6 +98,7 @@
 			children = (
 				114434B12B208B8C00D7355C /* RepositoriesList+Extensions.swift */,
 				114434B32B208DB900D7355C /* AuthenticationView+Extensions.swift */,
+				1140223E2B24EEBD005B775A /* Int+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -112,6 +119,43 @@
 				1173136B2B172EDF00289745 /* SceneDelegate.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		114435D32B2223A300D7355C /* Custom UI */ = {
+			isa = PBXGroup;
+			children = (
+				114435DE2B22255800D7355C /* RepositoryDetail */,
+				114435D42B2223A300D7355C /* CustomButton */,
+				114435D72B2223A300D7355C /* CustomCell */,
+			);
+			path = "Custom UI";
+			sourceTree = "<group>";
+		};
+		114435D42B2223A300D7355C /* CustomButton */ = {
+			isa = PBXGroup;
+			children = (
+				114435D52B2223A300D7355C /* CustomButtonClass.swift */,
+				114435D62B2223A300D7355C /* CustomButtonUI.xib */,
+			);
+			path = CustomButton;
+			sourceTree = "<group>";
+		};
+		114435D72B2223A300D7355C /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				114435D92B2223A300D7355C /* CustomTableViewCell.swift */,
+				114435D82B2223A300D7355C /* CustomTableViewCell.xib */,
+			);
+			path = CustomCell;
+			sourceTree = "<group>";
+		};
+		114435DE2B22255800D7355C /* RepositoryDetail */ = {
+			isa = PBXGroup;
+			children = (
+				114435DF2B22257B00D7355C /* RepositoryDetail.swift */,
+				114435E12B22259700D7355C /* RepositoryDetailUI.xib */,
+			);
+			path = RepositoryDetail;
 			sourceTree = "<group>";
 		};
 		1173135D2B172EDF00289745 = {
@@ -135,18 +179,16 @@
 		117313682B172EDF00289745 /* githubRepo */ = {
 			isa = PBXGroup;
 			children = (
+				114435D32B2223A300D7355C /* Custom UI */,
 				117313C62B1A123D00289745 /* NavigationController */,
 				1173137D2B172F8800289745 /* AuthView */,
 				1173137E2B172F9600289745 /* RepositoriesList */,
 				1173137F2B172FA600289745 /* RepositoryInfo */,
 				114434A92B1DF46F00D7355C /* Requests+CodableModel */,
 				114434B02B208B4A00D7355C /* Extensions */,
-				11D3A0E82B1CB869005D26B3 /* CustomCell */,
 				114434B52B208F2B00D7355C /* Supporting Files */,
 				114434B62B208F6500D7355C /* Application */,
 				117313742B172EE100289745 /* LaunchScreen.storyboard */,
-				114435C92B2172BA00D7355C /* CustomButton.swift */,
-				114435CB2B2172CD00D7355C /* CustomButton.xib */,
 			);
 			path = githubRepo;
 			sourceTree = "<group>";
@@ -185,15 +227,6 @@
 				117313BE2B19FE1900289745 /* MainNavigationController.xib */,
 			);
 			path = NavigationController;
-			sourceTree = "<group>";
-		};
-		11D3A0E82B1CB869005D26B3 /* CustomCell */ = {
-			isa = PBXGroup;
-			children = (
-				11D3A0ED2B1D7562005D26B3 /* CustomTableViewCell.swift */,
-				11D3A0EE2B1D7562005D26B3 /* CustomTableViewCell.xib */,
-			);
-			path = CustomCell;
 			sourceTree = "<group>";
 		};
 		37631553564EE4481C40DA5C /* Pods */ = {
@@ -273,14 +306,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				114435CC2B2172CD00D7355C /* CustomButton.xib in Resources */,
+				114435DD2B2224BE00D7355C /* CustomTableViewCell.xib in Resources */,
+				114435DC2B2224BB00D7355C /* CustomButtonUI.xib in Resources */,
+				114435E22B22259700D7355C /* RepositoryDetailUI.xib in Resources */,
 				117313BF2B19FE1900289745 /* MainNavigationController.xib in Resources */,
-				11D3A0F02B1D7562005D26B3 /* CustomTableViewCell.xib in Resources */,
 				117313C52B1A034000289745 /* RepositoriesListViewController.xib in Resources */,
 				117313852B17300300289745 /* AuthenticationViewController.xib in Resources */,
+				117313CC2B1A175800289745 /* RepositoryDetailInfoViewController.xib in Resources */,
 				117313762B172EE100289745 /* LaunchScreen.storyboard in Resources */,
 				117313732B172EE100289745 /* Assets.xcassets in Resources */,
-				117313CC2B1A175800289745 /* RepositoryDetailInfoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,18 +367,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				114435DB2B22246800D7355C /* CustomTableViewCell.swift in Sources */,
+				114435DA2B22246300D7355C /* CustomButtonClass.swift in Sources */,
 				114434B42B208DB900D7355C /* AuthenticationView+Extensions.swift in Sources */,
 				114434AD2B1F121000D7355C /* UserInfo.swift in Sources */,
 				117313C42B1A034000289745 /* RepositoriesListViewController.swift in Sources */,
 				117313C12B19FE8800289745 /* MainNavigationController.swift in Sources */,
 				1173136A2B172EDF00289745 /* AppDelegate.swift in Sources */,
-				11D3A0EF2B1D7562005D26B3 /* CustomTableViewCell.swift in Sources */,
+				114435E02B22257B00D7355C /* RepositoryDetail.swift in Sources */,
 				117313CB2B1A175800289745 /* RepositoryDetailInfoViewController.swift in Sources */,
 				117313842B17300300289745 /* AuthenticationViewController.swift in Sources */,
-				114435CA2B2172BA00D7355C /* CustomButton.swift in Sources */,
 				114434B22B208B8C00D7355C /* RepositoriesList+Extensions.swift in Sources */,
 				1173136C2B172EDF00289745 /* SceneDelegate.swift in Sources */,
 				114434AB2B1DF48700D7355C /* AppRepository.swift in Sources */,
+				1140223F2B24EEBD005B775A /* Int+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
