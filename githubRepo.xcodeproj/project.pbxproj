@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1140223F2B24EEBD005B775A /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1140223E2B24EEBD005B775A /* Int+Extensions.swift */; };
+		114196A62B3871540034768B /* TokenInputClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114196A52B3871540034768B /* TokenInputClass.swift */; };
+		114196A82B3871690034768B /* TokenInputUI.xib in Resources */ = {isa = PBXBuildFile; fileRef = 114196A72B3871690034768B /* TokenInputUI.xib */; };
 		114434AB2B1DF48700D7355C /* AppRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114434AA2B1DF48700D7355C /* AppRepository.swift */; };
 		114434AD2B1F121000D7355C /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114434AC2B1F121000D7355C /* UserInfo.swift */; };
 		114434B22B208B8C00D7355C /* RepositoriesList+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114434B12B208B8C00D7355C /* RepositoriesList+Extensions.swift */; };
@@ -35,6 +37,8 @@
 
 /* Begin PBXFileReference section */
 		1140223E2B24EEBD005B775A /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
+		114196A52B3871540034768B /* TokenInputClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenInputClass.swift; sourceTree = "<group>"; };
+		114196A72B3871690034768B /* TokenInputUI.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TokenInputUI.xib; sourceTree = "<group>"; };
 		114434AA2B1DF48700D7355C /* AppRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRepository.swift; sourceTree = "<group>"; };
 		114434AC2B1F121000D7355C /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		114434B12B208B8C00D7355C /* RepositoriesList+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepositoriesList+Extensions.swift"; sourceTree = "<group>"; };
@@ -76,6 +80,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		114196A42B3871220034768B /* CustomTokenInput */ = {
+			isa = PBXGroup;
+			children = (
+				114196A52B3871540034768B /* TokenInputClass.swift */,
+				114196A72B3871690034768B /* TokenInputUI.xib */,
+			);
+			path = CustomTokenInput;
+			sourceTree = "<group>";
+		};
 		114434A92B1DF46F00D7355C /* Requests+CodableModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +137,7 @@
 		114435D32B2223A300D7355C /* Custom UI */ = {
 			isa = PBXGroup;
 			children = (
+				114196A42B3871220034768B /* CustomTokenInput */,
 				114435DE2B22255800D7355C /* RepositoryDetail */,
 				114435D42B2223A300D7355C /* CustomButton */,
 				114435D72B2223A300D7355C /* CustomCell */,
@@ -306,6 +320,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				114196A82B3871690034768B /* TokenInputUI.xib in Resources */,
 				114435DD2B2224BE00D7355C /* CustomTableViewCell.xib in Resources */,
 				114435DC2B2224BB00D7355C /* CustomButtonUI.xib in Resources */,
 				114435E22B22259700D7355C /* RepositoryDetailUI.xib in Resources */,
@@ -369,6 +384,7 @@
 			files = (
 				114435DB2B22246800D7355C /* CustomTableViewCell.swift in Sources */,
 				114435DA2B22246300D7355C /* CustomButtonClass.swift in Sources */,
+				114196A62B3871540034768B /* TokenInputClass.swift in Sources */,
 				114434B42B208DB900D7355C /* AuthenticationView+Extensions.swift in Sources */,
 				114434AD2B1F121000D7355C /* UserInfo.swift in Sources */,
 				117313C42B1A034000289745 /* RepositoriesListViewController.swift in Sources */,
@@ -527,7 +543,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "/Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "githubRepo/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -555,7 +571,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "/Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "githubRepo/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
