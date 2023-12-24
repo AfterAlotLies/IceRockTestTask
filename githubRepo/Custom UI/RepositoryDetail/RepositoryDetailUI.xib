@@ -153,7 +153,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="URc-YP-mPK">
-                                            <rect key="frame" x="26.999999999999996" y="1" width="36.666666666666657" height="20"/>
+                                            <rect key="frame" x="27" y="2" width="36.666666666666657" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="250" constant="36.670000000000002" id="a26-R8-Ot8"/>
                                             </constraints>
@@ -162,7 +162,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="watchers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIr-Y6-td4">
-                                            <rect key="frame" x="65" y="0.0" width="66" height="19"/>
+                                            <rect key="frame" x="68" y="2" width="66" height="19"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" relation="lessThanOrEqual" priority="250" constant="66" id="PGK-za-3El"/>
                                             </constraints>
@@ -173,18 +173,18 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="URc-YP-mPK" secondAttribute="bottom" constant="3" id="1tV-wp-324"/>
+                                        <constraint firstAttribute="bottom" secondItem="URc-YP-mPK" secondAttribute="bottom" constant="2" id="1tV-wp-324"/>
                                         <constraint firstItem="URc-YP-mPK" firstAttribute="leading" secondItem="Vrk-aX-IKt" secondAttribute="trailing" constant="3" id="Cxt-st-Zxf"/>
                                         <constraint firstItem="Vrk-aX-IKt" firstAttribute="top" secondItem="XUR-zU-TJt" secondAttribute="top" id="Exm-Xh-ClU"/>
                                         <constraint firstItem="Vrk-aX-IKt" firstAttribute="leading" secondItem="XUR-zU-TJt" secondAttribute="leading" id="GlG-CJ-mUL"/>
-                                        <constraint firstItem="YIr-Y6-td4" firstAttribute="leading" secondItem="URc-YP-mPK" secondAttribute="trailing" constant="1.3300000000000001" id="Ode-yR-uxO"/>
-                                        <constraint firstItem="YIr-Y6-td4" firstAttribute="top" secondItem="XUR-zU-TJt" secondAttribute="top" id="Ul3-Oe-Rlo"/>
-                                        <constraint firstItem="YIr-Y6-td4" firstAttribute="leading" secondItem="URc-YP-mPK" secondAttribute="trailing" constant="1.3300000000000001" id="Z9e-Kn-K7J"/>
+                                        <constraint firstItem="YIr-Y6-td4" firstAttribute="leading" secondItem="URc-YP-mPK" secondAttribute="trailing" constant="4.3333333333333428" id="Ode-yR-uxO"/>
+                                        <constraint firstItem="YIr-Y6-td4" firstAttribute="top" secondItem="XUR-zU-TJt" secondAttribute="top" constant="2" id="Ul3-Oe-Rlo"/>
+                                        <constraint firstItem="YIr-Y6-td4" firstAttribute="leading" secondItem="URc-YP-mPK" secondAttribute="trailing" constant="4.3333333333333428" id="Z9e-Kn-K7J"/>
                                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="131" id="c2b-wI-7Zq"/>
-                                        <constraint firstAttribute="bottom" secondItem="YIr-Y6-td4" secondAttribute="bottom" constant="5" id="cXS-cB-FbF"/>
+                                        <constraint firstAttribute="bottom" secondItem="YIr-Y6-td4" secondAttribute="bottom" constant="3" id="cXS-cB-FbF"/>
                                         <constraint firstAttribute="height" constant="24" id="mX0-lN-hr4"/>
                                         <constraint firstAttribute="bottom" secondItem="Vrk-aX-IKt" secondAttribute="bottom" id="ps4-KW-swu"/>
-                                        <constraint firstItem="URc-YP-mPK" firstAttribute="top" secondItem="XUR-zU-TJt" secondAttribute="top" constant="1" id="q6h-sW-sK7"/>
+                                        <constraint firstItem="URc-YP-mPK" firstAttribute="top" secondItem="XUR-zU-TJt" secondAttribute="top" constant="2" id="q6h-sW-sK7"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nca-90-UPE" userLabel="forks view">
