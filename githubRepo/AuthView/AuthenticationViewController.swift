@@ -55,7 +55,7 @@ class AuthenticationViewController: UIViewController {
                     self.signInButton.stopLoading()
                     let repoUrl = response?.urlRepositories
                     let repositoriesListViewController = RepositoriesListViewController(nibName: "RepositoriesListViewController", bundle: nil)
-                    AppRepository.shared.set(url: repoUrl)
+                    AppRepository.shared.setAuthUrl(url: repoUrl)
                     self.navigationController?.pushViewController(repositoriesListViewController, animated: false)
                     self.inputTokenField.text = ""
                 }
