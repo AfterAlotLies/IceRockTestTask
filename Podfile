@@ -6,6 +6,6 @@ target 'githubRepo' do
   use_frameworks!
 
   # Pods for githubRepo
-  pod 'Alamofire'
-
+  pod 'Alamofire', '~> 5.0'
+  pod 'Down', '~> 0.10'
 end
