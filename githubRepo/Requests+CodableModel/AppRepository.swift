@@ -10,15 +10,15 @@ import Alamofire
 
 class AppRepository {
     
-    private var urlResponse = ""
+    private var authUrl = ""
     
-    func set(url: String?) {
+    func setAuthUrl(url: String?) {
         guard let url = url else { return }
-        urlResponse = url
+        authUrl = url
     }
     
     func getRepositories(completion: @escaping(Array<Repo>?, Error?) -> Void) {
-        AF.request(urlResponse, method: .get).validate().responseDecodable(of: [Repo].self) { response in
+        AF.request(authUrl, method: .get).validate().responseDecodable(of: [Repo].self) { response in
             switch response.result {
             case .success(let data):
                 let limitedCountOfRepositories = Array(data.prefix(10))
@@ -37,13 +37,22 @@ class AppRepository {
             case .success(let data):
                 completion(data, nil)
             case .failure(let error):
-                print(error.localizedDescription)
+                completion(nil, error)
             }
         }
     }
     
     func getRepositoryReadme(ownerName: String, repositoryName: String, branchName: String, completion: @escaping (String?, Error?) -> Void) {
+        let readmeUrl = "https://raw.githubusercontent.com/icerockdev/moko-resources/master/README.md"
         
+        AF.request(readmeUrl, method: .get).validate().responseString { response in
+            switch response.result {
+            case .success(let data):
+                completion(data, nil)
+            case .failure(let error):
+                completion(nil, error)
+            }
+        }
     }
     
     func signIn(token: String, completion: @escaping (UserInfo?, Error?) -> Void) {
@@ -54,7 +63,7 @@ class AppRepository {
         
         let url = "https://api.github.com/user"
         
-        AF.request(url, headers: headers).validate().responseDecodable(of: UserInfo.self) { response in
+        AF.request(url, method: .get, headers: headers).validate().responseDecodable(of: UserInfo.self) { response in
             switch response.result {
             case .success(let data):
                 completion(data, nil)
