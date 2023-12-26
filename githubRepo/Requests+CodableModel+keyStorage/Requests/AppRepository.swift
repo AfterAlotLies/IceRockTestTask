@@ -18,13 +18,28 @@ class AppRepository {
     }
     
     func getRepositories(completion: @escaping(Array<Repo>?, Error?) -> Void) {
-        AF.request(authUrl, method: .get).validate().responseDecodable(of: [Repo].self) { response in
-            switch response.result {
-            case .success(let data):
-                let limitedCountOfRepositories = Array(data.prefix(10))
-                completion(limitedCountOfRepositories, nil)
-            case .failure(let error):
-                completion(nil, error)
+        
+        let keyValue = KeyValueStorage()
+        
+        if let url = keyValue.reposUrl, !url.isEmpty {
+            AF.request(url, method: .get).validate().responseDecodable(of: [Repo].self) { response in
+                switch response.result {
+                case .success(let data):
+                    let limitedCountOfRepositories = Array(data.prefix(10))
+                    completion(limitedCountOfRepositories, nil)
+                case .failure(let error):
+                    completion(nil, error)
+                }
+            }
+        } else {
+            AF.request(authUrl, method: .get).validate().responseDecodable(of: [Repo].self) { response in
+                switch response.result {
+                case .success(let data):
+                    let limitedCountOfRepositories = Array(data.prefix(10))
+                    completion(limitedCountOfRepositories, nil)
+                case .failure(let error):
+                    completion(nil, error)
+                }
             }
         }
     }
@@ -54,7 +69,7 @@ class AppRepository {
             }
         }
     }
-    
+
     func signIn(token: String, completion: @escaping (UserInfo?, Error?) -> Void) {
         let headers: HTTPHeaders = [
             "Authorization": "Bearer \(token)",
@@ -67,6 +82,8 @@ class AppRepository {
             switch response.result {
             case .success(let data):
                 completion(data, nil)
+                KeyValueStorage.shared.saveAuthToken(token: token)
+                KeyValueStorage.shared.saveReposUrl(url: data.urlRepositories)
             case .failure(let error):
                 completion(nil, error)
             }
