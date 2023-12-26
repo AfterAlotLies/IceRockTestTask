@@ -6,42 +6,34 @@
 //
 
 import UIKit
-import Down
+import MarkdownKit
+import SwiftyMarkdown
 
 class RepositoryDetailInfoViewController: UIViewController {
     
     @IBOutlet private weak var topRepoInfoView: RepositoryDetail!
     @IBOutlet private weak var readmeTextView: UITextView!
+    @IBOutlet private weak var readmeLoader: UIActivityIndicatorView!
     
     private var chosenRepoId: String = ""
     
     var readmeString: String = ""
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         getRepositoryDetail()
-        
+        //readmeLoader.startAnimating()
+        readmeLoader.isHidden = true
         AppRepository.shared.getRepositoryReadme(ownerName: "", repositoryName: "", branchName: "") { repoReadme, error in
             if error != nil {
                 print("bad(")
             } else {
                 guard let repoInfo = repoReadme else { return }
-                DispatchQueue.main.async {
-                    self.renderMarkdown(markdown: repoInfo)
-                }
+                let changedRepoInfo = repoInfo.replacingOccurrences(of: "```", with: "`")
+                let markdownText = SwiftyMarkdown(string: changedRepoInfo)
+                self.readmeTextView.attributedText = markdownText.attributedString()
+                self.readmeTextView.textColor = .white
             }
-        }
-    }
-    
-    func renderMarkdown(markdown: String) {
-        do {
-            let downView = try DownView(frame: self.readmeTextView.bounds, markdownString: markdown)
-            downView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-
-            self.readmeTextView.addSubview(downView)
-        } catch {
-            print("Error rendering Markdown: \(error.localizedDescription)")
         }
     }
     

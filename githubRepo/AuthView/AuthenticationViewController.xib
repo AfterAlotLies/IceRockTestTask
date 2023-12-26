@@ -10,8 +10,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthenticationViewController" customModule="githubRepo" customModuleProvider="target">
             <connections>
                 <outlet property="imageLogo" destination="dKx-v2-Buf" id="3S8-pS-U5O"/>
-                <outlet property="inputTokenField" destination="dyJ-SP-aEW" id="XpL-Wg-Dbe"/>
                 <outlet property="signInButton" destination="vUb-Yp-Ohi" id="QRd-p2-L2V"/>
+                <outlet property="tokenInputField" destination="4HY-t6-ri6" id="muI-Rw-A0O"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,51 +20,35 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Personal access token" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="dyJ-SP-aEW">
-                    <rect key="frame" x="30" y="272" width="333" height="48"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="48" id="Qm3-6f-ahg"/>
-                    </constraints>
-                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <textInputTraits key="textInputTraits"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="8"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                            <integer key="value" value="1"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                </textField>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="githubLogo" translatesAutoresizingMaskIntoConstraints="NO" id="dKx-v2-Buf">
-                    <rect key="frame" x="144" y="129" width="98" height="94"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="94" id="1yc-hP-Uo7"/>
-                    </constraints>
-                </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vUb-Yp-Ohi" customClass="CustomButtonClass" customModule="githubRepo" customModuleProvider="target">
                     <rect key="frame" x="30" y="771" width="333" height="47"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="47" id="aRQ-gr-J7L"/>
-                        <constraint firstAttribute="width" constant="333" id="dXh-Yk-x73"/>
-                    </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4HY-t6-ri6" customClass="TokenInputClass" customModule="githubRepo" customModuleProvider="target">
+                    <rect key="frame" x="30" y="290" width="333" height="76"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="githubLogo" translatesAutoresizingMaskIntoConstraints="NO" id="dKx-v2-Buf">
+                    <rect key="frame" x="147" y="129" width="98" height="94"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="94" id="KFv-1z-jYr"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.05523881169" green="0.056316187189999999" blue="0.1358961887" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
-                <constraint firstItem="dKx-v2-Buf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="144" id="46M-ky-gFK"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dKx-v2-Buf" secondAttribute="trailing" constant="151" id="4ki-ZH-4MC"/>
-                <constraint firstItem="vUb-Yp-Ohi" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="9lq-7P-VPc"/>
-                <constraint firstItem="dyJ-SP-aEW" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="GQW-hY-vu6"/>
-                <constraint firstItem="dyJ-SP-aEW" firstAttribute="top" secondItem="dKx-v2-Buf" secondAttribute="bottom" constant="49" id="Iog-KW-Vf1"/>
-                <constraint firstItem="dKx-v2-Buf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="70" id="XcR-wZ-b84"/>
-                <constraint firstItem="dyJ-SP-aEW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="bFc-0F-HZX"/>
-                <constraint firstItem="vUb-Yp-Ohi" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="mLj-Wa-Raw"/>
+                <constraint firstItem="4HY-t6-ri6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="290" id="NaP-gP-XmM"/>
+                <constraint firstItem="dKx-v2-Buf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="147" id="POg-t0-4ko"/>
+                <constraint firstItem="4HY-t6-ri6" firstAttribute="leading" secondItem="vUb-Yp-Ohi" secondAttribute="leading" id="R2d-eN-I0e"/>
+                <constraint firstItem="4HY-t6-ri6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="UEf-bd-6hq"/>
+                <constraint firstItem="4HY-t6-ri6" firstAttribute="trailing" secondItem="vUb-Yp-Ohi" secondAttribute="trailing" id="V8Z-hd-low"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dKx-v2-Buf" secondAttribute="trailing" constant="148" id="hxN-U9-vWP"/>
+                <constraint firstItem="vUb-Yp-Ohi" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="mCq-Ne-1kk"/>
+                <constraint firstAttribute="bottom" secondItem="4HY-t6-ri6" secondAttribute="bottom" constant="486" id="nde-pz-XQ7"/>
+                <constraint firstItem="4HY-t6-ri6" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="o1b-tO-RWs"/>
+                <constraint firstItem="vUb-Yp-Ohi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="771" id="oNp-Gw-vJU"/>
+                <constraint firstItem="dKx-v2-Buf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="70" id="spU-ks-KR2"/>
             </constraints>
             <point key="canvasLocation" x="136.64122137404578" y="19.718309859154932"/>
         </view>

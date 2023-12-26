@@ -75,6 +75,11 @@ class RepositoriesListViewController: UIViewController {
     
     @objc
     func backToAuthView() {
-        navigationController?.popViewController(animated: false)
+        KeyValueStorage.shared.deleteAuthToken()
+        KeyValueStorage.shared.deleteReposUrl()
+        
+        let authViewController = AuthenticationViewController(nibName: "AuthenticationViewController", bundle: nil)
+        navigationController?.setViewControllers([authViewController], animated: false)
     }
+
 }

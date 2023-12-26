@@ -10,6 +10,7 @@
 		1140223F2B24EEBD005B775A /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1140223E2B24EEBD005B775A /* Int+Extensions.swift */; };
 		114196A62B3871540034768B /* TokenInputClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114196A52B3871540034768B /* TokenInputClass.swift */; };
 		114196A82B3871690034768B /* TokenInputUI.xib in Resources */ = {isa = PBXBuildFile; fileRef = 114196A72B3871690034768B /* TokenInputUI.xib */; };
+		114196AB2B3AE21D0034768B /* KeyValueStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114196AA2B3AE21D0034768B /* KeyValueStorage.swift */; };
 		114434AB2B1DF48700D7355C /* AppRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114434AA2B1DF48700D7355C /* AppRepository.swift */; };
 		114434AD2B1F121000D7355C /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114434AC2B1F121000D7355C /* UserInfo.swift */; };
 		114434B22B208B8C00D7355C /* RepositoriesList+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114434B12B208B8C00D7355C /* RepositoriesList+Extensions.swift */; };
@@ -39,6 +40,7 @@
 		1140223E2B24EEBD005B775A /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
 		114196A52B3871540034768B /* TokenInputClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenInputClass.swift; sourceTree = "<group>"; };
 		114196A72B3871690034768B /* TokenInputUI.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TokenInputUI.xib; sourceTree = "<group>"; };
+		114196AA2B3AE21D0034768B /* KeyValueStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStorage.swift; sourceTree = "<group>"; };
 		114434AA2B1DF48700D7355C /* AppRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRepository.swift; sourceTree = "<group>"; };
 		114434AC2B1F121000D7355C /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		114434B12B208B8C00D7355C /* RepositoriesList+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepositoriesList+Extensions.swift"; sourceTree = "<group>"; };
@@ -89,13 +91,30 @@
 			path = CustomTokenInput;
 			sourceTree = "<group>";
 		};
-		114434A92B1DF46F00D7355C /* Requests+CodableModel */ = {
+		114196A92B3AE2060034768B /* keyStorage */ = {
+			isa = PBXGroup;
+			children = (
+				114196AA2B3AE21D0034768B /* KeyValueStorage.swift */,
+			);
+			path = keyStorage;
+			sourceTree = "<group>";
+		};
+		114196AC2B3AE24C0034768B /* Requests */ = {
 			isa = PBXGroup;
 			children = (
 				114434AA2B1DF48700D7355C /* AppRepository.swift */,
-				114434AE2B205DD700D7355C /* CodableModel */,
 			);
-			path = "Requests+CodableModel";
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		114434A92B1DF46F00D7355C /* Requests+CodableModel+keyStorage */ = {
+			isa = PBXGroup;
+			children = (
+				114196AC2B3AE24C0034768B /* Requests */,
+				114434AE2B205DD700D7355C /* CodableModel */,
+				114196A92B3AE2060034768B /* keyStorage */,
+			);
+			path = "Requests+CodableModel+keyStorage";
 			sourceTree = "<group>";
 		};
 		114434AE2B205DD700D7355C /* CodableModel */ = {
@@ -198,7 +217,7 @@
 				1173137D2B172F8800289745 /* AuthView */,
 				1173137E2B172F9600289745 /* RepositoriesList */,
 				1173137F2B172FA600289745 /* RepositoryInfo */,
-				114434A92B1DF46F00D7355C /* Requests+CodableModel */,
+				114434A92B1DF46F00D7355C /* Requests+CodableModel+keyStorage */,
 				114434B02B208B4A00D7355C /* Extensions */,
 				114434B52B208F2B00D7355C /* Supporting Files */,
 				114434B62B208F6500D7355C /* Application */,
@@ -393,6 +412,7 @@
 				114435E02B22257B00D7355C /* RepositoryDetail.swift in Sources */,
 				117313CB2B1A175800289745 /* RepositoryDetailInfoViewController.swift in Sources */,
 				117313842B17300300289745 /* AuthenticationViewController.swift in Sources */,
+				114196AB2B3AE21D0034768B /* KeyValueStorage.swift in Sources */,
 				114434B22B208B8C00D7355C /* RepositoriesList+Extensions.swift in Sources */,
 				1173136C2B172EDF00289745 /* SceneDelegate.swift in Sources */,
 				114434AB2B1DF48700D7355C /* AppRepository.swift in Sources */,

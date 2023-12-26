@@ -7,5 +7,6 @@ target 'githubRepo' do
 
   # Pods for githubRepo
   pod 'Alamofire', '~> 5.0'
-  pod 'Down', '~> 0.10'
+  pod 'MarkdownKit', '~> 1.7.0'
+  pod 'SwiftyMarkdown', '~> 1.0'
 end

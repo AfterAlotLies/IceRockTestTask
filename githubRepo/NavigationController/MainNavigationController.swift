@@ -11,7 +11,17 @@ class MainNavigationController: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let navigationController = AuthenticationViewController(nibName: "AuthenticationViewController", bundle: nil)
-        self.viewControllers = [navigationController]
+        
+        let keyValue = KeyValueStorage()
+        
+        if let authToken = keyValue.authToken, !authToken.isEmpty {
+            print("AuthToken exists and is not empty")
+            let navigationController = RepositoriesListViewController(nibName: "RepositoriesListViewController", bundle: nil)
+            self.viewControllers = [navigationController]
+        } else {
+            print("AuthToken is nil or empty")
+            let navigationController = AuthenticationViewController(nibName: "AuthenticationViewController", bundle: nil)
+            self.viewControllers = [navigationController]
+        }
     }
 }
