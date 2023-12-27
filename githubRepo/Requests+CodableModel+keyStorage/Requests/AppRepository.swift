@@ -19,7 +19,7 @@ class AppRepository {
     
     func getRepositories(completion: @escaping(Array<Repo>?, Error?) -> Void) {
         
-        let keyValue = KeyValueStorage()
+        let keyValue = KeyValueStorage.shared
         
         if let url = keyValue.reposUrl, !url.isEmpty {
             AF.request(url, method: .get).validate().responseDecodable(of: [Repo].self) { response in

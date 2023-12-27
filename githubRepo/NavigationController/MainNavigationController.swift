@@ -12,7 +12,7 @@ class MainNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let keyValue = KeyValueStorage()
+        let keyValue = KeyValueStorage.shared
         
         if let authToken = keyValue.authToken, !authToken.isEmpty {
             print("AuthToken exists and is not empty")

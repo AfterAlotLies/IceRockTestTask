@@ -21,36 +21,42 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vUb-Yp-Ohi" customClass="CustomButtonClass" customModule="githubRepo" customModuleProvider="target">
-                    <rect key="frame" x="30" y="771" width="333" height="47"/>
+                    <rect key="frame" x="19" y="749" width="356" height="47"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="393" id="Tbk-Mc-to1"/>
+                        <constraint firstAttribute="height" constant="47" id="bma-0L-Hci"/>
+                    </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4HY-t6-ri6" customClass="TokenInputClass" customModule="githubRepo" customModuleProvider="target">
-                    <rect key="frame" x="30" y="290" width="333" height="76"/>
+                    <rect key="frame" x="19" y="282" width="356" height="48"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="393" id="407-8K-Nwk"/>
+                        <constraint firstAttribute="height" constant="48" id="crO-3X-3h8"/>
+                    </constraints>
                 </view>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="githubLogo" translatesAutoresizingMaskIntoConstraints="NO" id="dKx-v2-Buf">
-                    <rect key="frame" x="147" y="129" width="98" height="94"/>
+                    <rect key="frame" x="149" y="108" width="96" height="96"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="94" id="KFv-1z-jYr"/>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="96" id="VGg-Y0-307"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="96" id="iL9-Ja-nae"/>
                     </constraints>
                 </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.05523881169" green="0.056316187189999999" blue="0.1358961887" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
-                <constraint firstItem="4HY-t6-ri6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="290" id="NaP-gP-XmM"/>
-                <constraint firstItem="dKx-v2-Buf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="147" id="POg-t0-4ko"/>
-                <constraint firstItem="4HY-t6-ri6" firstAttribute="leading" secondItem="vUb-Yp-Ohi" secondAttribute="leading" id="R2d-eN-I0e"/>
-                <constraint firstItem="4HY-t6-ri6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="UEf-bd-6hq"/>
-                <constraint firstItem="4HY-t6-ri6" firstAttribute="trailing" secondItem="vUb-Yp-Ohi" secondAttribute="trailing" id="V8Z-hd-low"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dKx-v2-Buf" secondAttribute="trailing" constant="148" id="hxN-U9-vWP"/>
-                <constraint firstItem="vUb-Yp-Ohi" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="mCq-Ne-1kk"/>
-                <constraint firstAttribute="bottom" secondItem="4HY-t6-ri6" secondAttribute="bottom" constant="486" id="nde-pz-XQ7"/>
-                <constraint firstItem="4HY-t6-ri6" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="o1b-tO-RWs"/>
-                <constraint firstItem="vUb-Yp-Ohi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="771" id="oNp-Gw-vJU"/>
-                <constraint firstItem="dKx-v2-Buf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="70" id="spU-ks-KR2"/>
+                <constraint firstItem="4HY-t6-ri6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="19" id="L0R-5u-mTB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="vUb-Yp-Ohi" secondAttribute="bottom" constant="22" id="MQL-MP-caB"/>
+                <constraint firstItem="vUb-Yp-Ohi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="19" id="YXB-Ex-LNc"/>
+                <constraint firstItem="dKx-v2-Buf" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Zey-oB-8Ix"/>
+                <constraint firstItem="4HY-t6-ri6" firstAttribute="top" secondItem="dKx-v2-Buf" secondAttribute="bottom" constant="78" id="g4f-Gc-yTv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vUb-Yp-Ohi" secondAttribute="trailing" constant="18" id="gwr-Pe-7sp"/>
+                <constraint firstItem="dKx-v2-Buf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="49" id="m9T-vc-LSW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4HY-t6-ri6" secondAttribute="trailing" constant="18" id="pmq-xu-SDo"/>
             </constraints>
-            <point key="canvasLocation" x="136.64122137404578" y="19.718309859154932"/>
+            <point key="canvasLocation" x="131.16279069767441" y="17.38197424892704"/>
         </view>
     </objects>
     <resources>
