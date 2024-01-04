@@ -1,4 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-githubRepo/Pods-githubRepo-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
 ${BUILT_PRODUCTS_DIR}/MarkdownKit/MarkdownKit.framework
+${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework
 ${BUILT_PRODUCTS_DIR}/SwiftyMarkdown/SwiftyMarkdown.framework

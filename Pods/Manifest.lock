@@ -1,24 +1,28 @@
 PODS:
   - Alamofire (5.8.1)
   - MarkdownKit (1.7.1)
+  - ReachabilitySwift (5.0.0)
   - SwiftyMarkdown (1.2.4)
 
 DEPENDENCIES:
   - Alamofire (~> 5.0)
   - MarkdownKit (~> 1.7.0)
+  - ReachabilitySwift (~> 5.0)
   - SwiftyMarkdown (~> 1.0)
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - MarkdownKit
+    - ReachabilitySwift
     - SwiftyMarkdown
 
 SPEC CHECKSUMS:
   Alamofire: 3ca42e259043ee0dc5c0cdd76c4bc568b8e42af7
   MarkdownKit: 0b15195c63cf3e39387949c4bdeccde0055e252a
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   SwiftyMarkdown: 7cdec87c6ab5cd9ea0e22ced288e889960649ba5
 
-PODFILE CHECKSUM: 873135d06684ffe4776455c59cd398eec214db4d
+PODFILE CHECKSUM: a85bebe8b4fc20972ae92d37f1825013bd8e326e
 
 COCOAPODS: 1.14.2
