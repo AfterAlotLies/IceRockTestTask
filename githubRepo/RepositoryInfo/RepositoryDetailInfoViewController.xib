@@ -45,6 +45,15 @@
                                 </textView>
                             </subviews>
                         </stackView>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="rKk-ap-ZC1" userLabel="readme Loader">
+                            <rect key="frame" x="0.0" y="150" width="393" height="37"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </activityIndicatorView>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="8Z4-82-O35" userLabel="readme Loader">
+                            <rect key="frame" x="157" y="370" width="82" height="80"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </activityIndicatorView>
                     </subviews>
                     <constraints>
                         <constraint firstItem="vIe-6Q-0cx" firstAttribute="width" secondItem="eJ8-k1-81O" secondAttribute="width" id="3eL-jY-6NF"/>
@@ -56,10 +65,6 @@
                     <viewLayoutGuide key="contentLayoutGuide" id="fE2-N0-Dg0"/>
                     <viewLayoutGuide key="frameLayoutGuide" id="eJ8-k1-81O"/>
                 </scrollView>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="rKk-ap-ZC1">
-                    <rect key="frame" x="0.0" y="407" width="393" height="37"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.05523881169" green="0.056316187189999999" blue="0.1358961887" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
