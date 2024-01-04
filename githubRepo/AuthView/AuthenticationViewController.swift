@@ -20,10 +20,10 @@ class AuthenticationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        signInUserButton()
-        hideKeyBoard()
         checkInternetConnection()
         errorView.delegate = self
+        signInUserButton()
+        hideKeyBoard()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,9 +32,8 @@ class AuthenticationViewController: UIViewController {
     
     private func checkInternetConnection() {
         if internetConnection.connection != .wifi && internetConnection.connection != .cellular {
-            hideOrShowAuthView(response: "fail")
             errorView.setTypeOfPreviousView(type: .authController)
-            showBadConnectionView()
+            hideOrShowAuthView(response: "fail")
         } else {
             errorView.hideErrorView()
         }
@@ -51,14 +50,10 @@ class AuthenticationViewController: UIViewController {
                 if self.internetConnection.connection == .wifi || self.internetConnection.connection == .cellular {
                     self.authUserInApp(token: token)
                 } else {
-                    self.showBadConnectionView()
+                    self.errorView.showErrorView()
                 }
             }
         }
-    }
-    
-    private func showBadConnectionView() {
-        errorView.showErrorView()
     }
     
     public func hideOrShowAuthView(response: String) {
@@ -72,6 +67,7 @@ class AuthenticationViewController: UIViewController {
             imageLogo.isHidden = true
             tokenInputField.isHidden = true
             signInButton.isHidden = true
+            errorView.showErrorView()
         }
     }
     
