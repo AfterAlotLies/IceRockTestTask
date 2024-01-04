@@ -21,6 +21,7 @@
 		114435DD2B2224BE00D7355C /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 114435D82B2223A300D7355C /* CustomTableViewCell.xib */; };
 		114435E02B22257B00D7355C /* RepositoryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114435DF2B22257B00D7355C /* RepositoryDetail.swift */; };
 		114435E22B22259700D7355C /* RepositoryDetailUI.xib in Resources */ = {isa = PBXBuildFile; fileRef = 114435E12B22259700D7355C /* RepositoryDetailUI.xib */; };
+		11567D5B2B46C81500A8AF9D /* ErrorView+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11567D5A2B46C81500A8AF9D /* ErrorView+Protocol.swift */; };
 		1173136A2B172EDF00289745 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117313692B172EDF00289745 /* AppDelegate.swift */; };
 		1173136C2B172EDF00289745 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1173136B2B172EDF00289745 /* SceneDelegate.swift */; };
 		117313732B172EE100289745 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 117313722B172EE100289745 /* Assets.xcassets */; };
@@ -33,6 +34,11 @@
 		117313C52B1A034000289745 /* RepositoriesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 117313C32B1A034000289745 /* RepositoriesListViewController.xib */; };
 		117313CB2B1A175800289745 /* RepositoryDetailInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117313C92B1A175800289745 /* RepositoryDetailInfoViewController.swift */; };
 		117313CC2B1A175800289745 /* RepositoryDetailInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 117313CA2B1A175800289745 /* RepositoryDetailInfoViewController.xib */; };
+		11A590A12B3C657200EDDF7E /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A590A02B3C657200EDDF7E /* ErrorViewController.swift */; };
+		11A590A32B3C658400EDDF7E /* ErrorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11A590A22B3C658400EDDF7E /* ErrorViewController.xib */; };
+		11A590A52B41984600EDDF7E /* InternetConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A590A42B41984600EDDF7E /* InternetConnection.swift */; };
+		11A590A82B45777700EDDF7E /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A590A72B45777700EDDF7E /* ErrorView.swift */; };
+		11A590AA2B45778A00EDDF7E /* ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11A590A92B45778A00EDDF7E /* ErrorView.xib */; };
 		CD89ACEFEA16E3BE03B47013 /* Pods_githubRepo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1BED8C7408CDAC20161CD88 /* Pods_githubRepo.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +57,7 @@
 		114435D92B2223A300D7355C /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		114435DF2B22257B00D7355C /* RepositoryDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetail.swift; sourceTree = "<group>"; };
 		114435E12B22259700D7355C /* RepositoryDetailUI.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryDetailUI.xib; sourceTree = "<group>"; };
+		11567D5A2B46C81500A8AF9D /* ErrorView+Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ErrorView+Protocol.swift"; sourceTree = "<group>"; };
 		117313662B172EDF00289745 /* githubRepo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = githubRepo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		117313692B172EDF00289745 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1173136B2B172EDF00289745 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +72,11 @@
 		117313C32B1A034000289745 /* RepositoriesListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoriesListViewController.xib; sourceTree = "<group>"; };
 		117313C92B1A175800289745 /* RepositoryDetailInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailInfoViewController.swift; sourceTree = "<group>"; };
 		117313CA2B1A175800289745 /* RepositoryDetailInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryDetailInfoViewController.xib; sourceTree = "<group>"; };
+		11A590A02B3C657200EDDF7E /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
+		11A590A22B3C658400EDDF7E /* ErrorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorViewController.xib; sourceTree = "<group>"; };
+		11A590A42B41984600EDDF7E /* InternetConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetConnection.swift; sourceTree = "<group>"; };
+		11A590A72B45777700EDDF7E /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		11A590A92B45778A00EDDF7E /* ErrorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorView.xib; sourceTree = "<group>"; };
 		9369A6AC7C55F2139C245CF3 /* Pods-githubRepo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-githubRepo.debug.xcconfig"; path = "Target Support Files/Pods-githubRepo/Pods-githubRepo.debug.xcconfig"; sourceTree = "<group>"; };
 		D1BED8C7408CDAC20161CD88 /* Pods_githubRepo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_githubRepo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E58FCD385542B042FA76DBF7 /* Pods-githubRepo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-githubRepo.release.xcconfig"; path = "Target Support Files/Pods-githubRepo/Pods-githubRepo.release.xcconfig"; sourceTree = "<group>"; };
@@ -110,6 +122,7 @@
 		114434A92B1DF46F00D7355C /* Requests+CodableModel+keyStorage */ = {
 			isa = PBXGroup;
 			children = (
+				11A590A42B41984600EDDF7E /* InternetConnection.swift */,
 				114196AC2B3AE24C0034768B /* Requests */,
 				114434AE2B205DD700D7355C /* CodableModel */,
 				114196A92B3AE2060034768B /* keyStorage */,
@@ -131,6 +144,7 @@
 				114434B12B208B8C00D7355C /* RepositoriesList+Extensions.swift */,
 				114434B32B208DB900D7355C /* AuthenticationView+Extensions.swift */,
 				1140223E2B24EEBD005B775A /* Int+Extensions.swift */,
+				11567D5A2B46C81500A8AF9D /* ErrorView+Protocol.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -156,6 +170,7 @@
 		114435D32B2223A300D7355C /* Custom UI */ = {
 			isa = PBXGroup;
 			children = (
+				11A590A62B45776800EDDF7E /* ErrorView */,
 				114196A42B3871220034768B /* CustomTokenInput */,
 				114435DE2B22255800D7355C /* RepositoryDetail */,
 				114435D42B2223A300D7355C /* CustomButton */,
@@ -217,6 +232,7 @@
 				1173137D2B172F8800289745 /* AuthView */,
 				1173137E2B172F9600289745 /* RepositoriesList */,
 				1173137F2B172FA600289745 /* RepositoryInfo */,
+				11A5909F2B3C63B000EDDF7E /* ErrorView */,
 				114434A92B1DF46F00D7355C /* Requests+CodableModel+keyStorage */,
 				114434B02B208B4A00D7355C /* Extensions */,
 				114434B52B208F2B00D7355C /* Supporting Files */,
@@ -260,6 +276,24 @@
 				117313BE2B19FE1900289745 /* MainNavigationController.xib */,
 			);
 			path = NavigationController;
+			sourceTree = "<group>";
+		};
+		11A5909F2B3C63B000EDDF7E /* ErrorView */ = {
+			isa = PBXGroup;
+			children = (
+				11A590A02B3C657200EDDF7E /* ErrorViewController.swift */,
+				11A590A22B3C658400EDDF7E /* ErrorViewController.xib */,
+			);
+			path = ErrorView;
+			sourceTree = "<group>";
+		};
+		11A590A62B45776800EDDF7E /* ErrorView */ = {
+			isa = PBXGroup;
+			children = (
+				11A590A72B45777700EDDF7E /* ErrorView.swift */,
+				11A590A92B45778A00EDDF7E /* ErrorView.xib */,
+			);
+			path = ErrorView;
 			sourceTree = "<group>";
 		};
 		37631553564EE4481C40DA5C /* Pods */ = {
@@ -342,8 +376,10 @@
 				114196A82B3871690034768B /* TokenInputUI.xib in Resources */,
 				114435DD2B2224BE00D7355C /* CustomTableViewCell.xib in Resources */,
 				114435DC2B2224BB00D7355C /* CustomButtonUI.xib in Resources */,
+				11A590AA2B45778A00EDDF7E /* ErrorView.xib in Resources */,
 				114435E22B22259700D7355C /* RepositoryDetailUI.xib in Resources */,
 				117313BF2B19FE1900289745 /* MainNavigationController.xib in Resources */,
+				11A590A32B3C658400EDDF7E /* ErrorViewController.xib in Resources */,
 				117313C52B1A034000289745 /* RepositoriesListViewController.xib in Resources */,
 				117313852B17300300289745 /* AuthenticationViewController.xib in Resources */,
 				117313CC2B1A175800289745 /* RepositoryDetailInfoViewController.xib in Resources */,
@@ -403,6 +439,7 @@
 			files = (
 				114435DB2B22246800D7355C /* CustomTableViewCell.swift in Sources */,
 				114435DA2B22246300D7355C /* CustomButtonClass.swift in Sources */,
+				11A590A82B45777700EDDF7E /* ErrorView.swift in Sources */,
 				114196A62B3871540034768B /* TokenInputClass.swift in Sources */,
 				114434B42B208DB900D7355C /* AuthenticationView+Extensions.swift in Sources */,
 				114434AD2B1F121000D7355C /* UserInfo.swift in Sources */,
@@ -412,10 +449,13 @@
 				114435E02B22257B00D7355C /* RepositoryDetail.swift in Sources */,
 				117313CB2B1A175800289745 /* RepositoryDetailInfoViewController.swift in Sources */,
 				117313842B17300300289745 /* AuthenticationViewController.swift in Sources */,
+				11567D5B2B46C81500A8AF9D /* ErrorView+Protocol.swift in Sources */,
 				114196AB2B3AE21D0034768B /* KeyValueStorage.swift in Sources */,
+				11A590A52B41984600EDDF7E /* InternetConnection.swift in Sources */,
 				114434B22B208B8C00D7355C /* RepositoriesList+Extensions.swift in Sources */,
 				1173136C2B172EDF00289745 /* SceneDelegate.swift in Sources */,
 				114434AB2B1DF48700D7355C /* AppRepository.swift in Sources */,
+				11A590A12B3C657200EDDF7E /* ErrorViewController.swift in Sources */,
 				1140223F2B24EEBD005B775A /* Int+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -568,8 +608,8 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -598,8 +638,8 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
