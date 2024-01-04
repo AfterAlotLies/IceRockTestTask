@@ -9,7 +9,7 @@ import UIKit
 
 class CustomButtonClass: UIView {
     
-    @IBOutlet private weak var signUpButton: UIButton!
+    @IBOutlet private weak var customButton: UIButton!
     @IBOutlet private weak var loadingIndicator: UIActivityIndicatorView!
     
     var actionHandler: (() -> Void)?
@@ -29,7 +29,6 @@ class CustomButtonClass: UIView {
         subview.frame = self.bounds
         subview.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.addSubview(subview)
-        setupButtonUI()
     }
     
     private func loadViewFromXib() -> UIView {
@@ -38,13 +37,14 @@ class CustomButtonClass: UIView {
         return view
     }
     
-    private func setupButtonUI() {
-        signUpButton.titleLabel?.text = "Sign In"
+    func setButtonText(buttonText: String) {
+        customButton.titleLabel?.font = UIFont(name: "SF Mono", size: 20)
+        customButton.setTitle(buttonText, for: .normal)
         loadingIndicator.isHidden = true
     }
     
     func startLoading() {
-        signUpButton.titleLabel?.isHidden = true
+        customButton.titleLabel?.isHidden = true
         loadingIndicator.isHidden = false
         loadingIndicator.startAnimating()
     }
@@ -52,10 +52,10 @@ class CustomButtonClass: UIView {
     func stopLoading() {
         loadingIndicator.stopAnimating()
         loadingIndicator.isHidden = true
-        signUpButton.titleLabel?.isHidden = false
+        customButton.titleLabel?.isHidden = false
     }
     
-    @IBAction func signInUser(_ sender: Any) {
+    @IBAction func makeActionByClick(_ sender: Any) {
         actionHandler?()
     }
 }
