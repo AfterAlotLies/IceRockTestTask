@@ -141,10 +141,10 @@
 		114434B02B208B4A00D7355C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				11567D5C2B46D5BD00A8AF9D /* Protocols */,
 				114434B12B208B8C00D7355C /* RepositoriesList+Extensions.swift */,
 				114434B32B208DB900D7355C /* AuthenticationView+Extensions.swift */,
 				1140223E2B24EEBD005B775A /* Int+Extensions.swift */,
-				11567D5A2B46C81500A8AF9D /* ErrorView+Protocol.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -204,6 +204,14 @@
 				114435E12B22259700D7355C /* RepositoryDetailUI.xib */,
 			);
 			path = RepositoryDetail;
+			sourceTree = "<group>";
+		};
+		11567D5C2B46D5BD00A8AF9D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				11567D5A2B46C81500A8AF9D /* ErrorView+Protocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		1173135D2B172EDF00289745 = {
