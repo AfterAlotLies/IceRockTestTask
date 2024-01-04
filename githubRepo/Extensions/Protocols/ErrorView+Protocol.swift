@@ -9,4 +9,11 @@ import UIKit
 
 protocol ErrorViewDelegate: AnyObject {
     func retryAction()
+    func retryToGetRepoList()
+}
+
+extension ErrorViewDelegate {
+    func retryToGetRepoList() {
+        //not necessary to use
+    }
 }

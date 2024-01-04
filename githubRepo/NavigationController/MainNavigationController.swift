@@ -6,22 +6,30 @@
 //
 
 import UIKit
+import Reachability
 
 class MainNavigationController: UINavigationController {
+    
+    private let internetConnection = InternetConnection.shared.internetConnection
+    private let keyValue = KeyValueStorage.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let keyValue = KeyValueStorage.shared
-        
         if let authToken = keyValue.authToken, !authToken.isEmpty {
-            print("AuthToken exists and is not empty")
-            let navigationController = RepositoriesListViewController(nibName: "RepositoriesListViewController", bundle: nil)
-            self.viewControllers = [navigationController]
+            setRepoListMain()
         } else {
-            print("AuthToken is nil or empty")
-            let navigationController = AuthenticationViewController(nibName: "AuthenticationViewController", bundle: nil)
-            self.viewControllers = [navigationController]
+            setAuthViewMain()
         }
+    }
+    
+    private func setAuthViewMain() {
+        let navigationController = AuthenticationViewController(nibName: "AuthenticationViewController", bundle: nil)
+        self.viewControllers = [navigationController]
+    }
+    
+    private func setRepoListMain() {
+        let navigationController = RepositoriesListViewController(nibName: "RepositoriesListViewController", bundle: nil)
+        self.viewControllers = [navigationController]
     }
 }

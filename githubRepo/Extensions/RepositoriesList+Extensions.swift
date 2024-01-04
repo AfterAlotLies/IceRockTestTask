@@ -68,6 +68,19 @@ extension RepositoriesListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let repositoryDetail = RepositoryDetailInfoViewController(nibName: "RepositoryDetailInfoViewController", bundle: nil)
         repositoryDetail.setChosenRepoId(repoId: reposIdArray[indexPath.row])
+        repositoryDetail.navigationItem.title = nameRepoArray[indexPath.row]
         navigationController?.pushViewController(repositoryDetail, animated: true)
+    }
+}
+
+// MARK: - RepositoriesListViewController + ErrorViewDelegate
+extension RepositoriesListViewController: ErrorViewDelegate {
+    
+    func retryAction() {
+        showBadConnectionView(response: "success")
+    }
+    
+    func retryToGetRepoList() {
+        retryToGetRepositories()
     }
 }

@@ -14,11 +14,10 @@ class RepositoryDetailInfoViewController: UIViewController {
     @IBOutlet private weak var topRepoInfoView: RepositoryDetail!
     @IBOutlet private weak var readmeTextView: UITextView!
     @IBOutlet private weak var readmeLoader: UIActivityIndicatorView!
+    @IBOutlet private weak var errorView: ErrorView!
     
     private var chosenRepoId: String = ""
-    
-    var readmeString: String = ""
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         getRepositoryDetail()
@@ -49,7 +48,7 @@ class RepositoryDetailInfoViewController: UIViewController {
                 guard let repoDetail = response else { return }
                 self.setInRepoDetail(repoDetail: repoDetail)
             }
-            //self.topRepoInfoView.hideLicenseView()
+            self.topRepoInfoView.hideLicenseView()
         }
     }
     

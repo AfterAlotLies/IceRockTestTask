@@ -15,7 +15,7 @@ class ErrorView: UIView {
     @IBOutlet private weak var errorMessage: UILabel!
     @IBOutlet private weak var retryButton: CustomButtonClass!
     
-    let internetConnection = InternetConnection.shared.internetConnection
+    private let internetConnection = InternetConnection.shared.internetConnection
     private var previousView : ControllerType = .other
     weak var delegate: ErrorViewDelegate?
     
@@ -69,6 +69,23 @@ class ErrorView: UIView {
     }
     
     public func showErrorView() {
+        switch previousView {
+        case .authController:
+            badInternetConnectionError()
+        case .repoListBadConnection:
+            badInternetConnectionError()
+        case .repoListEmpty:
+            emptyRepositoriesWarning()
+        case .repoDetailBadConnection:
+            badInternetConnectionError()
+        case .repoDetailReadmeError:
+            loadReadmeError()
+        case .other:
+            otherErrors()
+        }
+    }
+    
+    private func setPropertiesToElements() {
         self.alpha = 1
         errorImage.isHidden = false
         errorTitle.isHidden = false
@@ -76,19 +93,80 @@ class ErrorView: UIView {
         retryButton.isHidden = false
     }
     
+    private func badInternetConnectionError() {
+        setPropertiesToElements()
+        errorImage.image = UIImage(named: "internetError")
+        errorTitle.text = "Connection error"
+        errorMessage.text = "Check your internet connection"
+        errorTitle.textColor = .red
+        errorMessage.textColor = .white
+
+    }
+    
+    private func emptyRepositoriesWarning() {
+        setPropertiesToElements()
+        errorImage.image = UIImage(named: "emptyFolder")
+        errorTitle.text = "Empty"
+        errorMessage.text = "No repositories at the moment"
+        errorTitle.textColor = .cyan
+        errorMessage.textColor = .white
+    }
+    
+    private func loadReadmeError() {
+        setPropertiesToElements()
+        errorImage.image = UIImage(named: "internetError")
+        errorTitle.text = "Load error"
+        errorMessage.text = "Check your internet connection"
+        errorTitle.textColor = .red
+        errorMessage.textColor = .white
+    }
+    
+    private func otherErrors() {
+        setPropertiesToElements()
+        errorImage.image = UIImage(named: "otherError")
+        errorTitle.text = "Something gone wrong"
+        errorMessage.text = "Reboot your app"
+        errorTitle.textColor = .red
+        errorMessage.textColor = .white
+    }
+    
     private func retryButtonAction() {
         retryButton.actionHandler = {
+            self.retryButton.startLoading()
             try? self.internetConnection.startNotifier()
-            self.retryBackToAuthView()
+            self.retryBackToAuthView(previousView: self.previousView)
         }
     }
     
-    private func retryBackToAuthView() {
-        if internetConnection.connection == .wifi || internetConnection.connection == .cellular {
-            delegate?.retryAction()
-        } else {
-            internetConnection.stopNotifier()
-            showErrorView()
+    private func retryBackToAuthView(previousView: ControllerType) {
+        switch previousView {
+        case .authController, .repoListBadConnection, .repoDetailBadConnection:
+            if internetConnection.connection == .wifi || internetConnection.connection == .cellular {
+                let successWorkItem = {
+                    self.delegate?.retryAction()
+                    self.retryButton.stopLoading()
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: successWorkItem)
+            } else {
+                let failureWorkItem = {
+                    self.internetConnection.stopNotifier()
+                    self.badInternetConnectionError()
+                    self.showErrorView()
+                    self.retryButton.stopLoading()
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: failureWorkItem)
+            }
+        case .repoListEmpty:
+            let workItem = {
+                self.delegate?.retryToGetRepoList()
+                self.retryButton.stopLoading()
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: workItem)
+        case .repoDetailReadmeError:
+            print("321")
+        default:
+            print("other")
         }
+        
     }
 }
