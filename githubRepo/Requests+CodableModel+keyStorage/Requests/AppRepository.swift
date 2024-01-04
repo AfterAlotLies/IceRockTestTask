@@ -10,6 +10,9 @@ import Alamofire
 
 class AppRepository {
     
+    static let shared = AppRepository()
+    private init() {}
+    
     private var authUrl = ""
     
     func setAuthUrl(url: String?) {
@@ -69,7 +72,7 @@ class AppRepository {
             }
         }
     }
-
+    
     func signIn(token: String, completion: @escaping (UserInfo?, Error?) -> Void) {
         let headers: HTTPHeaders = [
             "Authorization": "Bearer \(token)",
@@ -89,7 +92,4 @@ class AppRepository {
             }
         }
     }
-    
-    static let shared = AppRepository()
-    private init() {}
 }
