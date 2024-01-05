@@ -14,8 +14,6 @@ class RepositoriesListViewController: UIViewController {
     @IBOutlet private weak var loadingTableView: UIActivityIndicatorView!
     @IBOutlet private weak var errorView: ErrorView!
     
-    private let internetConnection = InternetConnection.shared.internetConnection
-
     var nameRepoArray = [String]()
     var languageArray = [String]()
     var descriptionArray = [String]()
@@ -27,21 +25,22 @@ class RepositoriesListViewController: UIViewController {
         setupNavBar()
         setupView()
         checkInternetConnection()
-        print("did load")
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("will appear")
     }
     
-    public func showBadConnectionView(response: String) {
+    public func showOrHideBadConnectionRepoListView(response: String) {
         switch response {
+            
         case "success":
+            
             repoList.isHidden = false
             loadingTableView.isHidden = false
             errorView.hideErrorView()
             getUserRepositories()
+            
         default:
             repoList.isHidden = true
             loadingTableView.isHidden = true
@@ -54,28 +53,29 @@ class RepositoriesListViewController: UIViewController {
     }
     
     private func checkInternetConnection() {
-        if internetConnection.connection == .wifi || internetConnection.connection == .cellular {
-            errorView.hideErrorView()
-            getUserRepositories()
-        } else {
-            errorView.setTypeOfPreviousView(type: .repoListBadConnection)
-            showBadConnectionView(response: "fail")
+        InternetConnection.shared.checkInternetConnection {
+            self.showOrHideBadConnectionRepoListView(response: "success")
+        } failureHandler: {
+            self.errorView.setTypeOfPreviousView(type: .repoListBadConnection)
+            self.showOrHideBadConnectionRepoListView(response: "fail")
         }
     }
     
     private func getUserRepositories() {
         clearAllArrays()
+        
         if loadingTableView.isHidden == true {
             loadingTableView.isHidden = false
         }
+        
         loadingTableView.startAnimating()
-        AppRepository.shared.getRepositories { data, error in
+        AppRepository.shared.getRepositories { repoDetail, error in
             if error != nil {
                 print(error?.localizedDescription ?? "error")
             } else {
-                guard let repositoriesInfo = data else { return }
-                for info in repositoriesInfo {
-                    self.addInfoToArrays(info: info)
+                guard let repositoryDetail = repoDetail else { return }
+                for detail in repositoryDetail {
+                    self.addInfoToArrays(detail: detail)
                 }
                 DispatchQueue.main.async {
                     if !self.nameRepoArray.isEmpty {
@@ -86,7 +86,7 @@ class RepositoriesListViewController: UIViewController {
                         self.loadingTableView.isHidden = true
                     } else {
                         self.errorView.setTypeOfPreviousView(type: .repoListEmpty)
-                        self.showBadConnectionView(response: "empty")
+                        self.showOrHideBadConnectionRepoListView(response: "empty")
                     }
                 }
             }
@@ -103,11 +103,11 @@ class RepositoriesListViewController: UIViewController {
         navigationItem.backButtonTitle = ""
     }
     
-    private func addInfoToArrays(info: Repo) {
-        nameRepoArray.append(info.name)
-        languageArray.append(info.language ?? "")
-        descriptionArray.append(info.description ?? "")
-        reposIdArray.append(info.id)
+    private func addInfoToArrays(detail: Repo) {
+        nameRepoArray.append(detail.name)
+        languageArray.append(detail.language ?? "")
+        descriptionArray.append(detail.description ?? "")
+        reposIdArray.append(detail.id)
     }
     
     private func clearAllArrays() {
