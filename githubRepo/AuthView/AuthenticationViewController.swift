@@ -15,9 +15,7 @@ class AuthenticationViewController: UIViewController {
     @IBOutlet private weak var tokenInputField: TokenInputClass!
     @IBOutlet private weak var signInButton: CustomButtonClass!
     @IBOutlet private weak var errorView: ErrorView!
-    
-    private let internetConnection = InternetConnection.shared.internetConnection
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         checkInternetConnection()
@@ -30,12 +28,29 @@ class AuthenticationViewController: UIViewController {
         super.viewWillAppear(animated)
     }
     
-    private func checkInternetConnection() {
-        if internetConnection.connection != .wifi && internetConnection.connection != .cellular {
-            errorView.setTypeOfPreviousView(type: .authController)
-            hideOrShowAuthView(response: "fail")
-        } else {
+    public func showOrHideBadConnectionAuthView(response: String) {
+        switch response {
+
+        case "success":
+            imageLogo.isHidden = false
+            tokenInputField.isHidden = false
+            signInButton.isHidden = false
             errorView.hideErrorView()
+
+        default:
+            imageLogo.isHidden = true
+            tokenInputField.isHidden = true
+            signInButton.isHidden = true
+            errorView.showErrorView()
+        }
+    }
+    
+    private func checkInternetConnection() {
+        InternetConnection.shared.checkInternetConnection {
+            self.showOrHideBadConnectionAuthView(response: "success")
+        } failureHandler: {
+            self.errorView.setTypeOfPreviousView(type: .authController)
+            self.showOrHideBadConnectionAuthView(response: "fail")
         }
     }
     
@@ -47,27 +62,16 @@ class AuthenticationViewController: UIViewController {
                 self.errorAlert(title: "Error",
                                 message: "Enter your personal access token")
             } else {
-                if self.internetConnection.connection == .wifi || self.internetConnection.connection == .cellular {
+                InternetConnection.shared.checkInternetConnection {
                     self.authUserInApp(token: token)
-                } else {
-                    self.errorView.showErrorView()
+                } failureHandler: {
+                    let noConnectionItem = {
+                        self.errorView.setTypeOfPreviousView(type: .authController)
+                        self.showOrHideBadConnectionAuthView(response: "fail")
+                    }
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: noConnectionItem)
                 }
             }
-        }
-    }
-    
-    public func hideOrShowAuthView(response: String) {
-        switch response {
-        case "success":
-            imageLogo.isHidden = false
-            tokenInputField.isHidden = false
-            signInButton.isHidden = false
-            errorView.hideErrorView()
-        default:
-            imageLogo.isHidden = true
-            tokenInputField.isHidden = true
-            signInButton.isHidden = true
-            errorView.showErrorView()
         }
     }
     
