@@ -29,22 +29,22 @@
                     </constraints>
                 </view>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="internetError" translatesAutoresizingMaskIntoConstraints="NO" id="Ctl-mk-VUG">
-                    <rect key="frame" x="173.66666666666666" y="336" width="83.999999999999972" height="84"/>
+                    <rect key="frame" x="173.66666666666666" y="335.66666666666669" width="83.999999999999972" height="84"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="84" id="Kou-pJ-5PT"/>
                         <constraint firstAttribute="height" constant="84" id="Ysf-cR-dG1"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2sy-Cl-3NI">
-                    <rect key="frame" x="103.33333333333333" y="476" width="224.66666666666669" height="18.666666666666686"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DCe-45-QCb">
+                    <rect key="frame" x="129" y="446.66666666666669" width="173" height="21"/>
                     <constraints>
-                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="241" id="ZT2-7Q-bUn"/>
-                        <constraint firstAttribute="height" constant="18.670000000000002" id="edw-5z-jgO"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="173" id="jS6-Ya-LNg"/>
+                        <constraint firstAttribute="height" constant="21" id="kHX-JQ-jET"/>
                     </constraints>
                     <attributedString key="attributedText">
-                        <fragment content="Check your internet connection">
+                        <fragment content="Connection error">
                             <attributes>
-                                <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="NSColor" red="1" green="0.013099520375223106" blue="0.040567876814794734" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <font key="NSFont" size="16" name="SFMono-Regular"/>
                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                             </attributes>
@@ -52,16 +52,16 @@
                     </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DCe-45-QCb">
-                    <rect key="frame" x="155.33333333333334" y="447" width="120.33333333333334" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2sy-Cl-3NI">
+                    <rect key="frame" x="68.666666666666686" y="475.66666666666669" width="294" height="19"/>
                     <constraints>
-                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="140" id="b9k-C5-lvg"/>
-                        <constraint firstAttribute="height" constant="21" id="gQa-Lf-qZL"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="294" id="32n-9A-y2d"/>
+                        <constraint firstAttribute="height" constant="19" id="VQr-HJ-3KX"/>
                     </constraints>
                     <attributedString key="attributedText">
-                        <fragment content="Connection error">
+                        <fragment content="Check your internet connection">
                             <attributes>
-                                <color key="NSColor" red="1" green="0.013099520375223106" blue="0.040567876814794734" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <font key="NSFont" size="16" name="SFMono-Regular"/>
                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                             </attributes>
@@ -84,7 +84,7 @@
                 <constraint firstItem="Ctl-mk-VUG" firstAttribute="centerX" secondItem="DCe-45-QCb" secondAttribute="centerX" id="sCC-8H-rEa"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
-            <point key="canvasLocation" x="95" y="-32"/>
+            <point key="canvasLocation" x="94.883720930232556" y="-32.188841201716741"/>
         </view>
     </objects>
     <resources>
