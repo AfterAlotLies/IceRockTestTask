@@ -61,8 +61,8 @@ class AppRepository {
     }
     
     func getRepositoryReadme(ownerName: String, repositoryName: String, branchName: String, completion: @escaping (String?, Error?) -> Void) {
-        let readmeUrl = "https://raw.githubusercontent.com/icerockdev/moko-resources/master/README.md"
-        
+//        let readmeUrl = "https://raw.githubusercontent.com/icerockdev/moko-resources/master/README.md"
+        let readmeUrl = "https://raw.githubusercontent.com/AfterAlotLies/EventList/main/README.md"
         AF.request(readmeUrl, method: .get).validate().responseString { response in
             switch response.result {
             case .success(let data):
