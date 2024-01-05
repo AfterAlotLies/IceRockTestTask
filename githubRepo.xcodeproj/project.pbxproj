@@ -22,6 +22,7 @@
 		114435E02B22257B00D7355C /* RepositoryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114435DF2B22257B00D7355C /* RepositoryDetail.swift */; };
 		114435E22B22259700D7355C /* RepositoryDetailUI.xib in Resources */ = {isa = PBXBuildFile; fileRef = 114435E12B22259700D7355C /* RepositoryDetailUI.xib */; };
 		11567D5B2B46C81500A8AF9D /* ErrorView+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11567D5A2B46C81500A8AF9D /* ErrorView+Protocol.swift */; };
+		11567D5E2B48318900A8AF9D /* RepositoryDetailInfo+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11567D5D2B48318900A8AF9D /* RepositoryDetailInfo+Extensions.swift */; };
 		1173136A2B172EDF00289745 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117313692B172EDF00289745 /* AppDelegate.swift */; };
 		1173136C2B172EDF00289745 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1173136B2B172EDF00289745 /* SceneDelegate.swift */; };
 		117313732B172EE100289745 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 117313722B172EE100289745 /* Assets.xcassets */; };
@@ -56,6 +57,7 @@
 		114435DF2B22257B00D7355C /* RepositoryDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetail.swift; sourceTree = "<group>"; };
 		114435E12B22259700D7355C /* RepositoryDetailUI.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryDetailUI.xib; sourceTree = "<group>"; };
 		11567D5A2B46C81500A8AF9D /* ErrorView+Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ErrorView+Protocol.swift"; sourceTree = "<group>"; };
+		11567D5D2B48318900A8AF9D /* RepositoryDetailInfo+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepositoryDetailInfo+Extensions.swift"; sourceTree = "<group>"; };
 		117313662B172EDF00289745 /* githubRepo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = githubRepo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		117313692B172EDF00289745 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1173136B2B172EDF00289745 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				114434B12B208B8C00D7355C /* RepositoriesList+Extensions.swift */,
 				114434B32B208DB900D7355C /* AuthenticationView+Extensions.swift */,
 				1140223E2B24EEBD005B775A /* Int+Extensions.swift */,
+				11567D5D2B48318900A8AF9D /* RepositoryDetailInfo+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 			files = (
 				114435DB2B22246800D7355C /* CustomTableViewCell.swift in Sources */,
 				114435DA2B22246300D7355C /* CustomButtonClass.swift in Sources */,
+				11567D5E2B48318900A8AF9D /* RepositoryDetailInfo+Extensions.swift in Sources */,
 				11A590A82B45777700EDDF7E /* ErrorView.swift in Sources */,
 				114196A62B3871540034768B /* TokenInputClass.swift in Sources */,
 				114434B42B208DB900D7355C /* AuthenticationView+Extensions.swift in Sources */,
