@@ -77,7 +77,7 @@ extension RepositoriesListViewController: UITableViewDelegate {
 extension RepositoriesListViewController: ErrorViewDelegate {
     
     func retryAction() {
-        showBadConnectionView(response: "success")
+        showOrHideBadConnectionRepoListView(response: "success")
     }
     
     func retryToGetRepoList() {

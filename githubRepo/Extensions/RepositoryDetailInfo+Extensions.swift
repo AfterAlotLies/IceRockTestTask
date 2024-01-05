@@ -5,4 +5,11 @@
 //  Created by Vyacheslav on 05.01.2024.
 //
 
-import Foundation
+import UIKit
+
+extension RepositoryDetailInfoViewController: ErrorViewDelegate {
+    
+    func retryAction() {
+        showOrHideBadConnectionRepoDetailView(response: "success")
+    }
+}
