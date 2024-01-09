@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -10,54 +10,44 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RepositoryDetailInfoViewController" customModule="githubRepo" customModuleProvider="target">
             <connections>
-                <outlet property="errorView" destination="EB8-pF-pnd" id="7Kt-eX-w3a"/>
-                <outlet property="readmeTextView" destination="tv6-2x-0BT" id="VCr-gc-J6H"/>
-                <outlet property="topRepoInfoView" destination="182-r0-oa9" id="rgs-cZ-J5h"/>
+                <outlet property="readmeTextView" destination="Vbe-au-rhV" id="fdr-yr-gVb"/>
+                <outlet property="topRepoInfoView" destination="IhQ-ag-DPv" id="oXo-oS-RNu"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="182-r0-oa9" customClass="RepositoryDetail" customModule="githubRepo" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="59" width="393" height="128"/>
-                    <color key="backgroundColor" red="0.05523881169" green="0.056316187189999999" blue="0.1358961887" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="128" id="kYc-d7-iET"/>
-                        <constraint firstAttribute="width" constant="393" id="llM-SZ-Xe9"/>
-                    </constraints>
-                </view>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tv6-2x-0BT">
-                    <rect key="frame" x="0.0" y="195" width="393" height="623"/>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Vbe-au-rhV">
+                    <rect key="frame" x="0.0" y="206" width="430" height="692"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                     <color key="textColor" systemColor="labelColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EB8-pF-pnd" customClass="ErrorView" customModule="githubRepo" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IhQ-ag-DPv" customClass="RepositoryDetail" customModule="githubRepo" customModuleProvider="target">
+                    <rect key="frame" x="19" y="59" width="393" height="139"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="139" id="8bM-6t-aFI"/>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="430" id="zG4-EU-PHy"/>
+                    </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.05523881169" green="0.056316187189999999" blue="0.1358961887" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
-                <constraint firstItem="tv6-2x-0BT" firstAttribute="top" secondItem="182-r0-oa9" secondAttribute="bottom" constant="8" symbolic="YES" id="17G-E6-YE8"/>
-                <constraint firstItem="EB8-pF-pnd" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="3hn-oV-R1R"/>
-                <constraint firstItem="EB8-pF-pnd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="6Bv-TD-nSc"/>
-                <constraint firstItem="tv6-2x-0BT" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="6JE-oP-dcM"/>
-                <constraint firstItem="182-r0-oa9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="JQg-v5-Cdp"/>
-                <constraint firstItem="EB8-pF-pnd" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="LnB-J7-ljT"/>
-                <constraint firstItem="EB8-pF-pnd" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="UoB-xY-OFP"/>
-                <constraint firstItem="182-r0-oa9" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="bjl-kC-45W"/>
-                <constraint firstItem="tv6-2x-0BT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="caC-Cg-KxV"/>
-                <constraint firstItem="182-r0-oa9" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="hoj-bd-J3E"/>
-                <constraint firstItem="tv6-2x-0BT" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="yv6-at-VgX"/>
+                <constraint firstItem="Vbe-au-rhV" firstAttribute="top" secondItem="IhQ-ag-DPv" secondAttribute="bottom" constant="8" symbolic="YES" id="A8p-7t-nl5"/>
+                <constraint firstItem="IhQ-ag-DPv" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="FMI-ur-KCc"/>
+                <constraint firstItem="Vbe-au-rhV" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="deZ-K2-BjE"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="IhQ-ag-DPv" secondAttribute="trailing" constant="18" id="i7F-UD-ovL"/>
+                <constraint firstItem="Vbe-au-rhV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="otd-bP-OvS"/>
+                <constraint firstItem="IhQ-ag-DPv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="19" id="q9h-Pm-Ra5"/>
+                <constraint firstItem="Vbe-au-rhV" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="xzN-BO-yAT"/>
             </constraints>
-            <point key="canvasLocation" x="69.465648854961827" y="177.46478873239437"/>
+            <point key="canvasLocation" x="68.372093023255815" y="177.03862660944208"/>
         </view>
     </objects>
     <resources>

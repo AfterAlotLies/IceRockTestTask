@@ -30,6 +30,7 @@ class CustomButtonClass: UIView {
         subview.frame = self.bounds
         subview.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.addSubview(subview)
+        customButton.titleLabel?.font = UIFont(name: "SFPro-Regular", size: 34)
     }
     
     private func loadViewFromXib() -> UIView {
@@ -40,7 +41,6 @@ class CustomButtonClass: UIView {
     
     func setButtonText(buttonText: String) {
         customButton.titleLabel?.isHidden = false
-        customButton.titleLabel?.font = UIFont(name: "SF Mono", size: 20)
         customButton.setTitle(buttonText, for: .normal)
         loadingIndicator.isHidden = true
     }

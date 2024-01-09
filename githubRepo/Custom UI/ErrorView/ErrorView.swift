@@ -163,16 +163,29 @@ class ErrorView: UIView {
             }
 
             
+        case .repoDetailReadmeError:
+            InternetConnection.shared.checkInternetConnection {
+                let successWorkItem = {
+                    self.delegate?.retryAction()
+                    self.retryButton.stopLoading()
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: successWorkItem)
+            } failureHandler: {
+                let failureWorkItem = {
+                    self.loadReadmeError()
+                    self.showErrorView()
+                    self.retryButton.stopLoading()
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: failureWorkItem)
+            }
+
+            
         case .repoListEmpty:
             let workItem = {
                 self.delegate?.retryToGetRepoList()
                 self.retryButton.stopLoading()
             }
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: workItem)
-
-            
-        case .repoDetailReadmeError:
-            print("321")
 
             
         default:

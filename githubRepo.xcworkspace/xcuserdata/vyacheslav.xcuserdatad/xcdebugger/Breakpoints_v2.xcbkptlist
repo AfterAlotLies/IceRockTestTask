@@ -280,7 +280,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "A1FBBF85-F4EF-4C54-82D9-B42E0D92E5E8"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "githubRepo/Requests+CodableModel+keyStorage/keyStorage/KeyValueStorage.swift"
@@ -1673,10 +1673,42 @@
             filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "showOrHideBadConnectionRepoDetailView(response:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "941FA759-7493-4C0E-B51F-6EDE55519641 - 81861877dfebb6b5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "githubRepo.RepositoryDetailInfoViewController.showOrHideBadConnectionRepoDetailView(response: Swift.String) -&gt; ()"
+                  moduleName = "githubRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "400">
+               </Location>
+               <Location
+                  uuid = "941FA759-7493-4C0E-B51F-6EDE55519641 - 81861877dfebb6b5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "githubRepo.RepositoryDetailInfoViewController.showOrHideBadConnectionRepoDetailView(response: Swift.String) -&gt; ()"
+                  moduleName = "githubRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "244">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1689,10 +1721,42 @@
             filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "showOrHideBadConnectionRepoDetailView(response:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0DED20FC-FF94-4720-B5F6-72C265CB7F32 - 81861877dfebb777"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "githubRepo.RepositoryDetailInfoViewController.showOrHideBadConnectionRepoDetailView(response: Swift.String) -&gt; ()"
+                  moduleName = "githubRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "708">
+               </Location>
+               <Location
+                  uuid = "0DED20FC-FF94-4720-B5F6-72C265CB7F32 - 81861877dfebb777"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "githubRepo.RepositoryDetailInfoViewController.showOrHideBadConnectionRepoDetailView(response: Swift.String) -&gt; ()"
+                  moduleName = "githubRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "556">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1705,10 +1769,42 @@
             filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "showOrHideBadConnectionRepoDetailView(response:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "48576874-2594-461D-81B4-761EAF1A52A2 - 81861877dfebb750"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "githubRepo.RepositoryDetailInfoViewController.showOrHideBadConnectionRepoDetailView(response: Swift.String) -&gt; ()"
+                  moduleName = "githubRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "860">
+               </Location>
+               <Location
+                  uuid = "48576874-2594-461D-81B4-761EAF1A52A2 - 81861877dfebb750"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "githubRepo.RepositoryDetailInfoViewController.showOrHideBadConnectionRepoDetailView(response: Swift.String) -&gt; ()"
+                  moduleName = "githubRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "708">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1721,10 +1817,72 @@
             filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "showOrHideBadConnectionRepoDetailView(response:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "194F608C-2B14-453D-908D-D9FEC67A80AA - 81861877dfebb731"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "githubRepo.RepositoryDetailInfoViewController.showOrHideBadConnectionRepoDetailView(response: Swift.String) -&gt; ()"
+                  moduleName = "githubRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "868">
+               </Location>
+               <Location
+                  uuid = "194F608C-2B14-453D-908D-D9FEC67A80AA - 81861877dfebb731"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "githubRepo.RepositoryDetailInfoViewController.showOrHideBadConnectionRepoDetailView(response: Swift.String) -&gt; ()"
+                  moduleName = "githubRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "860">
+               </Location>
+               <Location
+                  uuid = "194F608C-2B14-453D-908D-D9FEC67A80AA - 81861877dfebb696"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "githubRepo.RepositoryDetailInfoViewController.showOrHideBadConnectionRepoDetailView(response: Swift.String) -&gt; ()"
+                  moduleName = "githubRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "860">
+               </Location>
+               <Location
+                  uuid = "194F608C-2B14-453D-908D-D9FEC67A80AA - 81861877dfebb777"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "githubRepo.RepositoryDetailInfoViewController.showOrHideBadConnectionRepoDetailView(response: Swift.String) -&gt; ()"
+                  moduleName = "githubRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "860">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1737,10 +1895,1141 @@
             filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "showOrHideBadConnectionRepoDetailView(response:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0229AFBD-5B7A-4ADA-939F-5DF5CC2B2F07 - 81861877dfebb7dc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "githubRepo.RepositoryDetailInfoViewController.showOrHideBadConnectionRepoDetailView(response: Swift.String) -&gt; ()"
+                  moduleName = "githubRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "888">
+               </Location>
+               <Location
+                  uuid = "0229AFBD-5B7A-4ADA-939F-5DF5CC2B2F07 - 81861877dfebb712"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "githubRepo.RepositoryDetailInfoViewController.showOrHideBadConnectionRepoDetailView(response: Swift.String) -&gt; ()"
+                  moduleName = "githubRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "868">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4B2BDCFB-4136-401B-B9B9-9DBDC9B909AE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5CEAEFF5-18C8-4A17-91F5-1F385ABDD792"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "checkInternetConnection()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D67FB792-71A5-4AFF-94AB-640708136FD6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "showOrHideBadConnectionRepoDetailView(response:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D67FB792-71A5-4AFF-94AB-640708136FD6 - 81861877dfebb712"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "githubRepo.RepositoryDetailInfoViewController.showOrHideBadConnectionRepoDetailView(response: Swift.String) -&gt; ()"
+                  moduleName = "githubRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "1044">
+               </Location>
+               <Location
+                  uuid = "D67FB792-71A5-4AFF-94AB-640708136FD6 - 81861877dfebb731"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "githubRepo.RepositoryDetailInfoViewController.showOrHideBadConnectionRepoDetailView(response: Swift.String) -&gt; ()"
+                  moduleName = "githubRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "888">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "56358454-1C4E-4345-A018-5C490DDE64C2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "showOrHideBadConnectionRepoDetailView(response:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "16195136-CBB5-4B6D-BAD6-B4F60A1E4840"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "showOrHideBadConnectionRepoDetailView(response:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CC5F947A-05C7-4305-91E2-F678504845C4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "showOrHideBadConnectionRepoDetailView(response:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CC5F947A-05C7-4305-91E2-F678504845C4 - 81861877dfebb696"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "githubRepo.RepositoryDetailInfoViewController.showOrHideBadConnectionRepoDetailView(response: Swift.String) -&gt; ()"
+                  moduleName = "githubRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "556">
+               </Location>
+               <Location
+                  uuid = "CC5F947A-05C7-4305-91E2-F678504845C4 - 81861877dfebb696"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "githubRepo.RepositoryDetailInfoViewController.showOrHideBadConnectionRepoDetailView(response: Swift.String) -&gt; ()"
+                  moduleName = "githubRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "400">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "02D991B2-24F5-4723-B67B-6A414A34CBAD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "checkInternetConnection()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "02D991B2-24F5-4723-B67B-6A414A34CBAD - 3107de488d0c854b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "githubRepo.RepositoryDetailInfoViewController.checkInternetConnection() -&gt; ()"
+                  moduleName = "githubRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "02D991B2-24F5-4723-B67B-6A414A34CBAD - 9a6443fe3e4c05f2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in githubRepo.RepositoryDetailInfoViewController.checkInternetConnection() -&gt; ()"
+                  moduleName = "githubRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "52">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4126BF4C-F83E-45F7-9F11-3B69010556AA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "showErrorView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8DF8398D-3F3F-49A8-8D67-FE3AEA9D0C7E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "showErrorView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AF3D327B-C042-4F1B-8B77-4C05FF45DD24"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "showErrorView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9C7F6BB8-9EA0-457A-8C23-4307DE12961E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "showErrorView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "99B1A3F7-1D60-4204-BE3D-2A65E6474123"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "showErrorView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7C8652F7-58E3-43C4-890D-6A05602B2BC0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "showErrorView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0BD1A1AD-30EB-438B-9BDC-CAE1E0713192"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "showErrorView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2109773A-5443-44BF-BE74-7A94B679FA62"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "showErrorView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D6F9EC2B-3A75-4F1D-9597-B9798C9F4E1A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "showErrorView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "693F0943-ED19-4C7B-AD6B-2B269247A943"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "showErrorView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A71F7F11-9F62-46AC-98EC-7C56A7CFD20F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "showErrorView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5888042D-B529-441A-BA55-540C34F1B88C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "showErrorView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C73F9ED9-2F2A-4EE5-AEA5-DDD4880FAE3D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "showErrorView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "86A35817-CB6B-4001-960B-B78955F17E9A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "badInternetConnectionError()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4CB00BAD-C6A1-440A-9D9D-58F2B25C768F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/Requests+CodableModel+keyStorage/InternetConnection.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "checkInternetConnection(successHandler:failureHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EE2392C0-36D2-444F-BA6D-486D937C219A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/Requests+CodableModel+keyStorage/InternetConnection.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "checkInternetConnection(successHandler:failureHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7C8F649C-C199-4833-B42E-B7ABA9103E88"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/Requests+CodableModel+keyStorage/InternetConnection.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "checkInternetConnection(successHandler:failureHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6199BFB7-0430-45B6-8F04-6B78E51E5BB6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/Requests+CodableModel+keyStorage/InternetConnection.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "checkInternetConnection(successHandler:failureHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A5B4DECA-BAE7-4483-8968-ED3C7100E52A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/Requests+CodableModel+keyStorage/InternetConnection.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "checkInternetConnection(successHandler:failureHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E832D427-A243-4F86-A53B-220B0C55050B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/Requests+CodableModel+keyStorage/InternetConnection.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "checkInternetConnection(successHandler:failureHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2A7E9202-4AA2-4B78-8E84-733CD11138FF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/Requests+CodableModel+keyStorage/InternetConnection.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "checkInternetConnection(successHandler:failureHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5CD164B8-7D53-49EB-B1A5-98A62213ACFA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
+            landmarkName = "retryBackToAuthView(previousView:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "546406BE-3DAE-4829-A8B4-096F3B3D6E96"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "getRepositoryReadme()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "546406BE-3DAE-4829-A8B4-096F3B3D6E96 - eee766a68758d2f1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "githubRepo.RepositoryDetailInfoViewController.getRepositoryReadme() -&gt; ()"
+                  moduleName = "githubRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "546406BE-3DAE-4829-A8B4-096F3B3D6E96 - 6a5799fc2b07df9c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in githubRepo.RepositoryDetailInfoViewController.getRepositoryReadme() -&gt; ()"
+                  moduleName = "githubRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "82"
+                  endingLineNumber = "82"
+                  offsetFromSymbolStart = "516">
+               </Location>
+               <Location
+                  uuid = "546406BE-3DAE-4829-A8B4-096F3B3D6E96 - eee766a68758d212"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "githubRepo.RepositoryDetailInfoViewController.getRepositoryReadme() -&gt; ()"
+                  moduleName = "githubRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "82"
+                  endingLineNumber = "82"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "37D6D8E9-29DA-4975-87D9-CCCAC15CDC39"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
+            landmarkName = "retryBackToAuthView(previousView:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "37D6D8E9-29DA-4975-87D9-CCCAC15CDC39 - 9e72132a9817fb22"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "githubRepo.ErrorView.retryBackToAuthView(previousView: githubRepo.ErrorView.ControllerType) -&gt; ()"
+                  moduleName = "githubRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/Custom%20UI/ErrorView/ErrorView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "167"
+                  endingLineNumber = "167"
+                  offsetFromSymbolStart = "528">
+               </Location>
+               <Location
+                  uuid = "37D6D8E9-29DA-4975-87D9-CCCAC15CDC39 - 741658219f7c7f93"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 () -&gt; () in githubRepo.ErrorView.retryBackToAuthView(previousView: githubRepo.ErrorView.ControllerType) -&gt; ()"
+                  moduleName = "githubRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/Custom%20UI/ErrorView/ErrorView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "172"
+                  endingLineNumber = "172"
+                  offsetFromSymbolStart = "320">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3732B9E3-D1F5-4973-B035-472A01A0EDA3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
+            landmarkName = "retryBackToAuthView(previousView:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4CF25B0D-0DB9-4769-AFCA-0A7C9D5B11DB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "170"
+            endingLineNumber = "170"
+            landmarkName = "retryBackToAuthView(previousView:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C26BD081-C424-4F5B-B82A-8578FBC707E7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "175"
+            endingLineNumber = "175"
+            landmarkName = "retryBackToAuthView(previousView:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "769BE115-150B-46EE-8BA5-38D22519BDC6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "176"
+            endingLineNumber = "176"
+            landmarkName = "retryBackToAuthView(previousView:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "29EE4505-BF72-4B1D-A6DB-8BC2DD089FAA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "177"
+            endingLineNumber = "177"
+            landmarkName = "retryBackToAuthView(previousView:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E6FEA377-741D-4128-871F-DCF4D2E8657A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "getRepositoryDetail()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E6FEA377-741D-4128-871F-DCF4D2E8657A - 1b2e066a3df8e108"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "githubRepo.RepositoryDetailInfoViewController.getRepositoryDetail() -&gt; ()"
+                  moduleName = "githubRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "E6FEA377-741D-4128-871F-DCF4D2E8657A - c5c92588342c2990"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;githubRepo.RepoDetails&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in githubRepo.RepositoryDetailInfoViewController.getRepositoryDetail() -&gt; ()"
+                  moduleName = "githubRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  uuid = "E6FEA377-741D-4128-871F-DCF4D2E8657A - 1b2e066a3df8e127"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "githubRepo.RepositoryDetailInfoViewController.getRepositoryDetail() -&gt; ()"
+                  moduleName = "githubRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "E6FEA377-741D-4128-871F-DCF4D2E8657A - c5c92588342c29f1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;githubRepo.RepoDetails&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in githubRepo.RepositoryDetailInfoViewController.getRepositoryDetail() -&gt; ()"
+                  moduleName = "githubRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "72">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6900A7CB-4DF1-4324-9E30-47ADEA24270B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "getRepositoryDetail()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6900A7CB-4DF1-4324-9E30-47ADEA24270B - c5c92588342c2990"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;githubRepo.RepoDetails&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in githubRepo.RepositoryDetailInfoViewController.getRepositoryDetail() -&gt; ()"
+                  moduleName = "githubRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  uuid = "6900A7CB-4DF1-4324-9E30-47ADEA24270B - c5c92588342c29f1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;githubRepo.RepoDetails&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in githubRepo.RepositoryDetailInfoViewController.getRepositoryDetail() -&gt; ()"
+                  moduleName = "githubRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "72">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6356AE94-6138-42F6-84CD-53E2ED6AE14D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "getRepositoryDetail()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6356AE94-6138-42F6-84CD-53E2ED6AE14D - c5c92588342c29f1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;githubRepo.RepoDetails&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in githubRepo.RepositoryDetailInfoViewController.getRepositoryDetail() -&gt; ()"
+                  moduleName = "githubRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "180">
+               </Location>
+               <Location
+                  uuid = "6356AE94-6138-42F6-84CD-53E2ED6AE14D - c5c92588342c29d2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;githubRepo.RepoDetails&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in githubRepo.RepositoryDetailInfoViewController.getRepositoryDetail() -&gt; ()"
+                  moduleName = "githubRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "180">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "95A92E58-2DA9-435E-A39F-6F55BC14AD34"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "getRepositoryDetail()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "95A92E58-2DA9-435E-A39F-6F55BC14AD34 - c5c92588342c29d2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;githubRepo.RepoDetails&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in githubRepo.RepositoryDetailInfoViewController.getRepositoryDetail() -&gt; ()"
+                  moduleName = "githubRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "756">
+               </Location>
+               <Location
+                  uuid = "95A92E58-2DA9-435E-A39F-6F55BC14AD34 - c5c92588342c2633"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;githubRepo.RepoDetails&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in githubRepo.RepositoryDetailInfoViewController.getRepositoryDetail() -&gt; ()"
+                  moduleName = "githubRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "756">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3159A8A1-5847-4609-B938-A71D24B6CE02"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "getRepositoryDetail()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3159A8A1-5847-4609-B938-A71D24B6CE02 - c5c92588342c2633"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;githubRepo.RepoDetails&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in githubRepo.RepositoryDetailInfoViewController.getRepositoryDetail() -&gt; ()"
+                  moduleName = "githubRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "792">
+               </Location>
+               <Location
+                  uuid = "3159A8A1-5847-4609-B938-A71D24B6CE02 - c5c92588342c2633"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;githubRepo.RepoDetails&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in githubRepo.RepositoryDetailInfoViewController.getRepositoryDetail() -&gt; ()"
+                  moduleName = "githubRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "860">
+               </Location>
+               <Location
+                  uuid = "3159A8A1-5847-4609-B938-A71D24B6CE02 - c5c92588342c2614"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;githubRepo.RepoDetails&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in githubRepo.RepositoryDetailInfoViewController.getRepositoryDetail() -&gt; ()"
+                  moduleName = "githubRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "792">
+               </Location>
+               <Location
+                  uuid = "3159A8A1-5847-4609-B938-A71D24B6CE02 - c5c92588342c2614"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;githubRepo.RepoDetails&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in githubRepo.RepositoryDetailInfoViewController.getRepositoryDetail() -&gt; ()"
+                  moduleName = "githubRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "860">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C9697A4D-A602-4B0F-A506-8B50CB733D75"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "getRepositoryDetail()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C9697A4D-A602-4B0F-A506-8B50CB733D75 - c5c92588342c2614"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;githubRepo.RepoDetails&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in githubRepo.RepositoryDetailInfoViewController.getRepositoryDetail() -&gt; ()"
+                  moduleName = "githubRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "872">
+               </Location>
+               <Location
+                  uuid = "C9697A4D-A602-4B0F-A506-8B50CB733D75 - c5c92588342c2675"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;githubRepo.RepoDetails&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in githubRepo.RepositoryDetailInfoViewController.getRepositoryDetail() -&gt; ()"
+                  moduleName = "githubRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "872">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

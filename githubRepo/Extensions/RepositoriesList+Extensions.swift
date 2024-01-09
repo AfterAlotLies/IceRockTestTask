@@ -12,7 +12,7 @@ extension RepositoriesListViewController {
     
     func setupNavBar() {
         navigationItem.setHidesBackButton(true, animated: false)
-        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = true
         
         let standardAppearance = UINavigationBarAppearance()
         standardAppearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]

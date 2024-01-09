@@ -12,4 +12,19 @@ extension RepositoryDetailInfoViewController: ErrorViewDelegate {
     func retryAction() {
         showOrHideBadConnectionRepoDetailView(response: "success")
     }
+    
+    func setupNavigationRightItem() {
+        let barButton = UIButton()
+
+        let backButton = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+        backButton.setImage(UIImage(named: "logoutImage"), for: .normal)
+        backButton.imageView?.contentMode = .scaleAspectFit
+        
+        backButton.addTarget(self,
+                             action: #selector(backToAuthView),
+                             for: .touchUpInside)
+
+        barButton.addSubview(backButton)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: barButton)
+    }
 }

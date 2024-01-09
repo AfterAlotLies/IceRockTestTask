@@ -8,7 +8,7 @@
 import UIKit
 import Reachability
 
-final class InternetConnection {
+class InternetConnection {
     
     static let shared = InternetConnection()
     private init() {}
