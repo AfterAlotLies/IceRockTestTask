@@ -25,17 +25,21 @@ class RepositoryDetailInfoViewController: UIViewController {
         checkInternetConnection()
         setupNavigationRightItem()
        // errorView.delegate = self
-//        readmeErrorView = ErrorView()
-//        
-//        self.view.addSubview(readmeErrorView)
-//            
-//            readmeErrorView.translatesAutoresizingMaskIntoConstraints = false
-//            NSLayoutConstraint.activate([
-//                readmeErrorView.leadingAnchor.constraint(equalTo: readmeTextView.leadingAnchor),
-//                readmeErrorView.topAnchor.constraint(equalTo: readmeTextView.topAnchor),
-//                readmeErrorView.trailingAnchor.constraint(equalTo: readmeTextView.trailingAnchor),
-//                readmeErrorView.bottomAnchor.constraint(equalTo: readmeTextView.bottomAnchor)
-//            ])
+        readmeErrorView = ErrorView()
+        
+        self.view.addSubview(readmeErrorView)
+            
+            readmeErrorView.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                readmeErrorView.leadingAnchor.constraint(equalTo: readmeTextView.leadingAnchor),
+                readmeErrorView.topAnchor.constraint(equalTo: readmeTextView.topAnchor),
+                readmeErrorView.trailingAnchor.constraint(equalTo: readmeTextView.trailingAnchor),
+                readmeErrorView.bottomAnchor.constraint(equalTo: readmeTextView.bottomAnchor)
+            ])
+        
+        topRepoInfoView.starsView.setupStarsView()
+        topRepoInfoView.forksView.setupForksView()
+        topRepoInfoView.watchersView.setupWatchersView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -128,10 +132,10 @@ class RepositoryDetailInfoViewController: UIViewController {
     }
     
     private func setInRepoDetail(repoDetail: RepoDetails) {
-        topRepoInfoView.githubUrlLabel.text = repoDetail.githubUrlRepo
-        topRepoInfoView.starsCountLabel.text = repoDetail.stargazers.intToString()
-        topRepoInfoView.forksCountLabel.text = repoDetail.forks.intToString()
-        topRepoInfoView.watchersCoutnLabel.text = repoDetail.watchers.intToString()
+//        topRepoInfoView.githubUrlLabel.text = repoDetail.githubUrlRepo
+//        topRepoInfoView.starsCountLabel.text = repoDetail.stargazers.intToString()
+//        topRepoInfoView.forksCountLabel.text = repoDetail.forks.intToString()
+//        topRepoInfoView.watchersCoutnLabel.text = repoDetail.watchers.intToString()
     }
     
     @objc

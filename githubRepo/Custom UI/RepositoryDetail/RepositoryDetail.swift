@@ -12,10 +12,10 @@ class RepositoryDetail: UIView {
     @IBOutlet weak var githubUrlLabel: UILabel!
     @IBOutlet weak var licenseLabel: UILabel!
     @IBOutlet weak var nameLicenseLabel: UILabel!
-    @IBOutlet weak var starsCountLabel: UILabel!
-    @IBOutlet weak var forksCountLabel: UILabel!
-    @IBOutlet weak var watchersCoutnLabel: UILabel!
     @IBOutlet weak var stackview: UIStackView!
+    @IBOutlet weak var starsView: BottomViewRepositoryDetail!
+    @IBOutlet weak var forksView: BottomViewRepositoryDetail!
+    @IBOutlet weak var watchersView: BottomViewRepositoryDetail!
     
     override init(frame: CGRect) {
         super.init(frame: frame)

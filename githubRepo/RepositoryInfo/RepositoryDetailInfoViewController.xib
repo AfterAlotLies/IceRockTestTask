@@ -21,17 +21,17 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Vbe-au-rhV">
-                    <rect key="frame" x="0.0" y="206" width="430" height="692"/>
+                    <rect key="frame" x="0.0" y="243" width="430" height="655"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="textColor" systemColor="labelColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IhQ-ag-DPv" customClass="RepositoryDetail" customModule="githubRepo" customModuleProvider="target">
-                    <rect key="frame" x="19" y="59" width="393" height="139"/>
+                    <rect key="frame" x="12" y="59" width="405" height="176"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="139" id="8bM-6t-aFI"/>
+                        <constraint firstAttribute="height" constant="176" id="8bM-6t-aFI"/>
                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="430" id="zG4-EU-PHy"/>
                     </constraints>
                 </view>
@@ -39,12 +39,12 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.05523881169" green="0.056316187189999999" blue="0.1358961887" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
-                <constraint firstItem="Vbe-au-rhV" firstAttribute="top" secondItem="IhQ-ag-DPv" secondAttribute="bottom" constant="8" symbolic="YES" id="A8p-7t-nl5"/>
+                <constraint firstItem="Vbe-au-rhV" firstAttribute="top" secondItem="IhQ-ag-DPv" secondAttribute="bottom" constant="8" id="A8p-7t-nl5"/>
                 <constraint firstItem="IhQ-ag-DPv" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="FMI-ur-KCc"/>
                 <constraint firstItem="Vbe-au-rhV" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="deZ-K2-BjE"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="IhQ-ag-DPv" secondAttribute="trailing" constant="18" id="i7F-UD-ovL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="IhQ-ag-DPv" secondAttribute="trailing" constant="13" id="i7F-UD-ovL"/>
                 <constraint firstItem="Vbe-au-rhV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="otd-bP-OvS"/>
-                <constraint firstItem="IhQ-ag-DPv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="19" id="q9h-Pm-Ra5"/>
+                <constraint firstItem="IhQ-ag-DPv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="q9h-Pm-Ra5"/>
                 <constraint firstItem="Vbe-au-rhV" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="xzN-BO-yAT"/>
             </constraints>
             <point key="canvasLocation" x="68.372093023255815" y="177.03862660944208"/>

@@ -21,26 +21,21 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5gQ-aq-dfm" customClass="CustomButtonClass" customModule="githubRepo" customModuleProvider="target">
-                    <rect key="frame" x="19" y="851" width="393" height="47"/>
+                    <rect key="frame" x="18" y="835" width="394" height="47"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="47" id="IMg-rq-nhW"/>
-                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="393" id="MMN-0y-Dta"/>
                     </constraints>
                 </view>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="internetError" translatesAutoresizingMaskIntoConstraints="NO" id="Ctl-mk-VUG">
-                    <rect key="frame" x="173.66666666666666" y="335.66666666666669" width="83.999999999999972" height="84"/>
+                    <rect key="frame" x="173" y="340" width="84" height="84"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="84" id="Kou-pJ-5PT"/>
                         <constraint firstAttribute="height" constant="84" id="Ysf-cR-dG1"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DCe-45-QCb">
-                    <rect key="frame" x="129" y="446.66666666666669" width="173" height="21"/>
-                    <constraints>
-                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="173" id="jS6-Ya-LNg"/>
-                        <constraint firstAttribute="height" constant="21" id="kHX-JQ-jET"/>
-                    </constraints>
+                    <rect key="frame" x="16" y="451" width="398" height="18.666666666666686"/>
                     <attributedString key="attributedText">
                         <fragment content="Connection error">
                             <attributes>
@@ -53,11 +48,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2sy-Cl-3NI">
-                    <rect key="frame" x="68.666666666666686" y="475.66666666666669" width="294" height="19"/>
-                    <constraints>
-                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="294" id="32n-9A-y2d"/>
-                        <constraint firstAttribute="height" constant="19" id="VQr-HJ-3KX"/>
-                    </constraints>
+                    <rect key="frame" x="16" y="477.66666666666669" width="398" height="18.666666666666686"/>
                     <attributedString key="attributedText">
                         <fragment content="Check your internet connection">
                             <attributes>
@@ -73,13 +64,19 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" red="0.05523881169" green="0.056316187189999999" blue="0.1358961887" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
-                <constraint firstItem="5gQ-aq-dfm" firstAttribute="top" secondItem="2sy-Cl-3NI" secondAttribute="bottom" constant="356.33333333333331" id="E6i-or-4Xn"/>
+                <constraint firstItem="2sy-Cl-3NI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="2XI-QD-CYf"/>
+                <constraint firstItem="Ctl-mk-VUG" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-84" id="CeB-gz-33q"/>
+                <constraint firstItem="5gQ-aq-dfm" firstAttribute="top" relation="greaterThanOrEqual" secondItem="2sy-Cl-3NI" secondAttribute="bottom" constant="16" id="E6i-or-4Xn"/>
+                <constraint firstItem="2sy-Cl-3NI" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Flu-dc-CvV"/>
                 <constraint firstItem="2sy-Cl-3NI" firstAttribute="centerX" secondItem="5gQ-aq-dfm" secondAttribute="centerX" id="Ive-CM-pLn"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="5gQ-aq-dfm" secondAttribute="trailing" constant="18" id="QLi-ZB-RJz"/>
                 <constraint firstItem="DCe-45-QCb" firstAttribute="top" secondItem="Ctl-mk-VUG" secondAttribute="bottom" constant="27" id="UKP-3d-Otw"/>
+                <constraint firstItem="DCe-45-QCb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="XWc-md-U3Y"/>
                 <constraint firstItem="2sy-Cl-3NI" firstAttribute="top" secondItem="DCe-45-QCb" secondAttribute="bottom" constant="8" symbolic="YES" id="a7M-hb-HcT"/>
-                <constraint firstItem="5gQ-aq-dfm" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="19" id="aay-Gu-bds"/>
-                <constraint firstItem="5gQ-aq-dfm" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="gRy-g8-zYy"/>
+                <constraint firstItem="5gQ-aq-dfm" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="18" id="aay-Gu-bds"/>
+                <constraint firstItem="5gQ-aq-dfm" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="-16" id="gRy-g8-zYy"/>
+                <constraint firstItem="Ctl-mk-VUG" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="lNF-QY-hJt"/>
+                <constraint firstItem="DCe-45-QCb" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="mfS-du-5Xw"/>
                 <constraint firstItem="DCe-45-QCb" firstAttribute="centerX" secondItem="2sy-Cl-3NI" secondAttribute="centerX" id="qa3-WO-WuL"/>
                 <constraint firstItem="Ctl-mk-VUG" firstAttribute="centerX" secondItem="DCe-45-QCb" secondAttribute="centerX" id="sCC-8H-rEa"/>
             </constraints>

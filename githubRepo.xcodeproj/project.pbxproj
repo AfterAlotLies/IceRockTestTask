@@ -22,6 +22,8 @@
 		114435E02B22257B00D7355C /* RepositoryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114435DF2B22257B00D7355C /* RepositoryDetail.swift */; };
 		114435E22B22259700D7355C /* RepositoryDetailUI.xib in Resources */ = {isa = PBXBuildFile; fileRef = 114435E12B22259700D7355C /* RepositoryDetailUI.xib */; };
 		114DE64A2B4AC98E0009FB53 /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 114DE6492B4AC91D0009FB53 /* SF-Pro.ttf */; };
+		114DE64C2B4D71CE0009FB53 /* BottomViewRepositoryDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 114DE64B2B4D71CE0009FB53 /* BottomViewRepositoryDetail.xib */; };
+		114DE64E2B4D729C0009FB53 /* BottomViewRepositoryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114DE64D2B4D729C0009FB53 /* BottomViewRepositoryDetail.swift */; };
 		11567D5B2B46C81500A8AF9D /* ErrorView+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11567D5A2B46C81500A8AF9D /* ErrorView+Protocol.swift */; };
 		11567D5E2B48318900A8AF9D /* RepositoryDetailInfo+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11567D5D2B48318900A8AF9D /* RepositoryDetailInfo+Extensions.swift */; };
 		1173136A2B172EDF00289745 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117313692B172EDF00289745 /* AppDelegate.swift */; };
@@ -58,6 +60,8 @@
 		114435DF2B22257B00D7355C /* RepositoryDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetail.swift; sourceTree = "<group>"; };
 		114435E12B22259700D7355C /* RepositoryDetailUI.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryDetailUI.xib; sourceTree = "<group>"; };
 		114DE6492B4AC91D0009FB53 /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
+		114DE64B2B4D71CE0009FB53 /* BottomViewRepositoryDetail.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomViewRepositoryDetail.xib; sourceTree = "<group>"; };
+		114DE64D2B4D729C0009FB53 /* BottomViewRepositoryDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomViewRepositoryDetail.swift; sourceTree = "<group>"; };
 		11567D5A2B46C81500A8AF9D /* ErrorView+Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ErrorView+Protocol.swift"; sourceTree = "<group>"; };
 		11567D5D2B48318900A8AF9D /* RepositoryDetailInfo+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepositoryDetailInfo+Extensions.swift"; sourceTree = "<group>"; };
 		117313662B172EDF00289745 /* githubRepo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = githubRepo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -204,6 +208,8 @@
 			children = (
 				114435DF2B22257B00D7355C /* RepositoryDetail.swift */,
 				114435E12B22259700D7355C /* RepositoryDetailUI.xib */,
+				114DE64D2B4D729C0009FB53 /* BottomViewRepositoryDetail.swift */,
+				114DE64B2B4D71CE0009FB53 /* BottomViewRepositoryDetail.xib */,
 			);
 			path = RepositoryDetail;
 			sourceTree = "<group>";
@@ -382,6 +388,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				114196A82B3871690034768B /* TokenInputUI.xib in Resources */,
+				114DE64C2B4D71CE0009FB53 /* BottomViewRepositoryDetail.xib in Resources */,
 				114DE64A2B4AC98E0009FB53 /* SF-Pro.ttf in Resources */,
 				114435DD2B2224BE00D7355C /* CustomTableViewCell.xib in Resources */,
 				114435DC2B2224BB00D7355C /* CustomButtonUI.xib in Resources */,
@@ -452,6 +459,7 @@
 				114196A62B3871540034768B /* TokenInputClass.swift in Sources */,
 				114434B42B208DB900D7355C /* AuthenticationView+Extensions.swift in Sources */,
 				114434AD2B1F121000D7355C /* UserInfo.swift in Sources */,
+				114DE64E2B4D729C0009FB53 /* BottomViewRepositoryDetail.swift in Sources */,
 				117313C42B1A034000289745 /* RepositoriesListViewController.swift in Sources */,
 				117313C12B19FE8800289745 /* MainNavigationController.swift in Sources */,
 				1173136A2B172EDF00289745 /* AppDelegate.swift in Sources */,

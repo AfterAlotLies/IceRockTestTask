@@ -41,7 +41,7 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vUb-Yp-Ohi" customClass="CustomButtonClass" customModule="githubRepo" customModuleProvider="target">
-                    <rect key="frame" x="18" y="851" width="393" height="47"/>
+                    <rect key="frame" x="18" y="835" width="393" height="47"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="393" id="Tbk-Mc-to1"/>
@@ -55,7 +55,7 @@
                 <constraint firstItem="lVE-yw-MAq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="67Z-af-rZb"/>
                 <constraint firstItem="lVE-yw-MAq" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="A5g-Ll-8ak"/>
                 <constraint firstItem="4HY-t6-ri6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="19" id="L0R-5u-mTB"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="vUb-Yp-Ohi" secondAttribute="bottom" id="MQL-MP-caB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="vUb-Yp-Ohi" secondAttribute="bottom" constant="16" id="MQL-MP-caB"/>
                 <constraint firstItem="vUb-Yp-Ohi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="18" id="YXB-Ex-LNc"/>
                 <constraint firstItem="dKx-v2-Buf" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Zey-oB-8Ix"/>
                 <constraint firstItem="lVE-yw-MAq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="fjI-jD-cfC"/>
