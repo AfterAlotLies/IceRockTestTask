@@ -10,7 +10,6 @@ import Reachability
 
 class MainNavigationController: UINavigationController {
     
-    private let internetConnection = InternetConnection.shared.internetConnection
     private let keyValue = KeyValueStorage.shared
     
     override func viewDidLoad() {

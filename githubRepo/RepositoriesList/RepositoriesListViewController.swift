@@ -19,6 +19,8 @@ class RepositoriesListViewController: UIViewController {
     var descriptionArray = [String]()
     var reposIdArray = [Int]()
     
+    private var authUrl: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationRightItem()
@@ -31,7 +33,12 @@ class RepositoriesListViewController: UIViewController {
         super.viewWillAppear(animated)
     }
     
-    public func showOrHideBadConnectionRepoListView(response: String) {
+    public func setAuthUrl(url: String?) {
+        guard let url = url else { return }
+        authUrl = url
+    }
+    
+    public func showOrHideErrorViewRepositoriesList(response: String) {
         switch response {
             
         case "success":
@@ -54,10 +61,10 @@ class RepositoriesListViewController: UIViewController {
     
     private func checkInternetConnection() {
         InternetConnection.shared.checkInternetConnection {
-            self.showOrHideBadConnectionRepoListView(response: "success")
+            self.showOrHideErrorViewRepositoriesList(response: "success")
         } failureHandler: {
             self.errorView.setTypeOfPreviousView(type: .repoListBadConnection)
-            self.showOrHideBadConnectionRepoListView(response: "fail")
+            self.showOrHideErrorViewRepositoriesList(response: "fail")
         }
     }
     
@@ -69,9 +76,10 @@ class RepositoriesListViewController: UIViewController {
         }
         
         loadingTableView.startAnimating()
-        AppRepository.shared.getRepositories { repoDetail, error in
+        AppRepository.shared.getRepositories(authUrl: authUrl) { repoDetail, error in
             if error != nil {
-                print(error?.localizedDescription ?? "error")
+                self.errorView.setTypeOfPreviousView(type: .other)
+                self.showOrHideErrorViewRepositoriesList(response: "fail")
             } else {
                 guard let repositoryDetail = repoDetail else { return }
                 for detail in repositoryDetail {
@@ -86,7 +94,7 @@ class RepositoriesListViewController: UIViewController {
                         self.loadingTableView.isHidden = true
                     } else {
                         self.errorView.setTypeOfPreviousView(type: .repoListEmpty)
-                        self.showOrHideBadConnectionRepoListView(response: "empty")
+                        self.showOrHideErrorViewRepositoriesList(response: "empty")
                     }
                 }
             }

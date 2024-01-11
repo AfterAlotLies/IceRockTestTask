@@ -10,7 +10,7 @@ import UIKit
 extension RepositoryDetailInfoViewController: ErrorViewDelegate {
     
     func retryAction() {
-        showOrHideBadConnectionRepoDetailView(response: "success")
+        showOrHideErrorViewRepositoryDetail(response: "success")
     }
     
     func setupNavigationRightItem() {
