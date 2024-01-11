@@ -19,36 +19,27 @@
             <rect key="frame" x="0.0" y="0.0" width="138" height="46"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starsImage" translatesAutoresizingMaskIntoConstraints="NO" id="EfO-2H-rhD">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="starsImage" translatesAutoresizingMaskIntoConstraints="NO" id="EfO-2H-rhD">
                     <rect key="frame" x="7" y="11" width="24" height="24"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="24" id="Buu-26-3dH"/>
-                        <constraint firstAttribute="height" constant="24" id="YyF-bN-Vws"/>
-                    </constraints>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="stars" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r1n-Ih-ILY">
-                    <rect key="frame" x="87.333333333333329" y="12.999999999999998" width="37.666666666666671" height="20.333333333333329"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" fixedFrame="YES" text="stars" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r1n-Ih-ILY">
+                    <rect key="frame" x="89.333333333333329" y="12.999999999999998" width="36" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <color key="textColor" red="1" green="0.047366312280000003" blue="0.1310479386" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJd-F5-MO3">
-                    <rect key="frame" x="52" y="12.999999999999998" width="10.333333333333336" height="20.333333333333329"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJd-F5-MO3">
+                    <rect key="frame" x="53" y="12.999999999999998" width="10" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <color key="textColor" red="1" green="0.047366312280000003" blue="0.1310479386" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" red="0.05523881169" green="0.056316187189999999" blue="0.1358961887" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-            <constraints>
-                <constraint firstItem="r1n-Ih-ILY" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="2bR-28-RZl"/>
-                <constraint firstItem="EfO-2H-rhD" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="B5b-O6-uSh"/>
-                <constraint firstItem="lJd-F5-MO3" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="BB5-uK-SKS"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="r1n-Ih-ILY" secondAttribute="trailing" constant="13" id="ba6-qW-cfN"/>
-                <constraint firstItem="lJd-F5-MO3" firstAttribute="leading" secondItem="EfO-2H-rhD" secondAttribute="trailing" constant="21" id="kMr-Fi-fln"/>
-                <constraint firstItem="EfO-2H-rhD" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="7" id="nar-W5-sn1"/>
-            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="-54.961832061068698" y="170.42253521126761"/>
         </view>

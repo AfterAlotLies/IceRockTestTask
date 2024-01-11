@@ -36,25 +36,11 @@ class BottomViewRepositoryDetail: UIView {
         return view
     }
     
-    func setupStarsView() {
-        imageDetail.image = UIImage(named: "starsImage")
-        numsLabelDetail.text = "256"
-        numsLabelDetail.textColor = .yellow
-        nameLabelDetail.text = "stars"
+    func setupBottomView(imageName: String, count: Int, title: String, color: UIColor) {
+        imageDetail.image = UIImage(named: imageName)
+        numsLabelDetail.text = count.intToString()
+        numsLabelDetail.textColor = color
+        nameLabelDetail.text = title
+        nameLabelDetail.textColor = .white
     }
-    
-    func setupForksView() {
-        imageDetail.image = UIImage(named: "forksImage")
-        numsLabelDetail.text = "256"
-        numsLabelDetail.textColor = .green
-        nameLabelDetail.text = "forks"
-    }
-    
-    func setupWatchersView() {
-        imageDetail.image = UIImage(named: "watchersImage")
-        numsLabelDetail.text = "256"
-        numsLabelDetail.textColor = .cyan
-        nameLabelDetail.text = "watchers"
-    }
-    
 }

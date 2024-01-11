@@ -90,7 +90,7 @@ class ErrorView: UIView {
         }
     }
     
-    private func setPropertiesToElements() {
+    private func showElementsErrorView() {
         self.alpha = 1
         errorImage.isHidden = false
         errorTitle.isHidden = false
@@ -99,7 +99,7 @@ class ErrorView: UIView {
     }
     
     private func badInternetConnectionError() {
-        setPropertiesToElements()
+        showElementsErrorView()
         errorImage.image = UIImage(named: "internetError")
         errorTitle.text = "Connection error"
         errorMessage.text = "Check your internet connection"
@@ -109,7 +109,7 @@ class ErrorView: UIView {
     }
     
     private func emptyRepositoriesWarning() {
-        setPropertiesToElements()
+        showElementsErrorView()
         errorImage.image = UIImage(named: "emptyFolder")
         errorTitle.text = "Empty"
         errorMessage.text = "No repositories at the moment"
@@ -118,7 +118,7 @@ class ErrorView: UIView {
     }
     
     private func loadReadmeError() {
-        setPropertiesToElements()
+        showElementsErrorView()
         errorImage.image = UIImage(named: "internetError")
         errorTitle.text = "Load error"
         errorMessage.text = "Check your internet connection"
@@ -127,7 +127,7 @@ class ErrorView: UIView {
     }
     
     private func otherErrors() {
-        setPropertiesToElements()
+        showElementsErrorView()
         errorImage.image = UIImage(named: "otherError")
         errorTitle.text = "Something gone wrong"
         errorMessage.text = "Reboot your app and check Internet"

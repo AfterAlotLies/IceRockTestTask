@@ -66,7 +66,7 @@
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="License" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u89-eC-EBu">
-                                    <rect key="frame" x="44.000000000000007" y="14" width="96.666666666666686" height="22"/>
+                                    <rect key="frame" x="44" y="14" width="58.666666666666657" height="22"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
@@ -88,7 +88,7 @@
                                 <constraint firstItem="u89-eC-EBu" firstAttribute="top" secondItem="DyT-X4-ByV" secondAttribute="top" constant="14" id="Ybg-1Q-rQB"/>
                                 <constraint firstItem="dmP-BM-iYf" firstAttribute="leading" secondItem="DyT-X4-ByV" secondAttribute="leading" constant="8" id="mKC-Xv-KVG"/>
                                 <constraint firstAttribute="bottom" secondItem="dmP-BM-iYf" secondAttribute="bottom" constant="13" id="nIu-7r-Bco"/>
-                                <constraint firstItem="ggB-S1-EG9" firstAttribute="leading" relation="lessThanOrEqual" secondItem="u89-eC-EBu" secondAttribute="trailing" constant="164" id="qO6-A2-uoa"/>
+                                <constraint firstItem="ggB-S1-EG9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="u89-eC-EBu" secondAttribute="trailing" constant="16" id="qO6-A2-uoa"/>
                                 <constraint firstAttribute="bottom" secondItem="ggB-S1-EG9" secondAttribute="bottom" constant="14" id="tTx-4C-YuH"/>
                             </constraints>
                         </view>
