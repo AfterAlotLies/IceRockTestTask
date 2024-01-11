@@ -14,7 +14,7 @@ class RepositoryDetailInfoViewController: UIViewController {
     
     @IBOutlet private weak var topRepoInfoView: RepositoryDetail!
     @IBOutlet private weak var readmeTextView: UITextView!
-   // @IBOutlet private weak var errorView: ErrorView!
+    @IBOutlet private weak var errorView: ErrorView!
     
     private var readmeErrorView: ErrorView!
     
@@ -22,24 +22,10 @@ class RepositoryDetailInfoViewController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupReadmeErrorView()
         checkInternetConnection()
         setupNavigationRightItem()
-       // errorView.delegate = self
-        readmeErrorView = ErrorView()
-        
-        self.view.addSubview(readmeErrorView)
-            
-            readmeErrorView.translatesAutoresizingMaskIntoConstraints = false
-            NSLayoutConstraint.activate([
-                readmeErrorView.leadingAnchor.constraint(equalTo: readmeTextView.leadingAnchor),
-                readmeErrorView.topAnchor.constraint(equalTo: readmeTextView.topAnchor),
-                readmeErrorView.trailingAnchor.constraint(equalTo: readmeTextView.trailingAnchor),
-                readmeErrorView.bottomAnchor.constraint(equalTo: readmeTextView.bottomAnchor)
-            ])
-        
-        topRepoInfoView.starsView.setupStarsView()
-        topRepoInfoView.forksView.setupForksView()
-        topRepoInfoView.watchersView.setupWatchersView()
+        errorView.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,43 +37,57 @@ class RepositoryDetailInfoViewController: UIViewController {
         chosenRepoId = repoId.intToString()
     }
     
-    public func showOrHideBadConnectionRepoDetailView(response: String) {
+    public func showOrHideErrorViewRepositoryDetail(response: String) {
         switch response {
 
         case "success":
-           // errorView.hideErrorView()
-            //readmeErrorView.hideErrorView()
+            errorView.hideErrorView()
+            readmeErrorView.hideErrorView()
             topRepoInfoView.isHidden = false
             readmeTextView.isHidden = false
             getRepositoryDetail()
             getRepositoryReadme()
 
         default:
-           // errorView.showErrorView()
-            //readmeErrorView.hideErrorView()
+            errorView.showErrorView()
+            readmeErrorView.hideErrorView()
             topRepoInfoView.isHidden = true
             readmeTextView.isHidden = true
         }
     }
     
+    private func setupReadmeErrorView() {
+        readmeErrorView = ErrorView()
+        
+        self.view.addSubview(readmeErrorView)
+        
+        readmeErrorView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            readmeErrorView.leadingAnchor.constraint(equalTo: readmeTextView.leadingAnchor),
+            readmeErrorView.topAnchor.constraint(equalTo: readmeTextView.topAnchor),
+            readmeErrorView.trailingAnchor.constraint(equalTo: readmeTextView.trailingAnchor),
+            readmeErrorView.bottomAnchor.constraint(equalTo: readmeTextView.bottomAnchor)
+        ])
+    }
+    
     private func checkInternetConnection() {
         InternetConnection.shared.checkInternetConnection {
-            self.showOrHideBadConnectionRepoDetailView(response: "success")
+            self.showOrHideErrorViewRepositoryDetail(response: "success")
         } failureHandler: {
-            //self.errorView.setTypeOfPreviousView(type: .repoDetailBadConnection)
-            self.showOrHideBadConnectionRepoDetailView(response: "fail")
+            self.errorView.setTypeOfPreviousView(type: .repoDetailBadConnection)
+            self.showOrHideErrorViewRepositoryDetail(response: "fail")
         }
     }
     
     private func getRepositoryDetail() {
         AppRepository.shared.getRepository(repoId: chosenRepoId) { response, error in
             if error != nil {
-                print(error?.localizedDescription ?? "error")
+                self.errorView.setTypeOfPreviousView(type: .other)
+                self.showOrHideErrorViewRepositoryDetail(response: "fail")
             } else {
                 guard let repoDetail = response else { return }
                 self.setInRepoDetail(repoDetail: repoDetail)
             }
-            //self.topRepoInfoView.hideLicenseView()
         }
     }
     
@@ -106,9 +106,9 @@ class RepositoryDetailInfoViewController: UIViewController {
                             }
 
                         default:
-                           // self.errorView.setTypeOfPreviousView(type: .other)
+                            self.errorView.setTypeOfPreviousView(type: .other)
                             self.readmeTextView.isHidden = true
-                            //self.readmeErrorView.showErrorView()
+                            self.readmeErrorView.showErrorView()
                         }
                     }
                 } else {
@@ -126,16 +126,21 @@ class RepositoryDetailInfoViewController: UIViewController {
             }
         } failureHandler: {
             self.readmeTextView.isHidden = true
-            //self.readmeErrorView.setTypeOfPreviousView(type: .repoDetailReadmeError)
-            //self.readmeErrorView.showErrorView()
+            self.readmeErrorView.setTypeOfPreviousView(type: .repoDetailReadmeError)
+            self.readmeErrorView.showErrorView()
         }
     }
     
     private func setInRepoDetail(repoDetail: RepoDetails) {
-//        topRepoInfoView.githubUrlLabel.text = repoDetail.githubUrlRepo
-//        topRepoInfoView.starsCountLabel.text = repoDetail.stargazers.intToString()
-//        topRepoInfoView.forksCountLabel.text = repoDetail.forks.intToString()
-//        topRepoInfoView.watchersCoutnLabel.text = repoDetail.watchers.intToString()
+        
+        if let licenseName = repoDetail.license?.name {
+            topRepoInfoView.setTopRepositoryDetail(url: repoDetail.githubUrlRepo, license: "License", licenseName: licenseName)
+            topRepoInfoView.setupBottomView(stars: repoDetail.stargazers, forks: repoDetail.forks, watchers: repoDetail.watchers)
+        } else {
+            topRepoInfoView.setTopRepositoryDetail(url: repoDetail.githubUrlRepo, license: "", licenseName: "")
+            topRepoInfoView.hideLicenseView()
+            topRepoInfoView.setupBottomView(stars: repoDetail.stargazers, forks: repoDetail.forks, watchers: repoDetail.watchers)
+        }
     }
     
     @objc
