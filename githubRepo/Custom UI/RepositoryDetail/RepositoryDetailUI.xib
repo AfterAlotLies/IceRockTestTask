@@ -25,10 +25,10 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eSV-h2-XBo">
-                    <rect key="frame" x="16" y="5" width="371" height="166"/>
+                    <rect key="frame" x="0.0" y="5" width="403" height="166"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="skV-zj-BCG">
-                            <rect key="frame" x="0.0" y="0.0" width="371" height="50"/>
+                            <rect key="frame" x="0.0" y="0.0" width="403" height="50"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="linkChainImage" translatesAutoresizingMaskIntoConstraints="NO" id="8hi-o2-0UF">
                                     <rect key="frame" x="8" y="13" width="24" height="24"/>
@@ -38,7 +38,7 @@
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="github.com/icerockdev/moko-resources" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJc-g7-czv">
-                                    <rect key="frame" x="44" y="13" width="319" height="24"/>
+                                    <rect key="frame" x="44" y="13" width="351" height="24"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" name="AccentColor"/>
                                     <nil key="highlightedColor"/>
@@ -56,7 +56,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DyT-X4-ByV">
-                            <rect key="frame" x="0.0" y="58" width="371" height="50"/>
+                            <rect key="frame" x="0.0" y="58" width="403" height="50"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" verticalHuggingPriority="251" image="licenseImage" translatesAutoresizingMaskIntoConstraints="NO" id="dmP-BM-iYf">
                                     <rect key="frame" x="8" y="13" width="24" height="24"/>
@@ -66,13 +66,13 @@
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="License" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u89-eC-EBu">
-                                    <rect key="frame" x="44.000000000000007" y="14" width="64.666666666666686" height="22"/>
+                                    <rect key="frame" x="44.000000000000007" y="14" width="96.666666666666686" height="22"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Apache-2.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggB-S1-EG9">
-                                    <rect key="frame" x="272.66666666666669" y="14" width="89.333333333333314" height="22"/>
+                                    <rect key="frame" x="304.66666666666669" y="14" width="89.333333333333314" height="22"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
@@ -93,25 +93,39 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QaT-Vd-I3B">
-                            <rect key="frame" x="0.0" y="116" width="371" height="50"/>
+                            <rect key="frame" x="0.0" y="116" width="403" height="50"/>
                             <subviews>
-                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UGl-FX-dr4" customClass="BottomViewRepositoryDetail" customModule="githubRepo" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="2" width="120" height="46"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UGl-FX-dr4" customClass="BottomViewRepositoryDetail" customModule="githubRepo" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="134.33333333333334" height="24"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="24" id="Q89-c3-jvH"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VAa-UB-kPt" customClass="BottomViewRepositoryDetail" customModule="githubRepo" customModuleProvider="target">
+                                    <rect key="frame" x="268.66666666666669" y="0.0" width="134.33333333333331" height="24"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>
-                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VAa-UB-kPt" customClass="BottomViewRepositoryDetail" customModule="githubRepo" customModuleProvider="target">
-                                    <rect key="frame" x="248" y="2" width="120" height="46"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </view>
-                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8un-nb-lwn" customClass="BottomViewRepositoryDetail" customModule="githubRepo" customModuleProvider="target">
-                                    <rect key="frame" x="124" y="2" width="120" height="46"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8un-nb-lwn" customClass="BottomViewRepositoryDetail" customModule="githubRepo" customModuleProvider="target">
+                                    <rect key="frame" x="134.33333333333331" y="0.0" width="134.33333333333331" height="24"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="8un-nb-lwn" firstAttribute="top" secondItem="QaT-Vd-I3B" secondAttribute="top" id="8CO-bs-f7Q"/>
+                                <constraint firstItem="8un-nb-lwn" firstAttribute="height" secondItem="VAa-UB-kPt" secondAttribute="height" id="Bpi-iP-I1Q"/>
+                                <constraint firstItem="VAa-UB-kPt" firstAttribute="leading" secondItem="8un-nb-lwn" secondAttribute="trailing" id="F56-gu-fGd"/>
+                                <constraint firstItem="8un-nb-lwn" firstAttribute="width" secondItem="VAa-UB-kPt" secondAttribute="width" id="N8a-aR-QKJ"/>
+                                <constraint firstItem="8un-nb-lwn" firstAttribute="leading" secondItem="UGl-FX-dr4" secondAttribute="trailing" id="SaK-Lj-zzL"/>
+                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="UGl-FX-dr4" secondAttribute="bottom" constant="8" id="kFy-iZ-oAB"/>
+                                <constraint firstItem="UGl-FX-dr4" firstAttribute="top" secondItem="QaT-Vd-I3B" secondAttribute="top" id="oHu-nl-qsu"/>
+                                <constraint firstItem="VAa-UB-kPt" firstAttribute="top" secondItem="QaT-Vd-I3B" secondAttribute="top" id="oII-tK-y5X"/>
+                                <constraint firstItem="UGl-FX-dr4" firstAttribute="width" secondItem="8un-nb-lwn" secondAttribute="width" id="qH3-6K-atg"/>
+                                <constraint firstAttribute="trailing" secondItem="VAa-UB-kPt" secondAttribute="trailing" id="sP4-Bf-Cmy"/>
+                                <constraint firstItem="UGl-FX-dr4" firstAttribute="height" secondItem="8un-nb-lwn" secondAttribute="height" id="tii-ao-m2J"/>
+                                <constraint firstItem="UGl-FX-dr4" firstAttribute="leading" secondItem="QaT-Vd-I3B" secondAttribute="leading" id="tke-7C-5lK"/>
+                            </constraints>
                         </view>
                     </subviews>
                 </stackView>
@@ -119,8 +133,8 @@
             <viewLayoutGuide key="safeArea" id="hWu-ns-cOg"/>
             <color key="backgroundColor" red="0.05523881169" green="0.056316187189999999" blue="0.1358961887" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
-                <constraint firstItem="hWu-ns-cOg" firstAttribute="trailing" secondItem="eSV-h2-XBo" secondAttribute="trailing" constant="16" id="74W-XJ-dg6"/>
-                <constraint firstItem="eSV-h2-XBo" firstAttribute="leading" secondItem="hWu-ns-cOg" secondAttribute="leading" constant="16" id="CLu-EI-jrg"/>
+                <constraint firstItem="hWu-ns-cOg" firstAttribute="trailing" secondItem="eSV-h2-XBo" secondAttribute="trailing" id="74W-XJ-dg6"/>
+                <constraint firstItem="eSV-h2-XBo" firstAttribute="leading" secondItem="hWu-ns-cOg" secondAttribute="leading" id="CLu-EI-jrg"/>
                 <constraint firstItem="eSV-h2-XBo" firstAttribute="top" secondItem="kO7-f4-WOr" secondAttribute="top" constant="5" id="Zkk-6d-aJE"/>
                 <constraint firstAttribute="bottom" secondItem="eSV-h2-XBo" secondAttribute="bottom" constant="5" id="zfx-La-N4R"/>
             </constraints>

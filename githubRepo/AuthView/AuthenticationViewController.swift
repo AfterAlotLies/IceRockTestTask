@@ -28,7 +28,7 @@ class AuthenticationViewController: UIViewController {
         super.viewWillAppear(animated)
     }
     
-    public func showOrHideBadConnectionAuthView(response: String) {
+    public func showOrHideErrorViewAuthView(response: String) {
         switch response {
 
         case "success":
@@ -47,10 +47,10 @@ class AuthenticationViewController: UIViewController {
     
     private func checkInternetConnection() {
         InternetConnection.shared.checkInternetConnection {
-            self.showOrHideBadConnectionAuthView(response: "success")
+            self.showOrHideErrorViewAuthView(response: "success")
         } failureHandler: {
             self.errorView.setTypeOfPreviousView(type: .authController)
-            self.showOrHideBadConnectionAuthView(response: "fail")
+            self.showOrHideErrorViewAuthView(response: "fail")
         }
     }
     
@@ -62,12 +62,14 @@ class AuthenticationViewController: UIViewController {
                 self.errorAlert(title: "Error",
                                 message: "Enter your personal access token")
             } else {
+                self.signInButton.startLoading()
                 InternetConnection.shared.checkInternetConnection {
                     self.authUserInApp(token: token)
                 } failureHandler: {
                     let noConnectionItem = {
                         self.errorView.setTypeOfPreviousView(type: .authController)
-                        self.showOrHideBadConnectionAuthView(response: "fail")
+                        self.showOrHideErrorViewAuthView(response: "fail")
+                        self.signInButton.stopLoading()
                     }
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: noConnectionItem)
                 }
@@ -76,7 +78,6 @@ class AuthenticationViewController: UIViewController {
     }
     
     private func authUserInApp(token: String) {
-        signInButton.startLoading()
         AppRepository.shared.signIn(token: token) { response, error in
             if error != nil {
                 if let error = error as? AFError, let errorCode = error.responseCode {
@@ -95,7 +96,7 @@ class AuthenticationViewController: UIViewController {
                     self.signInButton.stopLoading()
                     let repoUrl = response?.urlRepositories
                     let repositoriesListViewController = RepositoriesListViewController(nibName: "RepositoriesListViewController", bundle: nil)
-                    AppRepository.shared.setAuthUrl(url: repoUrl)
+                    repositoriesListViewController.setAuthUrl(url: repoUrl)
                     self.navigationController?.pushViewController(repositoriesListViewController, animated: false)
                     self.tokenInputField.clearTextField()
                 }

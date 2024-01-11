@@ -13,14 +13,7 @@ class AppRepository {
     static let shared = AppRepository()
     private init() {}
     
-    private var authUrl = ""
-    
-    func setAuthUrl(url: String?) {
-        guard let url = url else { return }
-        authUrl = url
-    }
-    
-    func getRepositories(completion: @escaping(Array<Repo>?, Error?) -> Void) {
+    func getRepositories(authUrl: String, completion: @escaping(Array<Repo>?, Error?) -> Void) {
         
         let keyValue = KeyValueStorage.shared
         
@@ -61,8 +54,8 @@ class AppRepository {
     }
     
     func getRepositoryReadme(ownerName: String, repositoryName: String, branchName: String, completion: @escaping (String?, Error?) -> Void) {
-//        let readmeUrl = "https://raw.githubusercontent.com/icerockdev/moko-resources/master/README.md"
-        let readmeUrl = "https://raw.githubusercontent.com/AfterAlotLies/EventList/main/README.md"
+        let readmeUrl = "https://raw.githubusercontent.com/icerockdev/moko-resources/master/README.md"
+//        let readmeUrl = "https://raw.githubusercontent.com/AfterAlotLies/EventList/main/README.md"
         AF.request(readmeUrl, method: .get).validate().responseString { response in
             switch response.result {
             case .success(let data):
