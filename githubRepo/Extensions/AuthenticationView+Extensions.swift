@@ -24,6 +24,6 @@ extension AuthenticationViewController {
 extension AuthenticationViewController: ErrorViewDelegate {
     
     func retryAction() {
-        showOrHideErrorViewAuthView(response: "success")
+        updateViewBasedOnResponse(response: "success")
     }
 }

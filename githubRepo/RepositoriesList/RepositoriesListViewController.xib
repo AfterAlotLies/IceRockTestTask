@@ -11,7 +11,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RepositoriesListViewController" customModule="githubRepo" customModuleProvider="target">
             <connections>
                 <outlet property="errorView" destination="xRa-Du-lz3" id="2bE-Yd-Mf8"/>
-                <outlet property="loadingTableView" destination="Rvh-jc-E5g" id="KOa-kw-3eZ"/>
                 <outlet property="repoList" destination="Txj-2e-SIW" id="ocf-c9-tAh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -26,10 +25,6 @@
                     <color key="backgroundColor" red="0.05523881169" green="0.056316187189999999" blue="0.1358961887" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <color key="separatorColor" systemColor="systemGrayColor"/>
                 </tableView>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Rvh-jc-E5g">
-                    <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
-                    <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                </activityIndicatorView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xRa-Du-lz3" customClass="ErrorView" customModule="githubRepo" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -38,7 +33,6 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.05523881169" green="0.056316187189999999" blue="0.1358961887" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
-                <constraint firstItem="Rvh-jc-E5g" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="1DA-Im-s3Z"/>
                 <constraint firstItem="Txj-2e-SIW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="5sX-O0-EFO"/>
                 <constraint firstItem="xRa-Du-lz3" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="6uV-Vc-ugE"/>
                 <constraint firstItem="xRa-Du-lz3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="6wo-Ah-B1u"/>
@@ -47,7 +41,6 @@
                 <constraint firstItem="xRa-Du-lz3" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="J6u-PM-2Z2"/>
                 <constraint firstItem="Txj-2e-SIW" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="L5k-la-ynp"/>
                 <constraint firstItem="xRa-Du-lz3" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="cou-ZC-bSv"/>
-                <constraint firstItem="Rvh-jc-E5g" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="wK6-B4-gU8"/>
             </constraints>
             <point key="canvasLocation" x="145.80152671755724" y="50"/>
         </view>

@@ -13,6 +13,7 @@ protocol ErrorViewDelegate: AnyObject {
 }
 
 extension ErrorViewDelegate {
+    
     func retryToGetRepoList() {
         //not necessary to use
     }

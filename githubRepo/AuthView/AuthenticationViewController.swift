@@ -6,8 +6,8 @@
 //
 
 import UIKit
-import Reachability
 import Alamofire
+import NVActivityIndicatorView
 
 class AuthenticationViewController: UIViewController {
     
@@ -28,7 +28,7 @@ class AuthenticationViewController: UIViewController {
         super.viewWillAppear(animated)
     }
     
-    public func showOrHideErrorViewAuthView(response: String) {
+    public func updateViewBasedOnResponse(response: String) {
         switch response {
 
         case "success":
@@ -47,10 +47,10 @@ class AuthenticationViewController: UIViewController {
     
     private func checkInternetConnection() {
         InternetConnection.shared.checkInternetConnection {
-            self.showOrHideErrorViewAuthView(response: "success")
+            self.updateViewBasedOnResponse(response: "success")
         } failureHandler: {
             self.errorView.setTypeOfPreviousView(type: .authController)
-            self.showOrHideErrorViewAuthView(response: "fail")
+            self.updateViewBasedOnResponse(response: "fail")
         }
     }
     
@@ -68,7 +68,7 @@ class AuthenticationViewController: UIViewController {
                 } failureHandler: {
                     let noConnectionItem = {
                         self.errorView.setTypeOfPreviousView(type: .authController)
-                        self.showOrHideErrorViewAuthView(response: "fail")
+                        self.updateViewBasedOnResponse(response: "fail")
                         self.signInButton.stopLoading()
                     }
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: noConnectionItem)
@@ -96,7 +96,7 @@ class AuthenticationViewController: UIViewController {
                     self.signInButton.stopLoading()
                     let repoUrl = response?.urlRepositories
                     let repositoriesListViewController = RepositoriesListViewController(nibName: "RepositoriesListViewController", bundle: nil)
-                    repositoriesListViewController.setAuthUrl(url: repoUrl)
+                    AppRepository.shared.setAuthUrl(url: repoUrl)
                     self.navigationController?.pushViewController(repositoriesListViewController, animated: false)
                     self.tokenInputField.clearTextField()
                 }

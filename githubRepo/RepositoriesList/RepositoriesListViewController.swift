@@ -6,26 +6,26 @@
 //
 
 import UIKit
-import Reachability
+import NVActivityIndicatorView
 
 class RepositoriesListViewController: UIViewController {
 
     @IBOutlet private weak var repoList: UITableView!
-    @IBOutlet private weak var loadingTableView: UIActivityIndicatorView!
     @IBOutlet private weak var errorView: ErrorView!
+    
+    private let loadingIndicator = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 37, height: 37), type: .circleStrokeSpin, color: .white)
     
     var nameRepoArray = [String]()
     var languageArray = [String]()
     var descriptionArray = [String]()
     var reposIdArray = [Int]()
     
-    private var authUrl: String = ""
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationRightItem()
         setupNavBar()
         setupView()
+        setupLoaderIndicator()
         checkInternetConnection()
     }
     
@@ -33,24 +33,19 @@ class RepositoriesListViewController: UIViewController {
         super.viewWillAppear(animated)
     }
     
-    public func setAuthUrl(url: String?) {
-        guard let url = url else { return }
-        authUrl = url
-    }
-    
-    public func showOrHideErrorViewRepositoriesList(response: String) {
+    public func updateViewBasedOnResponse(response: String) {
         switch response {
             
         case "success":
             
             repoList.isHidden = false
-            loadingTableView.isHidden = false
+            loadingIndicator.isHidden = false
             errorView.hideErrorView()
             getUserRepositories()
             
         default:
             repoList.isHidden = true
-            loadingTableView.isHidden = true
+            loadingIndicator.isHidden = true
             errorView.showErrorView()
         }
     }
@@ -59,27 +54,39 @@ class RepositoriesListViewController: UIViewController {
         checkInternetConnection()
     }
     
+    private func setupLoaderIndicator() {
+        view.addSubview(loadingIndicator)
+        loadingIndicator.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            loadingIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            loadingIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
+        
+        loadingIndicator.startAnimating()
+    }
+    
     private func checkInternetConnection() {
         InternetConnection.shared.checkInternetConnection {
-            self.showOrHideErrorViewRepositoriesList(response: "success")
+            self.updateViewBasedOnResponse(response: "success")
         } failureHandler: {
             self.errorView.setTypeOfPreviousView(type: .repoListBadConnection)
-            self.showOrHideErrorViewRepositoriesList(response: "fail")
+            self.updateViewBasedOnResponse(response: "fail")
         }
     }
     
     private func getUserRepositories() {
         clearAllArrays()
         
-        if loadingTableView.isHidden == true {
-            loadingTableView.isHidden = false
+        if loadingIndicator.isHidden == true {
+            loadingIndicator.isHidden = false
         }
         
-        loadingTableView.startAnimating()
-        AppRepository.shared.getRepositories(authUrl: authUrl) { repoDetail, error in
+        loadingIndicator.startAnimating()
+        AppRepository.shared.getRepositories { repoDetail, error in
             if error != nil {
                 self.errorView.setTypeOfPreviousView(type: .other)
-                self.showOrHideErrorViewRepositoriesList(response: "fail")
+                self.updateViewBasedOnResponse(response: "fail")
             } else {
                 guard let repositoryDetail = repoDetail else { return }
                 for detail in repositoryDetail {
@@ -90,11 +97,11 @@ class RepositoriesListViewController: UIViewController {
                         self.errorView.hideErrorView()
                         self.repoList.isHidden = false
                         self.repoList.reloadData()
-                        self.loadingTableView.stopAnimating()
-                        self.loadingTableView.isHidden = true
+                        self.loadingIndicator.stopAnimating()
+                        self.loadingIndicator.isHidden = true
                     } else {
                         self.errorView.setTypeOfPreviousView(type: .repoListEmpty)
-                        self.showOrHideErrorViewRepositoriesList(response: "empty")
+                        self.updateViewBasedOnResponse(response: "empty")
                     }
                 }
             }
@@ -107,7 +114,7 @@ class RepositoriesListViewController: UIViewController {
         errorView.delegate = self
         repoList.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomTableViewCell")
         repoList.separatorInset = UIEdgeInsets.zero
-        loadingTableView.isHidden = false
+        loadingIndicator.isHidden = false
         navigationItem.backButtonTitle = ""
     }
     

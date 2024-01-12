@@ -11,7 +11,8 @@ import NVActivityIndicatorView
 class CustomButtonClass: UIView {
     
     @IBOutlet private weak var customButton: UIButton!
-    @IBOutlet private weak var loadingIndicator: UIActivityIndicatorView!
+    
+    private let loadingIndicator = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 20, height: 20), type: .circleStrokeSpin, color: .white)
     
     var actionHandler: (() -> Void)?
     
@@ -30,11 +31,20 @@ class CustomButtonClass: UIView {
         subview.frame = self.bounds
         subview.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.addSubview(subview)
-        customButton.titleLabel?.font = UIFont(name: "SFPro-Regular", size: 34)
+        
+        subview.addSubview(loadingIndicator)
+        
+        loadingIndicator.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            loadingIndicator.centerXAnchor.constraint(equalTo: subview.centerXAnchor),
+            loadingIndicator.centerYAnchor.constraint(equalTo: subview.centerYAnchor)
+        ])
     }
     
     private func loadViewFromXib() -> UIView {
         guard let view = Bundle.main.loadNibNamed("CustomButtonUI", owner: self)?.first as? UIView else { return UIView() }
+
 
         return view
     }

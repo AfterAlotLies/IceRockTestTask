@@ -7,7 +7,7 @@
 
 import UIKit
 
-// MARK: - Setup NavigationBar + NavigationRightItem
+// MARK: - Setup View
 extension RepositoriesListViewController {
     
     func setupNavBar() {
@@ -109,7 +109,7 @@ extension RepositoriesListViewController: UITableViewDelegate {
 extension RepositoriesListViewController: ErrorViewDelegate {
     
     func retryAction() {
-        showOrHideErrorViewRepositoriesList(response: "success")
+        updateViewBasedOnResponse(response: "success")
     }
     
     func retryToGetRepoList() {

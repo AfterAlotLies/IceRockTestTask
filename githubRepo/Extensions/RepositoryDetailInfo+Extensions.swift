@@ -10,9 +10,10 @@ import UIKit
 extension RepositoryDetailInfoViewController: ErrorViewDelegate {
     
     func retryAction() {
-        showOrHideErrorViewRepositoryDetail(response: "success")
+        updateViewBasedOnResponse(response: "success")
     }
     
+// MARK: - Setup Detail View
     func setupNavigationRightItem() {
         let barButton = UIButton()
 
