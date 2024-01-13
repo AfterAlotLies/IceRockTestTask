@@ -20,8 +20,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HSh-mz-Akh">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="47"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="filled" buttonSize="medium">
-                        <attributedString key="attributedTitle"/>
+                    <buttonConfiguration key="configuration" style="filled" title="" buttonSize="medium">
                         <color key="baseBackgroundColor" red="0.37186397562966506" green="0.81596166817183358" blue="0.40848792127425793" alpha="0.69682716836734693" colorSpace="custom" customColorSpace="displayP3"/>
                     </buttonConfiguration>
                     <connections>

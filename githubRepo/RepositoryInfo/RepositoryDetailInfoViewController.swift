@@ -5,7 +5,6 @@
 //  Created by Vyacheslav on 01.12.2023.
 //
 
-import Foundation
 import UIKit
 import Alamofire
 import SwiftyMarkdown
@@ -23,38 +22,38 @@ class RepositoryDetailInfoViewController: UIViewController {
     private var readmeErrorView: ErrorView!
     
     private var chosenRepoId: String = ""
-    private var branch: String = ""
+    private var branchName: String = ""
     private var repositoryName: String = ""
     private var ownerName: String = ""
-    
-    private var requestItem: (() -> Void)?
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         setupReadmeErrorView()
         setupLoadingIndicators()
         checkInternetConnection()
         setupNavigationRightItem()
+        readmeErrorView.delegate = self
         errorView.delegate = self
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
-    public func setChosenRepoId(repoId: Int?) {
-        guard let repoId = repoId else { return }
+    public func setChosenRepoId(repoId: Int?, branch: String?, repoName: String?, owner: String?) {
+        guard let repoId = repoId, let branch = branch, let repoName = repoName, let owner = owner else { return }
         chosenRepoId = repoId.intToString()
+        branchName = branch
+        repositoryName = repoName
+        ownerName = owner
     }
     
+// MARK: - Update view by response
+
     public func updateViewBasedOnResponse(response: String) {
         switch response {
             
         case "success":
             errorView.hideErrorView()
             readmeErrorView.hideErrorView()
-            topRepoInfoView.isHidden = false
-            readmeTextView.isHidden = false
+            topRepoInfoView.isHidden = true
+            readmeTextView.isHidden = true
             getRepositoryDetail()
             getRepositoryReadme()
             
@@ -66,6 +65,110 @@ class RepositoryDetailInfoViewController: UIViewController {
         }
     }
     
+//MARK: - Check internet connection
+
+    private func checkInternetConnection() {
+        InternetConnection.shared.checkInternetConnection {
+            self.updateViewBasedOnResponse(response: "success")
+        } failureHandler: {
+            self.errorView.setTypeOfPreviousView(type: .repoDetailBadConnection)
+            self.updateViewBasedOnResponse(response: "fail")
+        }
+    }
+    
+// MARK: - Requests to get data for top view + to get readme
+
+    private func getRepositoryDetail() {
+        self.viewLoadingIndicator.startAnimating()
+        AppRepository.shared.getRepository(repoId: chosenRepoId) { response, error in
+            if error != nil {
+                DispatchQueue.main.async {
+                    self.errorView.setTypeOfPreviousView(type: .other)
+                    self.updateViewBasedOnResponse(response: "fail")
+                    self.viewLoadingIndicator.stopAnimating()
+                }
+            } else {
+                guard let repoDetail = response else { return }
+                DispatchQueue.main.async {
+                    self.setInRepoDetail(repoDetail: repoDetail)
+                    self.topRepoInfoView.isHidden = false
+                    self.viewLoadingIndicator.stopAnimating()
+                }
+            }
+        }
+    }
+    
+    private func getRepositoryReadme() {
+        InternetConnection.shared.checkInternetConnection {
+            AppRepository.shared.getRepositoryReadme(ownerName: self.ownerName, repositoryName: self.repositoryName, branchName: self.branchName) { repoReadme, error in
+                self.readmeLoadingIndicator.startAnimating()
+                if error != nil {
+                    if let error = error as? AFError, let errorCode = error.responseCode {
+                        switch errorCode {
+                            
+                        case 404:
+                            DispatchQueue.main.async {
+                                self.readmeTextView.text = "No README.md"
+                                self.readmeTextView.textColor = .gray
+                                self.readmeTextView.isHidden = false
+                                self.readmeLoadingIndicator.stopAnimating()
+                            }
+                            
+                        default:
+                            DispatchQueue.main.async {
+                                self.errorView.setTypeOfPreviousView(type: .other)
+                                self.readmeTextView.isHidden = true
+                                self.readmeErrorView.showErrorView()
+                                self.readmeLoadingIndicator.stopAnimating()
+                            }
+                        }
+                    }
+                } else {
+                    guard let repoInfo = repoReadme else { return }
+                    if repoInfo.isEmpty || repoInfo == "" {
+                        DispatchQueue.main.async {
+                            self.readmeTextView.text = "README.md is empty"
+                            self.readmeTextView.textColor = .gray
+                            self.readmeTextView.isHidden = false
+                            self.readmeLoadingIndicator.stopAnimating()
+                        }
+                    } else {
+                        DispatchQueue.main.async {
+                            let changedRepoInfo = repoInfo.replacingOccurrences(of: "```", with: "`")
+                            let markdownText = SwiftyMarkdown(string: changedRepoInfo)
+                            self.readmeTextView.attributedText = markdownText.attributedString()
+                            self.readmeTextView.textColor = .white
+                            self.readmeTextView.isHidden = false
+                            self.readmeLoadingIndicator.stopAnimating()
+                        }
+                    }
+                }
+            }
+        } failureHandler: {
+            DispatchQueue.main.async {
+                self.readmeLoadingIndicator.stopAnimating()
+                self.readmeTextView.isHidden = true
+                self.readmeErrorView.setTypeOfPreviousView(type: .repoDetailReadmeError)
+                self.readmeErrorView.showErrorView()
+            }
+        }
+    }
+    
+// MARK: - Set data to top view
+
+    private func setInRepoDetail(repoDetail: RepoDetails) {
+        if let licenseName = repoDetail.license?.name {
+            topRepoInfoView.setTopRepositoryDetail(url: repoDetail.githubUrlRepo, license: "License", licenseName: licenseName)
+            topRepoInfoView.setupBottomView(stars: repoDetail.stargazers, forks: repoDetail.forks, watchers: repoDetail.watchers)
+        } else {
+            topRepoInfoView.setTopRepositoryDetail(url: repoDetail.githubUrlRepo, license: "", licenseName: "")
+            topRepoInfoView.hideLicenseView()
+            topRepoInfoView.setupBottomView(stars: repoDetail.stargazers, forks: repoDetail.forks, watchers: repoDetail.watchers)
+        }
+    }
+    
+// MARK: - Setup methods
+
     private func setupLoadingIndicators() {
         view.addSubview(viewLoadingIndicator)
         view.addSubview(readmeLoadingIndicator
@@ -86,7 +189,7 @@ class RepositoryDetailInfoViewController: UIViewController {
             readmeLoadingIndicator.topAnchor.constraint(equalTo: readmeTextView.topAnchor, constant: 8)
         ])
     }
-    
+        
     private func setupReadmeErrorView() {
         readmeErrorView = ErrorView()
         
@@ -99,90 +202,6 @@ class RepositoryDetailInfoViewController: UIViewController {
             readmeErrorView.trailingAnchor.constraint(equalTo: readmeTextView.trailingAnchor),
             readmeErrorView.bottomAnchor.constraint(equalTo: readmeTextView.bottomAnchor)
         ])
-    }
-    
-    private func checkInternetConnection() {
-        InternetConnection.shared.checkInternetConnection {
-            self.updateViewBasedOnResponse(response: "success")
-        } failureHandler: {
-            self.errorView.setTypeOfPreviousView(type: .repoDetailBadConnection)
-            self.updateViewBasedOnResponse(response: "fail")
-        }
-    }
-    
-    private func getRepositoryDetail() {
-        self.viewLoadingIndicator.startAnimating()
-        topRepoInfoView.isHidden = true
-        AppRepository.shared.getRepository(repoId: chosenRepoId) { response, error in
-            if error != nil {
-                self.errorView.setTypeOfPreviousView(type: .other)
-                self.updateViewBasedOnResponse(response: "fail")
-                self.viewLoadingIndicator.stopAnimating()
-            } else {
-                guard let repoDetail = response else { return }
-                self.setInRepoDetail(repoDetail: repoDetail)
-                self.topRepoInfoView.isHidden = false
-                self.viewLoadingIndicator.stopAnimating()
-            }
-        }
-    }
-    
-    private func getRepositoryReadme() {
-        InternetConnection.shared.checkInternetConnection {
-            AppRepository.shared.getRepositoryReadme(ownerName: self.ownerName, repositoryName: self.repositoryName, branchName: self.branch) { repoReadme, error in
-                self.readmeLoadingIndicator.startAnimating()
-                if error != nil {
-                    if let error = error as? AFError, let errorCode = error.responseCode {
-                        switch errorCode {
-                            
-                        case 404:
-                            DispatchQueue.main.async {
-                                self.readmeTextView.text = "No README.md"
-                                self.readmeTextView.textColor = .gray
-                                self.readmeLoadingIndicator.stopAnimating()
-                            }
-                            
-                        default:
-                            self.errorView.setTypeOfPreviousView(type: .other)
-                            self.readmeTextView.isHidden = true
-                            self.readmeErrorView.showErrorView()
-                            self.readmeLoadingIndicator.stopAnimating()
-                        }
-                    }
-                } else {
-                    guard let repoInfo = repoReadme else { return }
-                    if repoInfo.isEmpty || repoInfo == "" {
-                        self.readmeTextView.text = "README.md is empty"
-                        self.readmeTextView.textColor = .gray
-                        self.readmeLoadingIndicator.stopAnimating()
-                    } else {
-                        let changedRepoInfo = repoInfo.replacingOccurrences(of: "```", with: "`")
-                        let markdownText = SwiftyMarkdown(string: changedRepoInfo)
-                        self.readmeTextView.attributedText = markdownText.attributedString()
-                        self.readmeTextView.textColor = .white
-                        self.readmeLoadingIndicator.stopAnimating()
-                    }
-                }
-            }
-        } failureHandler: {
-            self.readmeLoadingIndicator.stopAnimating()
-            self.readmeTextView.isHidden = true
-            self.readmeErrorView.setTypeOfPreviousView(type: .repoDetailReadmeError)
-            self.readmeErrorView.showErrorView()
-        }
-    }
-
-    
-    private func setInRepoDetail(repoDetail: RepoDetails) {
-        
-        if let licenseName = repoDetail.license?.name {
-            topRepoInfoView.setTopRepositoryDetail(url: repoDetail.githubUrlRepo, license: "License", licenseName: licenseName)
-            topRepoInfoView.setupBottomView(stars: repoDetail.stargazers, forks: repoDetail.forks, watchers: repoDetail.watchers)
-        } else {
-            topRepoInfoView.setTopRepositoryDetail(url: repoDetail.githubUrlRepo, license: "", licenseName: "")
-            topRepoInfoView.hideLicenseView()
-            topRepoInfoView.setupBottomView(stars: repoDetail.stargazers, forks: repoDetail.forks, watchers: repoDetail.watchers)
-        }
     }
     
     @objc

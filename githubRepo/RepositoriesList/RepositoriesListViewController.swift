@@ -18,6 +18,8 @@ class RepositoriesListViewController: UIViewController {
     var nameRepoArray = [String]()
     var languageArray = [String]()
     var descriptionArray = [String]()
+    var branchArray = [String]()
+    var ownerNameArray = [String]()
     var reposIdArray = [Int]()
     
     override func viewDidLoad() {
@@ -29,10 +31,8 @@ class RepositoriesListViewController: UIViewController {
         checkInternetConnection()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
+// MARK: - Update view by response
+
     public func updateViewBasedOnResponse(response: String) {
         switch response {
             
@@ -54,6 +54,65 @@ class RepositoriesListViewController: UIViewController {
         checkInternetConnection()
     }
     
+// MARK: - Check internet connection
+
+    private func checkInternetConnection() {
+        InternetConnection.shared.checkInternetConnection {
+            self.updateViewBasedOnResponse(response: "success")
+        } failureHandler: {
+            self.errorView.setTypeOfPreviousView(type: .repoListBadConnection)
+            self.updateViewBasedOnResponse(response: "fail")
+        }
+    }
+    
+// MARK: - Request to get list of repositories
+
+    private func getUserRepositories() {
+        clearAllArrays()
+        
+        if loadingIndicator.isHidden == true {
+            loadingIndicator.isHidden = false
+        }
+        
+        loadingIndicator.startAnimating()
+        AppRepository.shared.getRepositories { repoDetail, error in
+            if error != nil {
+                DispatchQueue.main.async {
+                    self.errorView.setTypeOfPreviousView(type: .other)
+                    self.updateViewBasedOnResponse(response: "fail")
+                }
+            } else {
+                guard let repositoryDetail = repoDetail else { return }
+                for detail in repositoryDetail {
+                    self.addInfoToArrays(detail: detail)
+                }
+                DispatchQueue.main.async {
+                    if !self.nameRepoArray.isEmpty {
+                        self.errorView.hideErrorView()
+                        self.repoList.isHidden = false
+                        self.repoList.reloadData()
+                        self.loadingIndicator.stopAnimating()
+                    } else {
+                        self.errorView.setTypeOfPreviousView(type: .repoListEmpty)
+                        self.updateViewBasedOnResponse(response: "empty")
+                    }
+                }
+            }
+        }
+    }
+    
+// MARK: - Setup methods
+
+    private func setupView() {
+        repoList.dataSource = self
+        repoList.delegate = self
+        errorView.delegate = self
+        repoList.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomTableViewCell")
+        repoList.separatorInset = UIEdgeInsets.zero
+        loadingIndicator.isHidden = false
+        navigationItem.backButtonTitle = ""
+    }
+    
     private func setupLoaderIndicator() {
         view.addSubview(loadingIndicator)
         loadingIndicator.translatesAutoresizingMaskIntoConstraints = false
@@ -66,63 +125,15 @@ class RepositoriesListViewController: UIViewController {
         loadingIndicator.startAnimating()
     }
     
-    private func checkInternetConnection() {
-        InternetConnection.shared.checkInternetConnection {
-            self.updateViewBasedOnResponse(response: "success")
-        } failureHandler: {
-            self.errorView.setTypeOfPreviousView(type: .repoListBadConnection)
-            self.updateViewBasedOnResponse(response: "fail")
-        }
-    }
-    
-    private func getUserRepositories() {
-        clearAllArrays()
-        
-        if loadingIndicator.isHidden == true {
-            loadingIndicator.isHidden = false
-        }
-        
-        loadingIndicator.startAnimating()
-        AppRepository.shared.getRepositories { repoDetail, error in
-            if error != nil {
-                self.errorView.setTypeOfPreviousView(type: .other)
-                self.updateViewBasedOnResponse(response: "fail")
-            } else {
-                guard let repositoryDetail = repoDetail else { return }
-                for detail in repositoryDetail {
-                    self.addInfoToArrays(detail: detail)
-                }
-                DispatchQueue.main.async {
-                    if !self.nameRepoArray.isEmpty {
-                        self.errorView.hideErrorView()
-                        self.repoList.isHidden = false
-                        self.repoList.reloadData()
-                        self.loadingIndicator.stopAnimating()
-                        self.loadingIndicator.isHidden = true
-                    } else {
-                        self.errorView.setTypeOfPreviousView(type: .repoListEmpty)
-                        self.updateViewBasedOnResponse(response: "empty")
-                    }
-                }
-            }
-        }
-    }
-    
-    private func setupView() {
-        repoList.dataSource = self
-        repoList.delegate = self
-        errorView.delegate = self
-        repoList.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomTableViewCell")
-        repoList.separatorInset = UIEdgeInsets.zero
-        loadingIndicator.isHidden = false
-        navigationItem.backButtonTitle = ""
-    }
-    
+// MARK: - Actions with arrays
+
     private func addInfoToArrays(detail: Repo) {
         nameRepoArray.append(detail.name)
         languageArray.append(detail.language ?? "")
         descriptionArray.append(detail.description ?? "")
         reposIdArray.append(detail.id)
+        ownerNameArray.append(detail.owner.login)
+        branchArray.append(detail.branch)
     }
     
     private func clearAllArrays() {
@@ -140,5 +151,4 @@ class RepositoriesListViewController: UIViewController {
         let authViewController = AuthenticationViewController(nibName: "AuthenticationViewController", bundle: nil)
         navigationController?.setViewControllers([authViewController], animated: false)
     }
-
 }

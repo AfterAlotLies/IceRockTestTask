@@ -17,20 +17,30 @@ struct UserInfo: Codable {
 
 struct Repo: Codable {
 
+    private enum CodingKeys: String, CodingKey {
+        case name
+        case language
+        case description
+        case id
+        case owner
+        case branch = "default_branch"
+    }
     var name: String
     var language: String?
     var description: String?
     var id: Int
+    var owner: Owner
+    var branch: String
 }
 
 struct RepoDetails: Codable {
 
     private enum CodingKeys: String, CodingKey {
         case githubUrlRepo = "html_url"
-        case license
         case stargazers = "stargazers_count"
         case watchers = "watchers_count"
         case forks = "forks_count"
+
     }
     var githubUrlRepo: String
     var license: License?
@@ -41,4 +51,8 @@ struct RepoDetails: Codable {
 
 struct License: Codable {
     var name: String?
+}
+
+struct Owner: Codable {
+    var login: String
 }

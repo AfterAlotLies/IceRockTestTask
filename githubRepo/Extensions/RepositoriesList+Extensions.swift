@@ -99,7 +99,8 @@ extension RepositoriesListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let repositoryDetail = RepositoryDetailInfoViewController(nibName: "RepositoryDetailInfoViewController", bundle: nil)
-        repositoryDetail.setChosenRepoId(repoId: reposIdArray[indexPath.row])
+        repositoryDetail.setChosenRepoId(repoId: reposIdArray[indexPath.row], branch: branchArray[indexPath.row],
+                                         repoName: nameRepoArray[indexPath.row], owner: ownerNameArray[indexPath.row])
         repositoryDetail.navigationItem.title = nameRepoArray[indexPath.row]
         navigationController?.pushViewController(repositoryDetail, animated: true)
     }
@@ -108,7 +109,7 @@ extension RepositoriesListViewController: UITableViewDelegate {
 // MARK: - RepositoriesListViewController + ErrorViewDelegate
 extension RepositoriesListViewController: ErrorViewDelegate {
     
-    func retryAction() {
+    func retryConnectToInternet() {
         updateViewBasedOnResponse(response: "success")
     }
     

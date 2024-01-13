@@ -24,10 +24,8 @@ class AuthenticationViewController: UIViewController {
         hideKeyBoard()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
+// MARK: - Update view by response
+
     public func updateViewBasedOnResponse(response: String) {
         switch response {
 
@@ -45,6 +43,8 @@ class AuthenticationViewController: UIViewController {
         }
     }
     
+// MARK: - Check internet connection
+
     private func checkInternetConnection() {
         InternetConnection.shared.checkInternetConnection {
             self.updateViewBasedOnResponse(response: "success")
@@ -54,6 +54,8 @@ class AuthenticationViewController: UIViewController {
         }
     }
     
+// MARK: - Setup button + check correctly token
+
     private func signInUserButton() {
         signInButton.setButtonText(buttonText: "Sign in")
         signInButton.actionHandler = {
@@ -77,6 +79,8 @@ class AuthenticationViewController: UIViewController {
         }
     }
     
+// MARK: - Request to auth by token
+
     private func authUserInApp(token: String) {
         AppRepository.shared.signIn(token: token) { response, error in
             if error != nil {

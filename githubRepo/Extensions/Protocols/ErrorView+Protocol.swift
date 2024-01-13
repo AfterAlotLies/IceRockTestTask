@@ -8,7 +8,7 @@
 import UIKit
 
 protocol ErrorViewDelegate: AnyObject {
-    func retryAction()
+    func retryConnectToInternet()
     func retryToGetRepoList()
 }
 

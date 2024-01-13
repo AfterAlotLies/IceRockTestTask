@@ -20,6 +20,8 @@ class AppRepository {
         authUrl = url
     }
     
+// MARK: - Get list of repositories
+
     func getRepositories(completion: @escaping(Array<Repo>?, Error?) -> Void) {
         
         let keyValue = KeyValueStorage.shared
@@ -47,6 +49,8 @@ class AppRepository {
         }
     }
     
+// MARK: - Get detail of repository
+
     func getRepository(repoId: String, completion: @escaping (RepoDetails?, Error?) -> Void) {
         let repoUrl = "https://api.github.com/repositories/\(repoId)"
         
@@ -60,9 +64,10 @@ class AppRepository {
         }
     }
     
+// MARK: - Get repository readme
+
     func getRepositoryReadme(ownerName: String, repositoryName: String, branchName: String, completion: @escaping (String?, Error?) -> Void) {
-//        let readmeUrl = "https://raw.githubusercontent.com/icerockdev/moko-resources/master/README.md"
-        let readmeUrl = "https://raw.githubusercontent.com/AfterAlotLies/EventList/main/README.md"
+        let readmeUrl = "https://raw.githubusercontent.com/\(ownerName)/\(repositoryName)/\(branchName)/README.md"
         AF.request(readmeUrl, method: .get).validate().responseString { response in
             switch response.result {
             case .success(let data):
@@ -73,6 +78,8 @@ class AppRepository {
         }
     }
     
+// MARK: - Sign In user
+
     func signIn(token: String, completion: @escaping (UserInfo?, Error?) -> Void) {
         let headers: HTTPHeaders = [
             "Authorization": "Bearer \(token)",

@@ -270,8 +270,8 @@
             filePath = "githubRepo/RepositoriesList/RepositoriesListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
             landmarkName = "getUserRepositories()"
             landmarkType = "7">
          </BreakpointContent>
@@ -302,8 +302,8 @@
             filePath = "githubRepo/Requests+CodableModel+keyStorage/Requests/AppRepository.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
             landmarkName = "getRepositories(completion:)"
             landmarkType = "7">
             <Locations>
@@ -350,8 +350,8 @@
             filePath = "githubRepo/Requests+CodableModel+keyStorage/Requests/AppRepository.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "getRepositories(completion:)"
             landmarkType = "7">
             <Locations>
@@ -398,8 +398,8 @@
             filePath = "githubRepo/Requests+CodableModel+keyStorage/Requests/AppRepository.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "getRepositories(completion:)"
             landmarkType = "7">
             <Locations>
@@ -446,8 +446,8 @@
             filePath = "githubRepo/Requests+CodableModel+keyStorage/Requests/AppRepository.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "getRepositories(completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -462,8 +462,8 @@
             filePath = "githubRepo/Requests+CodableModel+keyStorage/Requests/AppRepository.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "getRepositories(completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -478,8 +478,8 @@
             filePath = "githubRepo/Requests+CodableModel+keyStorage/Requests/AppRepository.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "getRepositories(completion:)"
             landmarkType = "7">
             <Locations>
@@ -526,8 +526,8 @@
             filePath = "githubRepo/Requests+CodableModel+keyStorage/Requests/AppRepository.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "getRepositories(completion:)"
             landmarkType = "7">
             <Locations>
@@ -574,8 +574,8 @@
             filePath = "githubRepo/Requests+CodableModel+keyStorage/Requests/AppRepository.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "getRepositories(completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -590,8 +590,8 @@
             filePath = "githubRepo/Requests+CodableModel+keyStorage/Requests/AppRepository.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "getRepositories(completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -606,8 +606,8 @@
             filePath = "githubRepo/Requests+CodableModel+keyStorage/Requests/AppRepository.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
             landmarkName = "signIn(token:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -622,8 +622,8 @@
             filePath = "githubRepo/Requests+CodableModel+keyStorage/Requests/AppRepository.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
             landmarkName = "signIn(token:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -638,8 +638,8 @@
             filePath = "githubRepo/RepositoriesList/RepositoriesListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
             landmarkName = "backToAuthView()"
             landmarkType = "7">
          </BreakpointContent>
@@ -654,8 +654,8 @@
             filePath = "githubRepo/AuthView/AuthenticationViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "authUserInApp(token:)"
             landmarkType = "7">
             <Locations>
@@ -1071,7 +1071,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "48"
             endingLineNumber = "48"
-            landmarkName = "signInUserButton()"
+            landmarkName = "checkInternetConnection()"
             landmarkType = "7">
             <Locations>
                <Location
@@ -1125,54 +1125,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C40DB555-09C4-4CB6-ADE8-C958F9C57560"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "setTypeOfPreviousView(type:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E38A9944-D815-4DB1-BEC4-E1781E5FC91E"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "setTypeOfPreviousView(type:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "184A5C59-9739-44B7-BF77-320D7D76F1B3"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "setTypeOfPreviousView(type:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "5AF6920C-1BCD-42D0-ADF2-23D2667CB336"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -1189,22 +1141,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2F489FBD-6647-4084-AA33-D709D6E6B26E"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "140"
-            endingLineNumber = "140"
-            landmarkName = "retryButtonAction()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "96513B11-E772-4D38-A98D-25DF720A389A"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -1212,10 +1148,10 @@
             filePath = "githubRepo/AuthView/AuthenticationViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "AuthenticationViewController"
-            landmarkType = "3">
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "signInUserButton()"
+            landmarkType = "7">
             <Locations>
                <Location
                   uuid = "96513B11-E772-4D38-A98D-25DF720A389A - eb3520fe164a4148"
@@ -1260,9 +1196,9 @@
             filePath = "githubRepo/AuthView/AuthenticationViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "authUserInApp(token:)"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "signInUserButton()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1276,9 +1212,9 @@
             filePath = "githubRepo/AuthView/AuthenticationViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
-            landmarkName = "authUserInApp(token:)"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "signInUserButton()"
             landmarkType = "7">
             <Locations>
                <Location
@@ -1347,84 +1283,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4D2412BC-D72A-4492-A0A6-E4DBDC745EAB"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "githubRepo/AuthView/AuthenticationViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "signInUserButton()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "4D2412BC-D72A-4492-A0A6-E4DBDC745EAB - 1adeaffe2016b317"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "githubRepo.AuthenticationViewController.checkInternetConnection() -&gt; ()"
-                  moduleName = "githubRepo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/AuthView/AuthenticationViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "34"
-                  endingLineNumber = "34"
-                  offsetFromSymbolStart = "28">
-               </Location>
-               <Location
-                  uuid = "4D2412BC-D72A-4492-A0A6-E4DBDC745EAB - ed5634acc4c4944"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in githubRepo.AuthenticationViewController.checkInternetConnection() -&gt; ()"
-                  moduleName = "githubRepo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/AuthView/AuthenticationViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35"
-                  offsetFromSymbolStart = "68">
-               </Location>
-               <Location
-                  uuid = "4D2412BC-D72A-4492-A0A6-E4DBDC745EAB - 1adeaffe2016bd26"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "githubRepo.AuthenticationViewController.checkInternetConnection() -&gt; ()"
-                  moduleName = "githubRepo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/AuthView/AuthenticationViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "49"
-                  endingLineNumber = "49"
-                  offsetFromSymbolStart = "28">
-               </Location>
-               <Location
-                  uuid = "4D2412BC-D72A-4492-A0A6-E4DBDC745EAB - ed5634acc4c47b3"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in githubRepo.AuthenticationViewController.checkInternetConnection() -&gt; ()"
-                  moduleName = "githubRepo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/AuthView/AuthenticationViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "50"
-                  endingLineNumber = "50"
-                  offsetFromSymbolStart = "52">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "F2205905-0571-463A-BE1C-B83F44226FB7"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -1434,7 +1292,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "50"
             endingLineNumber = "50"
-            landmarkName = "signInUserButton()"
+            landmarkName = "checkInternetConnection()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1450,7 +1308,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "51"
             endingLineNumber = "51"
-            landmarkName = "signInUserButton()"
+            landmarkName = "checkInternetConnection()"
             landmarkType = "7">
             <Locations>
                <Location
@@ -1528,7 +1386,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "52"
             endingLineNumber = "52"
-            landmarkName = "signInUserButton()"
+            landmarkName = "checkInternetConnection()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1544,7 +1402,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "53"
             endingLineNumber = "53"
-            landmarkName = "signInUserButton()"
+            landmarkName = "checkInternetConnection()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1558,8 +1416,8 @@
             filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "152"
-            endingLineNumber = "152"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
             landmarkName = "retryBackToAuthView(previousView:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1670,8 +1528,8 @@
             filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "updateViewBasedOnResponse(response:)"
             landmarkType = "7">
             <Locations>
@@ -1718,8 +1576,8 @@
             filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "updateViewBasedOnResponse(response:)"
             landmarkType = "7">
             <Locations>
@@ -1766,8 +1624,8 @@
             filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "updateViewBasedOnResponse(response:)"
             landmarkType = "7">
             <Locations>
@@ -1814,8 +1672,8 @@
             filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "updateViewBasedOnResponse(response:)"
             landmarkType = "7">
             <Locations>
@@ -1937,8 +1795,8 @@
             filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "updateViewBasedOnResponse(response:)"
             landmarkType = "7">
             <Locations>
@@ -1985,8 +1843,8 @@
             filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -2001,8 +1859,8 @@
             filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
             landmarkName = "checkInternetConnection()"
             landmarkType = "7">
          </BreakpointContent>
@@ -2017,8 +1875,8 @@
             filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
             landmarkName = "updateViewBasedOnResponse(response:)"
             landmarkType = "7">
             <Locations>
@@ -2065,8 +1923,8 @@
             filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "updateViewBasedOnResponse(response:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2081,8 +1939,8 @@
             filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "updateViewBasedOnResponse(response:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2097,8 +1955,8 @@
             filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "updateViewBasedOnResponse(response:)"
             landmarkType = "7">
             <Locations>
@@ -2145,8 +2003,8 @@
             filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
             landmarkName = "checkInternetConnection()"
             landmarkType = "7">
             <Locations>
@@ -2193,8 +2051,8 @@
             filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "showErrorView()"
             landmarkType = "7">
          </BreakpointContent>
@@ -2209,8 +2067,8 @@
             filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "showErrorView()"
             landmarkType = "7">
          </BreakpointContent>
@@ -2219,6 +2077,22 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "AF3D327B-C042-4F1B-8B77-4C05FF45DD24"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "showErrorView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9C7F6BB8-9EA0-457A-8C23-4307DE12961E"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -2234,22 +2108,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9C7F6BB8-9EA0-457A-8C23-4307DE12961E"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "showErrorView()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "99B1A3F7-1D60-4204-BE3D-2A65E6474123"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -2257,8 +2115,8 @@
             filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
             landmarkName = "showErrorView()"
             landmarkType = "7">
          </BreakpointContent>
@@ -2305,8 +2163,8 @@
             filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
             landmarkName = "showErrorView()"
             landmarkType = "7">
          </BreakpointContent>
@@ -2315,22 +2173,6 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "D6F9EC2B-3A75-4F1D-9597-B9798C9F4E1A"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
-            landmarkName = "showErrorView()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "693F0943-ED19-4C7B-AD6B-2B269247A943"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -2346,39 +2188,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A71F7F11-9F62-46AC-98EC-7C56A7CFD20F"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
-            landmarkName = "showErrorView()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5888042D-B529-441A-BA55-540C34F1B88C"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
-            landmarkName = "showErrorView()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C73F9ED9-2F2A-4EE5-AEA5-DDD4880FAE3D"
+            uuid = "693F0943-ED19-4C7B-AD6B-2B269247A943"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -2394,6 +2204,54 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "A71F7F11-9F62-46AC-98EC-7C56A7CFD20F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "showErrorView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5888042D-B529-441A-BA55-540C34F1B88C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "showErrorView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C73F9ED9-2F2A-4EE5-AEA5-DDD4880FAE3D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "showErrorView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
             uuid = "86A35817-CB6B-4001-960B-B78955F17E9A"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -2401,9 +2259,9 @@
             filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
-            landmarkName = "badInternetConnectionError()"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "setupViewByError(imageName:titleText:messageText:titleColor:messageColor:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2529,8 +2387,8 @@
             filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "153"
-            endingLineNumber = "153"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
             landmarkName = "retryBackToAuthView(previousView:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2545,8 +2403,8 @@
             filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "167"
-            endingLineNumber = "167"
+            startingLineNumber = "152"
+            endingLineNumber = "152"
             landmarkName = "retryBackToAuthView(previousView:)"
             landmarkType = "7">
             <Locations>
@@ -2593,8 +2451,8 @@
             filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "169"
-            endingLineNumber = "169"
+            startingLineNumber = "154"
+            endingLineNumber = "154"
             landmarkName = "retryBackToAuthView(previousView:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2609,8 +2467,8 @@
             filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "170"
-            endingLineNumber = "170"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
             landmarkName = "retryBackToAuthView(previousView:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2625,8 +2483,8 @@
             filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "175"
-            endingLineNumber = "175"
+            startingLineNumber = "161"
+            endingLineNumber = "161"
             landmarkName = "retryBackToAuthView(previousView:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2641,8 +2499,8 @@
             filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "176"
-            endingLineNumber = "176"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
             landmarkName = "retryBackToAuthView(previousView:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2657,226 +2515,10 @@
             filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "177"
-            endingLineNumber = "177"
+            startingLineNumber = "165"
+            endingLineNumber = "165"
             landmarkName = "retryBackToAuthView(previousView:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E6FEA377-741D-4128-871F-DCF4D2E8657A"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
-            landmarkName = "getRepositoryDetail()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "E6FEA377-741D-4128-871F-DCF4D2E8657A - 1b2e066a3df8e108"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "githubRepo.RepositoryDetailInfoViewController.getRepositoryDetail() -&gt; ()"
-                  moduleName = "githubRepo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "67"
-                  endingLineNumber = "67"
-                  offsetFromSymbolStart = "32">
-               </Location>
-               <Location
-                  uuid = "E6FEA377-741D-4128-871F-DCF4D2E8657A - c5c92588342c2990"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;githubRepo.RepoDetails&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in githubRepo.RepositoryDetailInfoViewController.getRepositoryDetail() -&gt; ()"
-                  moduleName = "githubRepo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "68"
-                  endingLineNumber = "68"
-                  offsetFromSymbolStart = "72">
-               </Location>
-               <Location
-                  uuid = "E6FEA377-741D-4128-871F-DCF4D2E8657A - 1b2e066a3df8e127"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "githubRepo.RepositoryDetailInfoViewController.getRepositoryDetail() -&gt; ()"
-                  moduleName = "githubRepo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "68"
-                  endingLineNumber = "68"
-                  offsetFromSymbolStart = "32">
-               </Location>
-               <Location
-                  uuid = "E6FEA377-741D-4128-871F-DCF4D2E8657A - c5c92588342c29f1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;githubRepo.RepoDetails&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in githubRepo.RepositoryDetailInfoViewController.getRepositoryDetail() -&gt; ()"
-                  moduleName = "githubRepo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "69"
-                  endingLineNumber = "69"
-                  offsetFromSymbolStart = "72">
-               </Location>
-               <Location
-                  uuid = "E6FEA377-741D-4128-871F-DCF4D2E8657A - 1b2e066a3df8ef38"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "githubRepo.RepositoryDetailInfoViewController.getRepositoryDetail() -&gt; ()"
-                  moduleName = "githubRepo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "83"
-                  endingLineNumber = "83"
-                  offsetFromSymbolStart = "32">
-               </Location>
-               <Location
-                  uuid = "E6FEA377-741D-4128-871F-DCF4D2E8657A - c5c92588342c27e0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;githubRepo.RepoDetails&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in githubRepo.RepositoryDetailInfoViewController.getRepositoryDetail() -&gt; ()"
-                  moduleName = "githubRepo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "84"
-                  endingLineNumber = "84"
-                  offsetFromSymbolStart = "84">
-               </Location>
-               <Location
-                  uuid = "E6FEA377-741D-4128-871F-DCF4D2E8657A - 1b2e066a3df8eb77"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "githubRepo.RepositoryDetailInfoViewController.getRepositoryDetail() -&gt; ()"
-                  moduleName = "githubRepo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "116"
-                  endingLineNumber = "116"
-                  offsetFromSymbolStart = "260">
-               </Location>
-               <Location
-                  uuid = "E6FEA377-741D-4128-871F-DCF4D2E8657A - c5c92588342c2021"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;githubRepo.RepoDetails&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in githubRepo.RepositoryDetailInfoViewController.getRepositoryDetail() -&gt; ()"
-                  moduleName = "githubRepo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "117"
-                  endingLineNumber = "117"
-                  offsetFromSymbolStart = "88">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6356AE94-6138-42F6-84CD-53E2ED6AE14D"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
-            landmarkName = "getRepositoryDetail()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "6356AE94-6138-42F6-84CD-53E2ED6AE14D - c5c92588342c29f1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;githubRepo.RepoDetails&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in githubRepo.RepositoryDetailInfoViewController.getRepositoryDetail() -&gt; ()"
-                  moduleName = "githubRepo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "69"
-                  endingLineNumber = "69"
-                  offsetFromSymbolStart = "180">
-               </Location>
-               <Location
-                  uuid = "6356AE94-6138-42F6-84CD-53E2ED6AE14D - c5c92588342c29d2"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;githubRepo.RepoDetails&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in githubRepo.RepositoryDetailInfoViewController.getRepositoryDetail() -&gt; ()"
-                  moduleName = "githubRepo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "70"
-                  endingLineNumber = "70"
-                  offsetFromSymbolStart = "180">
-               </Location>
-               <Location
-                  uuid = "6356AE94-6138-42F6-84CD-53E2ED6AE14D - c5c92588342c27c1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;githubRepo.RepoDetails&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in githubRepo.RepositoryDetailInfoViewController.getRepositoryDetail() -&gt; ()"
-                  moduleName = "githubRepo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "85"
-                  endingLineNumber = "85"
-                  offsetFromSymbolStart = "216">
-               </Location>
-               <Location
-                  uuid = "6356AE94-6138-42F6-84CD-53E2ED6AE14D - c5c92588342c2002"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;githubRepo.RepoDetails&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in githubRepo.RepositoryDetailInfoViewController.getRepositoryDetail() -&gt; ()"
-                  moduleName = "githubRepo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "118"
-                  endingLineNumber = "118"
-                  offsetFromSymbolStart = "168">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2889,8 +2531,8 @@
             filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
             landmarkName = "getRepositoryDetail()"
             landmarkType = "7">
             <Locations>
@@ -2945,222 +2587,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3159A8A1-5847-4609-B938-A71D24B6CE02"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
-            landmarkName = "getRepositoryDetail()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "3159A8A1-5847-4609-B938-A71D24B6CE02 - c5c92588342c2633"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;githubRepo.RepoDetails&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in githubRepo.RepositoryDetailInfoViewController.getRepositoryDetail() -&gt; ()"
-                  moduleName = "githubRepo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "71"
-                  endingLineNumber = "71"
-                  offsetFromSymbolStart = "792">
-               </Location>
-               <Location
-                  uuid = "3159A8A1-5847-4609-B938-A71D24B6CE02 - c5c92588342c2633"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;githubRepo.RepoDetails&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in githubRepo.RepositoryDetailInfoViewController.getRepositoryDetail() -&gt; ()"
-                  moduleName = "githubRepo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "71"
-                  endingLineNumber = "71"
-                  offsetFromSymbolStart = "860">
-               </Location>
-               <Location
-                  uuid = "3159A8A1-5847-4609-B938-A71D24B6CE02 - c5c92588342c2614"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;githubRepo.RepoDetails&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in githubRepo.RepositoryDetailInfoViewController.getRepositoryDetail() -&gt; ()"
-                  moduleName = "githubRepo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "72"
-                  endingLineNumber = "72"
-                  offsetFromSymbolStart = "792">
-               </Location>
-               <Location
-                  uuid = "3159A8A1-5847-4609-B938-A71D24B6CE02 - c5c92588342c2614"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;githubRepo.RepoDetails&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in githubRepo.RepositoryDetailInfoViewController.getRepositoryDetail() -&gt; ()"
-                  moduleName = "githubRepo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "72"
-                  endingLineNumber = "72"
-                  offsetFromSymbolStart = "860">
-               </Location>
-               <Location
-                  uuid = "3159A8A1-5847-4609-B938-A71D24B6CE02 - c5c92588342c2403"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;githubRepo.RepoDetails&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in githubRepo.RepositoryDetailInfoViewController.getRepositoryDetail() -&gt; ()"
-                  moduleName = "githubRepo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "87"
-                  endingLineNumber = "87"
-                  offsetFromSymbolStart = "876">
-               </Location>
-               <Location
-                  uuid = "3159A8A1-5847-4609-B938-A71D24B6CE02 - c5c92588342c2403"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;githubRepo.RepoDetails&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in githubRepo.RepositoryDetailInfoViewController.getRepositoryDetail() -&gt; ()"
-                  moduleName = "githubRepo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "87"
-                  endingLineNumber = "87"
-                  offsetFromSymbolStart = "952">
-               </Location>
-               <Location
-                  uuid = "3159A8A1-5847-4609-B938-A71D24B6CE02 - c5c92588342c2086"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;githubRepo.RepoDetails&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in githubRepo.RepositoryDetailInfoViewController.getRepositoryDetail() -&gt; ()"
-                  moduleName = "githubRepo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "122"
-                  endingLineNumber = "122"
-                  offsetFromSymbolStart = "448">
-               </Location>
-               <Location
-                  uuid = "3159A8A1-5847-4609-B938-A71D24B6CE02 - c5c92588342c2086"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;githubRepo.RepoDetails&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in githubRepo.RepositoryDetailInfoViewController.getRepositoryDetail() -&gt; ()"
-                  moduleName = "githubRepo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "122"
-                  endingLineNumber = "122"
-                  offsetFromSymbolStart = "512">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C9697A4D-A602-4B0F-A506-8B50CB733D75"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
-            landmarkName = "getRepositoryDetail()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "C9697A4D-A602-4B0F-A506-8B50CB733D75 - c5c92588342c2614"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;githubRepo.RepoDetails&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in githubRepo.RepositoryDetailInfoViewController.getRepositoryDetail() -&gt; ()"
-                  moduleName = "githubRepo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "72"
-                  endingLineNumber = "72"
-                  offsetFromSymbolStart = "872">
-               </Location>
-               <Location
-                  uuid = "C9697A4D-A602-4B0F-A506-8B50CB733D75 - c5c92588342c2675"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;githubRepo.RepoDetails&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in githubRepo.RepositoryDetailInfoViewController.getRepositoryDetail() -&gt; ()"
-                  moduleName = "githubRepo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "73"
-                  endingLineNumber = "73"
-                  offsetFromSymbolStart = "872">
-               </Location>
-               <Location
-                  uuid = "C9697A4D-A602-4B0F-A506-8B50CB733D75 - c5c92588342c2464"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;githubRepo.RepoDetails&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in githubRepo.RepositoryDetailInfoViewController.getRepositoryDetail() -&gt; ()"
-                  moduleName = "githubRepo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "88"
-                  endingLineNumber = "88"
-                  offsetFromSymbolStart = "964">
-               </Location>
-               <Location
-                  uuid = "C9697A4D-A602-4B0F-A506-8B50CB733D75 - c5c92588342c20e7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;githubRepo.RepoDetails&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in githubRepo.RepositoryDetailInfoViewController.getRepositoryDetail() -&gt; ()"
-                  moduleName = "githubRepo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "123"
-                  endingLineNumber = "123"
-                  offsetFromSymbolStart = "520">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "47712146-ABFC-4595-9F2D-A870A214E518"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -3168,8 +2594,8 @@
             filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "178"
-            endingLineNumber = "178"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
             landmarkName = "setInRepoDetail(repoDetail:)"
             landmarkType = "7">
             <Locations>
@@ -3231,24 +2657,8 @@
             filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "179"
-            endingLineNumber = "179"
-            landmarkName = "setInRepoDetail(repoDetail:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9D81F051-C91B-460C-BF25-17CA9B3DCCC6"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "180"
-            endingLineNumber = "180"
+            startingLineNumber = "161"
+            endingLineNumber = "161"
             landmarkName = "setInRepoDetail(repoDetail:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -3263,8 +2673,8 @@
             filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "181"
-            endingLineNumber = "181"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
             landmarkName = "setInRepoDetail(repoDetail:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -3279,8 +2689,8 @@
             filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "182"
-            endingLineNumber = "182"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
             landmarkName = "setInRepoDetail(repoDetail:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -3295,8 +2705,8 @@
             filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "183"
-            endingLineNumber = "183"
+            startingLineNumber = "165"
+            endingLineNumber = "165"
             landmarkName = "setInRepoDetail(repoDetail:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -3311,8 +2721,8 @@
             filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "184"
-            endingLineNumber = "184"
+            startingLineNumber = "166"
+            endingLineNumber = "166"
             landmarkName = "setInRepoDetail(repoDetail:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -3327,8 +2737,8 @@
             filePath = "githubRepo/Requests+CodableModel+keyStorage/Requests/AppRepository.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "getRepository(repoId:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -3343,8 +2753,8 @@
             filePath = "githubRepo/Requests+CodableModel+keyStorage/Requests/AppRepository.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "getRepository(repoId:completion:)"
             landmarkType = "7">
             <Locations>
@@ -3406,8 +2816,8 @@
             filePath = "githubRepo/Requests+CodableModel+keyStorage/Requests/AppRepository.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "getRepository(repoId:completion:)"
             landmarkType = "7">
             <Locations>
@@ -3454,8 +2864,8 @@
             filePath = "githubRepo/Requests+CodableModel+keyStorage/Requests/AppRepository.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "getRepository(repoId:completion:)"
             landmarkType = "7">
             <Locations>
@@ -3532,8 +2942,8 @@
             filePath = "githubRepo/Requests+CodableModel+keyStorage/Requests/AppRepository.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "getRepository(repoId:completion:)"
             landmarkType = "7">
             <Locations>
@@ -3580,8 +2990,8 @@
             filePath = "githubRepo/Requests+CodableModel+keyStorage/Requests/AppRepository.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
             landmarkName = "getRepository(repoId:completion:)"
             landmarkType = "7">
             <Locations>
@@ -3628,8 +3038,8 @@
             filePath = "githubRepo/Requests+CodableModel+keyStorage/Requests/AppRepository.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "getRepository(repoId:completion:)"
             landmarkType = "7">
             <Locations>
@@ -3676,8 +3086,8 @@
             filePath = "githubRepo/RepositoriesList/RepositoriesListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -3692,8 +3102,8 @@
             filePath = "githubRepo/RepositoriesList/RepositoriesListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "checkInternetConnection()"
             landmarkType = "7">
          </BreakpointContent>
@@ -3708,8 +3118,8 @@
             filePath = "githubRepo/RepositoriesList/RepositoriesListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "checkInternetConnection()"
             landmarkType = "7">
          </BreakpointContent>
@@ -3912,8 +3322,8 @@
             filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "showErrorView()"
             landmarkType = "7">
          </BreakpointContent>
@@ -3921,64 +3331,96 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B9B21665-B98C-4401-A8C7-6C2EC48D87DD"
+            uuid = "F51C4AE3-DA9E-41D2-BE76-D3CF5FEB7018"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+            filePath = "githubRepo/RepositoriesList/RepositoriesListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
-            landmarkName = "getRepositoryDetail()"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "getUserRepositories()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F51C4AE3-DA9E-41D2-BE76-D3CF5FEB7018 - 37b31881260af100"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "githubRepo.RepositoriesListViewController.getUserRepositories() -&gt; ()"
+                  moduleName = "githubRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoriesList/RepositoriesListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  uuid = "F51C4AE3-DA9E-41D2-BE76-D3CF5FEB7018 - 3cf0ff3db9b874bb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;githubRepo.Repo&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in githubRepo.RepositoriesListViewController.getUserRepositories() -&gt; ()"
+                  moduleName = "githubRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoriesList/RepositoriesListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "204">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E446A9FF-B9D6-4BD3-A578-FB63383CD8B6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/RepositoriesList/RepositoriesListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "getUserRepositories()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "202BE6DD-82B3-4B28-81A7-857416EFFE6A"
+            uuid = "E9085226-CD02-4938-8DAC-7D6F6EC40E56"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+            filePath = "githubRepo/RepositoriesList/RepositoriesListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
-            landmarkName = "getRepositoryDetail()"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "getUserRepositories()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "5B21562A-4EC2-4AC2-A034-A00424CF91DB"
+            uuid = "8DD07621-1D4F-498B-B7B3-E5F7148763F1"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+            filePath = "githubRepo/RepositoriesList/RepositoriesListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
-            landmarkName = "getRepositoryDetail()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "D25F4B3B-67BE-4371-A650-65DEA4F32C31"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
-            landmarkName = "getRepositoryDetail()"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "getUserRepositories()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

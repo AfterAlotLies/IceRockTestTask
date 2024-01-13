@@ -8,7 +8,8 @@
 import UIKit
 
 class CustomTableViewCell: UITableViewCell {
-
+    
+    //поменять видимость?-----------добавить методы для ячейки?
     @IBOutlet weak var repositoryLabel: UILabel!
     @IBOutlet weak var languageLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!

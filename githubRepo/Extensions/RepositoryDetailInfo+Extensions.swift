@@ -9,7 +9,7 @@ import UIKit
 
 extension RepositoryDetailInfoViewController: ErrorViewDelegate {
     
-    func retryAction() {
+    func retryConnectToInternet() {
         updateViewBasedOnResponse(response: "success")
     }
     

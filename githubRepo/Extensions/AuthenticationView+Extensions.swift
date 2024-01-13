@@ -23,7 +23,7 @@ extension AuthenticationViewController {
 //MARK: - AuthenticatinoViewController + ErrorViewDelegate
 extension AuthenticationViewController: ErrorViewDelegate {
     
-    func retryAction() {
+    func retryConnectToInternet() {
         updateViewBasedOnResponse(response: "success")
     }
 }

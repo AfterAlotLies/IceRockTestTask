@@ -37,16 +37,14 @@ class ErrorView: UIView {
         configureView()
     }
     
+// MARK: - Setup/configure methods for view
+    
     private func configureView() {
         let subview = self.loadViewFromXib()
         subview.frame = self.bounds
         subview.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.addSubview(subview)
         setupButton()
-    }
-    
-    func setTypeOfPreviousView(type: ControllerType) {
-        previousView = type
     }
     
     private func loadViewFromXib() -> UIView {
@@ -59,82 +57,66 @@ class ErrorView: UIView {
         retryButtonAction()
     }
     
-    public func hideErrorView() {
-        self.alpha = 0
-        errorImage.isHidden = true
-        errorTitle.isHidden = true
-        errorMessage.isHidden = true
-        retryButton.isHidden = true
+    public func setTypeOfPreviousView(type: ControllerType) {
+        previousView = type
     }
     
+// MARK: - Set properties to error view
+
     public func showErrorView() {
         switch previousView {
 
         case .authController:
-            badInternetConnectionError()
+            setupViewByError(imageName: "internetError",
+                             titleText: "Connection Error",messageText: "Check your internet connection",
+                             titleColor: .red, messageColor: .white)
 
         case .repoListBadConnection:
-            badInternetConnectionError()
+            setupViewByError(imageName: "internetError",
+                             titleText: "Connection Error",messageText: "Check your internet connection",
+                             titleColor: .red, messageColor: .white)
 
         case .repoListEmpty:
-            emptyRepositoriesWarning()
+            setupViewByError(imageName: "emptyFolder",
+                             titleText: "Empty",messageText: "No repositories at the moment",
+                             titleColor: .cyan, messageColor: .white)
 
         case .repoDetailBadConnection:
-            badInternetConnectionError()
+            setupViewByError(imageName: "internetError",
+                             titleText: "Connection Error",messageText: "Check your internet connection",
+                             titleColor: .red, messageColor: .white)
 
         case .repoDetailReadmeError:
-            loadReadmeError()
+            setupViewByError(imageName: "internetError",
+                             titleText: "Load error",messageText: "Check your internet connection",
+                             titleColor: .red, messageColor: .white)
 
         case .other:
-            otherErrors()
+            setupViewByError(imageName: "otherError",
+                             titleText: "Something gone wrong",messageText: "Reboot your app and check Internet",
+                             titleColor: .red, messageColor: .white)
         }
     }
     
+    public func hideErrorView() {
+        isHidden = true
+    }
+    
     private func showElementsErrorView() {
-        self.alpha = 1
-        errorImage.isHidden = false
-        errorTitle.isHidden = false
-        errorMessage.isHidden = false
-        retryButton.isHidden = false
+        isHidden = false
     }
     
-    private func badInternetConnectionError() {
+    private func setupViewByError(imageName: String, titleText: String, messageText: String, titleColor: UIColor, messageColor: UIColor) {
         showElementsErrorView()
-        errorImage.image = UIImage(named: "internetError")
-        errorTitle.text = "Connection error"
-        errorMessage.text = "Check your internet connection"
-        errorTitle.textColor = .red
-        errorMessage.textColor = .white
+        errorImage.image = UIImage(named: "\(imageName)")
+        errorTitle.text = titleText
+        errorMessage.text = messageText
+        errorTitle.textColor = titleColor
+        errorMessage.textColor = messageColor
+    }
+    
+// MARK: - Methods to back previous view
 
-    }
-    
-    private func emptyRepositoriesWarning() {
-        showElementsErrorView()
-        errorImage.image = UIImage(named: "emptyFolder")
-        errorTitle.text = "Empty"
-        errorMessage.text = "No repositories at the moment"
-        errorTitle.textColor = .cyan
-        errorMessage.textColor = .white
-    }
-    
-    private func loadReadmeError() {
-        showElementsErrorView()
-        errorImage.image = UIImage(named: "internetError")
-        errorTitle.text = "Load error"
-        errorMessage.text = "Check your internet connection"
-        errorTitle.textColor = .red
-        errorMessage.textColor = .white
-    }
-    
-    private func otherErrors() {
-        showElementsErrorView()
-        errorImage.image = UIImage(named: "otherError")
-        errorTitle.text = "Something gone wrong"
-        errorMessage.text = "Reboot your app and check Internet"
-        errorTitle.textColor = .red
-        errorMessage.textColor = .white
-    }
-    
     private func retryButtonAction() {
         retryButton.actionHandler = {
             self.retryButton.startLoading()
@@ -149,13 +131,16 @@ class ErrorView: UIView {
         case .authController, .repoListBadConnection, .repoDetailBadConnection:
             InternetConnection.shared.checkInternetConnection {
                 let successWorkItem = {
-                    self.delegate?.retryAction()
+                    self.delegate?.retryConnectToInternet()
                     self.retryButton.stopLoading()
                 }
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: successWorkItem)
+
             } failureHandler: {
                 let failureWorkItem = {
-                    self.badInternetConnectionError()
+                    self.setupViewByError(imageName: "internetError",
+                                          titleText: "Connection Error",messageText: "Check your internet connection",
+                                          titleColor: .red,messageColor: .white)
                     self.showErrorView()
                     self.retryButton.stopLoading()
                 }
@@ -166,13 +151,16 @@ class ErrorView: UIView {
         case .repoDetailReadmeError:
             InternetConnection.shared.checkInternetConnection {
                 let successWorkItem = {
-                    self.delegate?.retryAction()
+                    self.delegate?.retryConnectToInternet()
                     self.retryButton.stopLoading()
                 }
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: successWorkItem)
+
             } failureHandler: {
                 let failureWorkItem = {
-                    self.loadReadmeError()
+                    self.setupViewByError(imageName: "internetError",
+                                                      titleText: "Load error",messageText: "Check your internet connection",
+                                                      titleColor: .red, messageColor: .white)
                     self.showErrorView()
                     self.retryButton.stopLoading()
                 }
@@ -189,7 +177,23 @@ class ErrorView: UIView {
 
             
         default:
-            print("other")
+            InternetConnection.shared.checkInternetConnection {
+                let successWorkItem = {
+                    self.delegate?.retryConnectToInternet()
+                    self.retryButton.stopLoading()
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: successWorkItem)
+
+            } failureHandler: {
+                let failureWorkItem = {
+                    self.setupViewByError(imageName: "otherError",
+                                          titleText: "Something gone wrong",messageText: "Reboot your app and check Internet",
+                                          titleColor: .red, messageColor: .white)
+                    self.showErrorView()
+                    self.retryButton.stopLoading()
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: failureWorkItem)
+            }
         }
     }
 }
