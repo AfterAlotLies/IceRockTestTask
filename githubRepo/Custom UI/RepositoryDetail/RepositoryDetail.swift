@@ -45,9 +45,9 @@ class RepositoryDetail: UIView {
     }
     
     func setupBottomView(stars: Int, forks: Int, watchers: Int) {
-        starsView.setupBottomView(imageName: "starsImage", count: stars, title: "stars", color: starsColor)
-        forksView.setupBottomView(imageName: "forksImage", count: forks, title: "forks", color: forksColor)
-        watchersView.setupBottomView(imageName: "watchersImage", count: watchers, title: "watchers", color: watchersColor)
+        starsView.setupBottomView(imageName: "starsImage", count: stars, title: LocalizedStrings.starsRepoDetail, color: starsColor)
+        forksView.setupBottomView(imageName: "forksImage", count: forks, title: LocalizedStrings.forksRepoDetail, color: forksColor)
+        watchersView.setupBottomView(imageName: "watchersImage", count: watchers, title: LocalizedStrings.watchersRepoDetail, color: watchersColor)
     }
     
     func setTopRepositoryDetail(url: String, license: String, licenseName: String) {

@@ -108,7 +108,7 @@ class RepositoryDetailInfoViewController: UIViewController {
                             
                         case 404:
                             DispatchQueue.main.async {
-                                self.readmeTextView.text = "No README.md"
+                                self.readmeTextView.text = LocalizedStrings.noReadme
                                 self.readmeTextView.textColor = .gray
                                 self.readmeTextView.isHidden = false
                                 self.readmeLoadingIndicator.stopAnimating()
@@ -127,7 +127,7 @@ class RepositoryDetailInfoViewController: UIViewController {
                     guard let repoInfo = repoReadme else { return }
                     if repoInfo.isEmpty || repoInfo == "" {
                         DispatchQueue.main.async {
-                            self.readmeTextView.text = "README.md is empty"
+                            self.readmeTextView.text = LocalizedStrings.emptyReadme
                             self.readmeTextView.textColor = .gray
                             self.readmeTextView.isHidden = false
                             self.readmeLoadingIndicator.stopAnimating()
@@ -158,7 +158,7 @@ class RepositoryDetailInfoViewController: UIViewController {
 
     private func setInRepoDetail(repoDetail: RepoDetails) {
         if let licenseName = repoDetail.license?.name {
-            topRepoInfoView.setTopRepositoryDetail(url: repoDetail.githubUrlRepo, license: "License", licenseName: licenseName)
+            topRepoInfoView.setTopRepositoryDetail(url: repoDetail.githubUrlRepo, license: LocalizedStrings.licenseRepoDetail, licenseName: licenseName)
             topRepoInfoView.setupBottomView(stars: repoDetail.stargazers, forks: repoDetail.forks, watchers: repoDetail.watchers)
         } else {
             topRepoInfoView.setTopRepositoryDetail(url: repoDetail.githubUrlRepo, license: "", licenseName: "")

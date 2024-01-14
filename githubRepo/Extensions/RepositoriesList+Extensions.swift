@@ -22,7 +22,7 @@ extension RepositoriesListViewController {
         navigationController?.navigationBar.standardAppearance = standardAppearance
         navigationController?.navigationBar.scrollEdgeAppearance = standardAppearance
         navigationItem.backBarButtonItem?.title = ""
-        title = "Repositories"
+        title = LocalizedStrings.repoListTitle
     }
     
     func setupNavigationRightItem() {

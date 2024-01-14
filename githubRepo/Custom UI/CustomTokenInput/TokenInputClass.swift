@@ -38,7 +38,7 @@ class TokenInputClass: UIView, UITextFieldDelegate {
     private func configureField() {
         tokenInputField.leftViewMode = .always
         tokenInputField.layer.borderColor = UIColor.darkGray.cgColor
-        tokenInputField.attributedPlaceholder = NSAttributedString(string: "Personal access token",
+        tokenInputField.attributedPlaceholder = NSAttributedString(string: LocalizedStrings.placeholderTokenField,
                                                                    attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
         tokenInputField.backgroundColor = .clear
         errorLabel.alpha = 0

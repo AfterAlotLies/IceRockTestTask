@@ -52,7 +52,7 @@ class CustomButtonClass: UIView {
     func setButtonText(buttonText: String) {
         customButton.titleLabel?.isHidden = false
         customButton.setTitle(buttonText, for: .normal)
-        customButton.titleLabel?.font = UIFont(name: "SF-Pro", size: 16)
+        customButton.titleLabel?.font = .boldSystemFont(ofSize: 35)
         loadingIndicator.isHidden = true
     }
     

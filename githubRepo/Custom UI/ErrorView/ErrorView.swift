@@ -53,7 +53,7 @@ class ErrorView: UIView {
     }
     
     private func setupButton() {
-        retryButton.setButtonText(buttonText: "Retry")
+        retryButton.setButtonText(buttonText: LocalizedStrings.buttonErrorView)
         retryButtonAction()
     }
     
@@ -68,32 +68,32 @@ class ErrorView: UIView {
 
         case .authController:
             setupViewByError(imageName: "internetError",
-                             titleText: "Connection Error",messageText: "Check your internet connection",
+                             titleText: LocalizedStrings.badConnectionTitle, messageText: LocalizedStrings.badConnectionMessage,
                              titleColor: .red, messageColor: .white)
 
         case .repoListBadConnection:
             setupViewByError(imageName: "internetError",
-                             titleText: "Connection Error",messageText: "Check your internet connection",
+                             titleText: LocalizedStrings.badConnectionTitle ,messageText: LocalizedStrings.badConnectionMessage,
                              titleColor: .red, messageColor: .white)
 
         case .repoListEmpty:
             setupViewByError(imageName: "emptyFolder",
-                             titleText: "Empty",messageText: "No repositories at the moment",
+                             titleText: LocalizedStrings.emptyRepositoryTitle , messageText: LocalizedStrings.emptyRepositoryMessage,
                              titleColor: .cyan, messageColor: .white)
 
         case .repoDetailBadConnection:
             setupViewByError(imageName: "internetError",
-                             titleText: "Connection Error",messageText: "Check your internet connection",
+                             titleText: LocalizedStrings.badConnectionTitle, messageText: LocalizedStrings.badConnectionMessage,
                              titleColor: .red, messageColor: .white)
 
         case .repoDetailReadmeError:
             setupViewByError(imageName: "internetError",
-                             titleText: "Load error",messageText: "Check your internet connection",
+                             titleText: LocalizedStrings.readmeErrorTitle, messageText: LocalizedStrings.badConnectionMessage,
                              titleColor: .red, messageColor: .white)
 
         case .other:
             setupViewByError(imageName: "otherError",
-                             titleText: "Something gone wrong",messageText: "Reboot your app and check Internet",
+                             titleText: LocalizedStrings.otherErrorTitle, messageText: LocalizedStrings.otherErrorMessage,
                              titleColor: .red, messageColor: .white)
         }
     }
@@ -139,7 +139,7 @@ class ErrorView: UIView {
             } failureHandler: {
                 let failureWorkItem = {
                     self.setupViewByError(imageName: "internetError",
-                                          titleText: "Connection Error",messageText: "Check your internet connection",
+                                          titleText: LocalizedStrings.badConnectionTitle, messageText: LocalizedStrings.badConnectionMessage,
                                           titleColor: .red,messageColor: .white)
                     self.showErrorView()
                     self.retryButton.stopLoading()
@@ -159,7 +159,7 @@ class ErrorView: UIView {
             } failureHandler: {
                 let failureWorkItem = {
                     self.setupViewByError(imageName: "internetError",
-                                                      titleText: "Load error",messageText: "Check your internet connection",
+                                          titleText: LocalizedStrings.readmeErrorTitle, messageText: LocalizedStrings.badConnectionMessage,
                                                       titleColor: .red, messageColor: .white)
                     self.showErrorView()
                     self.retryButton.stopLoading()
@@ -187,7 +187,7 @@ class ErrorView: UIView {
             } failureHandler: {
                 let failureWorkItem = {
                     self.setupViewByError(imageName: "otherError",
-                                          titleText: "Something gone wrong",messageText: "Reboot your app and check Internet",
+                                          titleText: LocalizedStrings.otherErrorTitle, messageText: LocalizedStrings.otherErrorMessage,
                                           titleColor: .red, messageColor: .white)
                     self.showErrorView()
                     self.retryButton.stopLoading()

@@ -15,7 +15,7 @@ class AuthenticationViewController: UIViewController {
     @IBOutlet private weak var tokenInputField: TokenInputClass!
     @IBOutlet private weak var signInButton: CustomButtonClass!
     @IBOutlet private weak var errorView: ErrorView!
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         checkInternetConnection()
@@ -57,12 +57,12 @@ class AuthenticationViewController: UIViewController {
 // MARK: - Setup button + check correctly token
 
     private func signInUserButton() {
-        signInButton.setButtonText(buttonText: "Sign in")
+        signInButton.setButtonText(buttonText: LocalizedStrings.buttonAuthController)
         signInButton.actionHandler = {
             let token = self.tokenInputField.checkCorrectToken()
             if token == "" {
-                self.errorAlert(title: "Error",
-                                message: "Enter your personal access token")
+                self.errorAlert(title: LocalizedStrings.titleAlert,
+                                message: LocalizedStrings.messageAlert)
             } else {
                 self.signInButton.startLoading()
                 InternetConnection.shared.checkInternetConnection {
@@ -92,7 +92,7 @@ class AuthenticationViewController: UIViewController {
                             self.tokenInputField.displayErrorText()
                         }
                     default:
-                        self.errorAlert(title: "Error", message: error.localizedDescription)
+                        self.errorAlert(title: LocalizedStrings.titleAlert, message: error.localizedDescription)
                     }
                 }
             } else {
