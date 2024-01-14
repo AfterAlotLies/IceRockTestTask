@@ -24,12 +24,14 @@
 		114DE64E2B4D729C0009FB53 /* BottomViewRepositoryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114DE64D2B4D729C0009FB53 /* BottomViewRepositoryDetail.swift */; };
 		114DE6512B4EAEED0009FB53 /* RepositoryDetailUI.xib in Resources */ = {isa = PBXBuildFile; fileRef = 114DE64F2B4EAEED0009FB53 /* RepositoryDetailUI.xib */; };
 		114DE6522B4EAEED0009FB53 /* BottomViewRepositoryDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 114DE6502B4EAEED0009FB53 /* BottomViewRepositoryDetail.xib */; };
+		114DE6552B52C4F90009FB53 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 114DE6542B52C4F90009FB53 /* Localizable.strings */; };
+		114DE6572B52C5440009FB53 /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114DE6562B52C5440009FB53 /* LocalizedStrings.swift */; };
+		114DE6592B53F7160009FB53 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 114DE6582B53F7160009FB53 /* Launch Screen.storyboard */; };
 		11567D5B2B46C81500A8AF9D /* ErrorView+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11567D5A2B46C81500A8AF9D /* ErrorView+Protocol.swift */; };
 		11567D5E2B48318900A8AF9D /* RepositoryDetailInfo+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11567D5D2B48318900A8AF9D /* RepositoryDetailInfo+Extensions.swift */; };
 		1173136A2B172EDF00289745 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117313692B172EDF00289745 /* AppDelegate.swift */; };
 		1173136C2B172EDF00289745 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1173136B2B172EDF00289745 /* SceneDelegate.swift */; };
 		117313732B172EE100289745 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 117313722B172EE100289745 /* Assets.xcassets */; };
-		117313762B172EE100289745 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 117313742B172EE100289745 /* LaunchScreen.storyboard */; };
 		117313842B17300300289745 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117313822B17300300289745 /* AuthenticationViewController.swift */; };
 		117313852B17300300289745 /* AuthenticationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 117313832B17300300289745 /* AuthenticationViewController.xib */; };
 		117313BF2B19FE1900289745 /* MainNavigationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 117313BE2B19FE1900289745 /* MainNavigationController.xib */; };
@@ -62,13 +64,15 @@
 		114DE64D2B4D729C0009FB53 /* BottomViewRepositoryDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomViewRepositoryDetail.swift; sourceTree = "<group>"; };
 		114DE64F2B4EAEED0009FB53 /* RepositoryDetailUI.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepositoryDetailUI.xib; sourceTree = "<group>"; };
 		114DE6502B4EAEED0009FB53 /* BottomViewRepositoryDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BottomViewRepositoryDetail.xib; path = ../../../../../../Downloads/BottomViewRepositoryDetail.xib; sourceTree = "<group>"; };
+		114DE6542B52C4F90009FB53 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		114DE6562B52C5440009FB53 /* LocalizedStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedStrings.swift; sourceTree = "<group>"; };
+		114DE6582B53F7160009FB53 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		11567D5A2B46C81500A8AF9D /* ErrorView+Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ErrorView+Protocol.swift"; sourceTree = "<group>"; };
 		11567D5D2B48318900A8AF9D /* RepositoryDetailInfo+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepositoryDetailInfo+Extensions.swift"; sourceTree = "<group>"; };
 		117313662B172EDF00289745 /* githubRepo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = githubRepo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		117313692B172EDF00289745 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1173136B2B172EDF00289745 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		117313722B172EE100289745 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		117313752B172EE100289745 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		117313772B172EE100289745 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		117313822B17300300289745 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		117313832B17300300289745 /* AuthenticationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthenticationViewController.xib; sourceTree = "<group>"; };
@@ -157,6 +161,8 @@
 		114434B52B208F2B00D7355C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				114DE6582B53F7160009FB53 /* Launch Screen.storyboard */,
+				114DE6532B52C4D20009FB53 /* LocalizedStrings */,
 				114DE6442B4AC5C30009FB53 /* Fonts */,
 				117313772B172EE100289745 /* Info.plist */,
 				117313722B172EE100289745 /* Assets.xcassets */,
@@ -222,6 +228,15 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		114DE6532B52C4D20009FB53 /* LocalizedStrings */ = {
+			isa = PBXGroup;
+			children = (
+				114DE6542B52C4F90009FB53 /* Localizable.strings */,
+				114DE6562B52C5440009FB53 /* LocalizedStrings.swift */,
+			);
+			path = LocalizedStrings;
+			sourceTree = "<group>";
+		};
 		11567D5C2B46D5BD00A8AF9D /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,7 +275,6 @@
 				114434B02B208B4A00D7355C /* Extensions */,
 				114434B52B208F2B00D7355C /* Supporting Files */,
 				114434B62B208F6500D7355C /* Application */,
-				117313742B172EE100289745 /* LaunchScreen.storyboard */,
 			);
 			path = githubRepo;
 			sourceTree = "<group>";
@@ -390,6 +404,8 @@
 				114196A82B3871690034768B /* TokenInputUI.xib in Resources */,
 				114DE64A2B4AC98E0009FB53 /* SF-Pro.ttf in Resources */,
 				114435DD2B2224BE00D7355C /* CustomTableViewCell.xib in Resources */,
+				114DE6592B53F7160009FB53 /* Launch Screen.storyboard in Resources */,
+				114DE6552B52C4F90009FB53 /* Localizable.strings in Resources */,
 				114435DC2B2224BB00D7355C /* CustomButtonUI.xib in Resources */,
 				11A590AA2B45778A00EDDF7E /* ErrorView.xib in Resources */,
 				117313BF2B19FE1900289745 /* MainNavigationController.xib in Resources */,
@@ -398,7 +414,6 @@
 				114DE6512B4EAEED0009FB53 /* RepositoryDetailUI.xib in Resources */,
 				114DE6522B4EAEED0009FB53 /* BottomViewRepositoryDetail.xib in Resources */,
 				117313CC2B1A175800289745 /* RepositoryDetailInfoViewController.xib in Resources */,
-				117313762B172EE100289745 /* LaunchScreen.storyboard in Resources */,
 				117313732B172EE100289745 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,22 +487,12 @@
 				114434B22B208B8C00D7355C /* RepositoriesList+Extensions.swift in Sources */,
 				1173136C2B172EDF00289745 /* SceneDelegate.swift in Sources */,
 				114434AB2B1DF48700D7355C /* AppRepository.swift in Sources */,
+				114DE6572B52C5440009FB53 /* LocalizedStrings.swift in Sources */,
 				1140223F2B24EEBD005B775A /* Int+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		117313742B172EE100289745 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				117313752B172EE100289745 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		117313782B172EE100289745 /* Debug */ = {
@@ -623,7 +628,7 @@
 				INFOPLIST_FILE = "githubRepo/Supporting Files/Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -653,7 +658,7 @@
 				INFOPLIST_FILE = "githubRepo/Supporting Files/Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
