@@ -1,0 +1,32 @@
+/* 
+  Localizable.strings
+  githubRepo
+
+  Created by Vyacheslav on 13.01.2024.
+  
+*/
+"Alert.ErrorTittle.Error" = "Error";
+"Alert.ErrorMessage.Enter.Token" = "Enter your personal access token";
+
+"AuthController.CustomButton.TitleButton.SignIn" = "Sign in";
+"ErrorView.CustomButton.TitleButton.Retry" = "Retry";
+
+"RepoDetail.No.Readme" = "No README.md";
+"RepoDetail.Readme.Empty" = "README.md is empty";
+
+"TopRepoDetail.License" = "License";
+"TopRepoDetail.Stars" = "stars";
+"TopRepoDetail.Forks" = "forks";
+"TopRepoDetail.Watchers" = "watchers";
+
+"TokenInput.Placeholder" = "Personal access token";
+
+"ErrorView.BadConnection.Title.Connection.Error" = "Connection Error";
+"ErrorView.BadConnection.ReadmeError.Message.Check.Internet" = "Check your internet connection";
+"ErrorView.EmptyRepo.Title.Empty" = "Empty";
+"ErrorView.EmptyRepo.Message.No.Repo" = "No repositories at the moment";
+"ErrorView.ReadmeError.Title.Error" = "Load error";
+"ErrorView.OtherError.Title.Error" = "Something gone wrong";
+"ErrorView.OtherError.Message.Check.Internet" = "Reboot your app and check internet";
+
+"RepoList.navTitle.Repositories" = "Repositories";
