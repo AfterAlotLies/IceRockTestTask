@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomButtonClass" customModule="githubRepo" customModuleProvider="target">
             <connections>
-                <outlet property="customButton" destination="HSh-mz-Akh" id="25u-0h-JEL"/>
+                <outlet property="customButton" destination="EMw-oG-saY" id="zBq-7N-Agt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -17,26 +17,35 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="47"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HSh-mz-Akh">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EMw-oG-saY">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="47"/>
-                    <buttonConfiguration key="configuration" style="filled" title="" buttonSize="medium">
-                        <color key="baseBackgroundColor" red="0.37186397562966506" green="0.81596166817183358" blue="0.40848792127425793" alpha="0.69682716836734693" colorSpace="custom" customColorSpace="displayP3"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled">
+                        <attributedString key="attributedTitle"/>
+                        <color key="baseBackgroundColor" red="0.20960748891918057" green="0.70911976484337236" blue="0.18570829009788345" alpha="0.69682716840000003" colorSpace="custom" customColorSpace="sRGB"/>
                     </buttonConfiguration>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
-                        <action selector="makeActionByClick:" destination="-1" eventType="touchUpInside" id="so6-D2-8XZ"/>
+                        <action selector="makeActionByClick:" destination="-1" eventType="touchUpInside" id="arw-4B-EuZ"/>
                     </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="HSh-mz-Akh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="1YI-p4-BXw"/>
-                <constraint firstItem="HSh-mz-Akh" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="4dJ-V8-9fn"/>
-                <constraint firstItem="HSh-mz-Akh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Dy7-hy-mir"/>
-                <constraint firstItem="HSh-mz-Akh" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="jNq-mV-rxt"/>
+                <constraint firstAttribute="bottom" secondItem="EMw-oG-saY" secondAttribute="bottom" id="GJT-zy-gjc"/>
+                <constraint firstItem="EMw-oG-saY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Qeu-Tw-OdU"/>
+                <constraint firstItem="EMw-oG-saY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Rc5-nm-pzq"/>
+                <constraint firstAttribute="trailing" secondItem="EMw-oG-saY" secondAttribute="trailing" id="yT5-WQ-9he"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-93.89312977099236" y="138.38028169014086"/>
+            <point key="canvasLocation" x="-61.832061068702288" y="179.92957746478874"/>
         </view>
     </objects>
 </document>

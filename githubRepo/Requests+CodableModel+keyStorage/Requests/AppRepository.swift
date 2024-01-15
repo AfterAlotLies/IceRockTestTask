@@ -26,7 +26,7 @@ class AppRepository {
         
         let keyValue = KeyValueStorage.shared
         
-        if let url = keyValue.reposUrl, !url.isEmpty {
+        if let url = keyValue.reposUrl {
             AF.request(url, method: .get).validate().responseDecodable(of: [Repo].self) { response in
                 switch response.result {
                 case .success(let data):

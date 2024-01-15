@@ -8,8 +8,9 @@
 "Alert.ErrorTittle.Error" = "Error";
 "Alert.ErrorMessage.Enter.Token" = "Enter your personal access token";
 
-"AuthController.CustomButton.TitleButton.SignIn" = "Sign in";
+"AuthController.CustomButton.TitleButton.SignIn" = "Sign In";
 "ErrorView.CustomButton.TitleButton.Retry" = "Retry";
+"ErrorView.CustomButton.TitleButton.Refresh" = "Refresh";
 
 "RepoDetail.No.Readme" = "No README.md";
 "RepoDetail.Readme.Empty" = "README.md is empty";

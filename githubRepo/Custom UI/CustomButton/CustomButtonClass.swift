@@ -44,15 +44,19 @@ class CustomButtonClass: UIView {
     
     private func loadViewFromXib() -> UIView {
         guard let view = Bundle.main.loadNibNamed("CustomButtonUI", owner: self)?.first as? UIView else { return UIView() }
-
-
+        
         return view
     }
     
     func setButtonText(buttonText: String) {
         customButton.titleLabel?.isHidden = false
-        customButton.setTitle(buttonText, for: .normal)
-        customButton.titleLabel?.font = .boldSystemFont(ofSize: 35)
+        
+        let font = UIFont(name: "SFProDisplay-Bold", size: 16)
+        let attributes = [NSAttributedString.Key.font: font]
+        let attributedQuote = NSAttributedString(string: buttonText, attributes: attributes as [NSAttributedString.Key : Any])
+        
+        customButton.setAttributedTitle(attributedQuote, for: .normal)
+        customButton.tintColor = .white
         loadingIndicator.isHidden = true
     }
     

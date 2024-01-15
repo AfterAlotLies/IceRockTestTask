@@ -57,6 +57,11 @@ class ErrorView: UIView {
         retryButtonAction()
     }
     
+    private func setupButtonForEmptyError() {
+        retryButton.setButtonText(buttonText: LocalizedStrings.buttonErrorViewEmptyError)
+        retryButtonAction()
+    }
+    
     public func setTypeOfPreviousView(type: ControllerType) {
         previousView = type
     }
@@ -80,6 +85,7 @@ class ErrorView: UIView {
             setupViewByError(imageName: "emptyFolder",
                              titleText: LocalizedStrings.emptyRepositoryTitle , messageText: LocalizedStrings.emptyRepositoryMessage,
                              titleColor: .cyan, messageColor: .white)
+            setupButtonForEmptyError()
 
         case .repoDetailBadConnection:
             setupViewByError(imageName: "internetError",
@@ -113,6 +119,11 @@ class ErrorView: UIView {
         errorMessage.text = messageText
         errorTitle.textColor = titleColor
         errorMessage.textColor = messageColor
+    }
+    
+    private func setupFontToLabels() {
+        errorTitle.font = UIFont(name: "SFProText-Medium", size: 16)
+        errorMessage.font = UIFont(name: "SFProText-Medium", size: 12)
     }
     
 // MARK: - Methods to back previous view

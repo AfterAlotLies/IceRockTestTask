@@ -76,7 +76,7 @@ class RepositoryDetailInfoViewController: UIViewController {
         }
     }
     
-// MARK: - Requests to get data for top view + to get readme
+// MARK: - Requests to get data for top view + readme
 
     private func getRepositoryDetail() {
         self.viewLoadingIndicator.startAnimating()
@@ -107,33 +107,36 @@ class RepositoryDetailInfoViewController: UIViewController {
                         switch errorCode {
                             
                         case 404:
-                            DispatchQueue.main.async {
+                            let noReadmeItem = {
                                 self.readmeTextView.text = LocalizedStrings.noReadme
                                 self.readmeTextView.textColor = .gray
                                 self.readmeTextView.isHidden = false
                                 self.readmeLoadingIndicator.stopAnimating()
                             }
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: noReadmeItem)
                             
                         default:
-                            DispatchQueue.main.async {
+                            let otherErrorItem = {
                                 self.errorView.setTypeOfPreviousView(type: .other)
                                 self.readmeTextView.isHidden = true
                                 self.readmeErrorView.showErrorView()
                                 self.readmeLoadingIndicator.stopAnimating()
                             }
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: otherErrorItem)
                         }
                     }
                 } else {
                     guard let repoInfo = repoReadme else { return }
-                    if repoInfo.isEmpty || repoInfo == "" {
-                        DispatchQueue.main.async {
+                    if repoInfo.isEmpty {
+                        let emptyReadmeItem = {
                             self.readmeTextView.text = LocalizedStrings.emptyReadme
                             self.readmeTextView.textColor = .gray
                             self.readmeTextView.isHidden = false
                             self.readmeLoadingIndicator.stopAnimating()
                         }
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: emptyReadmeItem)
                     } else {
-                        DispatchQueue.main.async {
+                        let readmeItem = {
                             let changedRepoInfo = repoInfo.replacingOccurrences(of: "```", with: "`")
                             let markdownText = SwiftyMarkdown(string: changedRepoInfo)
                             self.readmeTextView.attributedText = markdownText.attributedString()
@@ -141,6 +144,7 @@ class RepositoryDetailInfoViewController: UIViewController {
                             self.readmeTextView.isHidden = false
                             self.readmeLoadingIndicator.stopAnimating()
                         }
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: readmeItem)
                     }
                 }
             }
@@ -157,7 +161,7 @@ class RepositoryDetailInfoViewController: UIViewController {
 // MARK: - Set data to top view
 
     private func setInRepoDetail(repoDetail: RepoDetails) {
-        if let licenseName = repoDetail.license?.name {
+        if let licenseName = repoDetail.license?.spdx {
             topRepoInfoView.setTopRepositoryDetail(url: repoDetail.githubUrlRepo, license: LocalizedStrings.licenseRepoDetail, licenseName: licenseName)
             topRepoInfoView.setupBottomView(stars: repoDetail.stargazers, forks: repoDetail.forks, watchers: repoDetail.watchers)
         } else {

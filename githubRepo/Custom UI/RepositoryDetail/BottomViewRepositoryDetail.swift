@@ -42,5 +42,11 @@ class BottomViewRepositoryDetail: UIView {
         numsLabelDetail.textColor = color
         nameLabelDetail.text = title
         nameLabelDetail.textColor = .white
+        setupFontToLabels()
+    }
+    
+    private func setupFontToLabels() {
+        numsLabelDetail.font = UIFont(name: "SFProText-Medium", size: 16)
+        nameLabelDetail.font = UIFont(name: "SFProText-Medium", size: 16)
     }
 }

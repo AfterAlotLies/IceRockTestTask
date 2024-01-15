@@ -13,6 +13,7 @@ public enum LocalizedStrings {
     
     static let buttonAuthController = NSLocalizedString("AuthController.CustomButton.TitleButton.SignIn", comment: "")
     static let buttonErrorView = NSLocalizedString("ErrorView.CustomButton.TitleButton.Retry", comment: "")
+    static let buttonErrorViewEmptyError = NSLocalizedString("ErrorView.CustomButton.TitleButton.Refresh", comment: "")
     
     static let noReadme = NSLocalizedString("RepoDetail.No.Readme", comment: "")
     static let emptyReadme = NSLocalizedString("RepoDetail.Readme.Empty", comment: "")

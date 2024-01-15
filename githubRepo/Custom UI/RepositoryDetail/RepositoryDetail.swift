@@ -21,6 +21,8 @@ class RepositoryDetail: UIView {
     private let forksColor: UIColor = UIColor(red: 109.0 / 255.0, green: 210.0 / 255.0, blue: 111.0 / 255.0, alpha: 1)
     private let watchersColor: UIColor = UIColor(red: 156.0 / 255.0, green: 253.0 / 255.0, blue: 249.0 / 255.0, alpha: 1)
     
+    private var urlToOpen: String = ""
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureView()
@@ -36,6 +38,8 @@ class RepositoryDetail: UIView {
         subview.frame = self.bounds
         subview.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.addSubview(subview)
+        let openLink = UITapGestureRecognizer(target: self, action: #selector(handleLinkTap))
+        githubUrlLabel.addGestureRecognizer(openLink)
     }
     
     private func loadViewFromXib() -> UIView {
@@ -51,9 +55,33 @@ class RepositoryDetail: UIView {
     }
     
     func setTopRepositoryDetail(url: String, license: String, licenseName: String) {
-        githubUrlLabel.text = url
+        urlToOpen = url
+        makeTapOnLink(url: url)
         licenseLabel.text = license
         nameLicenseLabel.text = licenseName
+        setupFontToLabels()
+    }
+    
+    private func makeTapOnLink(url: String) {
+        let attributedGithubLabel = NSMutableAttributedString(string: url.replacingOccurrences(of: "https://", with: ""))
+        let range = (attributedGithubLabel.string as NSString).range(of: url)
+        attributedGithubLabel.addAttribute(.link, value: url, range: range)
+        
+        githubUrlLabel.attributedText = attributedGithubLabel
+        githubUrlLabel.isUserInteractionEnabled = true
+    }
+    
+    private func setupFontToLabels() {
+        githubUrlLabel.font = UIFont(name: "SFProText-Medium", size: 16)
+        licenseLabel.font = UIFont(name: "SFProText-Medium", size: 16)
+        nameLicenseLabel.font = UIFont(name: "SFProText-Medium", size: 16)
+    }
+    
+    @objc
+    private func handleLinkTap() {
+        if let url = URL(string: urlToOpen) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
     }
     
     func hideLicenseView() {

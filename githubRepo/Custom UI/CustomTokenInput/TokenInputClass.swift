@@ -44,6 +44,9 @@ class TokenInputClass: UIView, UITextFieldDelegate {
         errorLabel.alpha = 0
         tokenInputField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         tokenInputField.addTarget(self, action: #selector(touchUpInsideTextField), for: .editingDidEnd)
+        
+        tokenInputField.font = UIFont(name: "SFProDisplay-Medium", size: 16)
+        errorLabel.font = UIFont(name: "SFProDisplay-Medium", size: 12)
     }
     
     @objc 
@@ -64,7 +67,7 @@ class TokenInputClass: UIView, UITextFieldDelegate {
     }
     
     func checkCorrectToken() -> String {
-        guard let token = tokenInputField.text, !token.isEmpty else {
+        guard let token = tokenInputField.text else {
             return ""
         }
         return token

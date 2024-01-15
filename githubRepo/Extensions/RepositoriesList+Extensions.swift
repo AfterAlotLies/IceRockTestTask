@@ -44,51 +44,20 @@ extension RepositoriesListViewController {
 // MARK: - RepositoriesListViewController + UITableViewDataSource
 extension RepositoriesListViewController: UITableViewDataSource {
     
-    private enum Languages: String {
-        case swift = "Swift"
-        case c_first = "C"
-        case c_second = "C++"
-        case c_third = "C#"
-        case kotlin = "Kotlin"
-        case java = "Java"
-        case python = "Python"
-        case html = "HTML"
-        case javascript = "JavaScript"
-        
-        var labelColor: UIColor {
-               switch self {
-               case .swift:
-                   return .orange
-               case .c_first, .c_second, .c_third:
-                   return .cyan
-               case .kotlin:
-                   return .purple
-               case .java:
-                   return .red
-               case .python:
-                   return .green
-               case .html:
-                   return .brown
-               case .javascript:
-                   return .yellow
-               }
-           }
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return nameRepoArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell") as! CustomTableViewCell
+        cell.setFontToLabels()
+        cell.setRepoName(repoName: nameRepoArray[indexPath.row])
+        cell.setLanguage(language: languageArray[indexPath.row])
         cell.selectionStyle = .none
-        cell.repositoryLabel.text = nameRepoArray[indexPath.row]
-        cell.languageLabel.text = languageArray[indexPath.row]
-        cell.languageLabel.textColor = Languages(rawValue: languageArray[indexPath.row])?.labelColor ?? .white
         if descriptionArray[indexPath.row] == "" {
-            cell.descriptionLabel.isHidden = true
+            cell.hideDescriptionLabel()
         } else {
-            cell.descriptionLabel.text = descriptionArray[indexPath.row]
+            cell.setDescriptionRepo(description: descriptionArray[indexPath.row])
         }
         return cell
     }
