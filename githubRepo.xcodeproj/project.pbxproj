@@ -20,7 +20,6 @@
 		114435DC2B2224BB00D7355C /* CustomButtonUI.xib in Resources */ = {isa = PBXBuildFile; fileRef = 114435D62B2223A300D7355C /* CustomButtonUI.xib */; };
 		114435DD2B2224BE00D7355C /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 114435D82B2223A300D7355C /* CustomTableViewCell.xib */; };
 		114435E02B22257B00D7355C /* RepositoryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114435DF2B22257B00D7355C /* RepositoryDetail.swift */; };
-		114DE64A2B4AC98E0009FB53 /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 114DE6492B4AC91D0009FB53 /* SF-Pro.ttf */; };
 		114DE64E2B4D729C0009FB53 /* BottomViewRepositoryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114DE64D2B4D729C0009FB53 /* BottomViewRepositoryDetail.swift */; };
 		114DE6512B4EAEED0009FB53 /* RepositoryDetailUI.xib in Resources */ = {isa = PBXBuildFile; fileRef = 114DE64F2B4EAEED0009FB53 /* RepositoryDetailUI.xib */; };
 		114DE6522B4EAEED0009FB53 /* BottomViewRepositoryDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 114DE6502B4EAEED0009FB53 /* BottomViewRepositoryDetail.xib */; };
@@ -43,6 +42,9 @@
 		11A590A52B41984600EDDF7E /* InternetConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A590A42B41984600EDDF7E /* InternetConnection.swift */; };
 		11A590A82B45777700EDDF7E /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A590A72B45777700EDDF7E /* ErrorView.swift */; };
 		11A590AA2B45778A00EDDF7E /* ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11A590A92B45778A00EDDF7E /* ErrorView.xib */; };
+		11C5DE912B543BDA00F6A160 /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5DE902B543BDA00F6A160 /* SF-Pro-Display-Bold.otf */; };
+		11C5DE932B543D0300F6A160 /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5DE922B543D0300F6A160 /* SF-Pro-Display-Medium.otf */; };
+		11C5DE952B543D1E00F6A160 /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5DE942B543D1E00F6A160 /* SF-Pro-Text-Medium.otf */; };
 		CD89ACEFEA16E3BE03B47013 /* Pods_githubRepo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1BED8C7408CDAC20161CD88 /* Pods_githubRepo.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,7 +62,6 @@
 		114435D82B2223A300D7355C /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		114435D92B2223A300D7355C /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		114435DF2B22257B00D7355C /* RepositoryDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetail.swift; sourceTree = "<group>"; };
-		114DE6492B4AC91D0009FB53 /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
 		114DE64D2B4D729C0009FB53 /* BottomViewRepositoryDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomViewRepositoryDetail.swift; sourceTree = "<group>"; };
 		114DE64F2B4EAEED0009FB53 /* RepositoryDetailUI.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepositoryDetailUI.xib; sourceTree = "<group>"; };
 		114DE6502B4EAEED0009FB53 /* BottomViewRepositoryDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BottomViewRepositoryDetail.xib; path = ../../../../../../Downloads/BottomViewRepositoryDetail.xib; sourceTree = "<group>"; };
@@ -85,6 +86,9 @@
 		11A590A42B41984600EDDF7E /* InternetConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetConnection.swift; sourceTree = "<group>"; };
 		11A590A72B45777700EDDF7E /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		11A590A92B45778A00EDDF7E /* ErrorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorView.xib; sourceTree = "<group>"; };
+		11C5DE902B543BDA00F6A160 /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
+		11C5DE922B543D0300F6A160 /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
+		11C5DE942B543D1E00F6A160 /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
 		9369A6AC7C55F2139C245CF3 /* Pods-githubRepo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-githubRepo.debug.xcconfig"; path = "Target Support Files/Pods-githubRepo/Pods-githubRepo.debug.xcconfig"; sourceTree = "<group>"; };
 		D1BED8C7408CDAC20161CD88 /* Pods_githubRepo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_githubRepo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E58FCD385542B042FA76DBF7 /* Pods-githubRepo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-githubRepo.release.xcconfig"; path = "Target Support Files/Pods-githubRepo/Pods-githubRepo.release.xcconfig"; sourceTree = "<group>"; };
@@ -223,7 +227,9 @@
 		114DE6442B4AC5C30009FB53 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				114DE6492B4AC91D0009FB53 /* SF-Pro.ttf */,
+				11C5DE942B543D1E00F6A160 /* SF-Pro-Text-Medium.otf */,
+				11C5DE922B543D0300F6A160 /* SF-Pro-Display-Medium.otf */,
+				11C5DE902B543BDA00F6A160 /* SF-Pro-Display-Bold.otf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -402,14 +408,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				114196A82B3871690034768B /* TokenInputUI.xib in Resources */,
-				114DE64A2B4AC98E0009FB53 /* SF-Pro.ttf in Resources */,
 				114435DD2B2224BE00D7355C /* CustomTableViewCell.xib in Resources */,
 				114DE6592B53F7160009FB53 /* Launch Screen.storyboard in Resources */,
 				114DE6552B52C4F90009FB53 /* Localizable.strings in Resources */,
+				11C5DE952B543D1E00F6A160 /* SF-Pro-Text-Medium.otf in Resources */,
+				11C5DE912B543BDA00F6A160 /* SF-Pro-Display-Bold.otf in Resources */,
 				114435DC2B2224BB00D7355C /* CustomButtonUI.xib in Resources */,
 				11A590AA2B45778A00EDDF7E /* ErrorView.xib in Resources */,
 				117313BF2B19FE1900289745 /* MainNavigationController.xib in Resources */,
 				117313C52B1A034000289745 /* RepositoriesListViewController.xib in Resources */,
+				11C5DE932B543D0300F6A160 /* SF-Pro-Display-Medium.otf in Resources */,
 				117313852B17300300289745 /* AuthenticationViewController.xib in Resources */,
 				114DE6512B4EAEED0009FB53 /* RepositoryDetailUI.xib in Resources */,
 				114DE6522B4EAEED0009FB53 /* BottomViewRepositoryDetail.xib in Resources */,
@@ -620,6 +628,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TA66ZBP42J;
@@ -650,6 +659,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TA66ZBP42J;

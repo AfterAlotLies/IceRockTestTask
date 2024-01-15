@@ -15,7 +15,9 @@
 	</dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>SF-Pro.ttf</string>
+		<string>SF-Pro-Display-Medium.otf</string>
+		<string>SF-Pro-Display-Bold.otf</string>
+		<string>SF-Pro-Text-Medium.otf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

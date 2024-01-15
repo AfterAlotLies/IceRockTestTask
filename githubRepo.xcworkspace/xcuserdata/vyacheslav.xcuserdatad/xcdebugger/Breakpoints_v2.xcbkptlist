@@ -126,8 +126,8 @@
             filePath = "githubRepo/Extensions/RepositoriesList+Extensions.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -183,38 +183,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4626043B-73EC-4F28-9C3C-5EB36A14BE5D"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "githubRepo/Extensions/RepositoriesList+Extensions.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
-            landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "23B13D81-B358-4DB3-B9DE-E4DB2049ED00"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "githubRepo/Extensions/RepositoriesList+Extensions.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
-            landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "15A988F3-5669-40FD-A790-F5117E5B7214"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -222,8 +190,8 @@
             filePath = "githubRepo/Extensions/RepositoriesList+Extensions.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
             <Locations>
@@ -1071,8 +1039,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "48"
             endingLineNumber = "48"
-            landmarkName = "AuthenticationViewController"
-            landmarkType = "3">
+            landmarkName = "checkInternetConnection()"
+            landmarkType = "7">
             <Locations>
                <Location
                   uuid = "30832B10-5F65-451B-AE60-94C8CFB52810 - 1adeaffe2016b336"
@@ -1400,8 +1368,8 @@
             filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
             landmarkName = "retryBackToAuthView(previousView:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2035,8 +2003,8 @@
             filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
             landmarkName = "showErrorView()"
             landmarkType = "7">
          </BreakpointContent>
@@ -2045,38 +2013,6 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "8DF8398D-3F3F-49A8-8D67-FE3AEA9D0C7E"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
-            landmarkName = "showErrorView()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "AF3D327B-C042-4F1B-8B77-4C05FF45DD24"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "showErrorView()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9C7F6BB8-9EA0-457A-8C23-4307DE12961E"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -2092,7 +2028,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "99B1A3F7-1D60-4204-BE3D-2A65E6474123"
+            uuid = "AF3D327B-C042-4F1B-8B77-4C05FF45DD24"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -2108,7 +2044,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7C8652F7-58E3-43C4-890D-6A05602B2BC0"
+            uuid = "9C7F6BB8-9EA0-457A-8C23-4307DE12961E"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -2124,7 +2060,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0BD1A1AD-30EB-438B-9BDC-CAE1E0713192"
+            uuid = "99B1A3F7-1D60-4204-BE3D-2A65E6474123"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -2140,7 +2076,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2109773A-5443-44BF-BE74-7A94B679FA62"
+            uuid = "7C8652F7-58E3-43C4-890D-6A05602B2BC0"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -2156,7 +2092,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D6F9EC2B-3A75-4F1D-9597-B9798C9F4E1A"
+            uuid = "0BD1A1AD-30EB-438B-9BDC-CAE1E0713192"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -2172,23 +2108,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "693F0943-ED19-4C7B-AD6B-2B269247A943"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
-            landmarkName = "showErrorView()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A71F7F11-9F62-46AC-98EC-7C56A7CFD20F"
+            uuid = "2109773A-5443-44BF-BE74-7A94B679FA62"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -2204,15 +2124,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "5888042D-B529-441A-BA55-540C34F1B88C"
+            uuid = "D6F9EC2B-3A75-4F1D-9597-B9798C9F4E1A"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "showErrorView()"
             landmarkType = "7">
          </BreakpointContent>
@@ -2220,7 +2140,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C73F9ED9-2F2A-4EE5-AEA5-DDD4880FAE3D"
+            uuid = "693F0943-ED19-4C7B-AD6B-2B269247A943"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -2236,6 +2156,54 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "A71F7F11-9F62-46AC-98EC-7C56A7CFD20F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "showErrorView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5888042D-B529-441A-BA55-540C34F1B88C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "showErrorView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C73F9ED9-2F2A-4EE5-AEA5-DDD4880FAE3D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "showErrorView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
             uuid = "86A35817-CB6B-4001-960B-B78955F17E9A"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -2243,8 +2211,8 @@
             filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
             landmarkName = "setupViewByError(imageName:titleText:messageText:titleColor:messageColor:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2371,8 +2339,8 @@
             filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
             landmarkName = "retryBackToAuthView(previousView:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2387,8 +2355,8 @@
             filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "152"
-            endingLineNumber = "152"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
             landmarkName = "retryBackToAuthView(previousView:)"
             landmarkType = "7">
             <Locations>
@@ -2435,8 +2403,8 @@
             filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "154"
-            endingLineNumber = "154"
+            startingLineNumber = "165"
+            endingLineNumber = "165"
             landmarkName = "retryBackToAuthView(previousView:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2451,8 +2419,8 @@
             filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155"
+            startingLineNumber = "166"
+            endingLineNumber = "166"
             landmarkName = "retryBackToAuthView(previousView:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2467,8 +2435,8 @@
             filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "161"
-            endingLineNumber = "161"
+            startingLineNumber = "172"
+            endingLineNumber = "172"
             landmarkName = "retryBackToAuthView(previousView:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2483,8 +2451,8 @@
             filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "164"
-            endingLineNumber = "164"
+            startingLineNumber = "175"
+            endingLineNumber = "175"
             landmarkName = "retryBackToAuthView(previousView:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2499,8 +2467,8 @@
             filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "165"
-            endingLineNumber = "165"
+            startingLineNumber = "176"
+            endingLineNumber = "176"
             landmarkName = "retryBackToAuthView(previousView:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2571,118 +2539,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "47712146-ABFC-4595-9F2D-A870A214E518"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "160"
-            endingLineNumber = "160"
-            landmarkName = "setInRepoDetail(repoDetail:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "47712146-ABFC-4595-9F2D-A870A214E518 - bd32c9a71cbe8ace"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "githubRepo.RepositoryDetailInfoViewController.setInRepoDetail(repoDetail: githubRepo.RepoDetails) -&gt; ()"
-                  moduleName = "githubRepo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "136"
-                  endingLineNumber = "136"
-                  offsetFromSymbolStart = "108">
-               </Location>
-               <Location
-                  uuid = "47712146-ABFC-4595-9F2D-A870A214E518 - bd32c9a71cbe8ace"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "githubRepo.RepositoryDetailInfoViewController.setInRepoDetail(repoDetail: githubRepo.RepoDetails) -&gt; ()"
-                  moduleName = "githubRepo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "136"
-                  endingLineNumber = "136"
-                  offsetFromSymbolStart = "172">
-               </Location>
-               <Location
-                  uuid = "47712146-ABFC-4595-9F2D-A870A214E518 - bd32c9a71cbe8ace"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "githubRepo.RepositoryDetailInfoViewController.setInRepoDetail(repoDetail: githubRepo.RepoDetails) -&gt; ()"
-                  moduleName = "githubRepo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vyacheslav/Desktop/Training/githubRepo/githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "136"
-                  endingLineNumber = "136"
-                  offsetFromSymbolStart = "268">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "4A9B9C84-B52C-4022-AA87-A4D8E01DC3D2"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "161"
-            endingLineNumber = "161"
-            landmarkName = "setInRepoDetail(repoDetail:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C6DA5870-F43E-4032-95F5-085066FA3BB4"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "163"
-            endingLineNumber = "163"
-            landmarkName = "setInRepoDetail(repoDetail:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "073B0C1A-5113-4B9B-ADA8-CFE9760F4E3E"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "164"
-            endingLineNumber = "164"
-            landmarkName = "setInRepoDetail(repoDetail:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "1DF5082D-1231-4437-A9CD-6913E5647F53"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -2698,6 +2555,54 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "C6DA5870-F43E-4032-95F5-085066FA3BB4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
+            landmarkName = "setInRepoDetail(repoDetail:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "073B0C1A-5113-4B9B-ADA8-CFE9760F4E3E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
+            landmarkName = "setInRepoDetail(repoDetail:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1DF5082D-1231-4437-A9CD-6913E5647F53"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
+            landmarkName = "setInRepoDetail(repoDetail:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
             uuid = "FB0F1931-6186-4C44-81A1-C4CD0ACE7964"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -2705,8 +2610,8 @@
             filePath = "githubRepo/RepositoryInfo/RepositoryDetailInfoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "166"
-            endingLineNumber = "166"
+            startingLineNumber = "170"
+            endingLineNumber = "170"
             landmarkName = "setInRepoDetail(repoDetail:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -3306,8 +3211,8 @@
             filePath = "githubRepo/Custom UI/ErrorView/ErrorView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
             landmarkName = "showErrorView()"
             landmarkType = "7">
          </BreakpointContent>
