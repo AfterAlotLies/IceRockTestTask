@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MultiPurposeButton" customModule="githubRepo" customModuleProvider="target">
             <connections>
-                <outlet property="customButton" destination="EMw-oG-saY" id="Cjv-26-31c"/>
+                <outlet property="customButton" destination="EMw-oG-saY" id="TP4-sG-DcH"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

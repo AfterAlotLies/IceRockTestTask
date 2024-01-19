@@ -11,7 +11,7 @@
             <connections>
                 <outlet property="errorView" destination="lVE-yw-MAq" id="KzC-Vr-bAH"/>
                 <outlet property="imageLogo" destination="dKx-v2-Buf" id="3S8-pS-U5O"/>
-                <outlet property="signInButton" destination="vUb-Yp-Ohi" id="QRd-p2-L2V"/>
+                <outlet property="signInButton" destination="4Pe-tT-bCH" id="eNJ-0r-eX4"/>
                 <outlet property="tokenInputField" destination="4HY-t6-ri6" id="muI-Rw-A0O"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -40,12 +40,11 @@
                     <rect key="frame" x="0.0" y="59" width="430" height="839"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vUb-Yp-Ohi" customClass="MultiPurposeButton" customModule="githubRepo" customModuleProvider="target">
-                    <rect key="frame" x="18" y="835" width="393" height="47"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Pe-tT-bCH" userLabel="SignIn Button" customClass="MultiPurposeButton" customModule="githubRepo" customModuleProvider="target">
+                    <rect key="frame" x="20" y="834" width="390" height="48"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="393" id="Tbk-Mc-to1"/>
-                        <constraint firstAttribute="height" constant="47" id="bma-0L-Hci"/>
+                        <constraint firstAttribute="height" constant="48" id="deZ-8s-J0B"/>
                     </constraints>
                 </view>
             </subviews>
@@ -53,15 +52,15 @@
             <color key="backgroundColor" red="0.05523881169" green="0.056316187189999999" blue="0.1358961887" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
                 <constraint firstItem="lVE-yw-MAq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="67Z-af-rZb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4Pe-tT-bCH" secondAttribute="trailing" constant="20" id="9gf-SU-NQt"/>
                 <constraint firstItem="lVE-yw-MAq" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="A5g-Ll-8ak"/>
                 <constraint firstItem="4HY-t6-ri6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="19" id="L0R-5u-mTB"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="vUb-Yp-Ohi" secondAttribute="bottom" constant="16" id="MQL-MP-caB"/>
-                <constraint firstItem="vUb-Yp-Ohi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="18" id="YXB-Ex-LNc"/>
                 <constraint firstItem="dKx-v2-Buf" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Zey-oB-8Ix"/>
                 <constraint firstItem="lVE-yw-MAq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="fjI-jD-cfC"/>
                 <constraint firstItem="4HY-t6-ri6" firstAttribute="top" secondItem="dKx-v2-Buf" secondAttribute="bottom" constant="78" id="g4f-Gc-yTv"/>
                 <constraint firstItem="lVE-yw-MAq" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="gdb-Yb-Lxp"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vUb-Yp-Ohi" secondAttribute="trailing" constant="19" id="gwr-Pe-7sp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="4Pe-tT-bCH" secondAttribute="bottom" constant="16" id="hvG-Fa-kNv"/>
+                <constraint firstItem="4Pe-tT-bCH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="kMc-fC-F8B"/>
                 <constraint firstItem="dKx-v2-Buf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="49" id="m9T-vc-LSW"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4HY-t6-ri6" secondAttribute="trailing" constant="18" id="pmq-xu-SDo"/>
             </constraints>
