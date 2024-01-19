@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TokenInputClass: UIView, UITextFieldDelegate {
+class TokenInput: UIView, UITextFieldDelegate {
     
     @IBOutlet private weak var tokenInputField: UITextField!
     @IBOutlet private weak var errorLabel: UILabel!

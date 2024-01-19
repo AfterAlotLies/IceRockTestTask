@@ -15,6 +15,6 @@ protocol ErrorViewDelegate: AnyObject {
 extension ErrorViewDelegate {
     
     func retryToGetRepoList() {
-        //not necessary to use
+        //using for repeating to request get list repositories
     }
 }

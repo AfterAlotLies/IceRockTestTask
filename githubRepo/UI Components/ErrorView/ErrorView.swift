@@ -13,7 +13,7 @@ class ErrorView: UIView {
     @IBOutlet private weak var errorImage: UIImageView!
     @IBOutlet private weak var errorTitle: UILabel!
     @IBOutlet private weak var errorMessage: UILabel!
-    @IBOutlet private weak var retryButton: CustomButtonClass!
+    @IBOutlet private weak var retryButton: MultiPurposeButton!
     
     private var previousView : ControllerType = .other
     weak var delegate: ErrorViewDelegate?
@@ -140,7 +140,7 @@ class ErrorView: UIView {
 
             
         case .authController, .repoListBadConnection, .repoDetailBadConnection:
-            InternetConnection.shared.checkInternetConnection {
+            InternetConnectionManager.shared.checkInternetConnection {
                 let successWorkItem = {
                     self.delegate?.retryConnectToInternet()
                     self.retryButton.stopLoading()
@@ -160,7 +160,7 @@ class ErrorView: UIView {
 
             
         case .repoDetailReadmeError:
-            InternetConnection.shared.checkInternetConnection {
+            InternetConnectionManager.shared.checkInternetConnection { 
                 let successWorkItem = {
                     self.delegate?.retryConnectToInternet()
                     self.retryButton.stopLoading()
@@ -188,7 +188,7 @@ class ErrorView: UIView {
 
             
         default:
-            InternetConnection.shared.checkInternetConnection {
+            InternetConnectionManager.shared.checkInternetConnection {
                 let successWorkItem = {
                     self.delegate?.retryConnectToInternet()
                     self.retryButton.stopLoading()

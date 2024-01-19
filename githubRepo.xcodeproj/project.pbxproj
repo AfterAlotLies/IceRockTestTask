@@ -8,17 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		1140223F2B24EEBD005B775A /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1140223E2B24EEBD005B775A /* Int+Extensions.swift */; };
-		114196A62B3871540034768B /* TokenInputClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114196A52B3871540034768B /* TokenInputClass.swift */; };
+		114196A62B3871540034768B /* TokenInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114196A52B3871540034768B /* TokenInput.swift */; };
 		114196A82B3871690034768B /* TokenInputUI.xib in Resources */ = {isa = PBXBuildFile; fileRef = 114196A72B3871690034768B /* TokenInputUI.xib */; };
 		114196AB2B3AE21D0034768B /* KeyValueStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114196AA2B3AE21D0034768B /* KeyValueStorage.swift */; };
 		114434AB2B1DF48700D7355C /* AppRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114434AA2B1DF48700D7355C /* AppRepository.swift */; };
 		114434AD2B1F121000D7355C /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114434AC2B1F121000D7355C /* UserInfo.swift */; };
 		114434B22B208B8C00D7355C /* RepositoriesList+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114434B12B208B8C00D7355C /* RepositoriesList+Extensions.swift */; };
 		114434B42B208DB900D7355C /* AuthenticationView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114434B32B208DB900D7355C /* AuthenticationView+Extensions.swift */; };
-		114435DA2B22246300D7355C /* CustomButtonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114435D52B2223A300D7355C /* CustomButtonClass.swift */; };
-		114435DB2B22246800D7355C /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114435D92B2223A300D7355C /* CustomTableViewCell.swift */; };
-		114435DC2B2224BB00D7355C /* CustomButtonUI.xib in Resources */ = {isa = PBXBuildFile; fileRef = 114435D62B2223A300D7355C /* CustomButtonUI.xib */; };
-		114435DD2B2224BE00D7355C /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 114435D82B2223A300D7355C /* CustomTableViewCell.xib */; };
+		114435DA2B22246300D7355C /* MultiPurposeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114435D52B2223A300D7355C /* MultiPurposeButton.swift */; };
+		114435DB2B22246800D7355C /* RepositoriesListCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114435D92B2223A300D7355C /* RepositoriesListCells.swift */; };
+		114435DC2B2224BB00D7355C /* MultiPurposeButtonUI.xib in Resources */ = {isa = PBXBuildFile; fileRef = 114435D62B2223A300D7355C /* MultiPurposeButtonUI.xib */; };
+		114435DD2B2224BE00D7355C /* RepositoriesListCellsUI.xib in Resources */ = {isa = PBXBuildFile; fileRef = 114435D82B2223A300D7355C /* RepositoriesListCellsUI.xib */; };
 		114435E02B22257B00D7355C /* RepositoryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114435DF2B22257B00D7355C /* RepositoryDetail.swift */; };
 		114DE64E2B4D729C0009FB53 /* BottomViewRepositoryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114DE64D2B4D729C0009FB53 /* BottomViewRepositoryDetail.swift */; };
 		114DE6512B4EAEED0009FB53 /* RepositoryDetailUI.xib in Resources */ = {isa = PBXBuildFile; fileRef = 114DE64F2B4EAEED0009FB53 /* RepositoryDetailUI.xib */; };
@@ -39,9 +39,12 @@
 		117313C52B1A034000289745 /* RepositoriesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 117313C32B1A034000289745 /* RepositoriesListViewController.xib */; };
 		117313CB2B1A175800289745 /* RepositoryDetailInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117313C92B1A175800289745 /* RepositoryDetailInfoViewController.swift */; };
 		117313CC2B1A175800289745 /* RepositoryDetailInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 117313CA2B1A175800289745 /* RepositoryDetailInfoViewController.xib */; };
-		11A590A52B41984600EDDF7E /* InternetConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A590A42B41984600EDDF7E /* InternetConnection.swift */; };
+		11A590A52B41984600EDDF7E /* InternetConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A590A42B41984600EDDF7E /* InternetConnectionManager.swift */; };
 		11A590A82B45777700EDDF7E /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A590A72B45777700EDDF7E /* ErrorView.swift */; };
 		11A590AA2B45778A00EDDF7E /* ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11A590A92B45778A00EDDF7E /* ErrorView.xib */; };
+		11B310F32B5800B000440F67 /* RepoDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B310F22B5800B000440F67 /* RepoDetails.swift */; };
+		11B310F52B5801D600440F67 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B310F42B5801D600440F67 /* Repo.swift */; };
+		11B310F82B595AA500440F67 /* ResponseViewStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B310F72B595AA500440F67 /* ResponseViewStatus.swift */; };
 		11C5DE912B543BDA00F6A160 /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5DE902B543BDA00F6A160 /* SF-Pro-Display-Bold.otf */; };
 		11C5DE932B543D0300F6A160 /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5DE922B543D0300F6A160 /* SF-Pro-Display-Medium.otf */; };
 		11C5DE952B543D1E00F6A160 /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5DE942B543D1E00F6A160 /* SF-Pro-Text-Medium.otf */; };
@@ -50,17 +53,17 @@
 
 /* Begin PBXFileReference section */
 		1140223E2B24EEBD005B775A /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
-		114196A52B3871540034768B /* TokenInputClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenInputClass.swift; sourceTree = "<group>"; };
+		114196A52B3871540034768B /* TokenInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenInput.swift; sourceTree = "<group>"; };
 		114196A72B3871690034768B /* TokenInputUI.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TokenInputUI.xib; sourceTree = "<group>"; };
 		114196AA2B3AE21D0034768B /* KeyValueStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStorage.swift; sourceTree = "<group>"; };
 		114434AA2B1DF48700D7355C /* AppRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRepository.swift; sourceTree = "<group>"; };
 		114434AC2B1F121000D7355C /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		114434B12B208B8C00D7355C /* RepositoriesList+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepositoriesList+Extensions.swift"; sourceTree = "<group>"; };
 		114434B32B208DB900D7355C /* AuthenticationView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthenticationView+Extensions.swift"; sourceTree = "<group>"; };
-		114435D52B2223A300D7355C /* CustomButtonClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonClass.swift; sourceTree = "<group>"; };
-		114435D62B2223A300D7355C /* CustomButtonUI.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomButtonUI.xib; sourceTree = "<group>"; };
-		114435D82B2223A300D7355C /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
-		114435D92B2223A300D7355C /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		114435D52B2223A300D7355C /* MultiPurposeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiPurposeButton.swift; sourceTree = "<group>"; };
+		114435D62B2223A300D7355C /* MultiPurposeButtonUI.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MultiPurposeButtonUI.xib; sourceTree = "<group>"; };
+		114435D82B2223A300D7355C /* RepositoriesListCellsUI.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoriesListCellsUI.xib; sourceTree = "<group>"; };
+		114435D92B2223A300D7355C /* RepositoriesListCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesListCells.swift; sourceTree = "<group>"; };
 		114435DF2B22257B00D7355C /* RepositoryDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetail.swift; sourceTree = "<group>"; };
 		114DE64D2B4D729C0009FB53 /* BottomViewRepositoryDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomViewRepositoryDetail.swift; sourceTree = "<group>"; };
 		114DE64F2B4EAEED0009FB53 /* RepositoryDetailUI.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepositoryDetailUI.xib; sourceTree = "<group>"; };
@@ -83,9 +86,12 @@
 		117313C32B1A034000289745 /* RepositoriesListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoriesListViewController.xib; sourceTree = "<group>"; };
 		117313C92B1A175800289745 /* RepositoryDetailInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailInfoViewController.swift; sourceTree = "<group>"; };
 		117313CA2B1A175800289745 /* RepositoryDetailInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryDetailInfoViewController.xib; sourceTree = "<group>"; };
-		11A590A42B41984600EDDF7E /* InternetConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetConnection.swift; sourceTree = "<group>"; };
+		11A590A42B41984600EDDF7E /* InternetConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetConnectionManager.swift; sourceTree = "<group>"; };
 		11A590A72B45777700EDDF7E /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		11A590A92B45778A00EDDF7E /* ErrorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorView.xib; sourceTree = "<group>"; };
+		11B310F22B5800B000440F67 /* RepoDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetails.swift; sourceTree = "<group>"; };
+		11B310F42B5801D600440F67 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
+		11B310F72B595AA500440F67 /* ResponseViewStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseViewStatus.swift; sourceTree = "<group>"; };
 		11C5DE902B543BDA00F6A160 /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
 		11C5DE922B543D0300F6A160 /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
 		11C5DE942B543D1E00F6A160 /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
@@ -106,13 +112,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		114196A42B3871220034768B /* CustomTokenInput */ = {
+		114196A42B3871220034768B /* TokenInput */ = {
 			isa = PBXGroup;
 			children = (
-				114196A52B3871540034768B /* TokenInputClass.swift */,
+				114196A52B3871540034768B /* TokenInput.swift */,
 				114196A72B3871690034768B /* TokenInputUI.xib */,
 			);
-			path = CustomTokenInput;
+			path = TokenInput;
 			sourceTree = "<group>";
 		};
 		114196A92B3AE2060034768B /* keyStorage */ = {
@@ -134,26 +140,27 @@
 		114434A92B1DF46F00D7355C /* Requests+CodableModel+keyStorage */ = {
 			isa = PBXGroup;
 			children = (
-				11A590A42B41984600EDDF7E /* InternetConnection.swift */,
+				11A590A42B41984600EDDF7E /* InternetConnectionManager.swift */,
 				114196AC2B3AE24C0034768B /* Requests */,
-				114434AE2B205DD700D7355C /* CodableModel */,
+				114434AE2B205DD700D7355C /* Codable Models */,
 				114196A92B3AE2060034768B /* keyStorage */,
 			);
 			path = "Requests+CodableModel+keyStorage";
 			sourceTree = "<group>";
 		};
-		114434AE2B205DD700D7355C /* CodableModel */ = {
+		114434AE2B205DD700D7355C /* Codable Models */ = {
 			isa = PBXGroup;
 			children = (
 				114434AC2B1F121000D7355C /* UserInfo.swift */,
+				11B310F22B5800B000440F67 /* RepoDetails.swift */,
+				11B310F42B5801D600440F67 /* Repo.swift */,
 			);
-			path = CodableModel;
+			path = "Codable Models";
 			sourceTree = "<group>";
 		};
 		114434B02B208B4A00D7355C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				11567D5C2B46D5BD00A8AF9D /* Protocols */,
 				114434B32B208DB900D7355C /* AuthenticationView+Extensions.swift */,
 				114434B12B208B8C00D7355C /* RepositoriesList+Extensions.swift */,
 				11567D5D2B48318900A8AF9D /* RepositoryDetailInfo+Extensions.swift */,
@@ -162,16 +169,17 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		114434B52B208F2B00D7355C /* Supporting Files */ = {
+		114434B52B208F2B00D7355C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				114DE6582B53F7160009FB53 /* Launch Screen.storyboard */,
+				11B310F72B595AA500440F67 /* ResponseViewStatus.swift */,
 				114DE6532B52C4D20009FB53 /* LocalizedStrings */,
 				114DE6442B4AC5C30009FB53 /* Fonts */,
 				117313772B172EE100289745 /* Info.plist */,
 				117313722B172EE100289745 /* Assets.xcassets */,
+				114DE6582B53F7160009FB53 /* Launch Screen.storyboard */,
 			);
-			path = "Supporting Files";
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		114434B62B208F6500D7355C /* Application */ = {
@@ -183,34 +191,34 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
-		114435D32B2223A300D7355C /* Custom UI */ = {
+		114435D32B2223A300D7355C /* UI Components */ = {
 			isa = PBXGroup;
 			children = (
 				11A590A62B45776800EDDF7E /* ErrorView */,
-				114196A42B3871220034768B /* CustomTokenInput */,
+				114196A42B3871220034768B /* TokenInput */,
 				114435DE2B22255800D7355C /* RepositoryDetail */,
-				114435D42B2223A300D7355C /* CustomButton */,
-				114435D72B2223A300D7355C /* CustomCell */,
+				114435D42B2223A300D7355C /* MultiPurposeButton */,
+				114435D72B2223A300D7355C /* RepositoriesListCells */,
 			);
-			path = "Custom UI";
+			path = "UI Components";
 			sourceTree = "<group>";
 		};
-		114435D42B2223A300D7355C /* CustomButton */ = {
+		114435D42B2223A300D7355C /* MultiPurposeButton */ = {
 			isa = PBXGroup;
 			children = (
-				114435D52B2223A300D7355C /* CustomButtonClass.swift */,
-				114435D62B2223A300D7355C /* CustomButtonUI.xib */,
+				114435D52B2223A300D7355C /* MultiPurposeButton.swift */,
+				114435D62B2223A300D7355C /* MultiPurposeButtonUI.xib */,
 			);
-			path = CustomButton;
+			path = MultiPurposeButton;
 			sourceTree = "<group>";
 		};
-		114435D72B2223A300D7355C /* CustomCell */ = {
+		114435D72B2223A300D7355C /* RepositoriesListCells */ = {
 			isa = PBXGroup;
 			children = (
-				114435D92B2223A300D7355C /* CustomTableViewCell.swift */,
-				114435D82B2223A300D7355C /* CustomTableViewCell.xib */,
+				114435D92B2223A300D7355C /* RepositoriesListCells.swift */,
+				114435D82B2223A300D7355C /* RepositoriesListCellsUI.xib */,
 			);
-			path = CustomCell;
+			path = RepositoriesListCells;
 			sourceTree = "<group>";
 		};
 		114435DE2B22255800D7355C /* RepositoryDetail */ = {
@@ -243,14 +251,6 @@
 			path = LocalizedStrings;
 			sourceTree = "<group>";
 		};
-		11567D5C2B46D5BD00A8AF9D /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				11567D5A2B46C81500A8AF9D /* ErrorView+Protocol.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
 		1173135D2B172EDF00289745 = {
 			isa = PBXGroup;
 			children = (
@@ -272,14 +272,15 @@
 		117313682B172EDF00289745 /* githubRepo */ = {
 			isa = PBXGroup;
 			children = (
-				114435D32B2223A300D7355C /* Custom UI */,
+				114435D32B2223A300D7355C /* UI Components */,
 				117313C62B1A123D00289745 /* NavigationController */,
 				1173137D2B172F8800289745 /* AuthView */,
 				1173137E2B172F9600289745 /* RepositoriesList */,
 				1173137F2B172FA600289745 /* RepositoryInfo */,
 				114434A92B1DF46F00D7355C /* Requests+CodableModel+keyStorage */,
+				11B310F62B593AE300440F67 /* Protocols */,
 				114434B02B208B4A00D7355C /* Extensions */,
-				114434B52B208F2B00D7355C /* Supporting Files */,
+				114434B52B208F2B00D7355C /* Resources */,
 				114434B62B208F6500D7355C /* Application */,
 			);
 			path = githubRepo;
@@ -328,6 +329,14 @@
 				11A590A92B45778A00EDDF7E /* ErrorView.xib */,
 			);
 			path = ErrorView;
+			sourceTree = "<group>";
+		};
+		11B310F62B593AE300440F67 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				11567D5A2B46C81500A8AF9D /* ErrorView+Protocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		37631553564EE4481C40DA5C /* Pods */ = {
@@ -408,12 +417,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				114196A82B3871690034768B /* TokenInputUI.xib in Resources */,
-				114435DD2B2224BE00D7355C /* CustomTableViewCell.xib in Resources */,
+				114435DD2B2224BE00D7355C /* RepositoriesListCellsUI.xib in Resources */,
 				114DE6592B53F7160009FB53 /* Launch Screen.storyboard in Resources */,
 				114DE6552B52C4F90009FB53 /* Localizable.strings in Resources */,
 				11C5DE952B543D1E00F6A160 /* SF-Pro-Text-Medium.otf in Resources */,
 				11C5DE912B543BDA00F6A160 /* SF-Pro-Display-Bold.otf in Resources */,
-				114435DC2B2224BB00D7355C /* CustomButtonUI.xib in Resources */,
+				114435DC2B2224BB00D7355C /* MultiPurposeButtonUI.xib in Resources */,
 				11A590AA2B45778A00EDDF7E /* ErrorView.xib in Resources */,
 				117313BF2B19FE1900289745 /* MainNavigationController.xib in Resources */,
 				117313C52B1A034000289745 /* RepositoriesListViewController.xib in Resources */,
@@ -475,14 +484,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				114435DB2B22246800D7355C /* CustomTableViewCell.swift in Sources */,
-				114435DA2B22246300D7355C /* CustomButtonClass.swift in Sources */,
+				114435DB2B22246800D7355C /* RepositoriesListCells.swift in Sources */,
+				114435DA2B22246300D7355C /* MultiPurposeButton.swift in Sources */,
 				11567D5E2B48318900A8AF9D /* RepositoryDetailInfo+Extensions.swift in Sources */,
+				11B310F52B5801D600440F67 /* Repo.swift in Sources */,
 				11A590A82B45777700EDDF7E /* ErrorView.swift in Sources */,
-				114196A62B3871540034768B /* TokenInputClass.swift in Sources */,
+				114196A62B3871540034768B /* TokenInput.swift in Sources */,
 				114434B42B208DB900D7355C /* AuthenticationView+Extensions.swift in Sources */,
 				114434AD2B1F121000D7355C /* UserInfo.swift in Sources */,
 				114DE64E2B4D729C0009FB53 /* BottomViewRepositoryDetail.swift in Sources */,
+				11B310F32B5800B000440F67 /* RepoDetails.swift in Sources */,
 				117313C42B1A034000289745 /* RepositoriesListViewController.swift in Sources */,
 				117313C12B19FE8800289745 /* MainNavigationController.swift in Sources */,
 				1173136A2B172EDF00289745 /* AppDelegate.swift in Sources */,
@@ -491,9 +502,10 @@
 				117313842B17300300289745 /* AuthenticationViewController.swift in Sources */,
 				11567D5B2B46C81500A8AF9D /* ErrorView+Protocol.swift in Sources */,
 				114196AB2B3AE21D0034768B /* KeyValueStorage.swift in Sources */,
-				11A590A52B41984600EDDF7E /* InternetConnection.swift in Sources */,
+				11A590A52B41984600EDDF7E /* InternetConnectionManager.swift in Sources */,
 				114434B22B208B8C00D7355C /* RepositoriesList+Extensions.swift in Sources */,
 				1173136C2B172EDF00289745 /* SceneDelegate.swift in Sources */,
+				11B310F82B595AA500440F67 /* ResponseViewStatus.swift in Sources */,
 				114434AB2B1DF48700D7355C /* AppRepository.swift in Sources */,
 				114DE6572B52C5440009FB53 /* LocalizedStrings.swift in Sources */,
 				1140223F2B24EEBD005B775A /* Int+Extensions.swift in Sources */,
@@ -634,7 +646,7 @@
 				DEVELOPMENT_TEAM = TA66ZBP42J;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "githubRepo/Supporting Files/Info.plist";
+				INFOPLIST_FILE = githubRepo/Resources/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
@@ -665,7 +677,7 @@
 				DEVELOPMENT_TEAM = TA66ZBP42J;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "githubRepo/Supporting Files/Info.plist";
+				INFOPLIST_FILE = githubRepo/Resources/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";

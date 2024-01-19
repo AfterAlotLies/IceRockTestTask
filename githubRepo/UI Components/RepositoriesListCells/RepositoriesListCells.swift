@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CustomTableViewCell: UITableViewCell {
+class RepositoriesListCells: UITableViewCell {
     
     @IBOutlet private weak var repositoryLabel: UILabel!
     @IBOutlet private weak var languageLabel: UILabel!

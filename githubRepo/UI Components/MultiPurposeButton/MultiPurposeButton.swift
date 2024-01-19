@@ -8,7 +8,7 @@
 import UIKit
 import NVActivityIndicatorView
 
-class CustomButtonClass: UIView {
+class MultiPurposeButton: UIView {
     
     @IBOutlet private weak var customButton: UIButton!
     
@@ -43,7 +43,7 @@ class CustomButtonClass: UIView {
     }
     
     private func loadViewFromXib() -> UIView {
-        guard let view = Bundle.main.loadNibNamed("CustomButtonUI", owner: self)?.first as? UIView else { return UIView() }
+        guard let view = Bundle.main.loadNibNamed("MultiPurposeButtonUI", owner: self)?.first as? UIView else { return UIView() }
         
         return view
     }

@@ -20,7 +20,7 @@
             <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5gQ-aq-dfm" customClass="CustomButtonClass" customModule="githubRepo" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5gQ-aq-dfm" customClass="MultiPurposeButton" customModule="githubRepo" customModuleProvider="target">
                     <rect key="frame" x="18" y="835" width="394" height="47"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
