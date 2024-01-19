@@ -22,14 +22,15 @@ class MultiPurposeButton: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        configureView()
-        print("override init")
+        self.configureView()
+        print("override init button")
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        configureView()
-        print("required init")
+        self.configureView()
+        print("required init button")
+
     }
     
     func setButtonText(buttonText: String) {

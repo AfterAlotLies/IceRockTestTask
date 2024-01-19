@@ -42,6 +42,7 @@ class ErrorView: UIView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         configureView()
+        print("required init error view")
     }
     
 // MARK: - Setup/configure methods for view
