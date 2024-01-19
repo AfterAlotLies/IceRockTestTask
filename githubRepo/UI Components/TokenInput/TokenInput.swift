@@ -12,6 +12,10 @@ class TokenInput: UIView, UITextFieldDelegate {
     @IBOutlet private weak var tokenInputField: UITextField!
     @IBOutlet private weak var errorLabel: UILabel!
     
+    private enum Constants {
+        static let tokenInputUI = "TokenInputUI"
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureView()
@@ -20,6 +24,24 @@ class TokenInput: UIView, UITextFieldDelegate {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         configureView()
+    }
+    
+    func clearTextField() {
+        tokenInputField.text = ""
+    }
+    
+    func checkCorrectToken() -> String {
+        guard let token = tokenInputField.text else {
+            return ""
+        }
+        return token
+    }
+    
+    func displayErrorText() {
+        UIView.animate(withDuration: 0.5) {
+            self.errorLabel.alpha = 1.0
+            self.tokenInputField.layer.borderColor = UIColor.red.cgColor
+        }
     }
     
     private func configureView() {
@@ -31,7 +53,7 @@ class TokenInput: UIView, UITextFieldDelegate {
     }
     
     private func loadViewFromXib() -> UIView {
-        guard let view = Bundle.main.loadNibNamed("TokenInputUI", owner: self)?.first as? UIView else { return UIView() }
+        guard let view = Bundle.main.loadNibNamed(Constants.tokenInputUI, owner: self)?.first as? UIView else { return UIView() }
         return view
     }
     
@@ -60,23 +82,5 @@ class TokenInput: UIView, UITextFieldDelegate {
     @objc
     private func touchUpInsideTextField() {
         tokenInputField.layer.borderColor = UIColor.systemCyan.cgColor
-    }
-    
-    func clearTextField() {
-        tokenInputField.text = ""
-    }
-    
-    func checkCorrectToken() -> String {
-        guard let token = tokenInputField.text else {
-            return ""
-        }
-        return token
-    }
-    
-    func displayErrorText() {
-        UIView.animate(withDuration: 0.5) {
-            self.errorLabel.alpha = 1.0
-            self.tokenInputField.layer.borderColor = UIColor.red.cgColor
-        }
     }
 }

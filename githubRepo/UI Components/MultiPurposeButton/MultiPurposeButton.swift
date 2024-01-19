@@ -14,38 +14,22 @@ class MultiPurposeButton: UIView {
     
     private let loadingIndicator = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 20, height: 20), type: .circleStrokeSpin, color: .white)
     
+    private enum Constants {
+        static let multiPurposeButtonUI = "MultiPurposeButtonUI"
+    }
+    
     var actionHandler: (() -> Void)?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureView()
+        print("override init")
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         configureView()
-    }
-    
-    private func configureView() {
-        let subview = self.loadViewFromXib()
-        subview.frame = self.bounds
-        subview.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        self.addSubview(subview)
-        
-        subview.addSubview(loadingIndicator)
-        
-        loadingIndicator.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            loadingIndicator.centerXAnchor.constraint(equalTo: subview.centerXAnchor),
-            loadingIndicator.centerYAnchor.constraint(equalTo: subview.centerYAnchor)
-        ])
-    }
-    
-    private func loadViewFromXib() -> UIView {
-        guard let view = Bundle.main.loadNibNamed("MultiPurposeButtonUI", owner: self)?.first as? UIView else { return UIView() }
-        
-        return view
+        print("required init")
     }
     
     func setButtonText(buttonText: String) {
@@ -74,5 +58,29 @@ class MultiPurposeButton: UIView {
     
     @IBAction func makeActionByClick(_ sender: Any) {
         actionHandler?()
+    }
+    
+    private func configureView() {
+        let subview = self.loadViewFromXib()
+        subview.frame = self.bounds
+        subview.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        self.addSubview(subview)
+        
+        subview.addSubview(loadingIndicator)
+        
+        loadingIndicator.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            loadingIndicator.centerXAnchor.constraint(equalTo: subview.centerXAnchor),
+            loadingIndicator.centerYAnchor.constraint(equalTo: subview.centerYAnchor)
+        ])
+        
+        print("button inited")
+    }
+    
+    private func loadViewFromXib() -> UIView {
+        guard let view = Bundle.main.loadNibNamed(Constants.multiPurposeButtonUI, owner: self)?.first as? UIView else { return UIView() }
+        
+        return view
     }
 }

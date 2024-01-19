@@ -7,14 +7,18 @@
 
 import UIKit
 import Alamofire
-import NVActivityIndicatorView
 
 class AuthenticationViewController: UIViewController {
     
     @IBOutlet private weak var imageLogo: UIImageView!
-    @IBOutlet private weak var tokenInputField: TokenInputClass!
-    @IBOutlet private weak var signInButton: CustomButtonClass!
+    @IBOutlet private weak var tokenInputField: TokenInput!
+    @IBOutlet private weak var signInButton: MultiPurposeButton!
     @IBOutlet private weak var errorView: ErrorView!
+    
+    private enum Constants {
+        static let repoListController = "RepositoriesListViewController"
+        static let alertTitle = "OK"
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,11 +29,10 @@ class AuthenticationViewController: UIViewController {
     }
     
 // MARK: - Update view by response
-
-    public func updateViewBasedOnResponse(response: String) {
+    public func updateViewBasedOnResponse(response: ResponseViewStatus) {
         switch response {
 
-        case "success":
+        case .success:
             imageLogo.isHidden = false
             tokenInputField.isHidden = false
             signInButton.isHidden = false
@@ -44,33 +47,32 @@ class AuthenticationViewController: UIViewController {
     }
     
 // MARK: - Check internet connection
-
     private func checkInternetConnection() {
-        InternetConnection.shared.checkInternetConnection {
-            self.updateViewBasedOnResponse(response: "success")
+        InternetConnectionManager.shared.checkInternetConnection {
+            self.updateViewBasedOnResponse(response: .success)
         } failureHandler: {
             self.errorView.setTypeOfPreviousView(type: .authController)
-            self.updateViewBasedOnResponse(response: "fail")
+            self.updateViewBasedOnResponse(response: .fail)
         }
     }
     
 // MARK: - Setup button + check correctly token
-
     private func signInUserButton() {
         signInButton.setButtonText(buttonText: LocalizedStrings.buttonAuthController)
-        signInButton.actionHandler = {
-            let token = self.tokenInputField.checkCorrectToken()
+        signInButton.actionHandler = { [weak self] in
+            guard let self = self else { return }
+            let token = tokenInputField.checkCorrectToken()
             if token == "" {
-                self.errorAlert(title: LocalizedStrings.titleAlert,
+                errorAlert(title: LocalizedStrings.titleAlert,
                                 message: LocalizedStrings.messageAlert)
             } else {
                 self.signInButton.startLoading()
-                InternetConnection.shared.checkInternetConnection {
+                InternetConnectionManager.shared.checkInternetConnection {
                     self.authUserInApp(token: token)
                 } failureHandler: {
                     let noConnectionItem = {
                         self.errorView.setTypeOfPreviousView(type: .authController)
-                        self.updateViewBasedOnResponse(response: "fail")
+                        self.updateViewBasedOnResponse(response: .fail)
                         self.signInButton.stopLoading()
                     }
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: noConnectionItem)
@@ -80,9 +82,9 @@ class AuthenticationViewController: UIViewController {
     }
     
 // MARK: - Request to auth by token
-
     private func authUserInApp(token: String) {
-        AppRepository.shared.signIn(token: token) { response, error in
+        AppRepository.shared.signIn(token: token) { [weak self] response, error in
+            guard let self = self else { return }
             if error != nil {
                 if let error = error as? AFError, let errorCode = error.responseCode {
                     switch errorCode {
@@ -99,7 +101,7 @@ class AuthenticationViewController: UIViewController {
                 let workItem = DispatchWorkItem {
                     self.signInButton.stopLoading()
                     let repoUrl = response?.urlRepositories
-                    let repositoriesListViewController = RepositoriesListViewController(nibName: "RepositoriesListViewController", bundle: nil)
+                    let repositoriesListViewController = RepositoriesListViewController(nibName: Constants.repoListController, bundle: nil)
                     AppRepository.shared.setAuthUrl(url: repoUrl)
                     self.navigationController?.pushViewController(repositoriesListViewController, animated: false)
                     self.tokenInputField.clearTextField()
@@ -113,8 +115,22 @@ class AuthenticationViewController: UIViewController {
         let alert = UIAlertController(title: title,
                                       message: message,
                                       preferredStyle: .alert)
-        let okButton = UIAlertAction(title: "OK", style: .default)
+        let okButton = UIAlertAction(title: Constants.alertTitle, style: .default)
         alert.addAction(okButton)
         present(alert, animated: true)
+    }
+}
+
+// MARK: - Hide keyboard by tap
+private extension AuthenticationViewController {
+    
+    private func hideKeyBoard() {
+        let hideKeyboardTap = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        view.addGestureRecognizer(hideKeyboardTap)
+    }
+    
+    @objc
+    private func hideKeyboard() {
+        view.endEditing(true)
     }
 }

@@ -23,6 +23,14 @@ class RepositoryDetail: UIView {
     
     private var urlToOpen: String = ""
     
+    private enum Constants {
+        static let repoDetailUI = "RepositoryDetailUI"
+        static let starsImage = "starsImage"
+        static let forksImage = "forksImage"
+        static let watchersImage = "watchersImage"
+        static let removingString = "https://"
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureView()
@@ -31,6 +39,24 @@ class RepositoryDetail: UIView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         configureView()
+    }
+    
+    func setupBottomView(stars: Int, forks: Int, watchers: Int) {
+        starsView.setupBottomView(imageName: Constants.starsImage, count: stars, title: LocalizedStrings.starsRepoDetail, color: starsColor)
+        forksView.setupBottomView(imageName: Constants.forksImage, count: forks, title: LocalizedStrings.forksRepoDetail, color: forksColor)
+        watchersView.setupBottomView(imageName: Constants.watchersImage, count: watchers, title: LocalizedStrings.watchersRepoDetail, color: watchersColor)
+    }
+    
+    func setTopRepositoryDetail(url: String, license: String, licenseName: String) {
+        urlToOpen = url
+        makeTapOnLink(url: url)
+        licenseLabel.text = license
+        nameLicenseLabel.text = licenseName
+        setupFontToLabels()
+    }
+    
+    func hideLicenseView() {
+        stackview.arrangedSubviews[1].isHidden = true
     }
     
     private func configureView() {
@@ -43,27 +69,13 @@ class RepositoryDetail: UIView {
     }
     
     private func loadViewFromXib() -> UIView {
-        guard let view = Bundle.main.loadNibNamed("RepositoryDetailUI", owner: self)?.first as? UIView else { return UIView() }
+        guard let view = Bundle.main.loadNibNamed(Constants.repoDetailUI, owner: self)?.first as? UIView else { return UIView() }
 
         return view
     }
     
-    func setupBottomView(stars: Int, forks: Int, watchers: Int) {
-        starsView.setupBottomView(imageName: "starsImage", count: stars, title: LocalizedStrings.starsRepoDetail, color: starsColor)
-        forksView.setupBottomView(imageName: "forksImage", count: forks, title: LocalizedStrings.forksRepoDetail, color: forksColor)
-        watchersView.setupBottomView(imageName: "watchersImage", count: watchers, title: LocalizedStrings.watchersRepoDetail, color: watchersColor)
-    }
-    
-    func setTopRepositoryDetail(url: String, license: String, licenseName: String) {
-        urlToOpen = url
-        makeTapOnLink(url: url)
-        licenseLabel.text = license
-        nameLicenseLabel.text = licenseName
-        setupFontToLabels()
-    }
-    
     private func makeTapOnLink(url: String) {
-        let attributedGithubLabel = NSMutableAttributedString(string: url.replacingOccurrences(of: "https://", with: ""))
+        let attributedGithubLabel = NSMutableAttributedString(string: url.replacingOccurrences(of: Constants.removingString, with: ""))
         let range = (attributedGithubLabel.string as NSString).range(of: url)
         attributedGithubLabel.addAttribute(.link, value: url, range: range)
         
@@ -82,9 +94,5 @@ class RepositoryDetail: UIView {
         if let url = URL(string: urlToOpen) {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
-    }
-    
-    func hideLicenseView() {
-        stackview.arrangedSubviews[1].isHidden = true
     }
 }

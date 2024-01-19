@@ -21,7 +21,7 @@
             <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4HY-t6-ri6" customClass="TokenInputClass" customModule="githubRepo" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4HY-t6-ri6" customClass="TokenInput" customModule="githubRepo" customModuleProvider="target">
                     <rect key="frame" x="19" y="282" width="393" height="48"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -40,7 +40,7 @@
                     <rect key="frame" x="0.0" y="59" width="430" height="839"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vUb-Yp-Ohi" customClass="CustomButtonClass" customModule="githubRepo" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vUb-Yp-Ohi" customClass="MultiPurposeButton" customModule="githubRepo" customModuleProvider="target">
                     <rect key="frame" x="18" y="835" width="393" height="47"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>

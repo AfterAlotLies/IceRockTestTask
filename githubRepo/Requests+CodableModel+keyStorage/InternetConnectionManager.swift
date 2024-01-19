@@ -8,9 +8,9 @@
 import UIKit
 import Reachability
 
-class InternetConnection {
+class InternetConnectionManager {
     
-    static let shared = InternetConnection()
+    static let shared = InternetConnectionManager()
     private init() {}
     
     public var internetConnection = try! Reachability()

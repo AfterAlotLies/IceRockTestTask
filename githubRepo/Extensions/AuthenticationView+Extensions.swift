@@ -7,23 +7,10 @@
 
 import UIKit
 
-extension AuthenticationViewController {
-    
-    func hideKeyBoard() {
-        let hideKeyboardTap = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
-        view.addGestureRecognizer(hideKeyboardTap)
-    }
-    
-    @objc
-    private func hideKeyboard() {
-        view.endEditing(true)
-    }
-}
-
 //MARK: - AuthenticatinoViewController + ErrorViewDelegate
 extension AuthenticationViewController: ErrorViewDelegate {
     
     func retryConnectToInternet() {
-        updateViewBasedOnResponse(response: "success")
+        updateViewBasedOnResponse(response: .success)
     }
 }

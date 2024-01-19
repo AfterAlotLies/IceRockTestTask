@@ -15,6 +15,12 @@ class RepositoriesListViewController: UIViewController {
     
     private let loadingIndicator = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 37, height: 37), type: .circleStrokeSpin, color: .white)
     
+    private enum Constants {
+        static let repositoriesListUI = "RepositoriesListCellsUI"
+        static let authController = "AuthenticationViewController"
+        static let logoutImage = "logoutImage"
+    }
+    
     var nameRepoArray = [String]()
     var languageArray = [String]()
     var descriptionArray = [String]()
@@ -32,11 +38,10 @@ class RepositoriesListViewController: UIViewController {
     }
     
 // MARK: - Update view by response
-
-    public func updateViewBasedOnResponse(response: String) {
+    public func updateViewBasedOnResponse(response: ResponseViewStatus) {
         switch response {
             
-        case "success":
+        case .success:
             
             repoList.isHidden = false
             loadingIndicator.isHidden = false
@@ -55,18 +60,16 @@ class RepositoriesListViewController: UIViewController {
     }
     
 // MARK: - Check internet connection
-
     private func checkInternetConnection() {
-        InternetConnection.shared.checkInternetConnection {
-            self.updateViewBasedOnResponse(response: "success")
+        InternetConnectionManager.shared.checkInternetConnection {
+            self.updateViewBasedOnResponse(response: .success)
         } failureHandler: {
             self.errorView.setTypeOfPreviousView(type: .repoListBadConnection)
-            self.updateViewBasedOnResponse(response: "fail")
+            self.updateViewBasedOnResponse(response: .fail)
         }
     }
     
 // MARK: - Request to get list of repositories
-
     private func getUserRepositories() {
         clearAllArrays()
         
@@ -75,15 +78,16 @@ class RepositoriesListViewController: UIViewController {
         }
         
         loadingIndicator.startAnimating()
-        AppRepository.shared.getRepositories { repoDetail, error in
+        AppRepository.shared.getRepositories { [weak self] repoDetail, error in
+            guard let self = self else { return }
             if error != nil {
                 DispatchQueue.main.async {
                     self.errorView.setTypeOfPreviousView(type: .other)
-                    self.updateViewBasedOnResponse(response: "fail")
+                    self.updateViewBasedOnResponse(response: .fail)
                 }
             } else {
                 guard let repositoryDetail = repoDetail else { return }
-                for detail in repositoryDetail {
+                for detail in repositoryDetail { 
                     self.addInfoToArrays(detail: detail)
                 }
                 DispatchQueue.main.async {
@@ -94,39 +98,14 @@ class RepositoriesListViewController: UIViewController {
                         self.loadingIndicator.stopAnimating()
                     } else {
                         self.errorView.setTypeOfPreviousView(type: .repoListEmpty)
-                        self.updateViewBasedOnResponse(response: "empty")
+                        self.updateViewBasedOnResponse(response: .fail)
                     }
                 }
             }
         }
     }
     
-// MARK: - Setup methods
-
-    private func setupView() {
-        repoList.dataSource = self
-        repoList.delegate = self
-        errorView.delegate = self
-        repoList.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomTableViewCell")
-        repoList.separatorInset = UIEdgeInsets.zero
-        loadingIndicator.isHidden = false
-        navigationItem.backButtonTitle = ""
-    }
-    
-    private func setupLoaderIndicator() {
-        view.addSubview(loadingIndicator)
-        loadingIndicator.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            loadingIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            loadingIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-        ])
-        
-        loadingIndicator.startAnimating()
-    }
-    
 // MARK: - Actions with arrays
-
     private func addInfoToArrays(detail: Repo) {
         nameRepoArray.append(detail.name)
         languageArray.append(detail.language ?? "")
@@ -144,11 +123,67 @@ class RepositoriesListViewController: UIViewController {
     }
     
     @objc
-    func backToAuthView() {
+    private func backToAuthView() {
         KeyValueStorage.shared.deleteAuthToken()
         KeyValueStorage.shared.deleteReposUrl()
         
-        let authViewController = AuthenticationViewController(nibName: "AuthenticationViewController", bundle: nil)
+        let authViewController = AuthenticationViewController(nibName: Constants.authController, bundle: nil)
         navigationController?.setViewControllers([authViewController], animated: false)
+    }
+}
+
+// MARK: - Setup methods
+private extension RepositoriesListViewController {
+    
+    private func setupNavBar() {
+        navigationItem.setHidesBackButton(true, animated: false)
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+        
+        let standardAppearance = UINavigationBarAppearance()
+        standardAppearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        standardAppearance.configureWithOpaqueBackground()
+        standardAppearance.backgroundColor = UIColor.clear
+        
+        navigationController?.navigationBar.standardAppearance = standardAppearance
+        navigationController?.navigationBar.scrollEdgeAppearance = standardAppearance
+        navigationItem.backBarButtonItem?.title = ""
+        title = LocalizedStrings.repoListTitle
+    }
+    
+    private func setupNavigationRightItem() {
+        let barButton = UIButton()
+        
+        let backButton = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+        backButton.setImage(UIImage(named: Constants.logoutImage), for: .normal)
+        backButton.imageView?.contentMode = .scaleAspectFit
+        
+        backButton.addTarget(self,
+                             action: #selector(backToAuthView),
+                             for: .touchUpInside)
+        
+        barButton.addSubview(backButton)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: barButton)
+    }
+    
+    private func setupView() {
+        repoList.dataSource = self
+        repoList.delegate = self
+        errorView.delegate = self
+        repoList.register(UINib(nibName: Constants.repositoriesListUI, bundle: nil), forCellReuseIdentifier: Constants.repositoriesListUI)
+        repoList.separatorInset = UIEdgeInsets.zero
+        loadingIndicator.isHidden = false
+        navigationItem.backButtonTitle = ""
+    }
+    
+    private func setupLoaderIndicator() {
+        view.addSubview(loadingIndicator)
+        loadingIndicator.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            loadingIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            loadingIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
+        
+        loadingIndicator.startAnimating()
     }
 }
