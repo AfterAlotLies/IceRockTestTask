@@ -75,7 +75,6 @@ class RepositoryDetailInfoViewController: UIViewController {
             topRepoInfoView.isHidden = true
             readmeTextView.isHidden = true
             getRepositoryDetail()
-            getRepositoryReadme()
             
         default:
             errorView.showErrorView()
@@ -101,16 +100,17 @@ class RepositoryDetailInfoViewController: UIViewController {
         AppRepository.shared.getRepository(repoId: chosenRepoId) { response, error in
             if error != nil {
                 DispatchQueue.main.async {
+                    self.viewLoadingIndicator.stopAnimating()
                     self.errorView.setTypeOfPreviousView(type: .other)
                     self.updateViewBasedOnResponse(response: .fail)
-                    self.viewLoadingIndicator.stopAnimating()
                 }
             } else {
                 guard let repoDetail = response else { return }
                 DispatchQueue.main.async {
+                    self.viewLoadingIndicator.stopAnimating()
                     self.setInRepoDetail(repoDetail: repoDetail)
                     self.topRepoInfoView.isHidden = false
-                    self.viewLoadingIndicator.stopAnimating()
+                    self.getRepositoryReadme()
                 }
             }
         }
@@ -121,46 +121,33 @@ class RepositoryDetailInfoViewController: UIViewController {
             AppRepository.shared.getRepositoryReadme(ownerName: self.ownerName, repositoryName: self.repositoryName, branchName: self.branchName) { repoReadme, error in
                 if error != nil {
                     if let error = error as? AFError, let errorCode = error.responseCode {
+                        self.readmeLoadingIndicator.startAnimating()
                         switch errorCode {
                             
                         case 404:
-                            self.readmeLoadingIndicator.startAnimating()
                             let noReadmeItem = {
-                                self.readmeTextView.text = LocalizedStrings.noReadme
-                                self.readmeTextView.textColor = .gray
-                                self.readmeTextView.isHidden = false
-                                self.readmeLoadingIndicator.stopAnimating()
+                                self.setReadmeText(readmeText: LocalizedStrings.noReadme)
                             }
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: noReadmeItem)
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: noReadmeItem)
                             
                         default:
                             let otherErrorItem = {
-                                self.errorView.setTypeOfPreviousView(type: .other)
-                                self.readmeTextView.isHidden = true
-                                self.readmeErrorView.showErrorView()
-                                self.readmeLoadingIndicator.stopAnimating()
+                                self.setReadmeOtherError()
                             }
                             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: otherErrorItem)
                         }
                     }
                 } else {
                     guard let repoInfo = repoReadme else { return }
+                    self.readmeLoadingIndicator.startAnimating()
                     if repoInfo.isEmpty {
                         let emptyReadmeItem = {
-                            self.readmeTextView.text = LocalizedStrings.emptyReadme
-                            self.readmeTextView.textColor = .gray
-                            self.readmeTextView.isHidden = false
-                            self.readmeLoadingIndicator.stopAnimating()
+                            self.setReadmeText(readmeText: LocalizedStrings.emptyReadme)
                         }
                         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: emptyReadmeItem)
                     } else {
                         let readmeItem = {
-                            let changedRepoInfo = repoInfo.replacingOccurrences(of: "```", with: "`")
-                            let markdownText = SwiftyMarkdown(string: changedRepoInfo)
-                            self.readmeTextView.attributedText = markdownText.attributedString()
-                            self.readmeTextView.textColor = .white
-                            self.readmeTextView.isHidden = false
-                            self.readmeLoadingIndicator.stopAnimating()
+                            self.setReadmeData(repoInfo: repoInfo)
                         }
                         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: readmeItem)
                     }
@@ -168,14 +155,42 @@ class RepositoryDetailInfoViewController: UIViewController {
             }
         } failureHandler: {
             DispatchQueue.main.async {
-                self.readmeLoadingIndicator.stopAnimating()
-                self.readmeTextView.isHidden = true
-                self.readmeErrorView.setTypeOfPreviousView(type: .repoDetailReadmeError)
-                self.readmeErrorView.showErrorView()
+                self.setReadmeError()
             }
         }
     }
     
+// MARK: - Actions with readme (errors/success)
+    private func setReadmeText(readmeText: String) {
+        readmeLoadingIndicator.stopAnimating()
+        readmeTextView.text = readmeText
+        readmeTextView.textColor = .gray
+        readmeTextView.isHidden = false
+    }
+    
+    private func setReadmeData(repoInfo: String) {
+        self.readmeLoadingIndicator.stopAnimating()
+        let changedRepoInfo = repoInfo.replacingOccurrences(of: "```", with: "`")
+        let markdownText = SwiftyMarkdown(string: changedRepoInfo)
+        self.readmeTextView.attributedText = markdownText.attributedString()
+        self.readmeTextView.textColor = .white
+        self.readmeTextView.isHidden = false
+    }
+    
+    private func setReadmeError() {
+        readmeLoadingIndicator.stopAnimating()
+        readmeErrorView.setTypeOfPreviousView(type: .repoDetailReadmeError)
+        readmeTextView.isHidden = true
+        readmeErrorView.showErrorView()
+    }
+    
+    private func setReadmeOtherError() {
+        readmeLoadingIndicator.stopAnimating()
+        errorView.setTypeOfPreviousView(type: .other)
+        readmeTextView.isHidden = true
+        readmeErrorView.showErrorView()
+    }
+
 // MARK: - Set data to top view
     private func setInRepoDetail(repoDetail: RepoDetails) {
         if let licenseName = repoDetail.license?.spdx {
