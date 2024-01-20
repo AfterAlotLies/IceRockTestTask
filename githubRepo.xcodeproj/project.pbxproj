@@ -48,6 +48,7 @@
 		11C5DE912B543BDA00F6A160 /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5DE902B543BDA00F6A160 /* SF-Pro-Display-Bold.otf */; };
 		11C5DE932B543D0300F6A160 /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5DE922B543D0300F6A160 /* SF-Pro-Display-Medium.otf */; };
 		11C5DE952B543D1E00F6A160 /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5DE942B543D1E00F6A160 /* SF-Pro-Text-Medium.otf */; };
+		11FE5EB72B5BE887001CBF68 /* FontSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE5EB62B5BE887001CBF68 /* FontSettings.swift */; };
 		CD89ACEFEA16E3BE03B47013 /* Pods_githubRepo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1BED8C7408CDAC20161CD88 /* Pods_githubRepo.framework */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +96,7 @@
 		11C5DE902B543BDA00F6A160 /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
 		11C5DE922B543D0300F6A160 /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
 		11C5DE942B543D1E00F6A160 /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
+		11FE5EB62B5BE887001CBF68 /* FontSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSettings.swift; sourceTree = "<group>"; };
 		9369A6AC7C55F2139C245CF3 /* Pods-githubRepo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-githubRepo.debug.xcconfig"; path = "Target Support Files/Pods-githubRepo/Pods-githubRepo.debug.xcconfig"; sourceTree = "<group>"; };
 		D1BED8C7408CDAC20161CD88 /* Pods_githubRepo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_githubRepo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E58FCD385542B042FA76DBF7 /* Pods-githubRepo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-githubRepo.release.xcconfig"; path = "Target Support Files/Pods-githubRepo/Pods-githubRepo.release.xcconfig"; sourceTree = "<group>"; };
@@ -137,15 +139,15 @@
 			path = Requests;
 			sourceTree = "<group>";
 		};
-		114434A92B1DF46F00D7355C /* Requests+CodableModel+keyStorage */ = {
+		114434A92B1DF46F00D7355C /* NetworkServicesAndStorage */ = {
 			isa = PBXGroup;
 			children = (
-				11A590A42B41984600EDDF7E /* InternetConnectionManager.swift */,
+				11FE5EB52B5BE822001CBF68 /* InternetManager */,
 				114196AC2B3AE24C0034768B /* Requests */,
 				114434AE2B205DD700D7355C /* Codable Models */,
 				114196A92B3AE2060034768B /* keyStorage */,
 			);
-			path = "Requests+CodableModel+keyStorage";
+			path = NetworkServicesAndStorage;
 			sourceTree = "<group>";
 		};
 		114434AE2B205DD700D7355C /* Codable Models */ = {
@@ -173,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				11B310F72B595AA500440F67 /* ResponseViewStatus.swift */,
+				11FE5EB62B5BE887001CBF68 /* FontSettings.swift */,
 				114DE6532B52C4D20009FB53 /* LocalizedStrings */,
 				114DE6442B4AC5C30009FB53 /* Fonts */,
 				117313772B172EE100289745 /* Info.plist */,
@@ -277,7 +280,7 @@
 				1173137D2B172F8800289745 /* AuthView */,
 				1173137E2B172F9600289745 /* RepositoriesList */,
 				1173137F2B172FA600289745 /* RepositoryInfo */,
-				114434A92B1DF46F00D7355C /* Requests+CodableModel+keyStorage */,
+				114434A92B1DF46F00D7355C /* NetworkServicesAndStorage */,
 				11B310F62B593AE300440F67 /* Protocols */,
 				114434B02B208B4A00D7355C /* Extensions */,
 				114434B52B208F2B00D7355C /* Resources */,
@@ -337,6 +340,14 @@
 				11567D5A2B46C81500A8AF9D /* ErrorView+Protocol.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		11FE5EB52B5BE822001CBF68 /* InternetManager */ = {
+			isa = PBXGroup;
+			children = (
+				11A590A42B41984600EDDF7E /* InternetConnectionManager.swift */,
+			);
+			path = InternetManager;
 			sourceTree = "<group>";
 		};
 		37631553564EE4481C40DA5C /* Pods */ = {
@@ -487,6 +498,7 @@
 				114435DB2B22246800D7355C /* RepositoriesListCells.swift in Sources */,
 				114435DA2B22246300D7355C /* MultiPurposeButton.swift in Sources */,
 				11567D5E2B48318900A8AF9D /* RepositoryDetailInfo+Extensions.swift in Sources */,
+				11FE5EB72B5BE887001CBF68 /* FontSettings.swift in Sources */,
 				11B310F52B5801D600440F67 /* Repo.swift in Sources */,
 				11A590A82B45777700EDDF7E /* ErrorView.swift in Sources */,
 				114196A62B3871540034768B /* TokenInput.swift in Sources */,
