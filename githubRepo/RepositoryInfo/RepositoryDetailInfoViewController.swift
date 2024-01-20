@@ -29,15 +29,11 @@ class RepositoryDetailInfoViewController: UIViewController {
         static let readmeIndicatorHeight: CGFloat = 20
     }
     
-    private let viewLoadingIndicator = NVActivityIndicatorView(frame: CGRect(x: Constants.viewIndicatorPosX, 
-                                                                             y: Constants.viewIndicatorPosY,
-                                                                             width: Constants.viewIndicatorWidth, 
-                                                                             height: Constants.viewIndicatorHeight),
+    private let viewLoadingIndicator = NVActivityIndicatorView(frame: CGRect(x: Constants.viewIndicatorPosX, y: Constants.viewIndicatorPosY,
+                                                                             width: Constants.viewIndicatorWidth,height: Constants.viewIndicatorHeight),
                                                                 type: .circleStrokeSpin, color: .white)
-    private let readmeLoadingIndicator = NVActivityIndicatorView(frame: CGRect(x: Constants.readmeIndicatorPosX,
-                                                                               y: Constants.readmeIndicatorPosY,
-                                                                               width: Constants.readmeIndicatorWidth,
-                                                                               height: Constants.readmeIndicatorHeight),
+    private let readmeLoadingIndicator = NVActivityIndicatorView(frame: CGRect(x: Constants.readmeIndicatorPosX,y: Constants.readmeIndicatorPosY,
+                                                                               width: Constants.readmeIndicatorWidth,height: Constants.readmeIndicatorHeight),
                                                                 type: .circleStrokeSpin, color: .white)
     
     private var readmeErrorView: ErrorView!
