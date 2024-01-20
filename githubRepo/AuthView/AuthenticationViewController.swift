@@ -29,7 +29,7 @@ class AuthenticationViewController: UIViewController {
     }
     
 // MARK: - Update view by response
-    public func updateViewBasedOnResponse(response: ResponseViewStatus) {
+    func updateViewBasedOnResponse(response: ResponseViewStatus) {
         switch response {
 
         case .success:
@@ -59,12 +59,12 @@ class AuthenticationViewController: UIViewController {
 // MARK: - Setup button + check correctly token
     private func signInUserButton() {
         signInButton.setButtonText(buttonText: LocalizedStrings.buttonAuthController)
-        signInButton.actionHandler = { [weak self] in
+        signInButton.setActionOnButton { [weak self] in
             guard let self = self else { return }
             let token = tokenInputField.checkCorrectToken()
             if token == "" {
                 errorAlert(title: LocalizedStrings.titleAlert,
-                                message: LocalizedStrings.messageAlert)
+                           message: LocalizedStrings.messageAlert)
             } else {
                 self.signInButton.startLoading()
                 InternetConnectionManager.shared.checkInternetConnection {

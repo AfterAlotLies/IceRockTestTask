@@ -15,7 +15,7 @@ class InternetConnectionManager {
     
     public var internetConnection = try! Reachability()
         
-    public func checkInternetConnection(successHandler: @escaping () -> Void, failureHandler: @escaping () -> Void) {
+    func checkInternetConnection(successHandler: @escaping () -> Void, failureHandler: @escaping () -> Void) {
         try? internetConnection.startNotifier()
         if internetConnection.connection == .wifi || internetConnection.connection == .cellular {
             internetConnection.stopNotifier()

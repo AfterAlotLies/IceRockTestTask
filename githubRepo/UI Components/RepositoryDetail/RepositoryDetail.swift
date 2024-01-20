@@ -84,9 +84,9 @@ class RepositoryDetail: UIView {
     }
     
     private func setupFontToLabels() {
-        githubUrlLabel.font = UIFont(name: "SFProText-Medium", size: 16)
-        licenseLabel.font = UIFont(name: "SFProText-Medium", size: 16)
-        nameLicenseLabel.font = UIFont(name: "SFProText-Medium", size: 16)
+        githubUrlLabel.font = FontSettings.SFProTextMedium16
+        licenseLabel.font = FontSettings.SFProTextMedium16
+        nameLicenseLabel.font = FontSettings.SFProTextMedium16
     }
     
     @objc

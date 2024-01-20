@@ -57,7 +57,7 @@ class RepositoryDetailInfoViewController: UIViewController {
         errorView.delegate = self
     }
     
-    public func setChosenRepoId(repoId: Int?, branch: String?, repoName: String?, owner: String?) {
+    func setChosenRepoId(repoId: Int?, branch: String?, repoName: String?, owner: String?) {
         guard let repoId = repoId, let branch = branch, let repoName = repoName, let owner = owner else { return }
         chosenRepoId = repoId.intToString()
         branchName = branch
@@ -66,7 +66,7 @@ class RepositoryDetailInfoViewController: UIViewController {
     }
     
 // MARK: - Update view by response
-    public func updateViewBasedOnResponse(response: ResponseViewStatus) {
+    func updateViewBasedOnResponse(response: ResponseViewStatus) {
         switch response {
             
         case .success:

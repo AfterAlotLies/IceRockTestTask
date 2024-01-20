@@ -50,7 +50,7 @@ class BottomViewRepositoryDetail: UIView {
     }
     
     private func setupFontToLabels() {
-        numsLabelDetail.font = UIFont(name: "SFProText-Medium", size: 16)
-        nameLabelDetail.font = UIFont(name: "SFProText-Medium", size: 16)
+        numsLabelDetail.font = FontSettings.SFProTextMedium16
+        nameLabelDetail.font = FontSettings.SFProTextMedium16
     }
 }

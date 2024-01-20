@@ -42,12 +42,10 @@ class ErrorView: UIView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         configureView()
-        print("required init error view")
     }
     
 // MARK: - Setup/configure methods for view
-    
-    public func setTypeOfPreviousView(type: ControllerType) {
+    func setTypeOfPreviousView(type: ControllerType) {
         previousView = type
     }
     
@@ -57,7 +55,6 @@ class ErrorView: UIView {
         subview.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.addSubview(subview)
         setupButton()
-        print("error view inited")
     }
     
     private func loadViewFromXib() -> UIView {
@@ -76,8 +73,7 @@ class ErrorView: UIView {
     }
     
 // MARK: - Set properties to error view
-
-    public func showErrorView() {
+    func showErrorView() {
         switch previousView {
 
         case .authController:
@@ -113,7 +109,7 @@ class ErrorView: UIView {
         }
     }
     
-    public func hideErrorView() {
+    func hideErrorView() {
         isHidden = true
     }
     
@@ -131,14 +127,13 @@ class ErrorView: UIView {
     }
     
     private func setupFontToLabels() {
-        errorTitle.font = UIFont(name: "SFProText-Medium", size: 16)
-        errorMessage.font = UIFont(name: "SFProText-Medium", size: 12)
+        errorTitle.font = FontSettings.SFProTextMedium16
+        errorMessage.font = FontSettings.SFProTextMedium12
     }
     
 // MARK: - Methods to back previous view
-
     private func retryButtonAction() {
-        retryButton.actionHandler = { [weak self] in
+        retryButton.setActionOnButton { [weak self] in
             guard let self = self else { return }
             self.retryButton.startLoading()
             self.retryBackToPreviousView(previousView: self.previousView)

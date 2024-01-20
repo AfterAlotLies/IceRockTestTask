@@ -44,6 +44,7 @@ class TokenInput: UIView, UITextFieldDelegate {
         }
     }
     
+// MARK: - Setup Methods
     private func configureView() {
         let subview = self.loadViewFromXib()
         subview.frame = self.bounds
@@ -67,11 +68,12 @@ class TokenInput: UIView, UITextFieldDelegate {
         tokenInputField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         tokenInputField.addTarget(self, action: #selector(touchUpInsideTextField), for: .editingDidEnd)
         
-        tokenInputField.font = UIFont(name: "SFProDisplay-Medium", size: 16)
-        errorLabel.font = UIFont(name: "SFProDisplay-Medium", size: 12)
+        tokenInputField.font = FontSettings.SFProDisplayMedium16
+        errorLabel.font = FontSettings.SFProDispalyMedium12
     }
     
-    @objc 
+// MARK: - Actions with TextField
+    @objc
     private func textFieldDidChange(_ textField: UITextField) {
         UIView.animate(withDuration: 0.5) {
             self.errorLabel.alpha = 0

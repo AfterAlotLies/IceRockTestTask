@@ -15,7 +15,7 @@ class AppRepository {
     
     private var authUrl: String = ""
     
-    public func setAuthUrl(url: String?) {
+    func setAuthUrl(url: String?) {
         guard let url = url else { return }
         authUrl = url
     }

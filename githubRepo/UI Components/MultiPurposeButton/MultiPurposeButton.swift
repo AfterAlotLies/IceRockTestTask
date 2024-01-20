@@ -11,32 +11,33 @@ import NVActivityIndicatorView
 class MultiPurposeButton: UIView {
     
     @IBOutlet private weak var customButton: UIButton!
-    
-    private let loadingIndicator = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 20, height: 20), type: .circleStrokeSpin, color: .white)
-    
+        
     private enum Constants {
         static let multiPurposeButtonUI = "MultiPurposeButtonUI"
     }
     
-    var actionHandler: (() -> Void)?
+    private let loadingIndicator = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 20, height: 20), type: .circleStrokeSpin, color: .white)
     
+    private var clickButtonAction: (() -> Void)?
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.configureView()
-        print("override init button")
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         self.configureView()
-        print("required init button")
-
+    }
+    
+    func setActionOnButton(_ actionHandler: (() -> Void)?) {
+        clickButtonAction = actionHandler
     }
     
     func setButtonText(buttonText: String) {
         customButton.titleLabel?.isHidden = false
         
-        let font = UIFont(name: "SFProDisplay-Bold", size: 16)
+        let font = FontSettings.SFProDisplayBold16
         let attributes = [NSAttributedString.Key.font: font]
         let attributedQuote = NSAttributedString(string: buttonText, attributes: attributes as [NSAttributedString.Key : Any])
         
@@ -58,7 +59,7 @@ class MultiPurposeButton: UIView {
     }
     
     @IBAction func makeActionByClick(_ sender: Any) {
-        actionHandler?()
+        clickButtonAction?()
     }
     
     private func configureView() {
@@ -75,8 +76,6 @@ class MultiPurposeButton: UIView {
             loadingIndicator.centerXAnchor.constraint(equalTo: subview.centerXAnchor),
             loadingIndicator.centerYAnchor.constraint(equalTo: subview.centerYAnchor)
         ])
-        
-        print("button inited")
     }
     
     private func loadViewFromXib() -> UIView {

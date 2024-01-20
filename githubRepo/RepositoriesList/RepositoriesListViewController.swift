@@ -13,20 +13,21 @@ class RepositoriesListViewController: UIViewController {
     @IBOutlet private weak var repoList: UITableView!
     @IBOutlet private weak var errorView: ErrorView!
     
-    private let loadingIndicator = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 37, height: 37), type: .circleStrokeSpin, color: .white)
-    
     private enum Constants {
         static let repositoriesListUI = "RepositoriesListCellsUI"
         static let authController = "AuthenticationViewController"
         static let logoutImage = "logoutImage"
+        static let repoListController = "RepositoryDetailInfoViewController"
     }
     
-    var nameRepoArray = [String]()
-    var languageArray = [String]()
-    var descriptionArray = [String]()
-    var branchArray = [String]()
-    var ownerNameArray = [String]()
-    var reposIdArray = [Int]()
+    private let loadingIndicator = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 37, height: 37), type: .circleStrokeSpin, color: .white)
+    
+    private var nameRepoArray = [String]()
+    private var languageArray = [String]()
+    private var descriptionArray = [String]()
+    private var branchArray = [String]()
+    private var ownerNameArray = [String]()
+    private var reposIdArray = [Int]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +39,7 @@ class RepositoriesListViewController: UIViewController {
     }
     
 // MARK: - Update view by response
-    public func updateViewBasedOnResponse(response: ResponseViewStatus) {
+    func updateViewBasedOnResponse(response: ResponseViewStatus) {
         switch response {
             
         case .success:
@@ -55,7 +56,7 @@ class RepositoriesListViewController: UIViewController {
         }
     }
     
-    public func retryToGetRepositories() {
+    func retryToGetRepositories() {
         checkInternetConnection()
     }
     
@@ -129,6 +130,40 @@ class RepositoriesListViewController: UIViewController {
         
         let authViewController = AuthenticationViewController(nibName: Constants.authController, bundle: nil)
         navigationController?.setViewControllers([authViewController], animated: false)
+    }
+}
+
+// MARK: - RepositoriesListViewController + UITableViewDataSource
+extension RepositoriesListViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return nameRepoArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.repositoriesListUI) as! RepositoriesListCells
+        cell.setFontToLabels()
+        cell.setRepoName(repoName: nameRepoArray[indexPath.row])
+        cell.setLanguage(language: languageArray[indexPath.row])
+        cell.selectionStyle = .none
+        if descriptionArray[indexPath.row] == "" {
+            cell.hideDescriptionLabel()
+        } else {
+            cell.setDescriptionRepo(description: descriptionArray[indexPath.row])
+        }
+        return cell
+    }
+}
+
+// MARK: - RepositoriesListViewController + UITableViewDelegate
+extension RepositoriesListViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let repositoryDetail = RepositoryDetailInfoViewController(nibName: Constants.repoListController, bundle: nil)
+        repositoryDetail.setChosenRepoId(repoId: reposIdArray[indexPath.row], branch: branchArray[indexPath.row],
+                                         repoName: nameRepoArray[indexPath.row], owner: ownerNameArray[indexPath.row])
+        repositoryDetail.navigationItem.title = nameRepoArray[indexPath.row]
+        navigationController?.pushViewController(repositoryDetail, animated: true)
     }
 }
 
