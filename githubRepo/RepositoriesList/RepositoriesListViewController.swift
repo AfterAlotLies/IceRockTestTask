@@ -8,11 +8,13 @@
 import UIKit
 import NVActivityIndicatorView
 
+// MARK: -
 class RepositoriesListViewController: UIViewController {
-
+    
     @IBOutlet private weak var repoList: UITableView!
     @IBOutlet private weak var errorView: ErrorView!
     
+    // MARK: -
     private enum Constants {
         static let repositoriesListUI = "RepositoriesListCellsUI"
         static let authController = "AuthenticationViewController"
@@ -29,6 +31,7 @@ class RepositoriesListViewController: UIViewController {
     private var ownerNameArray = [String]()
     private var reposIdArray = [Int]()
     
+    // MARK: -
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationRightItem()
@@ -38,17 +41,14 @@ class RepositoriesListViewController: UIViewController {
         checkInternetConnection()
     }
     
-// MARK: - Update view by response
+    // MARK: - Update view by response
     func updateViewBasedOnResponse(response: ResponseViewStatus) {
         switch response {
-            
         case .success:
-            
             repoList.isHidden = false
             loadingIndicator.isHidden = false
-            errorView.hideErrorView()
+            errorView.setErrorViewHidden(true)
             getUserRepositories()
-            
         default:
             repoList.isHidden = true
             loadingIndicator.isHidden = true
@@ -60,7 +60,7 @@ class RepositoriesListViewController: UIViewController {
         checkInternetConnection()
     }
     
-// MARK: - Check internet connection
+    // MARK: - Check internet connection
     private func checkInternetConnection() {
         InternetConnectionManager.shared.checkInternetConnection {
             self.updateViewBasedOnResponse(response: .success)
@@ -70,7 +70,7 @@ class RepositoriesListViewController: UIViewController {
         }
     }
     
-// MARK: - Request to get list of repositories
+    // MARK: - Request to get list of repositories
     private func getUserRepositories() {
         clearAllArrays()
         
@@ -83,30 +83,33 @@ class RepositoriesListViewController: UIViewController {
             guard let self = self else { return }
             if error != nil {
                 DispatchQueue.main.async {
-                    self.errorView.setTypeOfPreviousView(type: .other)
-                    self.updateViewBasedOnResponse(response: .fail)
+                    self.ifDataEmpty(type: .other, response: .fail)
                 }
             } else {
                 guard let repositoryDetail = repoDetail else { return }
-                for detail in repositoryDetail { 
+                for detail in repositoryDetail {
                     self.addInfoToArrays(detail: detail)
                 }
                 DispatchQueue.main.async {
                     if !self.nameRepoArray.isEmpty {
-                        self.errorView.hideErrorView()
+                        self.errorView.setErrorViewHidden(true)
                         self.repoList.isHidden = false
                         self.repoList.reloadData()
                         self.loadingIndicator.stopAnimating()
                     } else {
-                        self.errorView.setTypeOfPreviousView(type: .repoListEmpty)
-                        self.updateViewBasedOnResponse(response: .fail)
+                        self.ifDataEmpty(type: .repoListEmpty, response: .fail)
                     }
                 }
             }
         }
     }
     
-// MARK: - Actions with arrays
+    private func ifDataEmpty(type: ControllerType, response: ResponseViewStatus) {
+        errorView.setTypeOfPreviousView(type: type)
+        updateViewBasedOnResponse(response: response)
+    }
+    
+    // MARK: - Actions with arrays
     private func addInfoToArrays(detail: Repo) {
         nameRepoArray.append(detail.name)
         languageArray.append(detail.language ?? "")
@@ -141,7 +144,9 @@ extension RepositoriesListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.repositoriesListUI) as! RepositoriesListCells
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.repositoriesListUI) as? RepositoriesListCells else {
+            return UITableViewCell()
+        }
         cell.setFontToLabels()
         cell.setRepoName(repoName: nameRepoArray[indexPath.row])
         cell.setLanguage(language: languageArray[indexPath.row])
@@ -170,7 +175,7 @@ extension RepositoriesListViewController: UITableViewDelegate {
 // MARK: - Setup methods
 private extension RepositoriesListViewController {
     
-    private func setupNavBar() {
+    func setupNavBar() {
         navigationItem.setHidesBackButton(true, animated: false)
         navigationController?.interactivePopGestureRecognizer?.isEnabled = true
         
@@ -185,7 +190,7 @@ private extension RepositoriesListViewController {
         title = LocalizedStrings.repoListTitle
     }
     
-    private func setupNavigationRightItem() {
+    func setupNavigationRightItem() {
         let barButton = UIButton()
         
         let backButton = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
@@ -200,7 +205,7 @@ private extension RepositoriesListViewController {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: barButton)
     }
     
-    private func setupView() {
+    func setupView() {
         repoList.dataSource = self
         repoList.delegate = self
         errorView.delegate = self
@@ -210,7 +215,7 @@ private extension RepositoriesListViewController {
         navigationItem.backButtonTitle = ""
     }
     
-    private func setupLoaderIndicator() {
+    func setupLoaderIndicator() {
         view.addSubview(loadingIndicator)
         loadingIndicator.translatesAutoresizingMaskIntoConstraints = false
         
@@ -220,5 +225,17 @@ private extension RepositoriesListViewController {
         ])
         
         loadingIndicator.startAnimating()
+    }
+}
+
+// MARK: - RepositoriesListViewController + ErrorViewDelegate
+extension RepositoriesListViewController: ErrorViewDelegate {
+    
+    func retryConnectToInternet() {
+        updateViewBasedOnResponse(response: .success)
+    }
+    
+    func retryToGetRepoList() {
+        retryToGetRepositories()
     }
 }

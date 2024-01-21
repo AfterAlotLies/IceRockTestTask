@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: -
 class RepositoriesListCells: UITableViewCell {
     
     @IBOutlet private weak var repositoryLabel: UILabel!
@@ -44,6 +45,7 @@ class RepositoriesListCells: UITableViewCell {
         }
     }
     
+    // MARK: -
     func setRepoName(repoName: String?) {
         guard let repositoryName = repoName else { return repositoryLabel.text = "" }
         repositoryLabel.text = repositoryName

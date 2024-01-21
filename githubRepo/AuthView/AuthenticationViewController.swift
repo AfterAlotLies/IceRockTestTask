@@ -8,6 +8,7 @@
 import UIKit
 import Alamofire
 
+// MARK: -
 class AuthenticationViewController: UIViewController {
     
     @IBOutlet private weak var imageLogo: UIImageView!
@@ -15,11 +16,13 @@ class AuthenticationViewController: UIViewController {
     @IBOutlet private weak var signInButton: MultiPurposeButton!
     @IBOutlet private weak var errorView: ErrorView!
     
+    // MARK: -
     private enum Constants {
         static let repoListController = "RepositoriesListViewController"
         static let alertTitle = "OK"
     }
     
+    // MARK: -
     override func viewDidLoad() {
         super.viewDidLoad()
         checkInternetConnection()
@@ -28,16 +31,14 @@ class AuthenticationViewController: UIViewController {
         hideKeyBoard()
     }
     
-// MARK: - Update view by response
+    // MARK: - Update view by response
     func updateViewBasedOnResponse(response: ResponseViewStatus) {
         switch response {
-
         case .success:
             imageLogo.isHidden = false
             tokenInputField.isHidden = false
             signInButton.isHidden = false
-            errorView.hideErrorView()
-
+            errorView.setErrorViewHidden(true)
         default:
             imageLogo.isHidden = true
             tokenInputField.isHidden = true
@@ -46,7 +47,7 @@ class AuthenticationViewController: UIViewController {
         }
     }
     
-// MARK: - Check internet connection
+    // MARK: - Check internet connection
     private func checkInternetConnection() {
         InternetConnectionManager.shared.checkInternetConnection {
             self.updateViewBasedOnResponse(response: .success)
@@ -56,7 +57,7 @@ class AuthenticationViewController: UIViewController {
         }
     }
     
-// MARK: - Setup button + check correctly token
+    // MARK: - Setup button + check correctly token
     private func signInUserButton() {
         signInButton.setButtonText(buttonText: LocalizedStrings.buttonAuthController)
         signInButton.setActionOnButton { [weak self] in
@@ -81,7 +82,7 @@ class AuthenticationViewController: UIViewController {
         }
     }
     
-// MARK: - Request to auth by token
+    // MARK: - Request to auth by token
     private func authUserInApp(token: String) {
         AppRepository.shared.signIn(token: token) { [weak self] response, error in
             guard let self = self else { return }
@@ -124,13 +125,21 @@ class AuthenticationViewController: UIViewController {
 // MARK: - Hide keyboard by tap
 private extension AuthenticationViewController {
     
-    private func hideKeyBoard() {
+    func hideKeyBoard() {
         let hideKeyboardTap = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         view.addGestureRecognizer(hideKeyboardTap)
     }
     
     @objc
-    private func hideKeyboard() {
+    func hideKeyboard() {
         view.endEditing(true)
+    }
+}
+
+// MARK: - AuthenticatinoViewController + ErrorViewDelegate
+extension AuthenticationViewController: ErrorViewDelegate {
+    
+    func retryConnectToInternet() {
+        updateViewBasedOnResponse(response: .success)
     }
 }

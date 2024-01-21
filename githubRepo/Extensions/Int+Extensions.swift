@@ -7,10 +7,10 @@
 
 import UIKit
 
+// MARK: -
 extension Int {
     
     func intToString() -> String {
         return String(self)
     }
-    
 }

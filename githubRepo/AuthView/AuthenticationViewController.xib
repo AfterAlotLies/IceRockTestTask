@@ -22,18 +22,17 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4HY-t6-ri6" customClass="TokenInput" customModule="githubRepo" customModuleProvider="target">
-                    <rect key="frame" x="19" y="282" width="393" height="48"/>
+                    <rect key="frame" x="16" y="263" width="398" height="48"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="393" id="407-8K-Nwk"/>
-                        <constraint firstAttribute="height" constant="48" id="crO-3X-3h8"/>
+                        <constraint firstAttribute="height" constant="48" id="rMv-07-LLq"/>
                     </constraints>
                 </view>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="githubLogo" translatesAutoresizingMaskIntoConstraints="NO" id="dKx-v2-Buf">
-                    <rect key="frame" x="167" y="108" width="96" height="96"/>
+                    <rect key="frame" x="167" y="103" width="96" height="96"/>
                     <constraints>
-                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="96" id="VGg-Y0-307"/>
-                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="96" id="iL9-Ja-nae"/>
+                        <constraint firstAttribute="width" constant="96" id="QnN-h2-eqN"/>
+                        <constraint firstAttribute="height" constant="96" id="ltT-yJ-Y6U"/>
                     </constraints>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lVE-yw-MAq" customClass="ErrorView" customModule="githubRepo" customModuleProvider="target">
@@ -41,10 +40,10 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Pe-tT-bCH" userLabel="SignIn Button" customClass="MultiPurposeButton" customModule="githubRepo" customModuleProvider="target">
-                    <rect key="frame" x="20" y="834" width="390" height="48"/>
+                    <rect key="frame" x="16" y="834" width="398" height="48"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="48" id="deZ-8s-J0B"/>
+                        <constraint firstAttribute="height" constant="48" id="Lpt-mB-XjI"/>
                     </constraints>
                 </view>
             </subviews>
@@ -52,17 +51,17 @@
             <color key="backgroundColor" red="0.05523881169" green="0.056316187189999999" blue="0.1358961887" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
                 <constraint firstItem="lVE-yw-MAq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="67Z-af-rZb"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4Pe-tT-bCH" secondAttribute="trailing" constant="20" id="9gf-SU-NQt"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4HY-t6-ri6" secondAttribute="trailing" constant="16" id="6r5-mE-v5z"/>
                 <constraint firstItem="lVE-yw-MAq" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="A5g-Ll-8ak"/>
-                <constraint firstItem="4HY-t6-ri6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="19" id="L0R-5u-mTB"/>
-                <constraint firstItem="dKx-v2-Buf" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Zey-oB-8Ix"/>
+                <constraint firstItem="4HY-t6-ri6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="FQS-GI-vUX"/>
+                <constraint firstItem="dKx-v2-Buf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="44" id="JJa-k1-hr9"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4Pe-tT-bCH" secondAttribute="trailing" constant="16" id="MDt-Nd-bA5"/>
+                <constraint firstItem="4Pe-tT-bCH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="PWt-hu-QX8"/>
+                <constraint firstItem="4HY-t6-ri6" firstAttribute="top" secondItem="dKx-v2-Buf" secondAttribute="bottom" constant="64" id="Rt5-xL-mOa"/>
                 <constraint firstItem="lVE-yw-MAq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="fjI-jD-cfC"/>
-                <constraint firstItem="4HY-t6-ri6" firstAttribute="top" secondItem="dKx-v2-Buf" secondAttribute="bottom" constant="78" id="g4f-Gc-yTv"/>
                 <constraint firstItem="lVE-yw-MAq" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="gdb-Yb-Lxp"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="4Pe-tT-bCH" secondAttribute="bottom" constant="16" id="hvG-Fa-kNv"/>
-                <constraint firstItem="4Pe-tT-bCH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="kMc-fC-F8B"/>
-                <constraint firstItem="dKx-v2-Buf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="49" id="m9T-vc-LSW"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4HY-t6-ri6" secondAttribute="trailing" constant="18" id="pmq-xu-SDo"/>
+                <constraint firstItem="dKx-v2-Buf" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="wo0-te-QdL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="4Pe-tT-bCH" secondAttribute="bottom" constant="16" id="zhh-gQ-Qcc"/>
             </constraints>
             <point key="canvasLocation" x="131.16279069767441" y="17.38197424892704"/>
         </view>

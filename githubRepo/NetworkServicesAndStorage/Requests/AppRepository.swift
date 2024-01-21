@@ -8,10 +8,10 @@
 import UIKit
 import Alamofire
 
+// MARK: -
 class AppRepository {
     
     static let shared = AppRepository()
-    private init() {}
     
     private var authUrl: String = ""
     
@@ -20,9 +20,8 @@ class AppRepository {
         authUrl = url
     }
     
-// MARK: - Get list of repositories
+    // MARK: - Get list of repositories
     func getRepositories(completion: @escaping(Array<Repo>?, Error?) -> Void) {
-        
         let keyValue = KeyValueStorage.shared
         
         if let url = keyValue.reposUrl {
@@ -48,7 +47,7 @@ class AppRepository {
         }
     }
     
-// MARK: - Get detail of repository
+    // MARK: - Get detail of repository
     func getRepository(repoId: String, completion: @escaping (RepoDetails?, Error?) -> Void) {
         let repoUrl = "https://api.github.com/repositories/\(repoId)"
         
@@ -62,7 +61,7 @@ class AppRepository {
         }
     }
     
-// MARK: - Get repository readme
+    // MARK: - Get repository readme
     func getRepositoryReadme(ownerName: String, repositoryName: String, branchName: String, completion: @escaping (String?, Error?) -> Void) {
         let readmeUrl = "https://raw.githubusercontent.com/\(ownerName)/\(repositoryName)/\(branchName)/README.md"
         AF.request(readmeUrl, method: .get).validate().responseString { response in
@@ -75,7 +74,7 @@ class AppRepository {
         }
     }
     
-// MARK: - Sign In user
+    // MARK: - Sign In user
     func signIn(token: String, completion: @escaping (UserInfo?, Error?) -> Void) {
         let headers: HTTPHeaders = [
             "Authorization": "Bearer \(token)",

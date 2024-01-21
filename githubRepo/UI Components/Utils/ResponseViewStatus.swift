@@ -7,8 +7,10 @@
 
 import UIKit
 
-//Enum is using for right displaying view element for screen
-public enum ResponseViewStatus {
+// MARK: - ResponseViewStatus
+// Enum is using for right displaying view element for screen
+enum ResponseViewStatus {
+    
     case success
     case fail
 }

@@ -16,6 +16,7 @@ class RepositoryDetailInfoViewController: UIViewController {
     @IBOutlet private weak var readmeTextView: UITextView!
     @IBOutlet private weak var errorView: ErrorView!
     
+    // MARK: -
     private enum Constants {
         static let authController = "AuthenticationViewController"
         static let logoutImage = "logoutImage"
@@ -29,12 +30,18 @@ class RepositoryDetailInfoViewController: UIViewController {
         static let readmeIndicatorHeight: CGFloat = 20
     }
     
-    private let viewLoadingIndicator = NVActivityIndicatorView(frame: CGRect(x: Constants.viewIndicatorPosX, y: Constants.viewIndicatorPosY,
-                                                                             width: Constants.viewIndicatorWidth,height: Constants.viewIndicatorHeight),
-                                                                type: .circleStrokeSpin, color: .white)
-    private let readmeLoadingIndicator = NVActivityIndicatorView(frame: CGRect(x: Constants.readmeIndicatorPosX,y: Constants.readmeIndicatorPosY,
-                                                                               width: Constants.readmeIndicatorWidth,height: Constants.readmeIndicatorHeight),
-                                                                type: .circleStrokeSpin, color: .white)
+    private let viewLoadingIndicator = NVActivityIndicatorView(frame: CGRect(x: Constants.viewIndicatorPosX,
+                                                                             y: Constants.viewIndicatorPosY,
+                                                                             width: Constants.viewIndicatorWidth,
+                                                                             height: Constants.viewIndicatorHeight),
+                                                               type: .circleStrokeSpin,
+                                                               color: .white)
+    private let readmeLoadingIndicator = NVActivityIndicatorView(frame: CGRect(x: Constants.readmeIndicatorPosX,
+                                                                               y: Constants.readmeIndicatorPosY,
+                                                                               width: Constants.readmeIndicatorWidth,
+                                                                               height: Constants.readmeIndicatorHeight),
+                                                                 type: .circleStrokeSpin,
+                                                                 color: .white)
     
     private var readmeErrorView: ErrorView!
     
@@ -43,6 +50,7 @@ class RepositoryDetailInfoViewController: UIViewController {
     private var repositoryName: String = ""
     private var ownerName: String = ""
     
+    // MARK: -
     override func viewDidLoad() {
         super.viewDidLoad()
         setupReadmeErrorView()
@@ -53,34 +61,37 @@ class RepositoryDetailInfoViewController: UIViewController {
         errorView.delegate = self
     }
     
+    // MARK: -
     func setChosenRepoId(repoId: Int?, branch: String?, repoName: String?, owner: String?) {
-        guard let repoId = repoId, let branch = branch, let repoName = repoName, let owner = owner else { return }
+        guard let repoId = repoId, 
+              let branch = branch,
+              let repoName = repoName,
+              let owner = owner
+        else { return }
         chosenRepoId = repoId.intToString()
         branchName = branch
         repositoryName = repoName
         ownerName = owner
     }
     
-// MARK: - Update view by response
+    /// Update view by response
     func updateViewBasedOnResponse(response: ResponseViewStatus) {
         switch response {
-            
         case .success:
-            errorView.hideErrorView()
-            readmeErrorView.hideErrorView()
+            errorView.setErrorViewHidden(true)
+            readmeErrorView.setErrorViewHidden(true)
             topRepoInfoView.isHidden = true
             readmeTextView.isHidden = true
             getRepositoryDetail()
-            
         default:
             errorView.showErrorView()
-            readmeErrorView.hideErrorView()
+            readmeErrorView.setErrorViewHidden(true)
             topRepoInfoView.isHidden = true
             readmeTextView.isHidden = true
         }
     }
     
-//MARK: - Check internet connection
+    //MARK: - Check internet connection
     private func checkInternetConnection() {
         InternetConnectionManager.shared.checkInternetConnection {
             self.updateViewBasedOnResponse(response: .success)
@@ -90,7 +101,7 @@ class RepositoryDetailInfoViewController: UIViewController {
         }
     }
     
-// MARK: - Requests to get data for top view + readme
+    // MARK: - Requests to get data for top view + readme
     private func getRepositoryDetail() {
         self.viewLoadingIndicator.startAnimating()
         AppRepository.shared.getRepository(repoId: chosenRepoId) { response, error in
@@ -114,7 +125,9 @@ class RepositoryDetailInfoViewController: UIViewController {
     
     private func getRepositoryReadme() {
         InternetConnectionManager.shared.checkInternetConnection {
-            AppRepository.shared.getRepositoryReadme(ownerName: self.ownerName, repositoryName: self.repositoryName, branchName: self.branchName) { repoReadme, error in
+            AppRepository.shared.getRepositoryReadme(ownerName: self.ownerName,
+                                                     repositoryName: self.repositoryName,
+                                                     branchName: self.branchName) { repoReadme, error in
                 if error != nil {
                     if let error = error as? AFError, let errorCode = error.responseCode {
                         self.readmeLoadingIndicator.startAnimating()
@@ -156,7 +169,7 @@ class RepositoryDetailInfoViewController: UIViewController {
         }
     }
     
-// MARK: - Actions with readme (errors/success)
+    // MARK: - Actions with readme (errors/success)
     private func setReadmeText(readmeText: String) {
         readmeLoadingIndicator.stopAnimating()
         readmeTextView.text = readmeText
@@ -186,8 +199,8 @@ class RepositoryDetailInfoViewController: UIViewController {
         readmeTextView.isHidden = true
         readmeErrorView.showErrorView()
     }
-
-// MARK: - Set data to top view
+    
+    // MARK: - Set data to top view
     private func setInRepoDetail(repoDetail: RepoDetails) {
         if let licenseName = repoDetail.license?.spdx {
             topRepoInfoView.setTopRepositoryDetail(url: repoDetail.githubUrlRepo, license: LocalizedStrings.licenseRepoDetail, licenseName: licenseName)
@@ -212,7 +225,7 @@ class RepositoryDetailInfoViewController: UIViewController {
 // MARK: - Setup Methods
 private extension RepositoryDetailInfoViewController {
     
-    private func setupNavigationRightItem() {
+    func setupNavigationRightItem() {
         let barButton = UIButton()
         
         let backButton = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
@@ -227,7 +240,7 @@ private extension RepositoryDetailInfoViewController {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: barButton)
     }
     
-    private func setupLoadingIndicators() {
+    func setupLoadingIndicators() {
         view.addSubview(viewLoadingIndicator)
         view.addSubview(readmeLoadingIndicator
         )
@@ -248,7 +261,7 @@ private extension RepositoryDetailInfoViewController {
         ])
     }
     
-    private func setupReadmeErrorView() {
+    func setupReadmeErrorView() {
         readmeErrorView = ErrorView()
         
         self.view.addSubview(readmeErrorView)
@@ -260,5 +273,13 @@ private extension RepositoryDetailInfoViewController {
             readmeErrorView.trailingAnchor.constraint(equalTo: readmeTextView.trailingAnchor),
             readmeErrorView.bottomAnchor.constraint(equalTo: readmeTextView.bottomAnchor)
         ])
+    }
+}
+
+// MARK: - RepositoryDetailInfoViewController + ErrorViewDelegate
+extension RepositoryDetailInfoViewController: ErrorViewDelegate {
+    
+    func retryConnectToInternet() {
+        updateViewBasedOnResponse(response: .success)
     }
 }

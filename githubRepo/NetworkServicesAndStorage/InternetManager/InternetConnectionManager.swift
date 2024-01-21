@@ -8,13 +8,13 @@
 import UIKit
 import Reachability
 
+// MARK: -
 class InternetConnectionManager {
     
     static let shared = InternetConnectionManager()
-    private init() {}
     
     public var internetConnection = try! Reachability()
-        
+    
     func checkInternetConnection(successHandler: @escaping () -> Void, failureHandler: @escaping () -> Void) {
         try? internetConnection.startNotifier()
         if internetConnection.connection == .wifi || internetConnection.connection == .cellular {

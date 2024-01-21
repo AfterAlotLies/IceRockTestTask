@@ -7,15 +7,16 @@
 
 import UIKit
 
+// MARK: -
 struct RepoDetails: Codable {
-
+    
     private enum CodingKeys: String, CodingKey {
         case githubUrlRepo = "html_url"
         case license
         case stargazers = "stargazers_count"
         case watchers = "watchers_count"
         case forks = "forks_count"
-
+        
     }
     var githubUrlRepo: String
     var license: License?
@@ -24,6 +25,7 @@ struct RepoDetails: Codable {
     var watchers: Int
 }
 
+// MARK: -
 struct License: Codable {
     
     private enum CodingKeys: String, CodingKey {

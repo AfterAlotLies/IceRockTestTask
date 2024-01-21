@@ -7,15 +7,18 @@
 
 import UIKit
 
-class TokenInput: UIView, UITextFieldDelegate {
+// MARK: - TokenInput
+class TokenInput: UIView {
     
     @IBOutlet private weak var tokenInputField: UITextField!
     @IBOutlet private weak var errorLabel: UILabel!
     
+    // MARK: - Constants
     private enum Constants {
         static let tokenInputUI = "TokenInputUI"
     }
     
+    // MARK: - Lifecycle
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureView()
@@ -26,6 +29,7 @@ class TokenInput: UIView, UITextFieldDelegate {
         configureView()
     }
     
+    // MARK: - Public funcs
     func clearTextField() {
         tokenInputField.text = ""
     }
@@ -44,7 +48,7 @@ class TokenInput: UIView, UITextFieldDelegate {
         }
     }
     
-// MARK: - Setup Methods
+    // MARK: - Private funcs
     private func configureView() {
         let subview = self.loadViewFromXib()
         subview.frame = self.bounds
@@ -72,7 +76,7 @@ class TokenInput: UIView, UITextFieldDelegate {
         errorLabel.font = FontSettings.SFProDispalyMedium12
     }
     
-// MARK: - Actions with TextField
+    // MARK: - Actions with TextField
     @objc
     private func textFieldDidChange(_ textField: UITextField) {
         UIView.animate(withDuration: 0.5) {

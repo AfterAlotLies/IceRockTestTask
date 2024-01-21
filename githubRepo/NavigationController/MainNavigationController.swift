@@ -8,15 +8,18 @@
 import UIKit
 import Reachability
 
+// MARK: -
 class MainNavigationController: UINavigationController {
     
     private let keyValue = KeyValueStorage.shared
     
+    // MARK: -
     private enum Constants {
         static let authController = "AuthenticationViewController"
         static let repoListController = "RepositoriesListViewController"
     }
     
+    // MARK: -
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,6 +30,7 @@ class MainNavigationController: UINavigationController {
         }
     }
     
+    // MARK: -
     private func setAuthViewMain() {
         let navigationController = AuthenticationViewController(nibName: Constants.authController, bundle: nil)
         self.viewControllers = [navigationController]

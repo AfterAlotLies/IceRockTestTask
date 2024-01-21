@@ -18,15 +18,7 @@ class ErrorView: UIView {
     private var previousView : ControllerType = .other
     weak var delegate: ErrorViewDelegate?
     
-    public enum ControllerType : String {
-        case authController = "authController"
-        case repoListBadConnection = "repoListBadConnection"
-        case repoListEmpty = "repoListEmpty"
-        case repoDetailBadConnection = "repoDetailBadConnection"
-        case repoDetailReadmeError = "repoDetailReadmeError"
-        case other = "other"
-    }
-    
+    // MARK: - Constants
     private enum Constants {
         static let errorView = "ErrorView"
         static let internetError = "internetError"
@@ -44,7 +36,7 @@ class ErrorView: UIView {
         configureView()
     }
     
-// MARK: - Setup/configure methods for view
+    // MARK: - Setup/configure methods for view
     func setTypeOfPreviousView(type: ControllerType) {
         previousView = type
     }
@@ -72,53 +64,46 @@ class ErrorView: UIView {
         retryButtonAction()
     }
     
-// MARK: - Set properties to error view
+    // MARK: - Set properties to error view
     func showErrorView() {
         switch previousView {
-
-        case .authController:
+        case .authController, .repoDetailBadConnection, .repoListBadConnection:
             setupViewByError(imageName: Constants.internetError,
-                             titleText: LocalizedStrings.badConnectionTitle, messageText: LocalizedStrings.badConnectionMessage,
+                             titleText: LocalizedStrings.badConnectionTitle,
+                             messageText: LocalizedStrings.badConnectionMessage,
                              titleColor: .red, messageColor: .white)
-
-        case .repoListBadConnection:
-            setupViewByError(imageName: Constants.internetError,
-                             titleText: LocalizedStrings.badConnectionTitle ,messageText: LocalizedStrings.badConnectionMessage,
-                             titleColor: .red, messageColor: .white)
-
+        
         case .repoListEmpty:
             setupViewByError(imageName: Constants.emptyFolder,
-                             titleText: LocalizedStrings.emptyRepositoryTitle , messageText: LocalizedStrings.emptyRepositoryMessage,
+                             titleText: LocalizedStrings.emptyRepositoryTitle ,
+                             messageText: LocalizedStrings.emptyRepositoryMessage,
                              titleColor: .cyan, messageColor: .white)
             setupButtonForEmptyError()
-
-        case .repoDetailBadConnection:
-            setupViewByError(imageName: Constants.internetError,
-                             titleText: LocalizedStrings.badConnectionTitle, messageText: LocalizedStrings.badConnectionMessage,
-                             titleColor: .red, messageColor: .white)
-
+        
         case .repoDetailReadmeError:
             setupViewByError(imageName: Constants.internetError,
-                             titleText: LocalizedStrings.readmeErrorTitle, messageText: LocalizedStrings.badConnectionMessage,
+                             titleText: LocalizedStrings.readmeErrorTitle,
+                             messageText: LocalizedStrings.badConnectionMessage,
                              titleColor: .red, messageColor: .white)
-
+        
         case .other:
             setupViewByError(imageName: Constants.otherError,
-                             titleText: LocalizedStrings.otherErrorTitle, messageText: LocalizedStrings.otherErrorMessage,
+                             titleText: LocalizedStrings.otherErrorTitle,
+                             messageText: LocalizedStrings.otherErrorMessage,
                              titleColor: .red, messageColor: .white)
         }
     }
     
-    func hideErrorView() {
-        isHidden = true
+    func setErrorViewHidden(_ isHidden: Bool) {
+        self.isHidden = isHidden
     }
     
-    private func showElementsErrorView() {
-        isHidden = false
-    }
-    
-    private func setupViewByError(imageName: String, titleText: String, messageText: String, titleColor: UIColor, messageColor: UIColor) {
-        showElementsErrorView()
+    private func setupViewByError(imageName: String,
+                                  titleText: String,
+                                  messageText: String,
+                                  titleColor: UIColor,
+                                  messageColor: UIColor) {
+        setErrorViewHidden(false)
         errorImage.image = UIImage(named: "\(imageName)")
         errorTitle.text = titleText
         errorMessage.text = messageText
@@ -131,7 +116,7 @@ class ErrorView: UIView {
         errorMessage.font = FontSettings.SFProTextMedium12
     }
     
-// MARK: - Methods to back previous view
+    // MARK: - Methods to back previous view
     private func retryButtonAction() {
         retryButton.setActionOnButton { [weak self] in
             guard let self = self else { return }
@@ -142,30 +127,26 @@ class ErrorView: UIView {
     
     private func retryBackToPreviousView(previousView: ControllerType) {
         switch previousView {
-
         case .authController, .repoListBadConnection, .repoDetailBadConnection:
             retryOnBadConnection()
-
         case .repoDetailReadmeError:
             retryOnReadmeError()
-
         case .repoListEmpty:
             retryOnEmptyList()
-
         default:
             retryOnOtherErrors()
         }
     }
     
-    //Retry to repair an error "Bad connection"
+    // Retry to repair an error "Bad connection"
     private func retryOnBadConnection() {
         InternetConnectionManager.shared.checkInternetConnection {
             let successWorkItem = {
                 self.delegate?.retryConnectToInternet()
                 self.retryButton.stopLoading()
             }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: successWorkItem)
-
+            self.startWorkItem(successWorkItem)
+            
         } failureHandler: {
             let failureWorkItem = {
                 self.setupViewByError(imageName: Constants.internetError,
@@ -174,49 +155,48 @@ class ErrorView: UIView {
                 self.showErrorView()
                 self.retryButton.stopLoading()
             }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: failureWorkItem)
+            self.startWorkItem(failureWorkItem)
         }
     }
     
-    //Retry to repair an error "Load error" in readme
+    // Retry to repair an error "Load error" in readme
     private func retryOnReadmeError() {
         InternetConnectionManager.shared.checkInternetConnection {
             let successWorkItem = {
                 self.delegate?.retryConnectToInternet()
                 self.retryButton.stopLoading()
             }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: successWorkItem)
-
+            self.startWorkItem(successWorkItem)
+            
         } failureHandler: {
             let failureWorkItem = {
                 self.setupViewByError(imageName: Constants.internetError,
                                       titleText: LocalizedStrings.readmeErrorTitle, messageText: LocalizedStrings.badConnectionMessage,
-                                                  titleColor: .red, messageColor: .white)
+                                      titleColor: .red, messageColor: .white)
                 self.showErrorView()
                 self.retryButton.stopLoading()
             }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: failureWorkItem)
+            self.startWorkItem(failureWorkItem)
         }
     }
     
-    //Retry to repair an error "Empty"
+    // Retry to repair an error "Empty"
     private func retryOnEmptyList() {
         let workItem = {
             self.delegate?.retryToGetRepoList()
             self.retryButton.stopLoading()
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: workItem)
+        self.startWorkItem(workItem)
     }
     
-    //Retry to repair other errors
+    // Retry to repair other errors
     private func retryOnOtherErrors() {
         InternetConnectionManager.shared.checkInternetConnection {
             let successWorkItem = {
                 self.delegate?.retryConnectToInternet()
                 self.retryButton.stopLoading()
             }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: successWorkItem)
-
+            self.startWorkItem(successWorkItem)
         } failureHandler: {
             let failureWorkItem = {
                 self.setupViewByError(imageName: Constants.otherError,
@@ -225,7 +205,15 @@ class ErrorView: UIView {
                 self.showErrorView()
                 self.retryButton.stopLoading()
             }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: failureWorkItem)
+            self.startWorkItem(failureWorkItem)
         }
+    }
+}
+
+// MARK: - ErrorView + Private work item
+private extension ErrorView {
+    
+    func startWorkItem(_ workItem: @escaping (() -> ())) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: workItem)
     }
 }

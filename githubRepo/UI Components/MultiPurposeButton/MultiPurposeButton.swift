@@ -8,10 +8,12 @@
 import UIKit
 import NVActivityIndicatorView
 
+// MARK: -
 class MultiPurposeButton: UIView {
     
     @IBOutlet private weak var customButton: UIButton!
-        
+    
+    // MARK: -
     private enum Constants {
         static let multiPurposeButtonUI = "MultiPurposeButtonUI"
     }
@@ -19,7 +21,8 @@ class MultiPurposeButton: UIView {
     private let loadingIndicator = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 20, height: 20), type: .circleStrokeSpin, color: .white)
     
     private var clickButtonAction: (() -> Void)?
-
+    
+    // MARK: -
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.configureView()
@@ -30,6 +33,7 @@ class MultiPurposeButton: UIView {
         self.configureView()
     }
     
+    // MARK: -
     func setActionOnButton(_ actionHandler: (() -> Void)?) {
         clickButtonAction = actionHandler
     }
@@ -58,10 +62,12 @@ class MultiPurposeButton: UIView {
         customButton.titleLabel?.isHidden = false
     }
     
+    // MARK: - IBAction
     @IBAction func makeActionByClick(_ sender: Any) {
         clickButtonAction?()
     }
     
+    // MARK: -
     private func configureView() {
         let subview = self.loadViewFromXib()
         subview.frame = self.bounds

@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - RepositoryDetail
 class RepositoryDetail: UIView {
     
     @IBOutlet private weak var githubUrlLabel: UILabel!
@@ -23,6 +24,7 @@ class RepositoryDetail: UIView {
     
     private var urlToOpen: String = ""
     
+    // MARK: - Constants
     private enum Constants {
         static let repoDetailUI = "RepositoryDetailUI"
         static let starsImage = "starsImage"
@@ -31,6 +33,7 @@ class RepositoryDetail: UIView {
         static let removingString = "https://"
     }
     
+    // MARK: - Lifecycle
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureView()
@@ -41,6 +44,12 @@ class RepositoryDetail: UIView {
         configureView()
     }
     
+    private func loadViewFromXib() -> UIView {
+        guard let view = Bundle.main.loadNibNamed(Constants.repoDetailUI, owner: self)?.first as? UIView else { return UIView() }
+        return view
+    }
+    
+    // MARK: - Public funcs
     func setupBottomView(stars: Int, forks: Int, watchers: Int) {
         starsView.setupBottomView(imageName: Constants.starsImage, count: stars, title: LocalizedStrings.starsRepoDetail, color: starsColor)
         forksView.setupBottomView(imageName: Constants.forksImage, count: forks, title: LocalizedStrings.forksRepoDetail, color: forksColor)
@@ -59,6 +68,7 @@ class RepositoryDetail: UIView {
         stackview.arrangedSubviews[1].isHidden = true
     }
     
+    // MARK: - Private funcs
     private func configureView() {
         let subview = self.loadViewFromXib()
         subview.frame = self.bounds
@@ -66,12 +76,6 @@ class RepositoryDetail: UIView {
         self.addSubview(subview)
         let openLink = UITapGestureRecognizer(target: self, action: #selector(handleLinkTap))
         githubUrlLabel.addGestureRecognizer(openLink)
-    }
-    
-    private func loadViewFromXib() -> UIView {
-        guard let view = Bundle.main.loadNibNamed(Constants.repoDetailUI, owner: self)?.first as? UIView else { return UIView() }
-
-        return view
     }
     
     private func makeTapOnLink(url: String) {

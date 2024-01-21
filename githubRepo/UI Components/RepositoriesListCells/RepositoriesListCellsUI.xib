@@ -27,9 +27,6 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sde-s1-mXV">
                                         <rect key="frame" x="0.0" y="0.0" width="340.33333333333331" height="32.333333333333336"/>
                                         <color key="tintColor" systemColor="systemBlueColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="165.66999999999999" id="8yk-fU-UOl"/>
-                                        </constraints>
                                         <attributedString key="attributedText">
                                             <fragment content="Name repository">
                                                 <attributes>
@@ -42,9 +39,6 @@
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="751" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbJ-aG-y8g">
                                         <rect key="frame" x="348.33333333333331" y="0.0" width="61.666666666666686" height="32.333333333333336"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="41.329999999999998" id="oLm-fC-8B1"/>
-                                        </constraints>
                                         <attributedString key="attributedText">
                                             <fragment content="language">
                                                 <attributes>
@@ -57,6 +51,14 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="bbJ-aG-y8g" firstAttribute="top" secondItem="air-IF-i4F" secondAttribute="top" id="EdW-vL-pYT"/>
+                                    <constraint firstAttribute="bottom" secondItem="bbJ-aG-y8g" secondAttribute="bottom" id="HUt-tb-oDe"/>
+                                    <constraint firstAttribute="trailing" secondItem="bbJ-aG-y8g" secondAttribute="trailing" id="PfC-gk-Wcw"/>
+                                    <constraint firstItem="sde-s1-mXV" firstAttribute="top" secondItem="air-IF-i4F" secondAttribute="top" id="TYA-gM-QZZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="sde-s1-mXV" secondAttribute="bottom" id="drN-dz-2Vq"/>
+                                    <constraint firstItem="sde-s1-mXV" firstAttribute="leading" secondItem="air-IF-i4F" secondAttribute="leading" id="k5S-7i-aQP"/>
+                                </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xB8-cP-qCg">
                                 <rect key="frame" x="0.0" y="35.333333333333336" width="410" height="17.666666666666664"/>
@@ -71,6 +73,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="xB8-cP-qCg" firstAttribute="leading" secondItem="KYq-Fw-IVd" secondAttribute="leading" id="9lV-Qi-4cK"/>
+                            <constraint firstAttribute="bottom" secondItem="xB8-cP-qCg" secondAttribute="bottom" id="kva-c1-zYy"/>
+                            <constraint firstAttribute="trailing" secondItem="xB8-cP-qCg" secondAttribute="trailing" id="rNP-L7-OvG"/>
+                        </constraints>
                     </stackView>
                 </subviews>
                 <color key="backgroundColor" red="0.05523881169" green="0.056316187189999999" blue="0.1358961887" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -92,7 +99,7 @@
     </objects>
     <resources>
         <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
