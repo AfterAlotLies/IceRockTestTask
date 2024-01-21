@@ -7,14 +7,14 @@
 
 import UIKit
 
-// MARK: -
+// MARK: - ErrorViewDelegate
 protocol ErrorViewDelegate: AnyObject {
     
     func retryConnectToInternet()
     func retryToGetRepoList()
 }
 
-// MARK: -
+// MARK: - ErrorViewDelegate + retryToGetRepoList
 extension ErrorViewDelegate {
     
     func retryToGetRepoList() {

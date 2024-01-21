@@ -8,7 +8,7 @@
 import UIKit
 import Reachability
 
-// MARK: -
+// MARK: - InternetConnectionManager
 class InternetConnectionManager {
     
     static let shared = InternetConnectionManager()

@@ -18,12 +18,6 @@ class RepositoryDetail: UIView {
     @IBOutlet private weak var forksView: BottomViewRepositoryDetail!
     @IBOutlet private weak var watchersView: BottomViewRepositoryDetail!
     
-    private let starsColor: UIColor = UIColor(red: 250.0 / 255.0, green: 216.0 / 255.0, blue: 118.0 / 255.0, alpha: 1)
-    private let forksColor: UIColor = UIColor(red: 109.0 / 255.0, green: 210.0 / 255.0, blue: 111.0 / 255.0, alpha: 1)
-    private let watchersColor: UIColor = UIColor(red: 156.0 / 255.0, green: 253.0 / 255.0, blue: 249.0 / 255.0, alpha: 1)
-    
-    private var urlToOpen: String = ""
-    
     // MARK: - Constants
     private enum Constants {
         static let repoDetailUI = "RepositoryDetailUI"
@@ -31,7 +25,16 @@ class RepositoryDetail: UIView {
         static let forksImage = "forksImage"
         static let watchersImage = "watchersImage"
         static let removingString = "https://"
+        static let starsColor: UIColor = UIColor(red: 250.0 / 255.0, green: 216.0 / 255.0, blue: 118.0 / 255.0, alpha: 1)
+        static let forksColor: UIColor = UIColor(red: 109.0 / 255.0, green: 210.0 / 255.0, blue: 111.0 / 255.0, alpha: 1)
+        static let watchersColor: UIColor = UIColor(red: 156.0 / 255.0, green: 253.0 / 255.0, blue: 249.0 / 255.0, alpha: 1)
     }
+    
+    private let starsColor = Constants.starsColor
+    private let forksColor: UIColor = Constants.forksColor
+    private let watchersColor: UIColor = Constants.watchersColor
+    
+    private var urlToOpen: String = ""
     
     // MARK: - Lifecycle
     override init(frame: CGRect) {

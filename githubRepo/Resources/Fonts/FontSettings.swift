@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - FontSettings
 public enum FontSettings {
     static let SFProTextMedium16: UIFont? = UIFont(name: "SFProText-Medium", size: 16)
     static let SFProTextMedium12: UIFont? = UIFont(name: "SFProText-Medium", size: 12)

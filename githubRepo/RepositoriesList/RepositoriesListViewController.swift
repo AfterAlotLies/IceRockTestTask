@@ -8,21 +8,23 @@
 import UIKit
 import NVActivityIndicatorView
 
-// MARK: -
+// MARK: - RepositoriesListViewController
 class RepositoriesListViewController: UIViewController {
     
     @IBOutlet private weak var repoList: UITableView!
     @IBOutlet private weak var errorView: ErrorView!
     
-    // MARK: -
+    // MARK: - Constants
     private enum Constants {
         static let repositoriesListUI = "RepositoriesListCellsUI"
         static let authController = "AuthenticationViewController"
         static let logoutImage = "logoutImage"
         static let repoListController = "RepositoryDetailInfoViewController"
+        static let loadingIndicatorFrame: CGRect = CGRect(x: 0, y: 0, width: 37, height: 37)
+        static let backButtonFrame: CGRect = CGRect(x: 0, y: 0, width: 30, height: 30)
     }
     
-    private let loadingIndicator = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 37, height: 37), type: .circleStrokeSpin, color: .white)
+    private let loadingIndicator = NVActivityIndicatorView(frame: Constants.loadingIndicatorFrame, type: .circleStrokeSpin, color: .white)
     
     private var nameRepoArray = [String]()
     private var languageArray = [String]()
@@ -31,7 +33,7 @@ class RepositoriesListViewController: UIViewController {
     private var ownerNameArray = [String]()
     private var reposIdArray = [Int]()
     
-    // MARK: -
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationRightItem()
@@ -41,7 +43,7 @@ class RepositoriesListViewController: UIViewController {
         checkInternetConnection()
     }
     
-    // MARK: - Update view by response
+    ///Update view by response
     func updateViewBasedOnResponse(response: ResponseViewStatus) {
         switch response {
         case .success:
@@ -172,6 +174,18 @@ extension RepositoriesListViewController: UITableViewDelegate {
     }
 }
 
+// MARK: - RepositoriesListViewController + ErrorViewDelegate
+extension RepositoriesListViewController: ErrorViewDelegate {
+    
+    func retryConnectToInternet() {
+        updateViewBasedOnResponse(response: .success)
+    }
+    
+    func retryToGetRepoList() {
+        retryToGetRepositories()
+    }
+}
+
 // MARK: - Setup methods
 private extension RepositoriesListViewController {
     
@@ -193,7 +207,7 @@ private extension RepositoriesListViewController {
     func setupNavigationRightItem() {
         let barButton = UIButton()
         
-        let backButton = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+        let backButton = UIButton(frame: Constants.backButtonFrame)
         backButton.setImage(UIImage(named: Constants.logoutImage), for: .normal)
         backButton.imageView?.contentMode = .scaleAspectFit
         
@@ -225,17 +239,5 @@ private extension RepositoriesListViewController {
         ])
         
         loadingIndicator.startAnimating()
-    }
-}
-
-// MARK: - RepositoriesListViewController + ErrorViewDelegate
-extension RepositoriesListViewController: ErrorViewDelegate {
-    
-    func retryConnectToInternet() {
-        updateViewBasedOnResponse(response: .success)
-    }
-    
-    func retryToGetRepoList() {
-        retryToGetRepositories()
     }
 }

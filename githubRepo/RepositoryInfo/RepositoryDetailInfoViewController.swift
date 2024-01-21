@@ -10,38 +10,24 @@ import Alamofire
 import SwiftyMarkdown
 import NVActivityIndicatorView
 
+// MARK: - RepositoryDetailInfoViewController
 class RepositoryDetailInfoViewController: UIViewController {
     
     @IBOutlet private weak var topRepoInfoView: RepositoryDetail!
     @IBOutlet private weak var readmeTextView: UITextView!
     @IBOutlet private weak var errorView: ErrorView!
     
-    // MARK: -
+    // MARK: - Constants
     private enum Constants {
         static let authController = "AuthenticationViewController"
         static let logoutImage = "logoutImage"
-        static let viewIndicatorPosX: CGFloat = 0
-        static let viewIndicatorPosY: CGFloat = 0
-        static let viewIndicatorWidth: CGFloat = 37
-        static let viewIndicatorHeight: CGFloat = 37
-        static let readmeIndicatorPosX: CGFloat = 0
-        static let readmeIndicatorPosY: CGFloat = 0
-        static let readmeIndicatorWidth: CGFloat = 20
-        static let readmeIndicatorHeight: CGFloat = 20
+        static let viewLoadingIndicatorFrame: CGRect = CGRect(x: 0, y: 0, width: 37, height: 37)
+        static let readmeLoadingIndicatorFrame: CGRect = CGRect(x: 0, y: 0, width: 20, height: 20)
+        static let backButtonFrame: CGRect = CGRect(x: 0, y: 0, width: 30, height: 30)
     }
     
-    private let viewLoadingIndicator = NVActivityIndicatorView(frame: CGRect(x: Constants.viewIndicatorPosX,
-                                                                             y: Constants.viewIndicatorPosY,
-                                                                             width: Constants.viewIndicatorWidth,
-                                                                             height: Constants.viewIndicatorHeight),
-                                                               type: .circleStrokeSpin,
-                                                               color: .white)
-    private let readmeLoadingIndicator = NVActivityIndicatorView(frame: CGRect(x: Constants.readmeIndicatorPosX,
-                                                                               y: Constants.readmeIndicatorPosY,
-                                                                               width: Constants.readmeIndicatorWidth,
-                                                                               height: Constants.readmeIndicatorHeight),
-                                                                 type: .circleStrokeSpin,
-                                                                 color: .white)
+    private let viewLoadingIndicator = NVActivityIndicatorView(frame: Constants.viewLoadingIndicatorFrame, type: .circleStrokeSpin, color: .white)
+    private let readmeLoadingIndicator = NVActivityIndicatorView(frame: Constants.readmeLoadingIndicatorFrame, type: .circleStrokeSpin, color: .white)
     
     private var readmeErrorView: ErrorView!
     
@@ -50,7 +36,7 @@ class RepositoryDetailInfoViewController: UIViewController {
     private var repositoryName: String = ""
     private var ownerName: String = ""
     
-    // MARK: -
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupReadmeErrorView()
@@ -61,10 +47,10 @@ class RepositoryDetailInfoViewController: UIViewController {
         errorView.delegate = self
     }
     
-    // MARK: -
+    // MARK: - Public funcs
     func setChosenRepoId(repoId: Int?, branch: String?, repoName: String?, owner: String?) {
-        guard let repoId = repoId, 
-              let branch = branch,
+        guard let repoId = repoId,
+                let branch = branch,
               let repoName = repoName,
               let owner = owner
         else { return }
@@ -137,13 +123,13 @@ class RepositoryDetailInfoViewController: UIViewController {
                             let noReadmeItem = {
                                 self.setReadmeText(readmeText: LocalizedStrings.noReadme)
                             }
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: noReadmeItem)
+                            self.startWorkItem(timeline: .now() + 2.0, workItem: noReadmeItem)
                             
                         default:
                             let otherErrorItem = {
                                 self.setReadmeOtherError()
                             }
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: otherErrorItem)
+                            self.startWorkItem(timeline: .now() + 1.5, workItem: otherErrorItem)
                         }
                     }
                 } else {
@@ -153,12 +139,12 @@ class RepositoryDetailInfoViewController: UIViewController {
                         let emptyReadmeItem = {
                             self.setReadmeText(readmeText: LocalizedStrings.emptyReadme)
                         }
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: emptyReadmeItem)
+                        self.startWorkItem(timeline: .now() + 1.5, workItem: emptyReadmeItem)
                     } else {
                         let readmeItem = {
                             self.setReadmeData(repoInfo: repoInfo)
                         }
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: readmeItem)
+                        self.startWorkItem(timeline: .now() + 1.5, workItem: readmeItem)
                     }
                 }
             }
@@ -167,6 +153,10 @@ class RepositoryDetailInfoViewController: UIViewController {
                 self.setReadmeError()
             }
         }
+    }
+    
+    private func startWorkItem(timeline: DispatchTime, workItem: @escaping ()->()) {
+        DispatchQueue.main.asyncAfter(deadline: timeline, execute: workItem)
     }
     
     // MARK: - Actions with readme (errors/success)
@@ -222,13 +212,21 @@ class RepositoryDetailInfoViewController: UIViewController {
     }
 }
 
+// MARK: - RepositoryDetailInfoViewController + ErrorViewDelegate
+extension RepositoryDetailInfoViewController: ErrorViewDelegate {
+    
+    func retryConnectToInternet() {
+        updateViewBasedOnResponse(response: .success)
+    }
+}
+
 // MARK: - Setup Methods
 private extension RepositoryDetailInfoViewController {
     
     func setupNavigationRightItem() {
         let barButton = UIButton()
         
-        let backButton = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+        let backButton = UIButton(frame: Constants.backButtonFrame)
         backButton.setImage(UIImage(named: Constants.logoutImage), for: .normal)
         backButton.imageView?.contentMode = .scaleAspectFit
         
@@ -273,13 +271,5 @@ private extension RepositoryDetailInfoViewController {
             readmeErrorView.trailingAnchor.constraint(equalTo: readmeTextView.trailingAnchor),
             readmeErrorView.bottomAnchor.constraint(equalTo: readmeTextView.bottomAnchor)
         ])
-    }
-}
-
-// MARK: - RepositoryDetailInfoViewController + ErrorViewDelegate
-extension RepositoryDetailInfoViewController: ErrorViewDelegate {
-    
-    func retryConnectToInternet() {
-        updateViewBasedOnResponse(response: .success)
     }
 }

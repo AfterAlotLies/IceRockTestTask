@@ -8,7 +8,7 @@
 import UIKit
 import Alamofire
 
-// MARK: -
+// MARK: - AppRepository
 class AppRepository {
     
     static let shared = AppRepository()

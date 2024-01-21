@@ -8,7 +8,7 @@
 import UIKit
 import Alamofire
 
-// MARK: -
+// MARK: - AuthenticationViewController
 class AuthenticationViewController: UIViewController {
     
     @IBOutlet private weak var imageLogo: UIImageView!
@@ -16,13 +16,13 @@ class AuthenticationViewController: UIViewController {
     @IBOutlet private weak var signInButton: MultiPurposeButton!
     @IBOutlet private weak var errorView: ErrorView!
     
-    // MARK: -
+    // MARK: - Constants
     private enum Constants {
         static let repoListController = "RepositoriesListViewController"
         static let alertTitle = "OK"
     }
     
-    // MARK: -
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         checkInternetConnection()
@@ -31,7 +31,7 @@ class AuthenticationViewController: UIViewController {
         hideKeyBoard()
     }
     
-    // MARK: - Update view by response
+    ///Update view by response
     func updateViewBasedOnResponse(response: ResponseViewStatus) {
         switch response {
         case .success:

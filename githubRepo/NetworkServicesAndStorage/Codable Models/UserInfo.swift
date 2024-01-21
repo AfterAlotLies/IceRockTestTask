@@ -7,7 +7,7 @@
 
 import UIKit
 
-// MARK: -
+// MARK: - UserInfo
 struct UserInfo: Codable {
 
     private enum CodingKeys: String, CodingKey {

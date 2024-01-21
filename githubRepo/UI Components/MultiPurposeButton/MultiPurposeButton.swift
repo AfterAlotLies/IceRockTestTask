@@ -8,21 +8,22 @@
 import UIKit
 import NVActivityIndicatorView
 
-// MARK: -
+// MARK: - MultiPurposeButton
 class MultiPurposeButton: UIView {
     
     @IBOutlet private weak var customButton: UIButton!
     
-    // MARK: -
+    // MARK: - Constants
     private enum Constants {
         static let multiPurposeButtonUI = "MultiPurposeButtonUI"
+        static let loadingIndicatorFrame: CGRect = CGRect(x: 0, y: 0, width: 20, height: 20)
     }
     
-    private let loadingIndicator = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 20, height: 20), type: .circleStrokeSpin, color: .white)
+    private let loadingIndicator = NVActivityIndicatorView(frame: Constants.loadingIndicatorFrame, type: .circleStrokeSpin, color: .white)
     
     private var clickButtonAction: (() -> Void)?
     
-    // MARK: -
+    // MARK: - Lifecycle
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.configureView()
@@ -33,7 +34,13 @@ class MultiPurposeButton: UIView {
         self.configureView()
     }
     
-    // MARK: -
+    private func loadViewFromXib() -> UIView {
+        guard let view = Bundle.main.loadNibNamed(Constants.multiPurposeButtonUI, owner: self)?.first as? UIView else { return UIView() }
+        
+        return view
+    }
+    
+    // MARK: - Public funcs
     func setActionOnButton(_ actionHandler: (() -> Void)?) {
         clickButtonAction = actionHandler
     }
@@ -67,7 +74,7 @@ class MultiPurposeButton: UIView {
         clickButtonAction?()
     }
     
-    // MARK: -
+    // MARK: - Private funcs
     private func configureView() {
         let subview = self.loadViewFromXib()
         subview.frame = self.bounds
@@ -82,11 +89,5 @@ class MultiPurposeButton: UIView {
             loadingIndicator.centerXAnchor.constraint(equalTo: subview.centerXAnchor),
             loadingIndicator.centerYAnchor.constraint(equalTo: subview.centerYAnchor)
         ])
-    }
-    
-    private func loadViewFromXib() -> UIView {
-        guard let view = Bundle.main.loadNibNamed(Constants.multiPurposeButtonUI, owner: self)?.first as? UIView else { return UIView() }
-        
-        return view
     }
 }

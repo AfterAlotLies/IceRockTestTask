@@ -7,7 +7,7 @@
 
 import UIKit
 
-// MARK: -
+// MARK: - RepoDetails
 struct RepoDetails: Codable {
     
     private enum CodingKeys: String, CodingKey {
@@ -25,7 +25,7 @@ struct RepoDetails: Codable {
     var watchers: Int
 }
 
-// MARK: -
+// MARK: - License
 struct License: Codable {
     
     private enum CodingKeys: String, CodingKey {

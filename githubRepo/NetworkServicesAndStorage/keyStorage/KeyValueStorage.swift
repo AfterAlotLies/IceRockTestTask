@@ -7,7 +7,7 @@
 
 import UIKit
 
-// MARK: -
+// MARK: - KeyValueStorage
 class KeyValueStorage {
     
     static let shared = KeyValueStorage()

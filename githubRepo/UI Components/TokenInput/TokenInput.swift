@@ -29,6 +29,11 @@ class TokenInput: UIView {
         configureView()
     }
     
+    private func loadViewFromXib() -> UIView {
+        guard let view = Bundle.main.loadNibNamed(Constants.tokenInputUI, owner: self)?.first as? UIView else { return UIView() }
+        return view
+    }
+    
     // MARK: - Public funcs
     func clearTextField() {
         tokenInputField.text = ""
@@ -55,11 +60,6 @@ class TokenInput: UIView {
         subview.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.addSubview(subview)
         configureField()
-    }
-    
-    private func loadViewFromXib() -> UIView {
-        guard let view = Bundle.main.loadNibNamed(Constants.tokenInputUI, owner: self)?.first as? UIView else { return UIView() }
-        return view
     }
     
     private func configureField() {

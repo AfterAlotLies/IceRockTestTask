@@ -7,7 +7,7 @@
 
 import UIKit
 
-// MARK: -
+// MARK: - Int
 extension Int {
     
     func intToString() -> String {

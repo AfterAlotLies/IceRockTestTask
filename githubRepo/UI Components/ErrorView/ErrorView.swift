@@ -26,6 +26,7 @@ class ErrorView: UIView {
         static let otherError = "otherError"
     }
     
+    // MARK: - Lifecycle
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureView()
@@ -34,6 +35,11 @@ class ErrorView: UIView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         configureView()
+    }
+    
+    private func loadViewFromXib() -> UIView {
+        guard let view = Bundle.main.loadNibNamed(Constants.errorView, owner: self)?.first as? UIView else { return UIView() }
+        return view
     }
     
     // MARK: - Setup/configure methods for view
@@ -47,11 +53,6 @@ class ErrorView: UIView {
         subview.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.addSubview(subview)
         setupButton()
-    }
-    
-    private func loadViewFromXib() -> UIView {
-        guard let view = Bundle.main.loadNibNamed(Constants.errorView, owner: self)?.first as? UIView else { return UIView() }
-        return view
     }
     
     private func setupButton() {
@@ -72,20 +73,20 @@ class ErrorView: UIView {
                              titleText: LocalizedStrings.badConnectionTitle,
                              messageText: LocalizedStrings.badConnectionMessage,
                              titleColor: .red, messageColor: .white)
-        
+            
         case .repoListEmpty:
             setupViewByError(imageName: Constants.emptyFolder,
                              titleText: LocalizedStrings.emptyRepositoryTitle ,
                              messageText: LocalizedStrings.emptyRepositoryMessage,
                              titleColor: .cyan, messageColor: .white)
             setupButtonForEmptyError()
-        
+            
         case .repoDetailReadmeError:
             setupViewByError(imageName: Constants.internetError,
                              titleText: LocalizedStrings.readmeErrorTitle,
                              messageText: LocalizedStrings.badConnectionMessage,
                              titleColor: .red, messageColor: .white)
-        
+            
         case .other:
             setupViewByError(imageName: Constants.otherError,
                              titleText: LocalizedStrings.otherErrorTitle,

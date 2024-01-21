@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: - LocalizedStrings
 public enum LocalizedStrings {
     static let titleAlert = NSLocalizedString("Alert.ErrorTittle.Error", comment: "")
     static let messageAlert = NSLocalizedString("Alert.ErrorMessage.Enter.Token", comment: "")
