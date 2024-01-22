@@ -77,7 +77,7 @@ class RepositoryDetailInfoViewController: UIViewController {
         }
     }
     
-    //MARK: - Check internet connection
+    // MARK: - Check internet connection
     private func checkInternetConnection() {
         InternetConnectionManager.shared.checkInternetConnection {
             self.updateViewBasedOnResponse(response: .success)
