@@ -20,7 +20,6 @@
 		114435E02B22257B00D7355C /* RepositoryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114435DF2B22257B00D7355C /* RepositoryDetail.swift */; };
 		114DE64E2B4D729C0009FB53 /* BottomViewRepositoryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114DE64D2B4D729C0009FB53 /* BottomViewRepositoryDetail.swift */; };
 		114DE6512B4EAEED0009FB53 /* RepositoryDetailUI.xib in Resources */ = {isa = PBXBuildFile; fileRef = 114DE64F2B4EAEED0009FB53 /* RepositoryDetailUI.xib */; };
-		114DE6522B4EAEED0009FB53 /* BottomViewRepositoryDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 114DE6502B4EAEED0009FB53 /* BottomViewRepositoryDetail.xib */; };
 		114DE6552B52C4F90009FB53 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 114DE6542B52C4F90009FB53 /* Localizable.strings */; };
 		114DE6572B52C5440009FB53 /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114DE6562B52C5440009FB53 /* LocalizedStrings.swift */; };
 		114DE6592B53F7160009FB53 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 114DE6582B53F7160009FB53 /* Launch Screen.storyboard */; };
@@ -47,6 +46,7 @@
 		11C5DE952B543D1E00F6A160 /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5DE942B543D1E00F6A160 /* SF-Pro-Text-Medium.otf */; };
 		11FE5EB72B5BE887001CBF68 /* FontSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE5EB62B5BE887001CBF68 /* FontSettings.swift */; };
 		11FE5EB92B5CD970001CBF68 /* ControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE5EB82B5CD970001CBF68 /* ControllerType.swift */; };
+		11FE5EDE2B613F28001CBF68 /* BottomViewRepositoryDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11FE5EDD2B613F28001CBF68 /* BottomViewRepositoryDetail.xib */; };
 		CD89ACEFEA16E3BE03B47013 /* Pods_githubRepo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1BED8C7408CDAC20161CD88 /* Pods_githubRepo.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,7 +64,6 @@
 		114435DF2B22257B00D7355C /* RepositoryDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetail.swift; sourceTree = "<group>"; };
 		114DE64D2B4D729C0009FB53 /* BottomViewRepositoryDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomViewRepositoryDetail.swift; sourceTree = "<group>"; };
 		114DE64F2B4EAEED0009FB53 /* RepositoryDetailUI.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepositoryDetailUI.xib; sourceTree = "<group>"; };
-		114DE6502B4EAEED0009FB53 /* BottomViewRepositoryDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BottomViewRepositoryDetail.xib; path = ../../../../../../Downloads/BottomViewRepositoryDetail.xib; sourceTree = "<group>"; };
 		114DE6542B52C4F90009FB53 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		114DE6562B52C5440009FB53 /* LocalizedStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedStrings.swift; sourceTree = "<group>"; };
 		114DE6582B53F7160009FB53 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -93,6 +92,7 @@
 		11C5DE942B543D1E00F6A160 /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
 		11FE5EB62B5BE887001CBF68 /* FontSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSettings.swift; sourceTree = "<group>"; };
 		11FE5EB82B5CD970001CBF68 /* ControllerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerType.swift; sourceTree = "<group>"; };
+		11FE5EDD2B613F28001CBF68 /* BottomViewRepositoryDetail.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomViewRepositoryDetail.xib; sourceTree = "<group>"; };
 		9369A6AC7C55F2139C245CF3 /* Pods-githubRepo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-githubRepo.debug.xcconfig"; path = "Target Support Files/Pods-githubRepo/Pods-githubRepo.debug.xcconfig"; sourceTree = "<group>"; };
 		D1BED8C7408CDAC20161CD88 /* Pods_githubRepo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_githubRepo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E58FCD385542B042FA76DBF7 /* Pods-githubRepo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-githubRepo.release.xcconfig"; path = "Target Support Files/Pods-githubRepo/Pods-githubRepo.release.xcconfig"; sourceTree = "<group>"; };
@@ -222,7 +222,7 @@
 				114435DF2B22257B00D7355C /* RepositoryDetail.swift */,
 				114DE64F2B4EAEED0009FB53 /* RepositoryDetailUI.xib */,
 				114DE64D2B4D729C0009FB53 /* BottomViewRepositoryDetail.swift */,
-				114DE6502B4EAEED0009FB53 /* BottomViewRepositoryDetail.xib */,
+				11FE5EDD2B613F28001CBF68 /* BottomViewRepositoryDetail.xib */,
 			);
 			path = RepositoryDetail;
 			sourceTree = "<group>";
@@ -429,6 +429,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11FE5EDE2B613F28001CBF68 /* BottomViewRepositoryDetail.xib in Resources */,
 				114196A82B3871690034768B /* TokenInputUI.xib in Resources */,
 				114435DD2B2224BE00D7355C /* RepositoriesListCellsUI.xib in Resources */,
 				114DE6592B53F7160009FB53 /* Launch Screen.storyboard in Resources */,
@@ -442,7 +443,6 @@
 				11C5DE932B543D0300F6A160 /* SF-Pro-Display-Medium.otf in Resources */,
 				117313852B17300300289745 /* AuthenticationViewController.xib in Resources */,
 				114DE6512B4EAEED0009FB53 /* RepositoryDetailUI.xib in Resources */,
-				114DE6522B4EAEED0009FB53 /* BottomViewRepositoryDetail.xib in Resources */,
 				117313CC2B1A175800289745 /* RepositoryDetailInfoViewController.xib in Resources */,
 				117313732B172EE100289745 /* Assets.xcassets in Resources */,
 			);
